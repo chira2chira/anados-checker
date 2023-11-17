@@ -102,7 +102,8 @@ export const Container: React.FC<ContainerProps> = (props) => {
           <div>
             {t("ui.text.author")}: チラツキ{" "}
             <a href="https://twitter.com/chira2chira">Twitter</a>{" "}
-            <a href="https://www.youtube.com/@chira2chira">YouTube</a>
+            <a href="https://www.youtube.com/@chira2chira">YouTube</a>{" "}
+            <a href="https://github.com/chira2chira/anados-checker">GitHub</a>
           </div>
         </footer>
 
