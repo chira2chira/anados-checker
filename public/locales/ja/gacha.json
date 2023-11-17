@@ -1,0 +1,19 @@
+{
+  "title": "アナドスガチャシミュレーター",
+  "ui": {
+    "text": {
+      "pullCount": "ガチャ回数",
+      "usedStone": "使用龍脈石",
+      "pickupRate": "ピックアップ提供割合",
+      "standardRate": "通常提供割合",
+      "limited": "限定"
+    },
+    "button": {
+      "changeBanner": "ガチャを変更",
+      "pull1": "1連",
+      "pull10": "10連",
+      "clear": "結果をクリア",
+      "rate": "提供割合"
+    }
+  }
+}

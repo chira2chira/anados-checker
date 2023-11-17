@@ -1,0 +1,19 @@
+{
+  "title": "AnotherEidos Gacha Simulator",
+  "ui": {
+    "text": {
+      "pullCount": "Pulls",
+      "usedStone": "Stones Used",
+      "pickupRate": "Pick-Up Rates",
+      "standardRate": "Standard Rates",
+      "limited": "Limited"
+    },
+    "button": {
+      "changeBanner": "Change Banner",
+      "pull1": "1 Time",
+      "pull10": "10 Times",
+      "clear": "Clear Result",
+      "rate": "Appearance Rate"
+    }
+  }
+}

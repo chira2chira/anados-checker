@@ -1,0 +1,17 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #111418;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* https://github.com/palantir/blueprint/issues/4864 */
+.bp5-toast-container {
+  position: fixed !important;
+}

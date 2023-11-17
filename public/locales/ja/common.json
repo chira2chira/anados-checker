@@ -1,0 +1,49 @@
+{
+  "title": "アナドス所持率チェッカー",
+  "description": "アナザーエイドスRのキャラクター所持率チェッカー。キャラクターの所持状況を管理したり、他の人に共有することができます。",
+  "ui": {
+    "button": {
+      "save": "保存",
+      "getShareLink": "共有リンクを取得",
+      "checkAll": "すべてチェック",
+      "uncheckAll": "すべて外す",
+      "spoilerFilter": "ネタバレを隠す"
+    },
+    "filter": {
+      "ownedBy": "所有状況",
+      "notOwned": "未所持",
+      "owned": "所持",
+      "availabilityBy": "入手経路",
+      "standard": "恒常",
+      "limited": "限定",
+      "deploymentBy": "配置場所",
+      "lowGround": "地上",
+      "highGround": "高台",
+      "bothGround": "両方",
+      "releaseBy": "実装時期",
+      "year2021": "2021年",
+      "year2022": "2022年",
+      "year2023": "2023年",
+      "aniv0.5": "HA指名スカウト",
+      "aniv1.0": "1周年指名スカウト",
+      "aniv1.5": "1.5周年指名スカウト",
+      "aniv2.0": "2周年指名スカウト(暫定)"
+    },
+    "message": {
+      "saved": "保存しました。",
+      "copiedShareLink": "共有リンクをクリップボードにコピーしました。",
+      "failedCopyShareLink": "共有リンクのコピーに失敗しました。"
+    },
+    "text": {
+      "overall": "所持率",
+      "resources": "データ参照",
+      "respect": "リスペクト",
+      "author": "作った人"
+    },
+    "link": {
+      "checker": "所持率チェッカー",
+      "gachasimu": "ガチャシミュレータ",
+      "generator": "会話ジェネレータ"
+    }
+  }
+}

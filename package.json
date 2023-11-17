@@ -1,0 +1,42 @@
+{
+  "name": "anados-checker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^5.2.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.17",
+    "@types/react-dom": "18.2.7",
+    "@vercel/postgres-kysely": "^0.4.1",
+    "dayjs": "^1.11.9",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "i18next": "^23.4.1",
+    "js-yaml": "^4.1.0",
+    "kysely": "^0.26.1",
+    "lodash.throttle": "^4.1.1",
+    "mersennetwister": "^0.2.3",
+    "next": "13.4.12",
+    "next-i18next": "^14.0.0",
+    "normalize.css": "^8.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "^13.0.3",
+    "shortid": "^2.2.16",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "@types/lodash.throttle": "^4.1.7",
+    "@types/mersennetwister": "^0.2.0",
+    "@types/shortid": "^0.0.29"
+  }
+}

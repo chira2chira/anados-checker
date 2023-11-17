@@ -1,0 +1,49 @@
+{
+  "title": "AnotherEidos Collection Tracker",
+  "description": "AnotherEidos collection tracker tool. You can manage the ownership status of characters and share it with other people.",
+  "ui": {
+    "button": {
+      "save": "Save",
+      "getShareLink": "Generate Share URL",
+      "checkAll": "Select All",
+      "uncheckAll": "Deselect All",
+      "spoilerFilter": "Hide Story Spoiler"
+    },
+    "filter": {
+      "ownedBy": "By Owned",
+      "notOwned": "Not Owned",
+      "owned": "Owned",
+      "availabilityBy": "Availability",
+      "standard": "Standard",
+      "limited": "Limited",
+      "deploymentBy": "Deployment",
+      "lowGround": "Low Ground",
+      "highGround": "High Ground",
+      "bothGround": "Both",
+      "releaseBy": "Release Year",
+      "year2021": "2021",
+      "year2022": "2022",
+      "year2023": "2023",
+      "aniv0.5": "The Half-Anniv Adventurer Scout",
+      "aniv1.0": "1st Adventurer Scout",
+      "aniv1.5": "1.5 Year Anniv Adventurer Scout",
+      "aniv2.0": "2nd Anniv Adventurer Scout (Temporary)"
+    },
+    "message": {
+      "saved": "Saved.",
+      "copiedShareLink": "Share URL Copied.",
+      "failedCopyShareLink": "Failed to Copy Share Link."
+    },
+    "text": {
+      "overall": "Overall",
+      "resources": "Resources",
+      "respect": "Respected",
+      "author": "Author"
+    },
+    "link": {
+      "checker": "Collection Tracker",
+      "gachasimu": "Gacha Simulator",
+      "generator": "Text Generator"
+    }
+  }
+}
