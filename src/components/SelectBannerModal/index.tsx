@@ -22,25 +22,47 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
           css={css`
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
           `}
         >
           {[...props.gachaInfo].reverse().map((x) => (
-            <a key={x.id} onClick={() => props.onSelect(x)}>
-              <div>
-                {isJa ? x.nameJa : x.nameEn}
-                <br />
-                {dayjs(x.start).format("YYYY/M/D")}
-                {" - "}
-                {dayjs(x.end).format("YYYY/M/D")}
-              </div>
-              <img
+            <a
+              key={x.id}
+              onClick={() => props.onSelect(x)}
+              css={css`
+                display: flex;
+                flex-direction: row;
+              `}
+            >
+              <div
                 css={css`
-                  max-width: 100%;
+                  margin-left: -4px;
+                  margin-right: 5px;
+                  width: 8px;
+                  border-radius: 4px;
+                  background-color: #738091;
                 `}
-                src={`/static/image/banner/${x.id}.png`}
-                alt={isJa ? x.nameJa : x.nameEn}
               />
+              <div>
+                <div
+                  css={css`
+                    margin-left: 3px;
+                  `}
+                >
+                  {isJa ? x.nameJa : x.nameEn}
+                  <br />
+                  {dayjs(x.start).format("YYYY/M/D")}
+                  {" - "}
+                  {dayjs(x.end).format("YYYY/M/D")}
+                </div>
+                <img
+                  css={css`
+                    max-width: 100%;
+                  `}
+                  src={`/static/image/banner/${x.id}.png`}
+                  alt={isJa ? x.nameJa : x.nameEn}
+                />
+              </div>
             </a>
           ))}
         </div>
