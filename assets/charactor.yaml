@@ -1419,3 +1419,21 @@
   limited: false
   release: 11/10/2023
   image: 90px-FS_ala’ad-din.png
+- id: 167
+  nameJa: ダンジョンボス ゼベク
+  nameEn: Dungeon Boss Sebek
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: true
+  release: 11/24/2023
+  image: 90px-FS_sebek_(awakened).png
+- id: 168
+  nameJa: 蜃気楼の召喚士 シールズ
+  nameEn: Summoner of Mirages Seals
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: true
+  release: 11/24/2023
+  image: 90px-FS_seals_(awakened).png
