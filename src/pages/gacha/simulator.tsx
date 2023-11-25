@@ -70,7 +70,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
 
   useEffect(() => {
     handleClear();
-  }, [banner.id])
+  }, [banner.id]);
 
   function getRarityPer(rarity: number) {
     const per =
@@ -157,7 +157,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
             max-width: 100%;
             margin-bottom: 2px;
           `}
-          src={`/static/image/banner/${banner.id}.png`}
+          src={`/static/image/banner/${isJa ? "ja" : "en"}/${banner.id}.png`}
           alt={isJa ? banner.nameJa : banner.nameEn}
         />
         <div
