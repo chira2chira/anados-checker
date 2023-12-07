@@ -127,13 +127,13 @@ function filterReleaseChar(filter: string) {
             : dayjs(char.release).isBefore(dayjs("2023/6/23")))
         );
       case "aniv2.0":
-        // 仮
+        // https://anothereidos-r.info/news/casino_01/
         if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
         return (
           char.rarity >= 4 &&
           (char.limited
-            ? dayjs(char.release).isBefore(dayjs("2023/6/24"))
-            : dayjs(char.release).isBefore(dayjs("2023/12/24")))
+            ? dayjs(char.release).isBefore(dayjs("2023/6/25"))
+            : dayjs(char.release).isBefore(dayjs("2023/12/23")))
         );
     }
   };
