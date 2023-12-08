@@ -13,7 +13,8 @@
       "pull1": "1 Time",
       "pull10": "10 Times",
       "clear": "Clear Results",
-      "rate": "Appearance Rate"
+      "rate": "Appearance Rate",
+      "highlightPu": "Highlight the pick-up"
     }
   }
 }

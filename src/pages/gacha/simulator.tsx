@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
-import { Button, Tooltip } from "@blueprintjs/core";
+import { Button, Checkbox, Tooltip } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { CharInfo } from "..";
 import { loadGachaMaster } from "@/utils/yamlUtil";
@@ -63,6 +63,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   const banner = getBanner(props.gachaInfo, id);
   const [openSelectBanner, setOpenSelectBanner] = useState(false);
   const [openRateList, setOpenRateList] = useState(false);
+  const [highlightPu, setHighlightPu] = useState(false);
   const [pullResult, setPullResult] = useState<CharInfoPu[]>([]);
   const [pullHistory, setPullHistory] = useState<CharInfoPu[]>([]);
   const { t, i18n } = useTranslation("gacha");
@@ -220,7 +221,11 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
             `}
           >
             {pullResult.map((x, i) => (
-              <CharacterImage key={`${i}:${x.id}`} char={x} />
+              <CharacterImage
+                key={`${i}:${x.id}`}
+                highlightPu={highlightPu}
+                char={x}
+              />
             ))}
           </div>
           <div
@@ -229,12 +234,42 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
               flex-direction: column;
               gap: 10px;
               width: 100%;
+              margin-bottom: 10px;
             `}
           >
-            <HistoryArea rarity={6} pullHistory={pullHistory} />
-            <HistoryArea rarity={5} pullHistory={pullHistory} />
-            <HistoryArea rarity={4} pullHistory={pullHistory} />
-            <HistoryArea rarity={3} pullHistory={pullHistory} />
+            <HistoryArea
+              rarity={6}
+              highlightPu={highlightPu}
+              pullHistory={pullHistory}
+            />
+            <HistoryArea
+              rarity={5}
+              highlightPu={highlightPu}
+              pullHistory={pullHistory}
+            />
+            <HistoryArea
+              rarity={4}
+              highlightPu={highlightPu}
+              pullHistory={pullHistory}
+            />
+            <HistoryArea
+              rarity={3}
+              highlightPu={highlightPu}
+              pullHistory={pullHistory}
+            />
+          </div>
+
+          <div
+            css={css`
+              display: flex;
+              justify-content: flex-start;
+            `}
+          >
+            <Checkbox
+              checked={highlightPu}
+              label={t("ui.button.highlightPu")}
+              onClick={() => setHighlightPu(!highlightPu)}
+            />
           </div>
         </>
       )}
@@ -257,6 +292,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
 
 type HistoryAreaProps = {
   rarity: number;
+  highlightPu: boolean;
   pullHistory: CharInfoPu[];
 };
 
@@ -289,6 +325,7 @@ const HistoryArea: React.FC<HistoryAreaProps> = (props) => {
           <CharacterImage
             key={y.id}
             char={y}
+            highlightPu={props.highlightPu}
             count={charList.filter((x) => x.id === y.id).length}
           />
         ))}
@@ -299,6 +336,7 @@ const HistoryArea: React.FC<HistoryAreaProps> = (props) => {
 
 type CharacterImageProps = {
   char: CharInfoPu;
+  highlightPu: boolean;
   count?: number;
 };
 
@@ -329,6 +367,7 @@ const CharacterImage: React.FC<CharacterImageProps> = (props) => {
           border-radius: 2px;
           background-color: ${getRarityColor(char.rarity)};
           line-height: 0;
+          opacity: ${props.highlightPu && !props.char.pickUp ? 0.4 : 1};
         `}
       >
         <img
