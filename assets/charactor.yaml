@@ -1437,3 +1437,30 @@
   limited: true
   release: 11/24/2023
   image: 90px-FS_seals_(awakened).png
+- id: 169
+  nameJa: ドミノ
+  nameEn: Domino
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 12/8/2023
+  image: 90px-FS_domino.png
+- id: 170
+  nameJa: ブラックバニー ウォルサー
+  nameEn: Bunnyboy Walther
+  rarity: 6
+  class: healer
+  deployment: high
+  limited: true
+  release: 12/8/2023
+  image: 90px-FS_walther_(awakened).png
+- id: 171
+  nameJa: 闇夜を駆けるはぐれ刑事 バーリッツ
+  nameEn: Lone Detective Dashing Through the Dark Barlitz
+  rarity: 6
+  class: shooter
+  deployment: high
+  limited: true
+  release: 12/8/2023
+  image: 90px-FS_barlitz_(awakened).png
