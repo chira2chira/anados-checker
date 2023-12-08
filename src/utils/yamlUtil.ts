@@ -90,7 +90,7 @@ export function loadGachaMaster() {
           }
           return {
             id,
-            weight: Math.round(accum * 100_000) / 100_000, // 小数点第5位で四捨五入
+            weight: Math.round(accum * 1_000_000) / 1_000_000, // 小数点第6位で四捨五入
           };
         }),
       };
