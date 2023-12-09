@@ -183,8 +183,8 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
       <div
         css={css`
           display: flex;
-          gap: 10px;
-          margin-bottom: 5px;
+          gap: 12px;
+          margin-bottom: 8px;
         `}
       >
         <Button onClick={handle1pull} intent="primary">
@@ -217,6 +217,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
               gap: 3px;
               margin-bottom: 20px;
               padding: 8px;
+              border: 1px solid #454545;
               background-color: #252a31;
             `}
           >
