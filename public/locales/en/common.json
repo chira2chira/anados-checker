@@ -27,7 +27,8 @@
       "aniv0.5": "The Half-Anniv Adventurer Scout",
       "aniv1.0": "1st Adventurer Scout",
       "aniv1.5": "1.5 Year Anniv Adventurer Scout",
-      "aniv2.0": "2nd Anniv Adventurer Scout"
+      "aniv2.0": "2nd Anniv Adventurer Scout",
+      "aniv2.5": "2.5 Year Anniv Adventurer Scout (Temporary)"
     },
     "message": {
       "saved": "Saved.",

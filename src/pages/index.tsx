@@ -135,6 +135,15 @@ function filterReleaseChar(filter: string) {
             ? dayjs(char.release).isBefore(dayjs("2023/6/25"))
             : dayjs(char.release).isBefore(dayjs("2023/12/23")))
         );
+      case "aniv2.5":
+        // 仮
+        if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
+        return (
+          char.rarity >= 4 &&
+          (char.limited
+            ? dayjs(char.release).isBefore(dayjs("2023/12/23"))
+            : dayjs(char.release).isBefore(dayjs("2024/6/22")))
+        );
     }
   };
 }
@@ -411,6 +420,7 @@ const Home: NextPage<HomeProps> = (props) => {
               <option value="2023">{t("ui.filter.year2023")}</option>
               <option value="aniv1.5">{t("ui.filter.aniv1.5")}</option>
               <option value="aniv2.0">{t("ui.filter.aniv2.0")}</option>
+              <option value="aniv2.5">{t("ui.filter.aniv2.5")}</option>
             </FilterSelect>
           </div>
 
