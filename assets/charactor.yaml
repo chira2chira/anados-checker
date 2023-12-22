@@ -1464,3 +1464,48 @@
   limited: true
   release: 12/8/2023
   image: 90px-FS_barlitz_(awakened).png
+- id: 172
+  nameJa: ゴージャスドリーム エドガー
+  nameEn: Dreams of Luxury Edgar
+  rarity: 5
+  class: healer
+  deployment: high
+  limited: true
+  release: 12/22/2023
+  image: 90px-FS_edgar_(awakened).png
+- id: 173
+  nameJa: マフィアブラザーズ ビルフォード
+  nameEn: Mafia Brothers Billford
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: true
+  release: 12/22/2023
+  image: 90px-FS_billford_(awakened).png
+- id: 174
+  nameJa: イカサマ勝負師 バカラ
+  nameEn: Conning Cony Baccarat
+  rarity: 6
+  class: support
+  deployment: high
+  limited: true
+  release: 12/22/2023
+  image: 90px-FS_baccarat_(awakened).png
+- id: 175
+  nameJa: ギャンブラー
+  nameEn: Gambler
+  rarity: 1
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 12/22/2023
+  image: 90px-FS_gambler.png
+- id: 176
+  nameJa: カジノSP
+  nameEn: Casino Security
+  rarity: 1
+  class: fighter
+  deployment: low
+  limited: false
+  release: 12/22/2023
+  image: 90px-FS_casino_security.png
