@@ -243,14 +243,6 @@ const Home: NextPage<HomeProps> = (props) => {
     }
   };
 
-  const handleChangeLocale: React.ChangeEventHandler<HTMLSelectElement> = (
-    e
-  ) => {
-    push("/" + e.currentTarget.value + asPath, undefined, {
-      locale: e.currentTarget.value,
-    });
-  };
-
   const handleSave = () => {
     window.localStorage.setItem(CHAR_KEY, owned.join(","));
     TopToaster?.show({
