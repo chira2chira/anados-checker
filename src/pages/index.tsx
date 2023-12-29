@@ -102,6 +102,8 @@ function filterReleaseChar(filter: string) {
         return dayjs(char.release).year() === 2022;
       case "2023":
         return dayjs(char.release).year() === 2023;
+      case "2024":
+        return dayjs(char.release).year() === 2024;
       case "aniv0.5":
         // https://anothereidos-r.info/news/pnote201/
         if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
@@ -410,6 +412,7 @@ const Home: NextPage<HomeProps> = (props) => {
               <option value="2021">{t("ui.filter.year2021")}</option>
               <option value="2022">{t("ui.filter.year2022")}</option>
               <option value="2023">{t("ui.filter.year2023")}</option>
+              <option value="2024">{t("ui.filter.year2024")}</option>
               <option value="aniv1.5">{t("ui.filter.aniv1.5")}</option>
               <option value="aniv2.0">{t("ui.filter.aniv2.0")}</option>
               <option value="aniv2.5">{t("ui.filter.aniv2.5")}</option>
