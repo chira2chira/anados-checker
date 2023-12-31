@@ -1509,3 +1509,21 @@
   limited: false
   release: 12/22/2023
   image: 90px-FS_casino_security.png
+- id: 177
+  nameJa: シャオロン
+  nameEn: Xiaolong
+  rarity: 5
+  class: healer
+  deployment: high
+  limited: false
+  release: 1/1/2024
+  image: 90px-FS_xiaolong.png
+- id: 178
+  nameJa: テンゴ
+  nameEn: Tengo
+  rarity: 6
+  class: caster
+  deployment: high
+  limited: false
+  release: 1/1/2024
+  image: 90px-FS_tengo.png
