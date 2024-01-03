@@ -413,7 +413,6 @@ const Home: NextPage<HomeProps> = (props) => {
               <option value="2022">{t("ui.filter.year2022")}</option>
               <option value="2023">{t("ui.filter.year2023")}</option>
               <option value="2024">{t("ui.filter.year2024")}</option>
-              <option value="aniv1.5">{t("ui.filter.aniv1.5")}</option>
               <option value="aniv2.0">{t("ui.filter.aniv2.0")}</option>
               <option value="aniv2.5">{t("ui.filter.aniv2.5")}</option>
             </FilterSelect>
