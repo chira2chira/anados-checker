@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { Dialog, DialogBody } from "@blueprintjs/core";
 import { css } from "@emotion/react";
@@ -38,7 +39,7 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
                 css={css`
                   margin-left: -4px;
                   margin-right: 5px;
-                  width: 8px;
+                  width: 3px;
                   border-radius: 4px;
                   background-color: #738091;
                 `}
@@ -55,12 +56,15 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
                   {" - "}
                   {dayjs(x.end).format("YYYY/M/D")}
                 </div>
-                <img
+                <Image
                   css={css`
                     max-width: 100%;
+                    height: auto;
                   `}
                   src={`/static/image/banner/${isJa ? "ja" : "en"}/${x.id}.png`}
                   alt={isJa ? x.nameJa : x.nameEn}
+                  width={449}
+                  height={86}
                 />
               </div>
             </a>

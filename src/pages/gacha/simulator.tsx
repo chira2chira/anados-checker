@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from "next";
 import { useRouter } from "next/router";
+import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
@@ -153,13 +154,16 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
           max-width: 480px;
         `}
       >
-        <img
+        <Image
           css={css`
             max-width: 100%;
+            height: auto;
             margin-bottom: 2px;
           `}
           src={`/static/image/banner/${isJa ? "ja" : "en"}/${banner.id}.png`}
           alt={isJa ? banner.nameJa : banner.nameEn}
+          width={480}
+          height={91}
         />
         <div
           css={css`
