@@ -201,9 +201,23 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
           margin-bottom: 10px;
         `}
       >
-        {t("ui.text.pullCount")}: {pullHistory.length} ({t("ui.text.usedStone")}
-        : {pullHistory.length * 4}
-        )<br />
+        <div
+          css={css`
+            display: flex;
+            align-items: center;
+          `}
+        >
+          {t("ui.text.pullCount")}: {pullHistory.length} (
+          {t("ui.text.usedStone")}: {pullHistory.length * 4}
+          <img
+            src="/static/image/common/stone.png"
+            alt="龍脈石"
+            width="15px"
+            height="15px"
+            style={{ margin: "0 3px 0 5px" }}
+          />
+          )
+        </div>
         ★6: {getRarityPer(6)}%, ★5: {getRarityPer(5)}%, PU: {getPuPer()}%
       </div>
 

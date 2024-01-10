@@ -3,7 +3,7 @@
   "ui": {
     "text": {
       "pullCount": "Pulls",
-      "usedStone": "Stones Used",
+      "usedStone": "Total Spent",
       "pickupRate": "Pick-Up Rates",
       "standardRate": "Standard Rates",
       "limited": "Limited"
