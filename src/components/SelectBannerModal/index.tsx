@@ -12,6 +12,14 @@ type SelectBannerModal = {
   onClose: () => void;
 };
 
+const leftLine = css`
+  margin-left: -4px;
+  margin-right: 5px;
+  width: 3px;
+  border-radius: 4px;
+  background-color: #738091;
+`;
+
 export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
   const { t, i18n } = useTranslation("gacha");
   const isJa = i18n.language === "ja";
@@ -33,17 +41,13 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
               css={css`
                 display: flex;
                 flex-direction: row;
+
+                &:hover ${".css-" + leftLine.name} {
+                  background-color: #68C1EE;
+                }
               `}
             >
-              <div
-                css={css`
-                  margin-left: -4px;
-                  margin-right: 5px;
-                  width: 3px;
-                  border-radius: 4px;
-                  background-color: #738091;
-                `}
-              />
+              <div css={leftLine} />
               <div>
                 <div
                   css={css`
