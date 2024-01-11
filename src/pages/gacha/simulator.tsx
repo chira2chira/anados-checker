@@ -216,8 +216,8 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
           <img
             src="/static/image/common/stone.png"
             alt="龍脈石"
-            width="15px"
-            height="15px"
+            width="18px"
+            height="18px"
             style={{ margin: "0 3px 0 5px" }}
           />
           )
