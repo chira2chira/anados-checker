@@ -1527,3 +1527,21 @@
   limited: false
   release: 1/1/2024
   image: 90px-FS_tengo.png
+- id: 179
+  nameJa: ハバキ
+  nameEn: Habaki
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: false
+  release: 1/12/2024
+  image: 90px-FS_habaki.png
+- id: 180
+  nameJa: 男の花道 コンゴウ
+  nameEn: Flourishing Virility Kongoh
+  rarity: 6
+  class: support
+  deployment: high
+  limited: true
+  release: 1/12/2024
+  image: 90px-FS_kongoh_(awakened).png
