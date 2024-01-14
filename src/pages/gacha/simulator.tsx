@@ -160,7 +160,10 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
             height: auto;
             margin-bottom: 2px;
           `}
-          src={`/static/image/banner/${isJa ? "ja" : "en"}/main/${banner.id}.png`}
+          priority
+          src={`/static/image/banner/${isJa ? "ja" : "en"}/main/${
+            banner.id
+          }.png`}
           alt={isJa ? banner.nameJa : banner.nameEn}
           width={770}
           height={433}
