@@ -14,6 +14,7 @@ import { Container } from "@/components/Container";
 import { SelectBannerModal } from "@/components/SelectBannerModal";
 import { RateListModal } from "@/components/RateListModal";
 import { sendEvent } from "@/utils/gtag";
+import { getBannerPlaceholder } from "@/utils/placeholder";
 
 type CharWeight = {
   id: number;
@@ -44,6 +45,10 @@ export type GachaInfo = {
 type GachaSimulatorProps = {
   charInfo: CharInfo[];
   gachaInfo: GachaInfo[];
+  banner: {
+    ja: { [key: number]: string };
+    en: { [key: number]: string };
+  };
 };
 
 type CharInfoPu = CharInfo & {
@@ -164,6 +169,8 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
           src={`/static/image/banner/${isJa ? "ja" : "en"}/main/${
             banner.id
           }.png`}
+          blurDataURL={props.banner[isJa ? "ja" : "en"][banner.id]}
+          placeholder="blur"
           alt={isJa ? banner.nameJa : banner.nameEn}
           width={770}
           height={433}
@@ -448,12 +455,14 @@ export const getStaticProps: GetStaticProps<GachaSimulatorProps> = async (
   context
 ) => {
   const { charInfo, gachaInfo } = loadGachaMaster();
+  const banner = await getBannerPlaceholder(gachaInfo.map((x) => x.id));
 
   return {
     props: {
       ...(await serverSideTranslations(context.locale!, ["common", "gacha"])),
       charInfo,
       gachaInfo,
+      banner,
     },
   };
 };
