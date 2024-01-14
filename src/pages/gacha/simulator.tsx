@@ -151,7 +151,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
           flex-direction: column;
           align-items: center;
           margin-bottom: 30px;
-          max-width: 480px;
+          max-width: 55em;
         `}
       >
         <Image
@@ -160,10 +160,10 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
             height: auto;
             margin-bottom: 2px;
           `}
-          src={`/static/image/banner/${isJa ? "ja" : "en"}/${banner.id}.png`}
+          src={`/static/image/banner/${isJa ? "ja" : "en"}/main/${banner.id}.png`}
           alt={isJa ? banner.nameJa : banner.nameEn}
-          width={480}
-          height={91}
+          width={770}
+          height={433}
         />
         <div
           css={css`

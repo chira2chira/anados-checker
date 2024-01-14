@@ -65,7 +65,7 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
                     max-width: 100%;
                     height: auto;
                   `}
-                  src={`/static/image/banner/${isJa ? "ja" : "en"}/${x.id}.png`}
+                  src={`/static/image/banner/${isJa ? "ja" : "en"}/header/${x.id}.png`}
                   alt={isJa ? x.nameJa : x.nameEn}
                   width={449}
                   height={86}
