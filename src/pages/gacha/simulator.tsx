@@ -155,6 +155,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
         `}
       >
         <Image
+          key={Number(isJa) + ":" + banner.id}
           css={css`
             max-width: 100%;
             height: auto;
