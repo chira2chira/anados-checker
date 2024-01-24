@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button, Checkbox, Tooltip } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { CharInfo } from "..";
@@ -12,7 +12,7 @@ import { gacha } from "@/utils/gacha";
 import { displayCharClass } from "@/utils/stringUtil";
 import { Container } from "@/components/Container";
 import { SelectBannerModal } from "@/components/SelectBannerModal";
-import { RateListModal } from "@/components/RateListModal";
+import { RateListModal, calcPickUpRate } from "@/components/RateListModal";
 import { sendEvent } from "@/utils/gtag";
 
 type CharWeight = {
@@ -50,6 +50,16 @@ type CharInfoPu = CharInfo & {
   pickUp: boolean;
 };
 
+const winStyle = css`
+  color: #fbd065;
+  font-weight: 600;
+`;
+
+const loseStyle = css`
+  color: #d69fd6;
+  font-weight: 600;
+`;
+
 function getBanner(gachaInfo: GachaInfo[], id: any) {
   if (typeof id === "string") {
     const b = gachaInfo.find((x) => x.id.toString() === id);
@@ -78,17 +88,33 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
     const per =
       pullHistory.filter((x) => x.rarity === rarity).length /
       pullHistory.length;
-    if (isNaN(per)) return "-";
+    if (isNaN(per)) return "-%";
 
-    return Math.round(per * 1000) / 10;
+    let rarityWeight = banner.weight.find((x) => x.rarity === rarity)!.weight;
+    rarityWeight += banner.pickUp.reduce((prev, current) => {
+      const char = props.charInfo.find((y) => y.nameJa === current.name)!;
+      return prev + (char.rarity === rarity ? current.weight : 0);
+    }, 0);
+
+    const style = per >= rarityWeight ? winStyle : loseStyle;
+    return <span css={style}>{Math.round(per * 1000) / 10}%</span>;
   }
 
   function getPuPer() {
     const per = pullHistory.filter((x) => x.pickUp).length / pullHistory.length;
-    if (isNaN(per)) return "-";
+    if (isNaN(per)) return "-%";
 
-    return Math.round(per * 1000) / 10;
+    const style = per >= puWeight ? winStyle : loseStyle;
+    return <span css={style}>{Math.round(per * 1000) / 10}%</span>;
   }
+  const puWeight = useMemo(
+    () =>
+      banner.pickUp.reduce((prev, current) => {
+        const char = props.charInfo.find((y) => y.nameJa === current.name)!;
+        return prev + calcPickUpRate(char, banner)! / 100;
+      }, 0),
+    [banner, props.charInfo]
+  );
 
   function nPull(n: number) {
     sendEvent({
@@ -227,7 +253,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
           />
           )
         </div>
-        ★6: {getRarityPer(6)}%, ★5: {getRarityPer(5)}%, PU: {getPuPer()}%
+        ★6: {getRarityPer(6)}, ★5: {getRarityPer(5)}, PU: {getPuPer()}
       </div>
 
       {pullHistory.length !== 0 && (

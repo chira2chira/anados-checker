@@ -11,7 +11,7 @@ type RateListModal = {
   onClose: () => void;
 };
 
-function calcPickUpRate(charInfo: CharInfo, gacha: GachaInfo) {
+export function calcPickUpRate(charInfo: CharInfo, gacha: GachaInfo) {
   let prevWeight = 0;
   for (const char of gacha.pool) {
     if (char.id === charInfo.id) {
