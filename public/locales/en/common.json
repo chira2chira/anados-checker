@@ -34,7 +34,8 @@
     "message": {
       "saved": "Saved.",
       "copiedShareLink": "Share URL Copied.",
-      "failedCopyShareLink": "Failed to Copy Share Link."
+      "failedCopyShareLink": "Failed to Copy Share Link.",
+      "copyToClipboard": "Copy to Clipboard"
     },
     "text": {
       "overall": "Overall",

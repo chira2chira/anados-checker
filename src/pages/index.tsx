@@ -4,7 +4,13 @@ import { loadCharactors } from "@/utils/yamlUtil";
 import CharacterList from "@/components/CharacterList";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { css } from "@emotion/react";
-import { Button, ButtonGroup, Checkbox, InputGroup } from "@blueprintjs/core";
+import {
+  Button,
+  ButtonGroup,
+  Checkbox,
+  InputGroup,
+  Tooltip,
+} from "@blueprintjs/core";
 import ClassButton from "@/components/ClassButton";
 import FilterSelect from "@/components/FilterSelect";
 import dayjs from "dayjs";
@@ -315,6 +321,7 @@ const Home: NextPage<HomeProps> = (props) => {
   const handleClipboardCopy = () => {
     shareUrlElm.current?.select();
     document.execCommand("copy");
+    setShareUrl("");
     TopToaster?.show({
       intent: "success",
       message: t("ui.message.copiedShareLink"),
@@ -539,20 +546,28 @@ const Home: NextPage<HomeProps> = (props) => {
             <InputGroup
               css={css`
                 width: 180px;
+                border: 1px solid #5f6b7c;
+                border-radius: 2px;
               `}
               inputRef={shareUrlElm}
               value={shareUrl}
               readOnly
-              intent="success"
               rightElement={
-                <Button
-                  css={css`
-                    width: 40px;
-                  `}
-                  intent="success"
-                  icon="clipboard"
-                  onClick={handleClipboardCopy}
-                />
+                <Tooltip
+                  compact
+                  content={t("ui.message.copyToClipboard")}
+                  position="bottom-right"
+                  defaultIsOpen={true}
+                >
+                  <Button
+                    css={css`
+                      width: 40px;
+                    `}
+                    intent="success"
+                    icon="clipboard"
+                    onClick={handleClipboardCopy}
+                  />
+                </Tooltip>
               }
             />
           ) : (
