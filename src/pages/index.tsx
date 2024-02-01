@@ -548,6 +548,7 @@ const Home: NextPage<HomeProps> = (props) => {
                 width: 180px;
                 border: 1px solid #5f6b7c;
                 border-radius: 2px;
+                direction: rtl;
               `}
               inputRef={shareUrlElm}
               value={shareUrl}
