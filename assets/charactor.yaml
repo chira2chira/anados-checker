@@ -1545,3 +1545,21 @@
   limited: true
   release: 1/12/2024
   image: 90px-FS_kongoh_(awakened).png
+- id: 181
+  nameJa: 酔狂の夢路 ライ
+  nameEn: Capricious Dreamer Rai
+  rarity: 6
+  class: support
+  deployment: high
+  limited: true
+  release: 2/2/2024
+  image: 90px-FS_rai_(awakened).png
+- id: 182
+  nameJa: 伝説の色本作家 フウ
+  nameEn: Wordsmith of Erotica Fu
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 2/2/2024
+  image: 90px-FS_fu_(awakened).png
