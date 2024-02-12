@@ -1,4 +1,5 @@
 - id: 1
+  unitId: 1
   nameJa: ガイア
   nameEn: Gaia
   rarity: 0
@@ -7,6 +8,7 @@
   limited: false
   image: 90px-FS_gaia.png
 - id: 2
+  unitId: 1001
   nameJa: ゴブリンアーチャー
   nameEn: Goblin Archer
   rarity: 1
@@ -15,6 +17,7 @@
   limited: false
   image: 90px-FS_goblin_archer.png
 - id: 3
+  unitId: 1002
   nameJa: ゴブリンファイター
   nameEn: Goblin Fighter
   rarity: 1
@@ -23,6 +26,7 @@
   limited: false
   image: 90px-FS_goblin_fighter.png
 - id: 4
+  unitId: 1003
   nameJa: ゴブリンライダー
   nameEn: Goblin Rider
   rarity: 1
@@ -31,6 +35,7 @@
   limited: false
   image: 90px-FS_goblin_rider.png
 - id: 5
+  unitId: 1004
   nameJa: スカイゴブリン
   nameEn: Aerial Goblin
   rarity: 1
@@ -39,6 +44,7 @@
   limited: false
   image: 90px-FS_aerial_goblin.png
 - id: 6
+  unitId: 1005
   nameJa: メイジゴブリン
   nameEn: Mage Goblin
   rarity: 1
@@ -47,6 +53,7 @@
   limited: false
   image: 90px-FS_mage_goblin.png
 - id: 7
+  unitId: 1006
   nameJa: パイス・ブラン 弓兵
   nameEn: Pays Blanc Archer
   rarity: 1
@@ -55,6 +62,7 @@
   limited: false
   image: 75px-FS_pays_blanc_archer.png
 - id: 8
+  unitId: 1007
   nameJa: パイス・ブラン 兵士
   nameEn: Pays Blanc Soldier
   rarity: 1
@@ -63,6 +71,7 @@
   limited: false
   image: 90px-FS_pays_blanc_soldier.png
 - id: 9
+  unitId: 1008
   nameJa: パイス・ブラン 魔導兵
   nameEn: Pays Blanc Sorcerer
   rarity: 1
@@ -71,6 +80,7 @@
   limited: false
   image: 90px-FS_pays_blanc_sorcerer.png
 - id: 10
+  unitId: 1009
   nameJa: バリスタ野盗
   nameEn: Bandit Ballista
   rarity: 1
@@ -79,6 +89,7 @@
   limited: false
   image: 90px-FS_bandit_ballista.png
 - id: 11
+  unitId: 2001
   nameJa: 海賊衛生兵
   nameEn: Pirate Medic
   rarity: 2
@@ -87,6 +98,7 @@
   limited: false
   image: 90px-FS_pirate_medic.png
 - id: 12
+  unitId: 2002
   nameJa: 海賊剣兵
   nameEn: Pirate Swordsman
   rarity: 2
@@ -95,6 +107,7 @@
   limited: false
   image: 90px-FS_pirate_swordsman.png
 - id: 13
+  unitId: 2003
   nameJa: 海賊銃兵
   nameEn: Pirate Musketeer
   rarity: 2
@@ -103,6 +116,7 @@
   limited: false
   image: 90px-FS_pirate_musketeer.png
 - id: 14
+  unitId: 2004
   nameJa: 海賊魔導兵
   nameEn: Pirate Sorcerer
   rarity: 2
@@ -111,6 +125,7 @@
   limited: false
   image: 90px-FS_pirate_sorcerer.png
 - id: 15
+  unitId: 2005
   nameJa: オブシドニア帝国斧兵
   nameEn: Obsidonian Imperial Halberdier
   rarity: 2
@@ -119,6 +134,7 @@
   limited: false
   image: 90px-FS_obsidonian_imperial_halberdier.png
 - id: 16
+  unitId: 2006
   nameJa: オブシドニア帝国 騎兵
   nameEn: Obsidonian Imperial Cavalry
   rarity: 2
@@ -127,6 +143,7 @@
   limited: false
   image: 90px-FS_obsidonian_imperial_cavalry.png
 - id: 17
+  unitId: 2007
   nameJa: オプシドニア帝国弩兵
   nameEn: Obsidonian Imperial Archer
   rarity: 2
@@ -135,6 +152,7 @@
   limited: false
   image: 90px-FS_obsidonian_imperial_archer.png
 - id: 18
+  unitId: 2008
   nameJa: オブシドニア帝国砲兵
   nameEn: Imperial Artillery Soldier
   rarity: 2
@@ -143,6 +161,7 @@
   limited: false
   image: 90px-FS_imperial_artillery_soldier.png
 - id: 19
+  unitId: 2009
   nameJa: マミー
   nameEn: Mummy
   rarity: 2
@@ -151,6 +170,7 @@
   limited: false
   image: 90px-FS_mummy.png
 - id: 20
+  unitId: 2010
   nameJa: メイジマミー
   nameEn: Mage Mummy
   rarity: 2
@@ -159,6 +179,7 @@
   limited: false
   image: 90px-FS_mage_mummy.png
 - id: 21
+  unitId: 2011
   nameJa: アーチャーマミー
   nameEn: Archer Mummy
   rarity: 2
@@ -167,6 +188,7 @@
   limited: false
   image: 90px-FS_archer_mummy.png
 - id: 22
+  unitId: 2012
   nameJa: ビッグマミー
   nameEn: Large Mummy
   rarity: 2
@@ -175,6 +197,7 @@
   limited: false
   image: 90px-FS_large_mummy.png
 - id: 23
+  unitId: 2013
   nameJa: 赤忍者
   nameEn: Red Ninja
   rarity: 2
@@ -184,6 +207,7 @@
   release: 12/31/2022
   image: 90px-FS_red_ninja.png
 - id: 24
+  unitId: 2014
   nameJa: 青忍者
   nameEn: Blue Ninja
   rarity: 2
@@ -193,6 +217,7 @@
   release: 12/31/2022
   image: 90px-FS_blue_ninja.png
 - id: 25
+  unitId: 2015
   nameJa: 白忍者
   nameEn: Light Ninja
   rarity: 2
@@ -202,6 +227,7 @@
   release: 12/31/2022
   image: 90px-FS_light_ninja.png
 - id: 26
+  unitId: 2016
   nameJa: 黒忍者
   nameEn: Dark Ninja
   rarity: 2
@@ -211,6 +237,7 @@
   release: 12/31/2022
   image: 90px-FS_dark_ninja.png
 - id: 27
+  unitId: 2018
   nameJa: スノーバンディット
   nameEn: Snow Bandit
   rarity: 2
@@ -220,6 +247,7 @@
   release: 3/24/2023
   image: 90px-FS_snow_bandit.png
 - id: 28
+  unitId: 2017
   nameJa: スノーウルフ
   nameEn: Snow Wolf
   rarity: 2
@@ -229,6 +257,7 @@
   release: 3/24/2023
   image: 90px-FS_snow_wolf.png
 - id: 29
+  unitId: 3001
   nameJa: アルカナ
   nameEn: Arcana
   rarity: 3
@@ -237,6 +266,7 @@
   limited: false
   image: 90px-FS_arcana.png
 - id: 30
+  unitId: 3002
   nameJa: エレーン
   nameEn: Elaine
   rarity: 3
@@ -245,6 +275,7 @@
   limited: false
   image: 90px-FS_elaine.png
 - id: 31
+  unitId: 3003
   nameJa: ギムノス
   nameEn: Gymnos
   rarity: 3
@@ -253,6 +284,7 @@
   limited: false
   image: 90px-FS_gymnos.png
 - id: 32
+  unitId: 3004
   nameJa: ダイン
   nameEn: Dyne
   rarity: 3
@@ -261,6 +293,7 @@
   limited: false
   image: 90px-FS_dyne.png
 - id: 33
+  unitId: 3005
   nameJa: バラン
   nameEn: Baran
   rarity: 3
@@ -269,6 +302,7 @@
   limited: false
   image: 90px-FS_baran.png
 - id: 34
+  unitId: 3006
   nameJa: バントゥ
   nameEn: Bantu
   rarity: 3
@@ -277,6 +311,7 @@
   limited: false
   image: 90px-FS_bantu.png
 - id: 35
+  unitId: 3007
   nameJa: フレット
   nameEn: Flet
   rarity: 3
@@ -285,6 +320,7 @@
   limited: false
   image: 90px-FS_flet.png
 - id: 36
+  unitId: 3008
   nameJa: シャルロッテ
   nameEn: Charlotte
   rarity: 3
@@ -293,6 +329,7 @@
   limited: false
   image: 75px-FS_charlotte.png
 - id: 37
+  unitId: 3009
   nameJa: ユルト
   nameEn: Yurt
   rarity: 3
@@ -301,6 +338,7 @@
   limited: false
   image: 90px-FS_yurt.png
 - id: 38
+  unitId: 3010
   nameJa: ロビン
   nameEn: Robin
   rarity: 3
@@ -309,6 +347,7 @@
   limited: false
   image: 90px-FS_robin.png
 - id: 39
+  unitId: 3011
   nameJa: アモレー
   nameEn: Amorey
   rarity: 3
@@ -317,6 +356,7 @@
   limited: false
   image: 90px-FS_amorey.png
 - id: 40
+  unitId: 3012
   nameJa: シールズ
   nameEn: Seals
   rarity: 3
@@ -325,6 +365,7 @@
   limited: false
   image: 90px-FS_seals.png
 - id: 41
+  unitId: 3013
   nameJa: コンゴウ
   nameEn: Kongoh
   rarity: 3
@@ -334,6 +375,7 @@
   release: 01/10/2022
   image: 90px-FS_kongoh.png
 - id: 42
+  unitId: 4001
   nameJa: カグラ
   nameEn: Kagura
   rarity: 4
@@ -342,6 +384,7 @@
   limited: false
   image: 90px-FS_kagura.png
 - id: 43
+  unitId: 4002
   nameJa: カレトビ
   nameEn: Karetovi
   rarity: 4
@@ -350,6 +393,7 @@
   limited: false
   image: 90px-FS_karetovi.png
 - id: 44
+  unitId: 4003
   nameJa: リュート
   nameEn: Lute
   rarity: 4
@@ -358,6 +402,7 @@
   limited: false
   image: 90px-FS_lute.png
 - id: 45
+  unitId: 4004
   nameJa: トルケル
   nameEn: Thorkell
   rarity: 4
@@ -366,6 +411,7 @@
   limited: false
   image: 90px-FS_thorkell.png
 - id: 46
+  unitId: 4005
   nameJa: ニトロ
   nameEn: Nitro
   rarity: 4
@@ -374,6 +420,7 @@
   limited: false
   image: 90px-FS_nitro.png
 - id: 47
+  unitId: 4006
   nameJa: パティ
   nameEn: Patty
   rarity: 4
@@ -382,6 +429,7 @@
   limited: false
   image: 90px-FS_patty.png
 - id: 48
+  unitId: 4007
   nameJa: フウ
   nameEn: Fu
   rarity: 4
@@ -390,6 +438,7 @@
   limited: false
   image: 90px-FS_fu.png
 - id: 49
+  unitId: 4008
   nameJa: プージ
   nameEn: Pugi
   rarity: 4
@@ -398,6 +447,7 @@
   limited: false
   image: 90px-FS_pugi.png
 - id: 50
+  unitId: 4009
   nameJa: ライ
   nameEn: Rai
   rarity: 4
@@ -406,6 +456,7 @@
   limited: false
   image: 90px-FS_rai.png
 - id: 51
+  unitId: 4010
   nameJa: レオンハート
   nameEn: Leonhart
   rarity: 4
@@ -414,6 +465,7 @@
   limited: false
   image: 90px-FS_leonhart.png
 - id: 52
+  unitId: 4011
   nameJa: オルニス
   nameEn: Ornis
   rarity: 4
@@ -422,6 +474,7 @@
   limited: false
   image: 90px-FS_ornis.png
 - id: 54
+  unitId: 4012
   nameJa: アレク
   nameEn: Alec
   rarity: 4
@@ -431,6 +484,7 @@
   release: 02/25/2022
   image: 90px-FS_alec_original.png
 - id: 55
+  unitId: 4013
   nameJa: リーサ
   nameEn: Lisa
   rarity: 4
@@ -440,6 +494,7 @@
   release: 04/28/2022
   image: 90px-FS_lisa.png
 - id: 56
+  unitId: 4014
   nameJa: ウォルサー
   nameEn: Walther
   rarity: 4
@@ -449,6 +504,7 @@
   release: 08/18/2022
   image: 90px-FS_walther.png
 - id: 57
+  unitId: 4015
   nameJa: カザード
   nameEn: Kazard
   rarity: 4
@@ -458,6 +514,7 @@
   release: 2/17/2023
   image: 90px-FS_kazard.png
 - id: 58
+  unitId: 5001
   nameJa: ルーク
   nameEn: Rook
   rarity: 5
@@ -466,6 +523,7 @@
   limited: false
   image: 90px-FS_rook.png
 - id: 59
+  unitId: 5002
   nameJa: ソル
   nameEn: Sol
   rarity: 5
@@ -474,6 +532,7 @@
   limited: false
   image: 90px-FS_sol.png
 - id: 60
+  unitId: 5003
   nameJa: ブルート
   nameEn: Brute
   rarity: 5
@@ -483,6 +542,7 @@
   release: 10/28/2022
   image: 90px-FS_brute.png
 - id: 61
+  unitId: 5004
   nameJa: ハルク
   nameEn: Hulk
   rarity: 5
@@ -491,6 +551,7 @@
   limited: false
   image: 75px-FS_hulk.png
 - id: 62
+  unitId: 5005
   nameJa: レッカー
   nameEn: Wrecker
   rarity: 5
@@ -499,6 +560,7 @@
   limited: false
   image: 90px-FS_wrecker.png
 - id: 63
+  unitId: 5006
   nameJa: モーガン
   nameEn: Morgan
   rarity: 5
@@ -507,6 +569,7 @@
   limited: false
   image: 90px-FS_morgan.png
 - id: 64
+  unitId: 5007
   nameJa: ヤブサハ
   nameEn: Yabsakha
   rarity: 5
@@ -515,6 +578,7 @@
   limited: false
   image: 90px-FS_yabsakha.png
 - id: 65
+  unitId: 5008
   nameJa: ラグナル
   nameEn: Ragnar
   rarity: 5
@@ -523,6 +587,7 @@
   limited: false
   image: 90px-FS_ragnar.png
 - id: 66
+  unitId: 5009
   nameJa: ロマネス
   nameEn: Romanes
   rarity: 5
@@ -531,6 +596,7 @@
   limited: false
   image: 90px-FS_romanes.png
 - id: 67
+  unitId: 5010
   nameJa: サルトビ
   nameEn: Sasuke Sarutobi
   rarity: 5
@@ -540,6 +606,7 @@
   release: 01/10/2022
   image: 90px-FS_sasuke_sarutobi.png
 - id: 68
+  unitId: 5011
   nameJa: ハンゾウ
   nameEn: Hanzo
   rarity: 5
@@ -549,6 +616,7 @@
   release: 01/10/2022
   image: 90px-FS_hanzo.png
 - id: 69
+  unitId: 5012
   nameJa: ハリマオ
   nameEn: Harimau
   rarity: 5
@@ -558,6 +626,7 @@
   release: 01/27/2022
   image: 90px-FS_harimau.png
 - id: 70
+  unitId: 5013
   nameJa: スタロン
   nameEn: Stalon
   rarity: 5
@@ -567,6 +636,7 @@
   release: 02/25/2022
   image: 90px-FS_stalon.png
 - id: 71
+  unitId: 5014
   nameJa: バーリッツ
   nameEn: Barlitz
   rarity: 5
@@ -576,6 +646,7 @@
   release: 3/31/2022
   image: 90px-FS_barlitz.png
 - id: 72
+  unitId: 5015
   nameJa: コルカ
   nameEn: Corca
   rarity: 5
@@ -585,6 +656,7 @@
   release: 4/15/2022
   image: 90px-FS_corca.png
 - id: 73
+  unitId: 5016
   nameJa: ロットハルト
   nameEn: Rothhart
   rarity: 5
@@ -594,6 +666,7 @@
   release: 05/20/2022
   image: 90px-FS_rothhart.png
 - id: 74
+  unitId: 5017
   nameJa: ベルゼブブ
   nameEn: Beelzebub
   rarity: 5
@@ -603,6 +676,7 @@
   release: 6/10/2022
   image: 90px-FS_beelzebub.png
 - id: 75
+  unitId: 5019
   nameJa: ゴルドフ
   nameEn: Gordov
   rarity: 5
@@ -612,6 +686,7 @@
   release: 07/15/2022
   image: 90px-FS_gordov.png
 - id: 76
+  unitId: 5020
   nameJa: ドワード
   nameEn: Dward
   rarity: 5
@@ -621,6 +696,7 @@
   release: 07/29/2022
   image: 90px-FS_dward.png
 - id: 77
+  unitId: 5021
   nameJa: ピオス
   nameEn: Pius
   rarity: 5
@@ -630,6 +706,7 @@
   release: 8/19/2022
   image: 90px-FS_pius.png
 - id: 78
+  unitId: 5027
   nameJa: シグヴァルディ
   nameEn: Sigvaldi
   rarity: 5
@@ -639,6 +716,7 @@
   release: 12/9/2022
   image: 90px-FS_sigvaldi.png
 - id: 79
+  unitId: 5028
   nameJa: バカラ
   nameEn: Baccarat
   rarity: 5
@@ -648,6 +726,7 @@
   release: 12/31/2022
   image: 90px-FS_baccarat.png
 - id: 80
+  unitId: 5029
   nameJa: カンクロウ
   nameEn: Kancrow
   rarity: 5
@@ -657,6 +736,7 @@
   release: 1/20/2023
   image: 90px-FS_kancrow.png
 - id: 81
+  unitId: 5031
   nameJa: ユーノ
   nameEn: Yuno
   rarity: 5
@@ -666,6 +746,7 @@
   release: 3/17/2023
   image: 90px-FS_yuno.png
 - id: 82
+  unitId: 5032
   nameJa: フォーカー
   nameEn: Folker
   rarity: 5
@@ -675,6 +756,7 @@
   release: 4/8/2023
   image: 90px-FS_folker.png
 - id: 83
+  unitId: 5034
   nameJa: マシュトラ
   nameEn: Maxtla
   rarity: 5
@@ -684,6 +766,7 @@
   release: 5/12/2023
   image: 90px-FS_maxtla.png
 - id: 84
+  unitId: 6001
   nameJa: ジンノスケ
   nameEn: Jinnosuke
   rarity: 6
@@ -692,6 +775,7 @@
   limited: false
   image: 90px-FS_jinnosuke.png
 - id: 85
+  unitId: 6002
   nameJa: ザハロフ
   nameEn: Zacharoff
   rarity: 6
@@ -700,6 +784,7 @@
   limited: false
   image: 90px-FS_zacharoff.png
 - id: 86
+  unitId: 6003
   nameJa: シドレー
   nameEn: Siddeley
   rarity: 6
@@ -708,6 +793,7 @@
   limited: false
   image: 90px-FS_siddeley.png
 - id: 87
+  unitId: 6004
   nameJa: ジャラム
   nameEn: Jalam
   rarity: 6
@@ -716,6 +802,7 @@
   limited: false
   image: 90px-FS_jalam.png
 - id: 88
+  unitId: 6005
   nameJa: テオドール
   nameEn: Theodor
   rarity: 6
@@ -724,6 +811,7 @@
   limited: false
   image: 90px-FS_theodor.png
 - id: 89
+  unitId: 6006
   nameJa: トーマス
   nameEn: Thomas
   rarity: 6
@@ -732,6 +820,7 @@
   limited: false
   image: 90px-FS_thomas.png
 - id: 90
+  unitId: 6007
   nameJa: バシュカー
   nameEn: Bashkar
   rarity: 6
@@ -740,6 +829,7 @@
   limited: false
   image: 90px-FS_bashkar.png
 - id: 91
+  unitId: 6008
   nameJa: バルト
   nameEn: Bart
   rarity: 6
@@ -748,6 +838,7 @@
   limited: false
   image: 90px-FS_bart.png
 - id: 92
+  unitId: 6009
   nameJa: ビルフォード
   nameEn: Billford
   rarity: 6
@@ -756,6 +847,7 @@
   limited: false
   image: 90px-FS_billford.png
 - id: 93
+  unitId: 6039
   nameJa: ディオン
   nameEn: Dion
   rarity: 6
@@ -765,6 +857,7 @@
   release: 3/3/2023
   image: 90px-FS_dion.png
 - id: 94
+  unitId: 6010
   nameJa: エドガー
   nameEn: Edgar
   rarity: 6
@@ -773,6 +866,7 @@
   limited: false
   image: 90px-FS_edgar.png
 - id: 95
+  unitId: 6011
   nameJa: ラショウ
   nameEn: Rasho
   rarity: 6
@@ -782,6 +876,7 @@
   release: 01/10/2022
   image: 90px-FS_rasho.png
 - id: 96
+  unitId: 6012
   nameJa: ピノ
   nameEn: Pino
   rarity: 6
@@ -791,6 +886,7 @@
   release: 01/27/2022
   image: 90px-FS_pino.png
 - id: 97
+  unitId: 6013
   nameJa: ダカール
   nameEn: Dakkar
   rarity: 6
@@ -800,6 +896,7 @@
   release: 01/27/2022
   image: 90px-FS_dakkar.png
 - id: 98
+  unitId: 6014
   nameJa: ヴェルンド
   nameEn: Volund
   rarity: 6
@@ -809,6 +906,7 @@
   release: 02/25/2022
   image: 90px-FS_volund.png
 - id: 99
+  unitId: 6015
   nameJa: エクウス
   nameEn: Equus
   rarity: 6
@@ -818,6 +916,7 @@
   release: 3/31/2022
   image: 90px-FS_equus.png
 - id: 100
+  unitId: 6016
   nameJa: ジェイド
   nameEn: Jade
   rarity: 6
@@ -827,6 +926,7 @@
   release: 4/15/2022
   image: 90px-FS_jade.png
 - id: 101
+  unitId: 6017
   nameJa: カフカ
   nameEn: Kafka
   rarity: 6
@@ -836,6 +936,7 @@
   release: 5/20/2022
   image: 90px-FS_kafka.png
 - id: 102
+  unitId: 6018
   nameJa: ヘリオン
   nameEn: Hellion
   rarity: 6
@@ -845,6 +946,7 @@
   release: 6/10/2022
   image: 90px-FS_hellion.png
 - id: 103
+  unitId: 6020
   nameJa: ルガロゥ
   nameEn: Rougarou
   rarity: 6
@@ -854,6 +956,7 @@
   release: 07/15/2022
   image: 90px-FS_rougarou.png
 - id: 104
+  unitId: 6021
   nameJa: アニマ
   nameEn: Anima
   rarity: 6
@@ -863,6 +966,7 @@
   release: 08/19/2022
   image: 90px-FS_anima.png
 - id: 105
+  unitId: 6022
   nameJa: アズモンド
   nameEn: Azmond
   rarity: 6
@@ -872,6 +976,7 @@
   release: 9/09/2022
   image: 90px-FS_azmond.png
 - id: 106
+  unitId: 6023
   nameJa: フォルテ
   nameEn: Forte
   rarity: 6
@@ -881,6 +986,7 @@
   release: 9/09/2022
   image: 90px-FS_forte.png
 - id: 107
+  unitId: 6040
   nameJa: アトムス
   nameEn: Atmos
   rarity: 6
@@ -890,6 +996,7 @@
   release: 3/17/2023
   image: 90px-FS_atmos.png
 - id: 108
+  unitId: 6041
   nameJa: サタン
   nameEn: Lucifer
   rarity: 6
@@ -899,6 +1006,7 @@
   release: 4/7/2023
   image: 90px-FS_lucifer.png
 - id: 109
+  unitId: 6045
   nameJa: ガムラ
   nameEn: Gamela
   rarity: 6
@@ -908,6 +1016,7 @@
   release: 5/26/2023
   image: 90px-FS_gamela.png
 - id: 110
+  unitId: 7001
   nameJa: バルボロス
   nameEn: Barboros
   rarity: 7
@@ -916,6 +1025,7 @@
   limited: false
   image: 90px-FS_barboros.png
 - id: 111
+  unitId: 5018
   nameJa: 若き日の勇姿 ヘリオン
   nameEn: Heroic Young Self Hellion
   rarity: 5
@@ -925,6 +1035,7 @@
   release: 06/24/2022
   image: 90px-FS_hellion_(young).png
 - id: 112
+  unitId: 5022
   nameJa: 渚の風雲 フウ
   nameEn: The Beach's Element Fu
   rarity: 5
@@ -934,6 +1045,7 @@
   release: 9/30/2022
   image: 90px-FS_fu_(summer).png
 - id: 113
+  unitId: 5023
   nameJa: 渚の雷光 ライ
   nameEn: The Beach's Thunder Rai
   rarity: 5
@@ -943,6 +1055,7 @@
   release: 9/30/2022
   image: 90px-FS_rai_(summer).png
 - id: 114
+  unitId: 5024
   nameJa: ビーチの支配者 ジャラム
   nameEn: Master of the Beach Jalam
   rarity: 5
@@ -952,6 +1065,7 @@
   release: 10/14/2022
   image: 90px-FS_jalam_(summer).png
 - id: 115
+  unitId: 5025
   nameJa: 特大花火師 ニトロ
   nameEn: Large-Scale Pyrotechnist Nitro
   rarity: 5
@@ -961,6 +1075,7 @@
   release: 10/28/2022
   image: 75px-FS_nitro_(summer).png
 - id: 116
+  unitId: 5026
   nameJa: 水遊び隊長 ビルフォード
   nameEn: Water-Fun Captain Billford
   rarity: 5
@@ -970,6 +1085,7 @@
   release: 11/11/2022
   image: 90px-FS_billford_(summer).png
 - id: 117
+  unitId: 5030
   nameJa: 愛のエプロン カレトビ
   nameEn: Apron of Love Karetovi
   rarity: 5
@@ -979,6 +1095,7 @@
   release: 03/03/2023
   image: 90px-FS_karetovi_(valentine).png
 - id: 118
+  unitId: 5033
   nameJa: 渇望の騎士 ヘリオン
   nameEn: Covetous Knight Hellion
   rarity: 5
@@ -988,6 +1105,7 @@
   release: 4/28/2023
   image: 90px-FS_hellion_(awakened).png
 - id: 119
+  unitId: 5035
   nameJa: 超新星の新郎 サタン
   nameEn: Stellar Bridegroom Lucifer
   rarity: 5
@@ -997,6 +1115,7 @@
   release: 5/26/2023
   image: 90px-FS_lucifer_(awakened).png
 - id: 120
+  unitId: 5036
   nameJa: スパルタントレーナー ヴェルンド
   nameEn: Spartan Trainer Volund
   rarity: 5
@@ -1006,6 +1125,7 @@
   release: 06/23/2023
   image: 90px-FS_volund_(awakened).png
 - id: 121
+  unitId: 6019
   nameJa: ハーフアニバーサリー アモレー
   nameEn: Half-Year Anniversary Amorey
   rarity: 6
@@ -1015,6 +1135,7 @@
   release: 06/24/2022
   image: 90px-FS_amorey_(half-anniversary).png
 - id: 122
+  unitId: 6024
   nameJa: ビーチハンター レオンハート
   nameEn: Beach Hunter Leonhart
   rarity: 6
@@ -1024,6 +1145,7 @@
   release: 9/30/2022
   image: 90px-FS_leonhart_(summer).png
 - id: 123
+  unitId: 6025
   nameJa: レスキュードッグ ハンゾウ
   nameEn: Lifeguard Dog Hanzo
   rarity: 6
@@ -1033,6 +1155,7 @@
   release: 10/14/2022
   image: 90px-FS_hanzo_(summer).png
 - id: 124
+  unitId: 6026
   nameJa: 出張海の家 フレット
   nameEn: Sea Lodge Flet
   rarity: 6
@@ -1042,6 +1165,7 @@
   release: 10/14/2022
   image: 90px-FS_flet_(summer).png
 - id: 125
+  unitId: 6027
   nameJa: 海上保安官 ブルート
   nameEn: Coast Guard Officer Brute
   rarity: 6
@@ -1051,6 +1175,7 @@
   release: 10/28/2022
   image: 90px-FS_brute_(summer).png
 - id: 126
+  unitId: 6028
   nameJa: ゴーゴーボーイ ラグナル
   nameEn: Go-Go Boy Ragnar
   rarity: 6
@@ -1060,6 +1185,7 @@
   release: 10/28/2022
   image: 75px-FS_ragnar_(summer).png
 - id: 127
+  unitId: 6029
   nameJa: ライフセーバー プージ
   nameEn: Lifesaver Pugi
   rarity: 6
@@ -1069,6 +1195,7 @@
   release: 11/11/2022
   image: 90px-FS_pugi_(summer).png
 - id: 128
+  unitId: 6030
   nameJa: ロックフェス リュート
   nameEn: Rock Festival Lute
   rarity: 6
@@ -1078,6 +1205,7 @@
   release: 11/11/2022
   image: 90px-FS_lute_(summer).png
 - id: 129
+  unitId: 6031
   nameJa: ラブトイハンター ルーク
   nameEn: X-Rated Toy Hunter Rook
   rarity: 6
@@ -1087,6 +1215,7 @@
   release: 12/9/2022
   image: 90px-FS_rook_(winter).png
 - id: 130
+  unitId: 6033
   nameJa: 復讐者 ダイン
   nameEn: Avenger Dyne
   rarity: 6
@@ -1096,6 +1225,7 @@
   release: 12/23/2022
   image: 90px-FS_dyne_(anniversary).png
 - id: 131
+  unitId: 6032
   nameJa: 栄光の騎士 ギムノス
   nameEn: Knight of Glory Gymnos
   rarity: 6
@@ -1105,6 +1235,7 @@
   release: 12/23/2022
   image: 90px-FS_gymnos_(anniversary).png
 - id: 132
+  unitId: 6034
   nameJa: ヤマトの風雷仁王 ジンノスケ
   nameEn: The Yamato King Over Wind & Thunder Jinnosuke
   rarity: 6
@@ -1114,6 +1245,7 @@
   release: 12/31/2022
   image: 90px-FS_jinnosuke_(awakened).png
 - id: 133
+  unitId: 6035
   nameJa: 伏魔殿の鬼将軍 ラショウ
   nameEn: Pandemonium’s Demon Shogun Rasho
   rarity: 6
@@ -1123,6 +1255,7 @@
   release: 1/20/2023
   image: 90px-FS_rasho_(awakened).png
 - id: 134
+  unitId: 6037
   nameJa: 今夜パパは帰らない コルカ
   nameEn: Daddy’s Out Tonight Corca
   rarity: 6
@@ -1132,6 +1265,7 @@
   release: 2/3/2023
   image: 90px-FS_corca_(awakened).png
 - id: 135
+  unitId: 6036
   nameJa: 悪を穿つ緑の牙 バロン
   nameEn: Fangs of Green that Pierce Evil Baron
   rarity: 6
@@ -1141,6 +1275,7 @@
   release: 2/3/2023
   image: 90px-FS_equus_(awakened).png
 - id: 136
+  unitId: 6038
   nameJa: HYPERマッドサイエンティスト ニトロ
   nameEn: Hyper Crazy Mad Scientist Nitro
   rarity: 6
@@ -1150,6 +1285,7 @@
   release: 2/18/2023
   image: 90px-FS_nitro_(awakened).png
 - id: 137
+  unitId: 6042
   nameJa: 守護騎士への願い カフカ
   nameEn: Desire for Thy Guardian Kafka
   rarity: 6
@@ -1159,6 +1295,7 @@
   release: 4/28/2023
   image: 90px-FS_kafka_(awakened).png
 - id: 138
+  unitId: 6044
   nameJa: 幸せになるのはオレだ！ ユーノ
   nameEn: I Will Find My Happiness! Yuno
   rarity: 6
@@ -1168,6 +1305,7 @@
   release: 5/12/2023
   image: 90px-FS_yuno_(awakened).png
 - id: 139
+  unitId: 6043
   nameJa: マスターブライダリスト フォーカー
   nameEn: Master Wedding Planner Folker
   rarity: 6
@@ -1177,6 +1315,7 @@
   release: 5/12/2023
   image: 90px-FS_folker_(awakened).png
 - id: 140
+  unitId: 6046
   nameJa: 運命糸の紡ぎ手 バラン
   nameEn: Weaver of Fate Baran
   rarity: 6
@@ -1186,6 +1325,7 @@
   release: 5/26/2023
   image: 90px-FS_baran_(awakened).png
 - id: 141
+  unitId: 6047
   nameJa: レペゼンラスト アズモンド
   nameEn: Reppin' Lust Azmond
   rarity: 6
@@ -1195,6 +1335,7 @@
   release: 6/16/2023
   image: 90px-FS_azmond_(awakened).png
 - id: 142
+  unitId: 6048
   nameJa: サイのおじさん ロマネス
   nameEn: Rhino Man Romanes
   rarity: 6
@@ -1204,6 +1345,7 @@
   release: 6/23/2023
   image: 90px-FS_romanes_(awakened).png
 - id: 143
+  unitId: 7002
   nameJa: 新たなる形相 バルボロス
   nameEn: New Look Barboros
   rarity: 7
@@ -1213,6 +1355,7 @@
   release: 9/30/2022
   image: 90px-FS_barboros_(new_look).png
 - id: 144
+  unitId: 5037
   nameJa: ポロンとオルタ
   nameEn: Pollon & Orta
   rarity: 5
@@ -1222,6 +1365,7 @@
   release: 7/7/2023
   image: 90px-FS_pollon_&_orta.png
 - id: 145
+  unitId: 6049
   nameJa: ゼベク
   nameEn: Sebek
   rarity: 6
@@ -1231,6 +1375,7 @@
   release: 7/7/2023
   image: 90px-FS_sebek.png
 - id: 146
+  unitId: 6051
   nameJa: 道拓くアークデーモン スタロン
   nameEn: Trailblazing Archdemon Stalon
   rarity: 6
@@ -1240,6 +1385,7 @@
   release: 7/21/2023
   image: 90px-FS_stalon_(awakened).png
 - id: 147
+  unitId: 6050
   nameJa: 支配者の審判 ジャラム
   nameEn: Arbiter of Kings Jalam
   rarity: 6
@@ -1249,6 +1395,7 @@
   release: 7/21/2023
   image: 90px-FS_jalam_(awakened).png
 - id: 148
+  unitId: 5038
   nameJa: ヒュブリス
   nameEn: Hybris
   rarity: 5
@@ -1258,6 +1405,7 @@
   release: 8/18/2023
   image: 90px-FS_hybris.png
 - id: 149
+  unitId: 6052
   nameJa: 悟りのスフィンクス ザハロフ
   nameEn: Enlightened Sphinx Zacharoff
   rarity: 6
@@ -1267,6 +1415,7 @@
   release: 8/18/2023
   image: 90px-FS_zacharoff_(awakened).png
 - id: 150
+  unitId: 2
   nameJa: 暁のドラグーン ガイア
   nameEn: Dragoon of the Dawn Gaia
   rarity: 0
@@ -1276,6 +1425,7 @@
   release: 9/1/2023
   image: 90px-FS_gaia_(dragoon).png
 - id: 151
+  unitId: 5039
   nameJa: ガオウ
   nameEn: Gaoh
   rarity: 5
@@ -1285,6 +1435,7 @@
   release: 9/8/2023
   image: 90px-FS_gaoh.png
 - id: 152
+  unitId: 6053
   nameJa: 海風香る艇長 バルト
   nameEn: Seabreeze-Scented Sea Captain Bart
   rarity: 6
@@ -1294,6 +1445,7 @@
   release: 9/8/2023
   image: 90px-FS_bart_(awakened).png
 - id: 153
+  unitId: 5041
   nameJa: バリタチ船長 レオンハート
   nameEn: Topdomian Pirate Captain Leonhart
   rarity: 5
@@ -1303,6 +1455,7 @@
   release: 9/29/2023
   image: 90px-FS_leonhart_(awakened).png
 - id: 154
+  unitId: 6054
   nameJa: 突撃特派員 トルケル
   nameEn: Special Corps on the Offensive! Thorkell
   rarity: 6
@@ -1312,6 +1465,7 @@
   release: 9/29/2023
   image: 90px-FS_thorkell_(awakened).png
 - id: 155
+  unitId: 5042
   nameJa: ハロルド
   nameEn: Harold
   rarity: 5
@@ -1321,6 +1475,7 @@
   release: 10/6/2023
   image: 90px-FS_harold.png
 - id: 156
+  unitId: 6056
   nameJa: スカバンド
   nameEn: Scavand
   rarity: 6
@@ -1330,6 +1485,7 @@
   release: 10/6/2023
   image: 90px-FS_scavand.png
 - id: 157
+  unitId: 6055
   nameJa: 進めマグナム号 パティ
   nameEn: Magnum, Roll Out! Patty
   rarity: 6
@@ -1339,6 +1495,7 @@
   release: 10/6/2023
   image: 90px-FS_patty_(awakened).png
 - id: 158
+  unitId: 5043
   nameJa: ヤークート
   nameEn: Yaqut
   rarity: 5
@@ -1348,6 +1505,7 @@
   release: 10/27/2023
   image: 90px-FS_yaqut.png
 - id: 159
+  unitId: 5044
   nameJa: ソルベ
   nameEn: Solvé
   rarity: 5
@@ -1357,6 +1515,7 @@
   release: 10/27/2023
   image: 90px-FS_solve.png
 - id: 160
+  unitId: 6057
   nameJa: シンバット
   nameEn: Sinbad
   rarity: 6
@@ -1366,6 +1525,7 @@
   release: 10/27/2023
   image: 90px-FS_sinbad.png
 - id: 161
+  unitId: 2019
   nameJa: サーヴァント
   nameEn: Servant
   rarity: 2
@@ -1375,6 +1535,7 @@
   release: 10/27/2023
   image: 90px-FS_servant.png
 - id: 162
+  unitId: 2020
   nameJa: サーヴァントガード
   nameEn: Servant Guard
   rarity: 2
@@ -1384,6 +1545,7 @@
   release: 10/27/2023
   image: 90px-FS_servant_guard.png
 - id: 163
+  unitId: 2021
   nameJa: サーヴァントキャスター
   nameEn: Servant Sorcerer
   rarity: 2
@@ -1393,6 +1555,7 @@
   release: 10/27/2023
   image: 90px-FS_servant_sorcerer.png
 - id: 164
+  unitId: 6058
   nameJa: 熱血個別指導 ヤブサハ
   nameEn: Passionate Private Tutor Yabsakha
   rarity: 6
@@ -1402,6 +1565,7 @@
   release: 11/10/2023
   image: 90px-FS_yabsakha_(awakened).png
 - id: 165
+  unitId: 5046
   nameJa: マージナイト ルーク
   nameEn: Magiknight Rook
   rarity: 5
@@ -1411,6 +1575,7 @@
   release: 11/10/2023
   image: 90px-FS_rook_(awakened).png
 - id: 166
+  unitId: 5045
   nameJa: ラジーン
   nameEn: Ala’ ad-Din
   rarity: 5
@@ -1420,6 +1585,7 @@
   release: 11/10/2023
   image: 90px-FS_ala’ad-din.png
 - id: 167
+  unitId: 5047
   nameJa: ダンジョンボス ゼベク
   nameEn: Dungeon Boss Sebek
   rarity: 5
@@ -1429,6 +1595,7 @@
   release: 11/24/2023
   image: 90px-FS_sebek_(awakened).png
 - id: 168
+  unitId: 6059
   nameJa: 蜃気楼の召喚士 シールズ
   nameEn: Summoner of Mirages Seals
   rarity: 6
@@ -1438,6 +1605,7 @@
   release: 11/24/2023
   image: 90px-FS_seals_(awakened).png
 - id: 169
+  unitId: 5048
   nameJa: ドミノ
   nameEn: Domino
   rarity: 5
@@ -1447,6 +1615,7 @@
   release: 12/8/2023
   image: 90px-FS_domino.png
 - id: 170
+  unitId: 6060
   nameJa: ブラックバニー ウォルサー
   nameEn: Bunnyboy Walther
   rarity: 6
@@ -1456,6 +1625,7 @@
   release: 12/8/2023
   image: 90px-FS_walther_(awakened).png
 - id: 171
+  unitId: 6061
   nameJa: 闇夜を駆けるはぐれ刑事 バーリッツ
   nameEn: Lone Detective Dashing Through the Dark Barlitz
   rarity: 6
@@ -1465,6 +1635,7 @@
   release: 12/8/2023
   image: 90px-FS_barlitz_(awakened).png
 - id: 172
+  unitId: 5049
   nameJa: ゴージャスドリーム エドガー
   nameEn: Dreams of Luxury Edgar
   rarity: 5
@@ -1474,6 +1645,7 @@
   release: 12/22/2023
   image: 90px-FS_edgar_(awakened).png
 - id: 173
+  unitId: 6063
   nameJa: マフィアブラザーズ ビルフォード
   nameEn: Mafia Brothers Billford
   rarity: 6
@@ -1483,6 +1655,7 @@
   release: 12/22/2023
   image: 90px-FS_billford_(awakened).png
 - id: 174
+  unitId: 6062
   nameJa: イカサマ勝負師 バカラ
   nameEn: Conning Cony Baccarat
   rarity: 6
@@ -1492,6 +1665,7 @@
   release: 12/22/2023
   image: 90px-FS_baccarat_(awakened).png
 - id: 175
+  unitId: 1010
   nameJa: ギャンブラー
   nameEn: Gambler
   rarity: 1
@@ -1501,6 +1675,7 @@
   release: 12/22/2023
   image: 90px-FS_gambler.png
 - id: 176
+  unitId: 1011
   nameJa: カジノSP
   nameEn: Casino Security
   rarity: 1
@@ -1510,6 +1685,7 @@
   release: 12/22/2023
   image: 90px-FS_casino_security.png
 - id: 177
+  unitId: 5050
   nameJa: シャオロン
   nameEn: Xiaolong
   rarity: 5
@@ -1519,6 +1695,7 @@
   release: 1/1/2024
   image: 90px-FS_xiaolong.png
 - id: 178
+  unitId: 6064
   nameJa: テンゴ
   nameEn: Tengo
   rarity: 6
@@ -1528,6 +1705,7 @@
   release: 1/1/2024
   image: 90px-FS_tengo.png
 - id: 179
+  unitId: 5051
   nameJa: ハバキ
   nameEn: Habaki
   rarity: 5
@@ -1537,6 +1715,7 @@
   release: 1/12/2024
   image: 90px-FS_habaki.png
 - id: 180
+  unitId: 6065
   nameJa: 男の花道 コンゴウ
   nameEn: Flourishing Virility Kongoh
   rarity: 6
@@ -1546,6 +1725,7 @@
   release: 1/12/2024
   image: 90px-FS_kongoh_(awakened).png
 - id: 181
+  unitId: 6067
   nameJa: 酔狂の夢路 ライ
   nameEn: Capricious Dreamer Rai
   rarity: 6
@@ -1555,6 +1735,7 @@
   release: 2/2/2024
   image: 90px-FS_rai_(awakened).png
 - id: 182
+  unitId: 6066
   nameJa: 伝説の色本作家 フウ
   nameEn: Wordsmith of Erotica Fu
   rarity: 6

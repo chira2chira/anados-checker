@@ -43,6 +43,13 @@ export function loadCharactors() {
     throw new Error("IDが重複している");
   } else if (charInfo.filter((x) => x.id === null).length > 0) {
     throw new Error("IDが未指定");
+  } else if (
+    charInfo.length !==
+    Array.from(new Set(charInfo.map((x) => x.unitId))).length
+  ) {
+    throw new Error("UnitIDが重複している");
+  } else if (charInfo.filter((x) => x.unitId === null).length > 0) {
+    throw new Error("UnitIDが未指定");
   }
   return charInfo;
 }

@@ -40,6 +40,7 @@ export type CharClass =
 
 export type CharInfo = {
   id: number;
+  unitId: number;
   nameJa: string;
   nameEn: string;
   rarity: number;
