@@ -2058,9 +2058,9 @@
     - rarity: 3
       weight: 0.36
   pickUp:
-    - name: レンタルお父さん コルカ
-      weight: 0.01
     - name: チャボ
+      weight: 0.01
+    - name: レンタルお父さん コルカ
       weight: 0.01
   rarity6:
     - ジンノスケ
