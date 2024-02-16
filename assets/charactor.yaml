@@ -1744,3 +1744,23 @@
   limited: true
   release: 2/2/2024
   image: 90px-FS_fu_(awakened).png
+- id: 183
+  unitId: 5052
+  nameJa: レンタルお父さん コルカ
+  nameEn: Rent-a-Daddy Corca
+  rarity: 5
+  class: shooter
+  deployment: high
+  limited: true
+  release: 2/16/2024
+  image: 90px-FS_corca_(rentalbf).png
+- id: 184
+  unitId: 6068
+  nameJa: チャボ
+  nameEn: Chabeau
+  rarity: 6
+  class: guard
+  deployment: low
+  limited: false
+  release: 2/16/2024
+  image: 90px-FS_chabeau.png
