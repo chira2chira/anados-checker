@@ -218,17 +218,25 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
       <div
         css={css`
           display: flex;
-          gap: 12px;
+          gap: 40px;
+          justify-content: space-between;
           margin-bottom: 8px;
         `}
       >
-        <Button onClick={handle1pull} intent="primary">
-          {t("ui.button.pull1")}
-        </Button>
-        <Button onClick={handle10pull} intent="primary">
-          {t("ui.button.pull10")}
-        </Button>
         <Button onClick={handleClear}>{t("ui.button.clear")}</Button>
+        <div
+          css={css`
+            display: flex;
+            gap: 12px;
+          `}
+        >
+          <Button onClick={handle1pull} intent="primary">
+            {t("ui.button.pull1")}
+          </Button>
+          <Button onClick={handle10pull} intent="primary">
+            {t("ui.button.pull10")}
+          </Button>
+        </div>
       </div>
 
       <div
