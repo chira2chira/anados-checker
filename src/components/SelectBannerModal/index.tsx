@@ -32,8 +32,9 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
   });
 
   useEffect(() => {
-    if (props.isOpen && !!id) {
-      bannerRefs.current[Number(id)].current?.scrollIntoView({
+    const bannerRef = bannerRefs.current[Number(id)];
+    if (props.isOpen && !!bannerRef) {
+      bannerRef.current?.scrollIntoView({
         block: "center",
       });
     }
