@@ -1764,3 +1764,23 @@
   limited: false
   release: 2/16/2024
   image: 90px-FS_chabeau.png
+- id: 185
+  unitId: 5053
+  nameJa: リオン
+  nameEn: Lyon
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 3/1/2024
+  image: 90px-FS_lyon.png
+- id: 186
+  unitId: 6069
+  nameJa: レンタルパートナー ユーノ
+  nameEn: Rental Partner Yuno
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 3/1/2024
+  image: 90px-FS_yuno_(rentalbf).png
