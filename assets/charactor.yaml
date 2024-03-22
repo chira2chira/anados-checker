@@ -1784,3 +1784,23 @@
   limited: true
   release: 3/1/2024
   image: 90px-FS_yuno_(rentalbf).png
+- id: 187
+  unitId: 6070
+  nameJa: ネコミミサキュバス シャルロッテ
+  nameEn: Cat-Eared Succubus Charlotte
+  rarity: 6
+  class: support
+  deployment: high
+  limited: true
+  release: 3/22/2024
+  image: 90px-FS_charlotte_(awakened).png
+- id: 188
+  unitId: 6071
+  nameJa: トランスファービースト ピオス
+  nameEn: Transmogrified Beast Pius
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 3/22/2024
+  image: 90px-FS_pius_(awakened).png
