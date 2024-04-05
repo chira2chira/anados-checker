@@ -1804,3 +1804,23 @@
   limited: true
   release: 3/22/2024
   image: 90px-FS_pius_(awakened).png
+- id: 189
+  unitId: 5054
+  nameJa: バクウ
+  nameEn: Bakoo
+  rarity: 5
+  class: caster
+  deployment: high
+  limited: false
+  release: 4/5/2024
+  image: 90px-FS_bakoo.png
+- id: 190
+  unitId: 6072
+  nameJa: ドリームナイト アルカナ
+  nameEn: Sweven Knight Arcana
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 4/5/2024
+  image: 90px-FS_arcana_(awakened).png
