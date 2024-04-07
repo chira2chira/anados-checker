@@ -20,16 +20,17 @@
       "lowGround": "Low Ground",
       "highGround": "High Ground",
       "bothGround": "Both",
-      "releaseBy": "Release Year",
+      "releaseBy": "By Release Year",
+      "ticketBy": "Anniv Scout Ticket",
       "year2021": "2021",
       "year2022": "2022",
       "year2023": "2023",
       "year2024": "2024",
-      "aniv0.5": "The Half-Anniv Adventurer Scout",
-      "aniv1.0": "1st Adventurer Scout",
-      "aniv1.5": "1.5 Year Anniv Adventurer Scout",
-      "aniv2.0": "2nd Anniv Adventurer Scout",
-      "aniv2.5": "2.5 Year Anniv Adventurer Scout (Temporary)"
+      "aniv0.5": "The Half-Anniv",
+      "aniv1.0": "1st Anniv",
+      "aniv1.5": "1.5 Year Anniv",
+      "aniv2.0": "2nd Anniv",
+      "aniv2.5": "2.5 Year Anniv (Temporary)"
     },
     "message": {
       "saved": "Saved.",

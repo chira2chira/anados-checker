@@ -97,7 +97,6 @@ function filterDeploymentChar(filter: string) {
   };
 }
 
-const INELIGIBLE_CHAR = ["Gaia", "Barboros", "New Look Barboros"];
 function filterReleaseChar(filter: string) {
   return function (char: CharInfo) {
     switch (filter) {
@@ -111,6 +110,15 @@ function filterReleaseChar(filter: string) {
         return dayjs(char.release).year() === 2023;
       case "2024":
         return dayjs(char.release).year() === 2024;
+    }
+  };
+}
+const INELIGIBLE_CHAR = ["Gaia", "Barboros", "New Look Barboros"];
+function filterTicketChar(filter: string) {
+  return function (char: CharInfo) {
+    switch (filter) {
+      case "none":
+        return true;
       case "aniv0.5":
         // https://anothereidos-r.info/news/pnote201/
         if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
@@ -164,6 +172,7 @@ const Home: NextPage<HomeProps> = (props) => {
   const [filterLimited, setFilterLimited] = useState("none");
   const [filterDeployment, setFilterDeployment] = useState("none");
   const [filterRelease, setFilterRelease] = useState("none");
+  const [filterTicket, setFilterTicket] = useState("none");
   const [hideSpoiler, setHideSpoiler] = useState(true);
   const [fetching, setFetching] = useState(false);
   const [flash, setFlash] = useState(false);
@@ -212,7 +221,8 @@ const Home: NextPage<HomeProps> = (props) => {
           .filter(filterOwnedChar(filterOwned))
           .filter(filterLimitedChar(filterLimited))
           .filter(filterDeploymentChar(filterDeployment))
-          .filter(filterReleaseChar(filterRelease));
+          .filter(filterReleaseChar(filterRelease))
+          .filter(filterTicketChar(filterTicket));
       const rare0 = applyFilter(0);
       const rare1 = applyFilter(1);
       const rare2 = applyFilter(2);
@@ -228,6 +238,7 @@ const Home: NextPage<HomeProps> = (props) => {
       filterLimited,
       filterDeployment,
       filterRelease,
+      filterTicket,
       filterClass,
       owned,
     ]);
@@ -388,7 +399,6 @@ const Home: NextPage<HomeProps> = (props) => {
             css={css`
               width: 100%;
               display: flex;
-              justify-content: space-between;
               gap: 5px;
             `}
           >
@@ -414,13 +424,25 @@ const Home: NextPage<HomeProps> = (props) => {
               <option value="both">{t("ui.filter.bothGround")}</option>
             </FilterSelect>
           </div>
-          <div>
+          <div
+            css={css`
+              width: 100%;
+              display: flex;
+              gap: 5px;
+            `}
+          >
             <FilterSelect value={filterRelease} onChange={setFilterRelease}>
               <option value="none">{t("ui.filter.releaseBy")}</option>
               <option value="2021">{t("ui.filter.year2021")}</option>
               <option value="2022">{t("ui.filter.year2022")}</option>
               <option value="2023">{t("ui.filter.year2023")}</option>
               <option value="2024">{t("ui.filter.year2024")}</option>
+            </FilterSelect>
+
+            <FilterSelect value={filterTicket} onChange={setFilterTicket}>
+              <option value="none">{t("ui.filter.ticketBy")}</option>
+              <option value="aniv1.0">{t("ui.filter.aniv1.0")}</option>
+              <option value="aniv1.5">{t("ui.filter.aniv1.5")}</option>
               <option value="aniv2.0">{t("ui.filter.aniv2.0")}</option>
               <option value="aniv2.5">{t("ui.filter.aniv2.5")}</option>
             </FilterSelect>

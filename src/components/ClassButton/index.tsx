@@ -1,6 +1,7 @@
 import { CharClass } from "@/pages";
 import { displayCharClass } from "@/utils/stringUtil";
 import { Button, ButtonProps } from "@blueprintjs/core";
+import { css } from "@emotion/react";
 
 type ClassButtonProps = {
   charClass: CharClass;
@@ -16,6 +17,9 @@ const ClassButton: React.FC<ClassButtonProps> = (props) => {
 
   return (
     <Button
+      css={css`
+        width: 45px;
+      `}
       {...buttonProps}
       icon={
         <img

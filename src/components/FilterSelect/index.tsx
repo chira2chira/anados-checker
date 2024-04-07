@@ -1,4 +1,5 @@
 import { Colors } from "@blueprintjs/core";
+import { css } from "@emotion/react";
 
 type FilterSelectProps = {
   value: string;
@@ -7,7 +8,12 @@ type FilterSelectProps = {
 };
 const FilterSelect: React.FC<FilterSelectProps> = (props) => {
   return (
-    <div className={"bp5-html-select"}>
+    <div
+      className={"bp5-html-select"}
+      css={css`
+        flex-grow: 1;
+      `}
+    >
       <select
         style={{
           background: props.value !== "none" ? Colors.BLUE3 : undefined,
