@@ -1824,3 +1824,23 @@
   limited: true
   release: 4/5/2024
   image: 90px-FS_arcana_(awakened).png
+- id: 191
+  unitId: 5055
+  nameJa: オリオン
+  nameEn: Orion
+  rarity: 5
+  class: caster
+  deployment: high
+  limited: false
+  release: 4/12/2024
+  image: 90px-FS_orion.png
+- id: 192
+  unitId: 5056
+  nameJa: スピカ
+  nameEn: Spica
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: false
+  release: 4/12/2024
+  image: 90px-FS_spica.png
