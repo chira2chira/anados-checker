@@ -6,7 +6,11 @@
       "usedStone": "使用龍脈石",
       "pickupRate": "ピックアップ提供割合",
       "standardRate": "通常提供割合",
-      "limited": "限定"
+      "limited": "限定",
+      "revival": "復刻"
+    },
+    "filter": {
+      "excludeRevival": "復刻を除外"
     },
     "button": {
       "changeBanner": "ガチャを変更",

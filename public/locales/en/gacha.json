@@ -6,7 +6,11 @@
       "usedStone": "Total Spent",
       "pickupRate": "Pick-Up Rates",
       "standardRate": "Standard Rates",
-      "limited": "Limited"
+      "limited": "Limited",
+      "revival": "Revival"
+    },
+    "filter": {
+      "excludeRevival": "Exclude Revival"
     },
     "button": {
       "changeBanner": "Change Banner",

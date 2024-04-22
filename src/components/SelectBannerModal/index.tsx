@@ -1,8 +1,15 @@
-import { RefObject, createRef, forwardRef, useEffect, useRef } from "react";
+import {
+  RefObject,
+  createRef,
+  forwardRef,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
-import { Dialog, DialogBody } from "@blueprintjs/core";
+import { Checkbox, Dialog, DialogBody, Tag } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { GachaInfo } from "@/pages/gacha/simulator";
 import dayjs from "dayjs";
@@ -24,7 +31,9 @@ const leftLine = css`
 
 export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
   const router = useRouter();
+  const [excludeRevival, setExcludeRevival] = useState(false);
   const { id } = router.query;
+  const { t } = useTranslation("gacha");
   const bannerRefs = useRef<RefObject<HTMLAnchorElement>[]>([]);
 
   props.gachaInfo.forEach((x) => {
@@ -45,19 +54,37 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
       <DialogBody>
         <div
           css={css`
+            text-align: right;
+          `}
+        >
+          <Checkbox
+            css={css`
+              margin-bottom: 3px;
+            `}
+            checked={excludeRevival}
+            onChange={() => setExcludeRevival(!excludeRevival)}
+          >
+            {t("ui.filter.excludeRevival")}
+          </Checkbox>
+        </div>
+        <div
+          css={css`
             display: flex;
             flex-direction: column;
             gap: 15px;
           `}
         >
-          {[...props.gachaInfo].reverse().map((x) => (
-            <BannerLink
-              ref={bannerRefs.current[x.id]}
-              key={x.id}
-              gachaInfo={x}
-              onClick={props.onSelect}
-            />
-          ))}
+          {[...props.gachaInfo]
+            .reverse()
+            .filter((x) => !excludeRevival || !x.revival)
+            .map((x) => (
+              <BannerLink
+                ref={bannerRefs.current[x.id]}
+                key={x.id}
+                gachaInfo={x}
+                onClick={props.onSelect}
+              />
+            ))}
         </div>
       </DialogBody>
     </Dialog>
@@ -71,7 +98,7 @@ type BannerLinkProps = {
 const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
   (props, ref) => {
     const { gachaInfo, onClick } = props;
-    const { i18n } = useTranslation("gacha");
+    const { t, i18n } = useTranslation("gacha");
     const isJa = i18n.language === "ja";
 
     return (
@@ -94,6 +121,15 @@ const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
               margin-left: 3px;
             `}
           >
+            {gachaInfo.revival && (
+              <Tag
+                css={css`
+                  margin-right: 5px;
+                `}
+              >
+                {t("ui.text.revival")}
+              </Tag>
+            )}
             {isJa ? gachaInfo.nameJa : gachaInfo.nameEn}
             <br />
             {dayjs(gachaInfo.start).format("YYYY/M/D")}

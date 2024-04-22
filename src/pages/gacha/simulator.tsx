@@ -24,6 +24,7 @@ export type GachaInfo = {
   id: number;
   nameJa: string;
   nameEn: string;
+  revival: boolean;
   start: string;
   end: string;
   weight: Array<{
@@ -65,7 +66,8 @@ function getBanner(gachaInfo: GachaInfo[], id: any) {
     const b = gachaInfo.find((x) => x.id.toString() === id);
     if (b !== undefined) return b;
   }
-  return gachaInfo[gachaInfo.length - 1];
+  // 未指定時は復刻を除外した最新のガチャにする
+  return gachaInfo.filter(x => !x.revival).slice(-1)[0];
 }
 
 const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
