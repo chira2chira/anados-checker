@@ -402,27 +402,36 @@ const Home: NextPage<HomeProps> = (props) => {
               gap: 5px;
             `}
           >
-            <FilterSelect value={filterOwned} onChange={setFilterOwned}>
-              <option value="none">{t("ui.filter.ownedBy")}</option>
-              <option value="notOwned">{t("ui.filter.notOwned")}</option>
-              <option value="owned">{t("ui.filter.owned")}</option>
-            </FilterSelect>
+            <FilterSelect
+              value={filterOwned}
+              onChange={setFilterOwned}
+              options={[
+                { value: "none", label: t("ui.filter.ownedBy") },
+                { value: "notOwned", label: t("ui.filter.notOwned") },
+                { value: "owned", label: t("ui.filter.owned") },
+              ]}
+            />
 
-            <FilterSelect value={filterLimited} onChange={setFilterLimited}>
-              <option value="none">{t("ui.filter.availabilityBy")}</option>
-              <option value="standard">{t("ui.filter.standard")}</option>
-              <option value="limited">{t("ui.filter.limited")}</option>
-            </FilterSelect>
+            <FilterSelect
+              value={filterLimited}
+              onChange={setFilterLimited}
+              options={[
+                { value: "none", label: t("ui.filter.availabilityBy") },
+                { value: "standard", label: t("ui.filter.standard") },
+                { value: "limited", label: t("ui.filter.limited") },
+              ]}
+            />
 
             <FilterSelect
               value={filterDeployment}
               onChange={setFilterDeployment}
-            >
-              <option value="none">{t("ui.filter.deploymentBy")}</option>
-              <option value="low">{t("ui.filter.lowGround")}</option>
-              <option value="high">{t("ui.filter.highGround")}</option>
-              <option value="both">{t("ui.filter.bothGround")}</option>
-            </FilterSelect>
+              options={[
+                { value: "none", label: t("ui.filter.deploymentBy") },
+                { value: "low", label: t("ui.filter.lowGround") },
+                { value: "high", label: t("ui.filter.highGround") },
+                { value: "both", label: t("ui.filter.bothGround") },
+              ]}
+            />
           </div>
           <div
             css={css`
@@ -431,21 +440,29 @@ const Home: NextPage<HomeProps> = (props) => {
               gap: 5px;
             `}
           >
-            <FilterSelect value={filterRelease} onChange={setFilterRelease}>
-              <option value="none">{t("ui.filter.releaseBy")}</option>
-              <option value="2021">{t("ui.filter.year2021")}</option>
-              <option value="2022">{t("ui.filter.year2022")}</option>
-              <option value="2023">{t("ui.filter.year2023")}</option>
-              <option value="2024">{t("ui.filter.year2024")}</option>
-            </FilterSelect>
+            <FilterSelect
+              value={filterRelease}
+              onChange={setFilterRelease}
+              options={[
+                { value: "none", label: t("ui.filter.releaseBy") },
+                { value: "2021", label: t("ui.filter.year2021") },
+                { value: "2022", label: t("ui.filter.year2022") },
+                { value: "2023", label: t("ui.filter.year2023") },
+                { value: "2024", label: t("ui.filter.year2024") },
+              ]}
+            />
 
-            <FilterSelect value={filterTicket} onChange={setFilterTicket}>
-              <option value="none">{t("ui.filter.ticketBy")}</option>
-              <option value="aniv1.0">{t("ui.filter.aniv1.0")}</option>
-              <option value="aniv1.5">{t("ui.filter.aniv1.5")}</option>
-              <option value="aniv2.0">{t("ui.filter.aniv2.0")}</option>
-              <option value="aniv2.5">{t("ui.filter.aniv2.5")}</option>
-            </FilterSelect>
+            <FilterSelect
+              value={filterTicket}
+              onChange={setFilterTicket}
+              options={[
+                { value: "none", label: t("ui.filter.ticketBy") },
+                { value: "aniv1.0", label: t("ui.filter.aniv1.0") },
+                { value: "aniv1.5", label: t("ui.filter.aniv1.5") },
+                { value: "aniv2.0", label: t("ui.filter.aniv2.0") },
+                { value: "aniv2.5", label: t("ui.filter.aniv2.5") },
+              ]}
+            />
           </div>
 
           <Checkbox

@@ -1,29 +1,28 @@
-import { Colors } from "@blueprintjs/core";
+import { Colors, HTMLSelect, OptionProps } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 
 type FilterSelectProps = {
   value: string;
+  options: OptionProps[];
   onChange: (value: string) => void;
-  children: React.ReactNode;
 };
 const FilterSelect: React.FC<FilterSelectProps> = (props) => {
   return (
-    <div
-      className={"bp5-html-select"}
+    <HTMLSelect
       css={css`
         flex-grow: 1;
+
+        && select,
+        && select:hover {
+          background-color: ${props.value !== "none"
+            ? Colors.BLUE3
+            : undefined};
+        }
       `}
-    >
-      <select
-        style={{
-          background: props.value !== "none" ? Colors.BLUE3 : undefined,
-        }}
-        onChange={(e) => props.onChange(e.currentTarget.value)}
-      >
-        {props.children}
-      </select>
-      <span className="bp5-icon bp5-icon-chevron-down"></span>
-    </div>
+      iconName="caret-down"
+      options={props.options}
+      onChange={(e) => props.onChange(e.currentTarget.value)}
+    />
   );
 };
 
