@@ -54,21 +54,6 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
       <DialogBody>
         <div
           css={css`
-            text-align: right;
-          `}
-        >
-          <Checkbox
-            css={css`
-              margin-bottom: 3px;
-            `}
-            checked={excludeRevival}
-            onChange={() => setExcludeRevival(!excludeRevival)}
-          >
-            {t("ui.filter.excludeRevival")}
-          </Checkbox>
-        </div>
-        <div
-          css={css`
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -87,6 +72,22 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
             ))}
         </div>
       </DialogBody>
+      <div
+        css={css`
+          margin: 10px 12px;
+        `}
+      >
+        <Checkbox
+          css={css`
+            margin-bottom: 0;
+          `}
+          inline
+          checked={excludeRevival}
+          onChange={() => setExcludeRevival(!excludeRevival)}
+        >
+          {t("ui.filter.excludeRevival")}
+        </Checkbox>
+      </div>
     </Dialog>
   );
 };
