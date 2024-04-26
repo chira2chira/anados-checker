@@ -1844,3 +1844,23 @@
   limited: false
   release: 4/12/2024
   image: 90px-FS_spica.png
+- id: 193
+  unitId: 5057
+  nameJa: 名誉社長 トーマス
+  nameEn: Renowned Boss Thomas
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: true
+  release: 4/26/2024
+  image: 90px-FS_thomas_(awakened).png
+- id: 194
+  unitId: 6073
+  nameJa: マグリット
+  nameEn: Magritte
+  rarity: 6
+  class: shooter
+  deployment: high
+  limited: false
+  release: 4/26/2024
+  image: 90px-FS_magritte.png
