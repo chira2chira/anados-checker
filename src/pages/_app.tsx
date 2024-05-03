@@ -16,6 +16,7 @@ FocusStyleManager.onlyShowFocusOnTabs();
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
+dayjs.tz.setDefault("Asia/Tokyo");
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();

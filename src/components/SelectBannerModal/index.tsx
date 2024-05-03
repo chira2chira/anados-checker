@@ -31,7 +31,9 @@ const leftLine = css`
 
 export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
   const router = useRouter();
-  const [excludeRevival, setExcludeRevival] = useState(false);
+  const [includeNew, setIncludeNew] = useState(true);
+  const [includeRevival, setIncludeRevival] = useState(true);
+  const [includeEnded, setIncludeEnded] = useState(true);
   const { id } = router.query;
   const { t } = useTranslation("gacha");
   const bannerRefs = useRef<RefObject<HTMLAnchorElement>[]>([]);
@@ -39,6 +41,15 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
   props.gachaInfo.forEach((x) => {
     bannerRefs.current[x.id] = createRef<HTMLAnchorElement>();
   });
+
+  const filteredBanner = [...props.gachaInfo]
+    .reverse()
+    .filter((x) => includeNew || x.revival)
+    .filter((x) => includeRevival || !x.revival)
+    .filter(
+      (x) =>
+        includeEnded || dayjs.tz().isBefore(dayjs(x.end).tz().add(1, "day"))
+    );
 
   useEffect(() => {
     const bannerRef = bannerRefs.current[Number(id)];
@@ -59,17 +70,17 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
             gap: 15px;
           `}
         >
-          {[...props.gachaInfo]
-            .reverse()
-            .filter((x) => !excludeRevival || !x.revival)
-            .map((x) => (
-              <BannerLink
-                ref={bannerRefs.current[x.id]}
-                key={x.id}
-                gachaInfo={x}
-                onClick={props.onSelect}
-              />
-            ))}
+          {filteredBanner.map((x) => (
+            <BannerLink
+              ref={bannerRefs.current[x.id]}
+              key={x.id}
+              gachaInfo={x}
+              onClick={props.onSelect}
+            />
+          ))}
+          {filteredBanner.length === 0 && (
+            <div>{t("ui.text.notFound")}</div>
+          )}
         </div>
       </DialogBody>
       <div
@@ -82,10 +93,30 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
             margin-bottom: 0;
           `}
           inline
-          checked={excludeRevival}
-          onChange={() => setExcludeRevival(!excludeRevival)}
+          checked={includeNew}
+          onChange={() => setIncludeNew(!includeNew)}
         >
-          {t("ui.filter.excludeRevival")}
+          {t("ui.text.new")}
+        </Checkbox>
+        <Checkbox
+          css={css`
+            margin-bottom: 0;
+          `}
+          inline
+          checked={includeRevival}
+          onChange={() => setIncludeRevival(!includeRevival)}
+        >
+          {t("ui.text.revival")}
+        </Checkbox>
+        <Checkbox
+          css={css`
+            margin-bottom: 0;
+          `}
+          inline
+          checked={includeEnded}
+          onChange={() => setIncludeEnded(!includeEnded)}
+        >
+          {t("ui.text.ended")}
         </Checkbox>
       </div>
     </Dialog>
@@ -133,9 +164,9 @@ const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
             )}
             {isJa ? gachaInfo.nameJa : gachaInfo.nameEn}
             <br />
-            {dayjs(gachaInfo.start).format("YYYY/M/D")}
+            {dayjs(gachaInfo.start).tz().format("YYYY/M/D")}
             {" - "}
-            {dayjs(gachaInfo.end).format("YYYY/M/D")}
+            {dayjs(gachaInfo.end).tz().format("YYYY/M/D")}
           </div>
           <Image
             css={css`

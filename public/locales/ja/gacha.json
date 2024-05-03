@@ -7,10 +7,10 @@
       "pickupRate": "ピックアップ提供割合",
       "standardRate": "通常提供割合",
       "limited": "限定",
-      "revival": "復刻"
-    },
-    "filter": {
-      "excludeRevival": "復刻を除外"
+      "new": "新規",
+      "revival": "復刻",
+      "ended": "期間外も表示",
+      "notFound": "条件に一致するガチャはありません。"
     },
     "button": {
       "changeBanner": "ガチャを変更",

@@ -7,10 +7,10 @@
       "pickupRate": "Pick-Up Rates",
       "standardRate": "Standard Rates",
       "limited": "Limited",
-      "revival": "Revival"
-    },
-    "filter": {
-      "excludeRevival": "Exclude Revival"
+      "new": "New",
+      "revival": "Return",
+      "ended": "Including Ended",
+      "notFound": "There are no banner matches the conditions."
     },
     "button": {
       "changeBanner": "Change Banner",
