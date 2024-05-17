@@ -2,7 +2,7 @@
   nameJa: 出航せよ！目指すは魔境・バリタチ島！
   nameEn: Set Sail for the Demonic Island of Topdom!
   start: 9/8/2023
-  end: 10/27/2023
+  end: 10/27/2023 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -110,7 +110,7 @@
   nameJa: オレこそバリタチ島の覇者！最強TOP！
   nameEn: I’ll be the King Dom of Topdom!
   start: 9/29/2023
-  end: 11/10/2023
+  end: 11/10/2023 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -220,7 +220,7 @@
   nameJa: 肉体言語で接触中！異文化コミュニケーション！
   nameEn: Talking with Your Body!? A Foreign Twist on Communication!
   start: 10/6/2023
-  end: 11/17/2023
+  end: 11/17/2023 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -332,7 +332,7 @@
   nameEn: Pays Blanc Is Getting Crazy!
   revival: true
   start: 10/20/2023
-  end: 12/1/2023
+  end: 12/1/2023 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -440,7 +440,7 @@
   nameJa: 二人一組！保健体育の実習を始める！
   nameEn: Paired Up to Square Up!
   start: 10/27/2023
-  end: 12/8/2023
+  end: 12/8/2023 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -555,7 +555,7 @@
   nameEn: No Way I’m Taking Part in Erotic Wrestling!
   revival: true
   start: 10/27/2023
-  end: 12/8/2023
+  end: 12/8/2023 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -667,7 +667,7 @@
   nameEn: Pervert Monster Championship!!
   revival: true
   start: 10/27/2023
-  end: 12/8/2023
+  end: 12/8/2023 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -780,7 +780,7 @@
   nameJa: モテモテ青春！大人の秘密を教えて先生！
   nameEn: 'Adulthood 101: Private Personal Tutoring!'
   start: 11/10/2023
-  end: 12/22/2023
+  end: 12/22/2023 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -894,7 +894,7 @@
   nameJa: 就職率120%超え！魔道学院はキミの夢を叶えます！
   nameEn: 120% Employment Rate! Dream School to Dream Job!
   start: 11/24/2023
-  end: 1/5/2024
+  end: 1/5/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -1005,7 +1005,7 @@
   nameJa: 今夜はゴージャスナイト！大人だけの社交場へようこそ！
   nameEn: Mingle with the Big Boys Tonight in the Glitzy Pleasure Dome!
   start: 12/8/2023
-  end: 1/19/2024
+  end: 1/19/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -1123,7 +1123,7 @@
   nameJa: ありがとう2.0周年！極上ナイトサービスでベッド・イン！
   nameEn: Thank You for 2 Years! Spend the Night Living Your Dreams!
   start: 12/22/2023
-  end: 2/2/2024
+  end: 2/2/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -1241,7 +1241,7 @@
   nameJa: おめでトラブル2024！温泉郷の龍神様は筆おろしが大スキ！
   nameEn: Scrappy New Year 2024! The Hot Spring Dragon God Loves First-Timers!
   start: 1/1/2024
-  end: 2/9/2024
+  end: 2/9/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -1357,7 +1357,7 @@
   nameJa: 散らすなら　いっそ奪わん　ロス・バージン
   nameEn: Petals Swept Away on the Breeze! Virginity Lost
   start: 1/12/2024
-  end: 2/23/2024
+  end: 2/23/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -1474,7 +1474,7 @@
   nameEn: Merry Christmas! Recruiting Mates to Sleep with on this Hole-y Night!
   revival: true
   start: 1/12/2024
-  end: 2/23/2024
+  end: 2/23/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -1590,7 +1590,7 @@
   nameEn: Hole-y White Knight & Black Knight
   revival: true
   start: 1/12/2024
-  end: 2/23/2024
+  end: 2/23/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -1706,7 +1706,7 @@
   nameJa: 温泉郷に遊郭設立！？パワースポットに急行！
   nameEn: From Onsen to Pleasure Den?! Non-Stop Ride to Pleasure Town!
   start: 2/2/2024
-  end: 3/15/2024
+  end: 3/15/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -1823,7 +1823,7 @@
   nameEn: Train Me Hard This Year!
   revival: true
   start: 2/2/2024
-  end: 3/15/2024
+  end: 3/15/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -1939,7 +1939,7 @@
   nameEn: Yamato Boys Are Kinda Serious! Marriage Desire to the MAX!
   revival: true
   start: 2/2/2024
-  end: 3/15/2024
+  end: 3/15/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -2054,7 +2054,7 @@
   nameJa: なんでもヤります！レンタルXXX！
   nameEn: Backshots on Tap and Up for Anything!
   start: 2/16/2024
-  end: 3/29/2024
+  end: 3/29/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -2173,7 +2173,7 @@
   nameJa: カレシ探すなら今すぐ登録！レンタルパートナー
   nameEn: Sign Up Now to Find a Boyfriend! Rental Partner
   start: 3/1/2024
-  end: 4/12/2024
+  end: 4/12/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -2293,7 +2293,7 @@
   nameEn: No Weapon Envy Here!
   revival: true
   start: 3/1/2024
-  end: 4/12/2024
+  end: 4/12/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -2412,7 +2412,7 @@
   nameEn: Handmade with Love and Choc-Full of Love Potion!
   revival: true
   start: 3/1/2024
-  end: 4/12/2024
+  end: 4/12/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
@@ -2530,7 +2530,7 @@
   nameJa: 突撃！あなたの淫夢にオジャマします！
   nameEn: Butting into your Dreams!
   start: 3/22/2024
-  end: 5/3/2024
+  end: 5/3/2024 23:59
   weight:
     - rarity: 6
       weight: 0.02
