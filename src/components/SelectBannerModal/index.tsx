@@ -46,10 +46,7 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
     .reverse()
     .filter((x) => includeNew || x.revival)
     .filter((x) => includeRevival || !x.revival)
-    .filter(
-      (x) =>
-        includeEnded || dayjs.tz().isBefore(dayjs(x.end).tz().add(1, "day"))
-    );
+    .filter((x) => includeEnded || dayjs.tz().isBefore(dayjs(x.end).tz()));
 
   useEffect(() => {
     const bannerRef = bannerRefs.current[Number(id)];
@@ -78,9 +75,7 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
               onClick={props.onSelect}
             />
           ))}
-          {filteredBanner.length === 0 && (
-            <div>{t("ui.text.notFound")}</div>
-          )}
+          {filteredBanner.length === 0 && <div>{t("ui.text.notFound")}</div>}
         </div>
       </DialogBody>
       <div
