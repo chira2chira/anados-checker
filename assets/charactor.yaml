@@ -1864,3 +1864,23 @@
   limited: false
   release: 4/26/2024
   image: 90px-FS_magritte.png
+- id: 195
+  unitId: 5058
+  nameJa: フルハウス
+  nameEn: Full House
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 5/17/2024
+  image: 90px-FS_full_house.png
+- id: 196
+  unitId: 6074
+  nameJa: アラート
+  nameEn: Allert
+  rarity: 6
+  class: support
+  deployment: high
+  limited: false
+  release: 5/17/2024
+  image: 90px-FS_allert.png
