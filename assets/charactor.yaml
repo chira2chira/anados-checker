@@ -1884,3 +1884,23 @@
   limited: false
   release: 5/17/2024
   image: 90px-FS_allert.png
+- id: 197
+  unitId: 5059
+  nameJa: バイオソルジャー ブルート
+  nameEn: Bionic Soldier Brute
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: true
+  release: 5/31/2024
+  image: 90px-FS_brute_(awakened).png
+- id: 198
+  unitId: 6075
+  nameJa: ドメイ
+  nameEn: Domay
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: false
+  release: 5/31/2024
+  image: 90px-FS_domay.png
