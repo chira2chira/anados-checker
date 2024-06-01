@@ -70,6 +70,13 @@ function getBanner(gachaInfo: GachaInfo[], id: any) {
   return gachaInfo.filter((x) => !x.revival).slice(-1)[0];
 }
 
+function formatRate(num: number, showSymbol?: boolean) {
+  // 小数点1桁表示
+  const result = Math.round(num * 1000) / 10;
+  const symbol = showSymbol && result >= 0 ? "+" : "";
+  return symbol + result;
+}
+
 const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   const router = useRouter();
   const { id } = router.query;
@@ -98,16 +105,14 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
       return prev + (char.rarity === rarity ? current.weight : 0);
     }, 0);
 
-    const style = per >= rarityWeight ? winStyle : loseStyle;
-    return <span css={style}>{Math.round(per * 1000) / 10}%</span>;
+    return <ResultRate percent={per} weight={rarityWeight} />;
   }
 
   function getPuPer() {
     const per = pullHistory.filter((x) => x.pickUp).length / pullHistory.length;
     if (isNaN(per)) return "-%";
 
-    const style = per >= puWeight ? winStyle : loseStyle;
-    return <span css={style}>{Math.round(per * 1000) / 10}%</span>;
+    return <ResultRate percent={per} weight={puWeight} />;
   }
 
   const puWeight = useMemo(
@@ -479,6 +484,31 @@ const CharacterImage: React.FC<CharacterImageProps> = (props) => {
           />
         )}
       </div>
+    </Tooltip>
+  );
+};
+
+type ResultRateProps = {
+  percent: number;
+  weight: number;
+};
+
+const ResultRate: React.FC<ResultRateProps> = (props) => {
+  const { percent, weight } = props;
+  const { t } = useTranslation("gacha");
+
+  const style = percent >= weight ? winStyle : loseStyle;
+  return (
+    <Tooltip
+      minimal
+      compact
+      content={`${t("ui.text.expectation")} ${formatRate(
+        percent - weight,
+        true
+      )}%`}
+      position="bottom"
+    >
+      <span css={style}>{formatRate(percent)}%</span>
     </Tooltip>
   );
 };
