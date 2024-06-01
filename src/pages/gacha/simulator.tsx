@@ -67,7 +67,7 @@ function getBanner(gachaInfo: GachaInfo[], id: any) {
     if (b !== undefined) return b;
   }
   // 未指定時は復刻を除外した最新のガチャにする
-  return gachaInfo.filter(x => !x.revival).slice(-1)[0];
+  return gachaInfo.filter((x) => !x.revival).slice(-1)[0];
 }
 
 const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
@@ -109,6 +109,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
     const style = per >= puWeight ? winStyle : loseStyle;
     return <span css={style}>{Math.round(per * 1000) / 10}%</span>;
   }
+
   const puWeight = useMemo(
     () =>
       banner.pickUp.reduce((prev, current) => {
