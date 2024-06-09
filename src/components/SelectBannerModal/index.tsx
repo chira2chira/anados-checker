@@ -157,7 +157,7 @@ const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
                 {t("ui.text.revival")}
               </Tag>
             )}
-            {isJa ? gachaInfo.nameJa : gachaInfo.nameEn}
+            <span>{isJa ? gachaInfo.nameJa : gachaInfo.nameEn}</span>
             <br />
             {dayjs(gachaInfo.start).tz().format("YYYY/M/D")}
             {" - "}

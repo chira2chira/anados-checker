@@ -565,7 +565,9 @@ const Home: NextPage<HomeProps> = (props) => {
           >
             {Math.round((owned.length / props.charInfo.length) * 100)}%
           </div>
-          {owned.length} / {props.charInfo.length}
+          <span>
+            {owned.length} / {props.charInfo.length}
+          </span>
         </div>
       </div>
       <div

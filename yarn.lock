@@ -471,6 +471,11 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.3.2.tgz#31b9c510d8cada9683549e1dbb4284cca5001faf"
   integrity sha512-V+MvGwaHH03hYhY+k6Ef/xKd6RYlc4q8WBx+2ANmipHJcKuktNcI/NgEsJgdSUF6Lw32njT6OnrRsKYCdgHjYw==
 
+"@sayari/eslint-plugin@^0.0.1-rc.4":
+  version "0.0.1-rc.4"
+  resolved "https://registry.yarnpkg.com/@sayari/eslint-plugin/-/eslint-plugin-0.0.1-rc.4.tgz#af522bfc03e3fad034a5354c250b978f94435550"
+  integrity sha512-epr+ovlyp+JPuPqUOW6S+aFcLIwnyBsBMr65yMi4qjQ9/8SlsAjVjt8Q8O9Al8fT1dk9MZlTomKI/UMr4bUT5A==
+
 "@swc/helpers@0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.2.tgz#85ea0c76450b61ad7d10a37050289eded783c27d"

@@ -139,8 +139,9 @@ const StandardRate: React.FC<StandardRateProps> = (props) => {
           margin-bottom: 5px;
         `}
       >
-        ★{props.rarity}: <RateSpan>{weight * 100}%</RateSpan>{" "}
-        {puWeight > 0 && `(PU +${puWeight * 100}%)`}
+        <span>★{props.rarity}: </span>
+        <RateSpan>{weight * 100}%</RateSpan>
+        <span> {puWeight > 0 && `(PU +${puWeight * 100}%)`}</span>
       </div>
       <div
         css={css`

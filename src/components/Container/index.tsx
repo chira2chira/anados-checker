@@ -88,19 +88,19 @@ export const Container: React.FC<ContainerProps> = (props) => {
           `}
         >
           <div>
-            {t("ui.text.resources")}:{" "}
+            <span>{t("ui.text.resources")}: </span>
             <a href="https://anothereidoswiki.ddns.net/index.php/Main_Page">
               AnotherEidos Wiki
             </a>
           </div>
           <div>
-            {t("ui.text.respect")}:{" "}
+            <span>{t("ui.text.respect")}: </span>
             <a href="https://eliya-bot.herokuapp.com/">
               ワーフリ所有率チェッカー
             </a>
           </div>
           <div>
-            {t("ui.text.author")}: チラツキ{" "}
+            <span>{t("ui.text.author")}: チラツキ </span>
             <a href="https://twitter.com/chira2chira">Twitter</a>{" "}
             <a href="https://www.youtube.com/@chira2chira">YouTube</a>{" "}
             <a href="https://github.com/chira2chira/anados-checker">GitHub</a>
