@@ -271,7 +271,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
           />
           <span>)</span>
         </div>
-        <span>
+        <span translate="no">
           ★6: {getRarityPer(6)}, ★5: {getRarityPer(5)}, PU: {getPuPer()}
         </span>
       </div>
