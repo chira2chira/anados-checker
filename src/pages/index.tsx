@@ -153,7 +153,7 @@ function filterTicketChar(filter: string) {
             : dayjs(char.release).isBefore(dayjs("2023/12/23")))
         );
       case "aniv2.5":
-        // 仮
+        // https://anothereidos-r.info/news/2-5anniv2024/
         if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
         return (
           char.rarity >= 4 &&
