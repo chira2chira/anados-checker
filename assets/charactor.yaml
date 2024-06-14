@@ -1904,3 +1904,23 @@
   limited: false
   release: 5/31/2024
   image: 90px-FS_domay.png
+- id: 199
+  unitId: 5060
+  nameJa: エターニオン
+  nameEn: Eternion
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: false
+  release: 6/14/2024
+  image: 90px-FS_eternion.png
+- id: 200
+  unitId: 6076
+  nameJa: マモン
+  nameEn: Mammon
+  rarity: 6
+  class: stranger
+  deployment: both
+  limited: false
+  release: 6/14/2024
+  image: 90px-FS_mammon.png
