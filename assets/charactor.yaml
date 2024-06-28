@@ -1924,3 +1924,23 @@
   limited: false
   release: 6/14/2024
   image: 90px-FS_mammon.png
+- id: 201
+  unitId: 6077
+  nameJa: ふたりだけの記念日 ヤークート
+  nameEn: An Anniversary Exclusively for Two Yaqut
+  rarity: 6
+  class: guard
+  deployment: low
+  limited: true
+  release: 6/28/2024
+  image: 90px-FS_yaqut_(awakened).png
+- id: 202
+  unitId: 6078
+  nameJa: ワンダーランドの案内人 ソルベ
+  nameEn: The Wonderland’s Guide Solvé
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: true
+  release: 6/28/2024
+  image: 90px-FS_solve_(awakened).png
