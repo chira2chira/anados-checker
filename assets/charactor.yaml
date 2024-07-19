@@ -1964,3 +1964,33 @@
   limited: false
   release: 7/5/2024
   image: 90px-FS_ittetsu.png
+- id: 205
+  unitId: 5062
+  nameJa: バイオゴーレム・γ
+  nameEn: Bionic Golem γ
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: false
+  release: 7/19/2024
+  image: 90px-FS_bionicgolem_gamma.png
+- id: 206
+  unitId: 5063
+  nameJa: バイオゴーレム・θ
+  nameEn: Bionic Golem θ
+  rarity: 5
+  class: shooter
+  deployment: high
+  limited: false
+  release: 7/19/2024
+  image: 90px-FS_bionicgolem_theta.png
+- id: 207
+  unitId: 6080
+  nameJa: ゼット
+  nameEn: Zed
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 7/19/2024
+  image: 90px-FS_zed.png
