@@ -30,7 +30,8 @@
       "aniv1.0": "1st Anniv",
       "aniv1.5": "1.5 Year Anniv",
       "aniv2.0": "2nd Anniv",
-      "aniv2.5": "2.5 Year Anniv"
+      "aniv2.5": "2.5 Year Anniv",
+      "aniv3.0": "3rd Year Anniv (Temporary)"
     },
     "message": {
       "saved": "Saved.",
