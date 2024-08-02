@@ -1994,3 +1994,33 @@
   limited: false
   release: 7/19/2024
   image: 90px-FS_zed.png
+- id: 208
+  unitId: 5064
+  nameJa: サマースカイダイビング ディオン
+  nameEn: Summer Skydiving Dion
+  rarity: 5
+  class: support
+  deployment: both
+  limited: true
+  release: 8/2/2024
+  image: 90px-FS_dion_(awakened).png
+- id: 209
+  unitId: 6081
+  nameJa: マッスルスモウレスラー ハルク
+  nameEn: Muscly Sumo Wrestler Hulk
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 8/2/2024
+  image: 90px-FS_hulk_(awakened).png
+- id: 210
+  unitId: 6082
+  nameJa: ハートストライカー マリオン
+  nameEn: Heart Striker Marion
+  rarity: 6
+  class: shooter
+  deployment: high
+  limited: true
+  release: 8/2/2024
+  image: 90px-FS_marion_(awakened).png
