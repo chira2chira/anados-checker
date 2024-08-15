@@ -14,7 +14,6 @@ import {
 import ClassButton from "@/components/ClassButton";
 import FilterSelect from "@/components/FilterSelect";
 import dayjs from "dayjs";
-import { toPng } from "html-to-image";
 import { domToCanvas } from "modern-screenshot";
 import { TopToaster } from "@/utils/toast";
 import { TEMP_CHAR_KEY } from "./share/char/[id]";
@@ -188,6 +187,7 @@ const Home: NextPage<HomeProps> = (props) => {
   const [fetching, setFetching] = useState(false);
   const [flash, setFlash] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
+  const [converting, setConverting] = useState(false);
   const shareUrlElm = useRef<HTMLInputElement>(null);
   const charAreaElm = useRef<HTMLDivElement>(null);
   const overallElm = useRef<HTMLDivElement>(null);
@@ -355,6 +355,7 @@ const Home: NextPage<HomeProps> = (props) => {
   };
 
   const handleCharImageDownload = async () => {
+    setConverting(true);
     const charArea = charAreaElm.current!;
     charArea.style.padding = "15px";
     const overall = overallElm.current!;
@@ -366,19 +367,18 @@ const Home: NextPage<HomeProps> = (props) => {
     credit.style.display = "block";
 
     const aElm = document.createElement("a");
-    if (isIos()) {
-      aElm.href = await domToCanvas(charArea).then((canvas) =>
-        canvas.toDataURL("image/png")
-      );
-    } else {
-      aElm.href = await toPng(charArea);
-    }
+    aElm.href = await domToCanvas(charArea, {
+      style: { background: "#111418" },
+    }).then((canvas) => {
+      return canvas.toDataURL("image/png");
+    });
     aElm.setAttribute(
       "download",
       "anadoschars_" + new Date().getTime() + ".png"
     );
     aElm.click();
 
+    setConverting(false);
     charArea.style.padding = "";
     overall.style.position = "sticky";
     overall.style.transitionDuration = currentDuration;
@@ -533,7 +533,6 @@ const Home: NextPage<HomeProps> = (props) => {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #111418;
           `}
         >
           <CharacterArea
@@ -704,8 +703,14 @@ const Home: NextPage<HomeProps> = (props) => {
             )}
           </div>
         </div>
-        <Button onClick={handleCharImageDownload} outlined>
-          {t("ui.button.downloadScreenshot")}
+        <Button
+          onClick={handleCharImageDownload}
+          outlined
+          disabled={converting}
+        >
+          {converting
+            ? t("ui.button.converting")
+            : t("ui.button.downloadScreenshot")}
         </Button>
       </div>
     </Container>

@@ -19,7 +19,6 @@
     "dayjs": "^1.11.9",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
-    "html-to-image": "^1.11.11",
     "i18next": "^23.4.1",
     "js-yaml": "^4.1.0",
     "kysely": "^0.26.1",
