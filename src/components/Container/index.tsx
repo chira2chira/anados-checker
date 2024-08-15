@@ -7,7 +7,7 @@ import CommonMeta from "@/components/CommonMeta";
 const main = css`
   max-width: 65em;
   margin: auto;
-  padding: 40px 15px 0;
+  padding: 60px 15px 0;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;

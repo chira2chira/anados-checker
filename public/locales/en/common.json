@@ -5,6 +5,7 @@
     "button": {
       "save": "Save",
       "getShareLink": "Generate Share URL",
+      "downloadScreenshot": "Download Screenshot",
       "checkAll": "Select All",
       "uncheckAll": "Deselect All",
       "spoilerFilter": "Hide Story Spoiler"

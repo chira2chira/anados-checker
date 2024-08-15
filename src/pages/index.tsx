@@ -14,6 +14,7 @@ import {
 import ClassButton from "@/components/ClassButton";
 import FilterSelect from "@/components/FilterSelect";
 import dayjs from "dayjs";
+import { toPng } from "html-to-image";
 import { TopToaster } from "@/utils/toast";
 import { TEMP_CHAR_KEY } from "./share/char/[id]";
 import { useRouter } from "next/router";
@@ -187,6 +188,9 @@ const Home: NextPage<HomeProps> = (props) => {
   const [flash, setFlash] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
   const shareUrlElm = useRef<HTMLInputElement>(null);
+  const charAreaElm = useRef<HTMLDivElement>(null);
+  const overallElm = useRef<HTMLDivElement>(null);
+  const creditElm = useRef<HTMLDivElement>(null);
   const { asPath, locale, push } = useRouter();
   const scrolling = useScroll();
   const { t } = useTranslation("common");
@@ -349,6 +353,30 @@ const Home: NextPage<HomeProps> = (props) => {
     });
   };
 
+  const handleCharImageDownload = () => {
+    const charArea = charAreaElm.current!;
+    charArea.style.padding = "15px";
+    const overall = overallElm.current!;
+    const currentDuration = overall.style.transitionDuration;
+    overall.style.position = "static";
+    overall.style.transitionDuration = "0s";
+    overall.classList.remove("scrolling");
+    const credit = creditElm.current!;
+    credit.style.display = "block";
+
+    toPng(charArea).then((dataUrl) => {
+      const aElm = document.createElement("a");
+      aElm.href = dataUrl;
+      aElm.download = "anadoschars.png";
+      aElm.click();
+
+      charArea.style.padding = "";
+      overall.style.position = "sticky";
+      overall.style.transitionDuration = currentDuration;
+      credit.style.display = "none";
+    });
+  };
+
   return (
     <Container titleLink="/">
       <div css={styles.main} className={flash ? "flash" : undefined}>
@@ -485,99 +513,123 @@ const Home: NextPage<HomeProps> = (props) => {
           />
         </div>
 
-        <CharacterArea
-          rarity={7}
-          charInfo={rare7}
-          hideSpoiler={hideSpoiler}
-          onCharClick={handleCharClick}
-          onBulkRegister={handleBulkRegister}
-        />
-        <CharacterArea
-          rarity={6}
-          charInfo={rare6}
-          hideSpoiler={hideSpoiler}
-          onCharClick={handleCharClick}
-          onBulkRegister={handleBulkRegister}
-        />
-        <CharacterArea
-          rarity={5}
-          charInfo={rare5}
-          hideSpoiler={hideSpoiler}
-          onCharClick={handleCharClick}
-          onBulkRegister={handleBulkRegister}
-        />
-        <CharacterArea
-          rarity={4}
-          charInfo={rare4}
-          hideSpoiler={hideSpoiler}
-          onCharClick={handleCharClick}
-          onBulkRegister={handleBulkRegister}
-        />
-        <CharacterArea
-          rarity={3}
-          charInfo={rare3}
-          hideSpoiler={hideSpoiler}
-          onCharClick={handleCharClick}
-          onBulkRegister={handleBulkRegister}
-        />
-        <CharacterArea
-          rarity={2}
-          charInfo={rare2}
-          hideSpoiler={hideSpoiler}
-          onCharClick={handleCharClick}
-          onBulkRegister={handleBulkRegister}
-        />
-        <CharacterArea
-          rarity={1}
-          charInfo={rare1}
-          hideSpoiler={hideSpoiler}
-          onCharClick={handleCharClick}
-          onBulkRegister={handleBulkRegister}
-        />
-        <CharacterArea
-          rarity={0}
-          charInfo={rare0}
-          hideSpoiler={hideSpoiler}
-          onCharClick={handleCharClick}
-          onBulkRegister={handleBulkRegister}
-        />
-
         <div
-          className={scrolling ? "scrolling" : undefined}
+          ref={charAreaElm}
           css={css`
-            padding: 10px 15px;
-            border-radius: 5px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: #d3d8de;
-            position: sticky;
-            bottom: 20px;
-            background: rgba(17, 20, 24, 0.7);
-
-            opacity: 1;
-            visibility: visible;
-            transition: opacity 0.5s, visibility 0.5s;
-
-            &.scrolling {
-              opacity: 0;
-              visibility: hidden;
-            }
+            background: #111418;
           `}
         >
-          {t("ui.text.overall")}
+          <CharacterArea
+            rarity={7}
+            charInfo={rare7}
+            hideSpoiler={hideSpoiler}
+            onCharClick={handleCharClick}
+            onBulkRegister={handleBulkRegister}
+          />
+          <CharacterArea
+            rarity={6}
+            charInfo={rare6}
+            hideSpoiler={hideSpoiler}
+            onCharClick={handleCharClick}
+            onBulkRegister={handleBulkRegister}
+          />
+          <CharacterArea
+            rarity={5}
+            charInfo={rare5}
+            hideSpoiler={hideSpoiler}
+            onCharClick={handleCharClick}
+            onBulkRegister={handleBulkRegister}
+          />
+          <CharacterArea
+            rarity={4}
+            charInfo={rare4}
+            hideSpoiler={hideSpoiler}
+            onCharClick={handleCharClick}
+            onBulkRegister={handleBulkRegister}
+          />
+          <CharacterArea
+            rarity={3}
+            charInfo={rare3}
+            hideSpoiler={hideSpoiler}
+            onCharClick={handleCharClick}
+            onBulkRegister={handleBulkRegister}
+          />
+          <CharacterArea
+            rarity={2}
+            charInfo={rare2}
+            hideSpoiler={hideSpoiler}
+            onCharClick={handleCharClick}
+            onBulkRegister={handleBulkRegister}
+          />
+          <CharacterArea
+            rarity={1}
+            charInfo={rare1}
+            hideSpoiler={hideSpoiler}
+            onCharClick={handleCharClick}
+            onBulkRegister={handleBulkRegister}
+          />
+          <CharacterArea
+            rarity={0}
+            charInfo={rare0}
+            hideSpoiler={hideSpoiler}
+            onCharClick={handleCharClick}
+            onBulkRegister={handleBulkRegister}
+          />
+
           <div
+            ref={overallElm}
+            className={scrolling ? "scrolling" : undefined}
             css={css`
-              color: #fff;
-              font-size: 200%;
-              font-weight: 600;
+              padding: 10px 15px;
+              border-radius: 5px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              color: #d3d8de;
+              position: sticky;
+              bottom: 20px;
+              background: rgba(17, 20, 24, 0.7);
+
+              opacity: 1;
+              visibility: visible;
+              transition: opacity 0.5s, visibility 0.5s;
+
+              &.scrolling {
+                opacity: 0;
+                visibility: hidden;
+              }
             `}
           >
-            {Math.round((owned.length / props.charInfo.length) * 100)}%
+            {t("ui.text.overall")}
+            <div
+              css={css`
+                color: #fff;
+                font-size: 200%;
+                font-weight: 600;
+              `}
+            >
+              {Math.round((owned.length / props.charInfo.length) * 100)}%
+            </div>
+            <span>
+              {owned.length} / {props.charInfo.length}
+            </span>
           </div>
-          <span>
-            {owned.length} / {props.charInfo.length}
-          </span>
+          <div
+            ref={creditElm}
+            css={css`
+              width: 100%;
+              text-align: right;
+              font-size: 80%;
+              display: none;
+            `}
+          >
+            <span>{t("title")}</span>
+            <br />
+            <span>https://anados-collection-tracker.vercel.app/</span>
+          </div>
         </div>
       </div>
       <div
@@ -587,48 +639,60 @@ const Home: NextPage<HomeProps> = (props) => {
           right: 10px;
           z-index: 10;
           display: flex;
+          flex-direction: column;
+          align-items: flex-end;
           gap: 5px;
         `}
       >
-        <Button onClick={handleSave} intent="primary">
-          {t("ui.button.save")}
-        </Button>
-        <div>
-          {shareUrl ? (
-            <InputGroup
-              css={css`
-                width: 180px;
-                border: 1px solid #5f6b7c;
-                border-radius: 2px;
-                direction: rtl;
-              `}
-              inputRef={shareUrlElm}
-              value={shareUrl}
-              readOnly
-              rightElement={
-                <Tooltip
-                  compact
-                  content={t("ui.message.copyToClipboard")}
-                  position="bottom-right"
-                  defaultIsOpen={true}
-                >
-                  <Button
-                    css={css`
-                      width: 40px;
-                    `}
-                    intent="success"
-                    icon="clipboard"
-                    onClick={handleClipboardCopy}
-                  />
-                </Tooltip>
-              }
-            />
-          ) : (
-            <Button loading={fetching} onClick={handleGetShareLink}>
-              {t("ui.button.getShareLink")}
-            </Button>
-          )}
+        <div
+          css={css`
+            display: flex;
+            gap: 5px;
+          `}
+        >
+          <Button onClick={handleSave} intent="primary">
+            {t("ui.button.save")}
+          </Button>
+          <div>
+            {shareUrl ? (
+              <InputGroup
+                css={css`
+                  width: 180px;
+                  border: 1px solid #5f6b7c;
+                  border-radius: 2px;
+                  direction: rtl;
+                `}
+                inputRef={shareUrlElm}
+                value={shareUrl}
+                readOnly
+                rightElement={
+                  <Tooltip
+                    compact
+                    content={t("ui.message.copyToClipboard")}
+                    position="bottom-right"
+                    defaultIsOpen={true}
+                  >
+                    <Button
+                      css={css`
+                        width: 40px;
+                      `}
+                      intent="success"
+                      icon="clipboard"
+                      onClick={handleClipboardCopy}
+                    />
+                  </Tooltip>
+                }
+              />
+            ) : (
+              <Button loading={fetching} onClick={handleGetShareLink}>
+                {t("ui.button.getShareLink")}
+              </Button>
+            )}
+          </div>
         </div>
+        <Button onClick={handleCharImageDownload} outlined>
+          {t("ui.button.downloadScreenshot")}
+        </Button>
       </div>
     </Container>
   );
