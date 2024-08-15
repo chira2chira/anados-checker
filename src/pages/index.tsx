@@ -357,6 +357,7 @@ const Home: NextPage<HomeProps> = (props) => {
   const handleCharImageDownload = async () => {
     setConverting(true);
     const charArea = charAreaElm.current!;
+    charArea.style.width = "850px";
     charArea.style.padding = "15px";
     const overall = overallElm.current!;
     const currentDuration = overall.style.transitionDuration;
@@ -381,6 +382,7 @@ const Home: NextPage<HomeProps> = (props) => {
     aElm.click();
 
     setConverting(false);
+    charArea.style.width = "";
     charArea.style.padding = "";
     overall.style.position = "sticky";
     overall.style.transitionDuration = currentDuration;
