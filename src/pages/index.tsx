@@ -14,7 +14,7 @@ import {
 import ClassButton from "@/components/ClassButton";
 import FilterSelect from "@/components/FilterSelect";
 import dayjs from "dayjs";
-import { domToCanvas } from "modern-screenshot";
+import { domToPng } from "modern-screenshot";
 import { TopToaster } from "@/utils/toast";
 import { TEMP_CHAR_KEY } from "./share/char/[id]";
 import { useRouter } from "next/router";
@@ -367,10 +367,12 @@ const Home: NextPage<HomeProps> = (props) => {
     credit.style.display = "block";
 
     const aElm = document.createElement("a");
-    aElm.href = await domToCanvas(charArea, {
-      style: { background: "#111418" },
-    }).then((canvas) => {
-      return canvas.toDataURL("image/png");
+    aElm.href = await domToPng(charArea, {
+      backgroundColor: "#111418",
+      features: {
+        fixSvgXmlDecode: false, // iOSのパフォーマンス向上
+      },
+      drawImageInterval: 1000, // よくわからない
     });
     aElm.setAttribute(
       "download",
