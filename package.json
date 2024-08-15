@@ -25,6 +25,7 @@
     "kysely": "^0.26.1",
     "lodash.throttle": "^4.1.1",
     "mersennetwister": "^0.2.3",
+    "modern-screenshot": "^4.4.39",
     "next": "^13.0.0",
     "next-i18next": "^14.0.0",
     "normalize.css": "^8.0.1",

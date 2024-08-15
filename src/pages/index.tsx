@@ -15,6 +15,7 @@ import ClassButton from "@/components/ClassButton";
 import FilterSelect from "@/components/FilterSelect";
 import dayjs from "dayjs";
 import { toPng } from "html-to-image";
+import { domToCanvas } from "modern-screenshot";
 import { TopToaster } from "@/utils/toast";
 import { TEMP_CHAR_KEY } from "./share/char/[id]";
 import { useRouter } from "next/router";
@@ -353,7 +354,7 @@ const Home: NextPage<HomeProps> = (props) => {
     });
   };
 
-  const handleCharImageDownload = () => {
+  const handleCharImageDownload = async () => {
     const charArea = charAreaElm.current!;
     charArea.style.padding = "15px";
     const overall = overallElm.current!;
@@ -364,22 +365,29 @@ const Home: NextPage<HomeProps> = (props) => {
     const credit = creditElm.current!;
     credit.style.display = "block";
 
-    toPng(charArea).then((dataUrl) => {
-      const aElm = document.createElement("a");
-      aElm.href = dataUrl;
-      aElm.download = "anadoschars.png";
-      aElm.click();
+    const aElm = document.createElement("a");
+    if (isIos()) {
+      aElm.href = await domToCanvas(charArea).then((canvas) =>
+        canvas.toDataURL("image/png")
+      );
+    } else {
+      aElm.href = await toPng(charArea);
+    }
+    aElm.setAttribute(
+      "download",
+      "anadoschars_" + new Date().getTime() + ".png"
+    );
+    aElm.click();
 
-      charArea.style.padding = "";
-      overall.style.position = "sticky";
-      overall.style.transitionDuration = currentDuration;
-      credit.style.display = "none";
+    charArea.style.padding = "";
+    overall.style.position = "sticky";
+    overall.style.transitionDuration = currentDuration;
+    credit.style.display = "none";
 
-      sendEvent({
-        action: "download",
-        category: "character",
-        label: "success",
-      });
+    sendEvent({
+      action: "download",
+      category: "character",
+      label: "success",
     });
   };
 
