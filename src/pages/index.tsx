@@ -374,6 +374,12 @@ const Home: NextPage<HomeProps> = (props) => {
       overall.style.position = "sticky";
       overall.style.transitionDuration = currentDuration;
       credit.style.display = "none";
+
+      sendEvent({
+        action: "download",
+        category: "character",
+        label: "success",
+      });
     });
   };
 
