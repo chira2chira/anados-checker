@@ -598,7 +598,7 @@ const Home: NextPage<HomeProps> = (props) => {
 
           <div
             ref={overallElm}
-            className={scrolling ? "scrolling" : undefined}
+            className={scrolling && !converting ? "scrolling" : undefined}
             css={css`
               padding: 10px 15px;
               border-radius: 5px;
