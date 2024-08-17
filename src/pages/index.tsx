@@ -14,7 +14,6 @@ import {
 import ClassButton from "@/components/ClassButton";
 import FilterSelect from "@/components/FilterSelect";
 import dayjs from "dayjs";
-import { domToPng } from "modern-screenshot";
 import { TopToaster } from "@/utils/toast";
 import { TEMP_CHAR_KEY } from "./share/char/[id]";
 import { useRouter } from "next/router";
@@ -25,6 +24,7 @@ import { parseLocalStorageChar } from "@/utils/charUtil";
 import { isIos } from "@/utils/browser";
 import { useScroll } from "@/hooks/useScroll";
 import { Container } from "@/components/Container";
+import { CaptureModal } from "@/components/CaptureModal";
 
 const CHAR_KEY = "chars";
 const SPOILER_KEY = "hidespoiler";
@@ -187,11 +187,8 @@ const Home: NextPage<HomeProps> = (props) => {
   const [fetching, setFetching] = useState(false);
   const [flash, setFlash] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
-  const [converting, setConverting] = useState(false);
+  const [openCaptureModal, setOpenCaptureModal] = useState(false);
   const shareUrlElm = useRef<HTMLInputElement>(null);
-  const charAreaElm = useRef<HTMLDivElement>(null);
-  const overallElm = useRef<HTMLDivElement>(null);
-  const creditElm = useRef<HTMLDivElement>(null);
   const { asPath, locale, push } = useRouter();
   const scrolling = useScroll();
   const { t } = useTranslation("common");
@@ -354,45 +351,8 @@ const Home: NextPage<HomeProps> = (props) => {
     });
   };
 
-  const handleCharImageDownload = async () => {
-    setConverting(true);
-    const charArea = charAreaElm.current!;
-    charArea.style.width = "850px";
-    charArea.style.padding = "15px";
-    const overall = overallElm.current!;
-    const currentDuration = overall.style.transitionDuration;
-    overall.style.position = "static";
-    overall.style.transitionDuration = "0s";
-    overall.classList.remove("scrolling");
-    const credit = creditElm.current!;
-    credit.style.display = "block";
-
-    const aElm = document.createElement("a");
-    aElm.href = await domToPng(charArea, {
-      backgroundColor: "#111418",
-      features: {
-        fixSvgXmlDecode: false, // iOSのパフォーマンス向上
-      },
-      drawImageInterval: 1000, // よくわからない
-    });
-    aElm.setAttribute(
-      "download",
-      "anadoschars_" + new Date().getTime() + ".png"
-    );
-    aElm.click();
-
-    setConverting(false);
-    charArea.style.width = "";
-    charArea.style.padding = "";
-    overall.style.position = "sticky";
-    overall.style.transitionDuration = currentDuration;
-    credit.style.display = "none";
-
-    sendEvent({
-      action: "download",
-      category: "character",
-      label: "success",
-    });
+  const handleCharImageDownload = () => {
+    setOpenCaptureModal(true);
   };
 
   return (
@@ -532,7 +492,6 @@ const Home: NextPage<HomeProps> = (props) => {
         </div>
 
         <div
-          ref={charAreaElm}
           css={css`
             display: flex;
             flex-direction: column;
@@ -597,8 +556,7 @@ const Home: NextPage<HomeProps> = (props) => {
           />
 
           <div
-            ref={overallElm}
-            className={scrolling && !converting ? "scrolling" : undefined}
+            className={scrolling ? "scrolling" : undefined}
             css={css`
               padding: 10px 15px;
               border-radius: 5px;
@@ -635,7 +593,6 @@ const Home: NextPage<HomeProps> = (props) => {
             </span>
           </div>
           <div
-            ref={creditElm}
             css={css`
               width: 100%;
               text-align: right;
@@ -707,16 +664,19 @@ const Home: NextPage<HomeProps> = (props) => {
             )}
           </div>
         </div>
-        <Button
-          onClick={handleCharImageDownload}
-          outlined
-          disabled={converting}
-        >
-          {converting
-            ? t("ui.button.converting")
-            : t("ui.button.downloadScreenshot")}
+        <Button onClick={handleCharImageDownload} outlined>
+          {t("ui.button.downloadScreenshot")}
         </Button>
       </div>
+
+      <CaptureModal
+        isOpen={openCaptureModal}
+        charInfo={props.charInfo}
+        displayChars={[rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7]}
+        owned={owned}
+        hideSpoiler={hideSpoiler}
+        onClose={() => setOpenCaptureModal(false)}
+      />
     </Container>
   );
 };
@@ -725,11 +685,12 @@ type CharacterAreaProps = {
   rarity: number;
   charInfo: CharInfo[];
   hideSpoiler: boolean;
+  hideCheckBUtton?: boolean;
   onCharClick: (id: number) => void;
   onBulkRegister: (ids: number[]) => void;
 };
 
-const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
+export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
   const { t } = useTranslation("common");
 
   if (props.charInfo.length === 0) return null;
@@ -793,16 +754,18 @@ const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
             {props.charInfo.filter((x) => x.owned).length} /{" "}
             {props.charInfo.length}
           </span>
-          <Button
-            outlined
-            css={css`
-              width: 6.3rem;
-              font-size: 80%;
-            `}
-            onClick={handleBulkRegister}
-          >
-            {allOwned ? t("ui.button.uncheckAll") : t("ui.button.checkAll")}
-          </Button>
+          {!props.hideCheckBUtton && (
+            <Button
+              outlined
+              css={css`
+                width: 6.3rem;
+                font-size: 80%;
+              `}
+              onClick={handleBulkRegister}
+            >
+              {allOwned ? t("ui.button.uncheckAll") : t("ui.button.checkAll")}
+            </Button>
+          )}
         </div>
       </div>
       <div

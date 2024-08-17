@@ -6,7 +6,6 @@
       "save": "Save",
       "getShareLink": "Generate Share URL",
       "downloadScreenshot": "Download Screenshot",
-      "converting": "In progress...",
       "checkAll": "Select All",
       "uncheckAll": "Deselect All",
       "spoilerFilter": "Hide Story Spoiler"
@@ -33,7 +32,10 @@
       "aniv1.5": "1.5 Year Anniv",
       "aniv2.0": "2nd Anniv",
       "aniv2.5": "2.5 Year Anniv",
-      "aniv3.0": "3rd Year Anniv (Temporary)"
+      "aniv3.0": "3rd Year Anniv (Temporary)",
+      "resetFilter": "Clearing filter conditions",
+      "showHighRarityOnly": "Display only high rarity characters",
+      "showOverall": "Display overall status"
     },
     "message": {
       "saved": "Saved.",
