@@ -121,9 +121,11 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
             </Button>
           </div>
           <div>
-            <Switch checked={resetFilter} onChange={handleResetFilter}>
-              {t("ui.filter.resetFilter")}
-            </Switch>
+            {props.charInfo.length !== props.displayChars.flat().length && (
+              <Switch checked={resetFilter} onChange={handleResetFilter}>
+                {t("ui.filter.resetFilter")}
+              </Switch>
+            )}
             <Switch
               checked={showHighRarityOnly}
               onChange={handleShowHighRarityOnly}
