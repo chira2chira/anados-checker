@@ -6,6 +6,8 @@ import { css } from "@emotion/react";
 import { CharacterArea, CharInfo } from "@/pages";
 import { sendEvent } from "@/utils/gtag";
 
+const BG_COLOR = "#111418";
+
 type CaptureModal = {
   isOpen: boolean;
   charInfo: CharInfo[];
@@ -58,7 +60,7 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
     aElm.href = await domToPng(previewElm, {
       width: previewChildInfo.clientWidth,
       height: previewChildInfo.clientHeight,
-      backgroundColor: "#111418",
+      backgroundColor: BG_COLOR,
       features: {
         fixSvgXmlDecode: false, // iOSのパフォーマンス向上
       },
@@ -140,6 +142,7 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
             ref={wrapperRef}
             css={css`
               border: 1px dotted white;
+              background-color: ${BG_COLOR};
             `}
           >
             <div
