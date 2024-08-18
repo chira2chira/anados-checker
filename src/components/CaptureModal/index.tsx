@@ -35,7 +35,7 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
     typeof document === "undefined"
       ? 10
       : document.documentElement.clientWidth * 0.9;
-  const previewScale = modalWidth > 880 ? 1 : modalWidth / 880;
+  const previewScale = modalWidth > 880 ? 0.9 : modalWidth / 880;
 
   const handleResetFilter = () => {
     setResetFilter(!resetFilter);
@@ -141,6 +141,7 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
           <div
             ref={wrapperRef}
             css={css`
+              position: relative;
               border: 1px dotted white;
               background-color: ${BG_COLOR};
             `}
@@ -159,6 +160,20 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
                   showOverall={showOverall}
                 />
               </div>
+            </div>
+            <div
+              css={css`
+                position: absolute;
+                top: -0.9em;
+                right: 0;
+                left: 0;
+                text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+                  -1px -1px 0 #000;
+                text-align: center;
+                font-size: 95%; 
+              `}
+            >
+              PREVIEW
             </div>
           </div>
         </div>
