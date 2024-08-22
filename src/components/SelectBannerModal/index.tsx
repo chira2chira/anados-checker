@@ -1,11 +1,4 @@
-import {
-  RefObject,
-  createRef,
-  forwardRef,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { RefObject, createRef, forwardRef, useRef, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
@@ -48,17 +41,21 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
     .filter((x) => includeRevival || !x.revival)
     .filter((x) => includeEnded || dayjs.tz().isBefore(dayjs(x.end).tz()));
 
-  useEffect(() => {
+  const scrollToCurrentBanner = () => {
     const bannerRef = bannerRefs.current[Number(id)];
-    if (props.isOpen && !!bannerRef) {
+    if (!!bannerRef) {
       bannerRef.current?.scrollIntoView({
         block: "center",
       });
     }
-  }, [props.isOpen, id]);
+  };
 
   return (
-    <Dialog isOpen={props.isOpen} onClose={props.onClose}>
+    <Dialog
+      isOpen={props.isOpen}
+      onOpening={scrollToCurrentBanner}
+      onClose={props.onClose}
+    >
       <DialogBody>
         <div
           css={css`
