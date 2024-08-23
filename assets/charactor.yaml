@@ -2024,3 +2024,33 @@
   limited: true
   release: 8/2/2024
   image: 90px-FS_marion_(awakened).png
+- id: 211
+  unitId: 5065
+  nameJa: アスレチックカウボーイ フォルテ
+  nameEn: Athletic Cowboy Forte
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: true
+  release: 8/23/2024
+  image: 90px-FS_forte_(awakened).png
+- id: 212
+  unitId: 5066
+  nameJa: サンライズホーク シドレー
+  nameEn: Sunrise Hawk Siddeley
+  rarity: 5
+  class: shooter
+  deployment: high
+  limited: true
+  release: 8/23/2024
+  image: 90px-FS_siddeley_(awakened).png
+- id: 213
+  unitId: 6083
+  nameJa: エンジョイフィッシング ボンヴォイ
+  nameEn: Fishing Enthusiast Bonvoy
+  rarity: 6
+  class: healer
+  deployment: high
+  limited: true
+  release: 8/23/2024
+  image: 90px-FS_bonvoy_(awakened).png
