@@ -276,73 +276,70 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
         </span>
       </div>
 
-      {pullHistory.length !== 0 && (
-        <>
-          <div
-            css={css`
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-              gap: 3px;
-              margin-bottom: 20px;
-              padding: 8px;
-              border: 1px solid #454545;
-              background-color: #252a31;
-            `}
-          >
-            {pullResult.map((x, i) => (
-              <CharacterImage
-                key={`${i}:${x.id}`}
-                highlightPu={highlightPu}
-                char={x}
-              />
-            ))}
-          </div>
-          <div
-            css={css`
-              display: flex;
-              flex-direction: column;
-              gap: 10px;
-              width: 100%;
-              margin-bottom: 10px;
-            `}
-          >
-            <HistoryArea
-              rarity={6}
-              highlightPu={highlightPu}
-              pullHistory={pullHistory}
-            />
-            <HistoryArea
-              rarity={5}
-              highlightPu={highlightPu}
-              pullHistory={pullHistory}
-            />
-            <HistoryArea
-              rarity={4}
-              highlightPu={highlightPu}
-              pullHistory={pullHistory}
-            />
-            <HistoryArea
-              rarity={3}
-              highlightPu={highlightPu}
-              pullHistory={pullHistory}
-            />
-          </div>
+      <div
+        css={css`
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 3px;
+          margin-bottom: 20px;
+          padding: 8px;
+          border: 1px solid #454545;
+          background-color: #252a31;
+        `}
+      >
+        {pullResult.length === 0 && <NoData />}
+        {pullResult.map((x, i) => (
+          <CharacterImage
+            key={`${i}:${x.id}`}
+            highlightPu={highlightPu}
+            char={x}
+          />
+        ))}
+      </div>
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+          margin-bottom: 10px;
+        `}
+      >
+        <HistoryArea
+          rarity={6}
+          highlightPu={highlightPu}
+          pullHistory={pullHistory}
+        />
+        <HistoryArea
+          rarity={5}
+          highlightPu={highlightPu}
+          pullHistory={pullHistory}
+        />
+        <HistoryArea
+          rarity={4}
+          highlightPu={highlightPu}
+          pullHistory={pullHistory}
+        />
+        <HistoryArea
+          rarity={3}
+          highlightPu={highlightPu}
+          pullHistory={pullHistory}
+        />
+      </div>
 
-          <div
-            css={css`
-              display: flex;
-              justify-content: flex-start;
-            `}
-          >
-            <Checkbox
-              checked={highlightPu}
-              label={t("ui.button.highlightPu")}
-              onClick={() => setHighlightPu(!highlightPu)}
-            />
-          </div>
-        </>
-      )}
+      <div
+        css={css`
+          display: flex;
+          justify-content: flex-start;
+        `}
+      >
+        <Checkbox
+          checked={highlightPu}
+          label={t("ui.button.highlightPu")}
+          onClick={() => setHighlightPu(!highlightPu)}
+        />
+      </div>
 
       <RateListModal
         isOpen={openRateList}
@@ -357,6 +354,23 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
         onClose={handleCloseSelectBanner}
       />
     </Container>
+  );
+};
+
+const NoData: React.FC = () => {
+  return (
+    <div
+      css={css`
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #919191;
+      `}
+    >
+      NO DATA
+    </div>
   );
 };
 
@@ -391,6 +405,7 @@ const HistoryArea: React.FC<HistoryAreaProps> = (props) => {
           gap: 3px;
         `}
       >
+        {uniqueCharList.length === 0 && <NoData />}
         {uniqueCharList.map((y) => (
           <CharacterImage
             key={y.id}
