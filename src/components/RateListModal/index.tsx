@@ -155,9 +155,20 @@ const StandardRate: React.FC<StandardRateProps> = (props) => {
           .map((x) => {
             const char = props.charInfo.find((y) => y.id === x.id);
             if (char === undefined || char.rarity !== props.rarity) return null;
+            const isPu =
+              props.gachaInfo.pickUp.filter((x) => x.name === char.nameJa)
+                .length === 1;
 
             return (
-              <span key={char.id}>{isJa ? char.nameJa : char.nameEn}</span>
+              <span
+                key={char.id}
+                css={css`
+                  color: ${isPu ? "#fbd065" : "inherit"};
+                  font-weight: ${isPu ? "bold" : "inherit"};
+                `}
+              >
+                {isJa ? char.nameJa : char.nameEn}
+              </span>
             );
           })
           .filter((x) => x !== null)
