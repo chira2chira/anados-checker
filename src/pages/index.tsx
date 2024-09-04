@@ -592,18 +592,6 @@ const Home: NextPage<HomeProps> = (props) => {
               {owned.length} / {props.charInfo.length}
             </span>
           </div>
-          <div
-            css={css`
-              width: 100%;
-              text-align: right;
-              font-size: 80%;
-              display: none;
-            `}
-          >
-            <span>{t("title")}</span>
-            <br />
-            <span>https://anados-collection-tracker.vercel.app/</span>
-          </div>
         </div>
       </div>
       <div
