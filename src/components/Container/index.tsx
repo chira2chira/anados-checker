@@ -49,12 +49,13 @@ export const Container: React.FC<ContainerProps> = (props) => {
         css={css`
           display: flex;
           padding: 3px 10px 0;
-          gap: 13px;
-          font-size: 90%;
+          gap: 11px;
+          font-size: 80%;
         `}
       >
         <Link href={"/"}>{t("ui.link.checker")}</Link>
         <Link href={"/gacha/simulator"}>{t("ui.link.gachasimu")}</Link>
+        <Link href={"/still/manager"}>{t("ui.link.stillmng")}</Link>
         <Link href={"https://anados-generator.vercel.app/"}>
           {t("ui.link.generator")}
         </Link>

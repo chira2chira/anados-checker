@@ -1,6 +1,7 @@
 import "i18next";
 import common from "./public/locales/ja/common.json";
 import gacha from "./public/locales/ja/gacha.json";
+import still from "./public/locales/ja/still.json";
 
 declare module "i18next" {
   // Extend CustomTypeOptions
@@ -11,6 +12,7 @@ declare module "i18next" {
     resources: {
       common: typeof common;
       gacha: typeof gacha;
+      still: typeof still;
     };
     // other
   }

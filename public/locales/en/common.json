@@ -8,7 +8,8 @@
       "downloadScreenshot": "Download Screenshot",
       "checkAll": "Select All",
       "uncheckAll": "Deselect All",
-      "spoilerFilter": "Hide Story Spoiler"
+      "spoilerFilter": "Hide Story Spoiler",
+      "close": "Close"
     },
     "filter": {
       "ownedBy": "By Owned",
@@ -23,6 +24,12 @@
       "bothGround": "Both",
       "releaseBy": "By Release Year",
       "ticketBy": "Anniv Scout Ticket",
+      "notImplementedBy": "Still",
+      "showNotImplemented": "Also Not Implemented",
+      "readBy": "Read Status",
+      "read": "Read",
+      "unread": "Unread",
+      "rateBy": "Rating",
       "year2021": "2021",
       "year2022": "2022",
       "year2023": "2023",
@@ -51,7 +58,8 @@
     },
     "link": {
       "checker": "Collection Tracker",
-      "gachasimu": "Gacha Simulator",
+      "gachasimu": "Gacha Sim",
+      "stillmng": "Still Manager",
       "generator": "Text Generator"
     }
   }

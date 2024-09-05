@@ -6,3 +6,7 @@ export function parseLocalStorageChar(value: string) {
     .map(Number)
     .filter((x) => !BAN_CHAR.includes(x));
 }
+
+export function parseLocalStorageStill(value: string) {
+  return JSON.parse(value);
+}

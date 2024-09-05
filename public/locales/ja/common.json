@@ -8,7 +8,8 @@
       "downloadScreenshot": "スクショを保存",
       "checkAll": "すべてチェック",
       "uncheckAll": "すべて外す",
-      "spoilerFilter": "ネタバレを隠す"
+      "spoilerFilter": "ネタバレを隠す",
+      "close": "閉じる"
     },
     "filter": {
       "ownedBy": "所有状況",
@@ -23,6 +24,12 @@
       "bothGround": "両方",
       "releaseBy": "実装時期",
       "ticketBy": "周年指名券",
+      "notImplementedBy": "スチル",
+      "showNotImplemented": "スチル未実装キャラも表示",
+      "readBy": "既読状態",
+      "read": "既読のみ",
+      "unread": "未読のみ",
+      "rateBy": "レビュー",
       "year2021": "2021年",
       "year2022": "2022年",
       "year2023": "2023年",
@@ -51,7 +58,8 @@
     },
     "link": {
       "checker": "所持率チェッカー",
-      "gachasimu": "ガチャシミュレータ",
+      "gachasimu": "ガチャシミュ",
+      "stillmng": "スチル管理",
       "generator": "会話ジェネレータ"
     }
   }

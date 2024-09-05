@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import { CharClass, CharInfo } from "../pages";
 import { GachaInfo } from "@/pages/gacha/simulator";
+import still from "@/../assets/still.json";
 
 const CLASS_SORT_LIST: CharClass[] = [
   "vanguard",
@@ -116,5 +117,54 @@ export function loadGachaMaster() {
     gachaInfo: gachaInfo.sort(
       (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime()
     ), // 開始日で降順。同日で並びを調整する場合は時間を入れる
+  };
+}
+
+export type CharInfoWithStill = CharInfo & {
+  stills: Array<{
+    id: string;
+    seq: number;
+    label: string;
+    image: string;
+    read: boolean;
+    rate: number;
+  }>;
+};
+
+export function loadStillMaster() {
+  const charInfo = loadCharactors();
+
+  // 整合性チェック
+  const files = fs.readdirSync(
+    path.join(process.cwd(), "public/static/image/still")
+  );
+  const images = still.master.map((x) => x.image);
+  images.forEach((image) => {
+    if (!files.includes(image))
+      throw new Error(`スチル画像が存在しない: ${image}`);
+  });
+  files.forEach((file) => {
+    if (!images.includes(file)) {
+      console.log("[WARN] スチルマスターにない画像を削除", file);
+      fs.rmSync(path.join(process.cwd(), "public/static/image/still", file));
+    }
+  });
+
+  const charInfoWithStills: CharInfoWithStill[] = charInfo.map((x) => {
+    const stills = still.master
+      .filter((y) => y.shared.includes(x.unitId))
+      .map((y) => ({
+        id: y.charId + ":" + y.seq,
+        seq: y.seq,
+        label: y.label,
+        image: y.image,
+        read: false,
+        rate: -1,
+      }));
+    return { ...x, stills };
+  });
+
+  return {
+    charInfoWithStills,
   };
 }
