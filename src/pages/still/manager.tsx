@@ -200,7 +200,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
     });
     sendEvent({
       action: "save",
-      category: "character",
+      category: "still",
       label: "success",
     });
   };
