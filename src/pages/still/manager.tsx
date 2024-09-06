@@ -184,6 +184,12 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
     setStillStates(newStates);
   };
 
+  const handleBulkRegister = (stills: StillState[]) => {
+    let newStates = stillStates.concat(stills);
+    newStates = Array.from(new Map(newStates.map((x) => [x.id, x])).values()); // 重複除去
+    setStillStates(newStates);
+  };
+
   const changeFilterClass = (charClass: CharClass) => {
     if (filterClass.includes(charClass)) {
       setFilterClass((x) => x.filter((y) => y !== charClass));
@@ -352,6 +358,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
+            onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={6}
@@ -359,6 +366,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
+            onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={5}
@@ -366,6 +374,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
+            onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={4}
@@ -373,6 +382,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
+            onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={3}
@@ -380,6 +390,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
+            onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={2}
@@ -387,6 +398,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
+            onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={1}
@@ -394,6 +406,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
+            onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={0}
@@ -401,6 +414,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
+            onBulkRegister={handleBulkRegister}
           />
         </div>
       </div>
@@ -438,9 +452,12 @@ type CharacterAreaProps = {
   hideSpoiler: boolean;
   onReadChange: (id: string) => void;
   onRateChange: (id: string, rate: number) => void;
+  onBulkRegister: (stills: StillState[]) => void;
 };
 
 export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
+  const { t } = useTranslation("common");
+
   if (props.charInfo.length === 0) return null;
 
   let allStills = props.charInfo.reduce<StillState[]>(
@@ -448,6 +465,21 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
     []
   );
   allStills = Array.from(new Map(allStills.map((x) => [x.id, x])).values()); // 重複除去
+  const allRead = allStills.filter((x) => x.read).length === allStills.length;
+
+  const handleBulkRegister = () => {
+    if (allRead) {
+      // すべて既読の場合
+      props.onBulkRegister(
+        allStills.map((x) => ({ id: x.id, rate: x.rate, read: false }))
+      );
+    } else {
+      // 未読がある場合
+      props.onBulkRegister(
+        allStills.map((x) => ({ id: x.id, rate: x.rate, read: true }))
+      );
+    }
+  };
 
   return (
     <div
@@ -492,6 +524,16 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
           >
             {allStills.filter((x) => x.read).length} / {allStills.length}
           </span>
+          <Button
+            outlined
+            css={css`
+              width: 6.3rem;
+              font-size: 80%;
+            `}
+            onClick={handleBulkRegister}
+          >
+            {allRead ? t("ui.button.uncheckAll") : t("ui.button.checkAll")}
+          </Button>
         </div>
       </div>
       <div
