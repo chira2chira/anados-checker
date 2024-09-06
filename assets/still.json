@@ -1485,6 +1485,13 @@
       "image": "StillThumbnail_bg_thomas_still03_mosaic_001.webp"
     },
     {
+      "charId": 5058,
+      "seq": 1,
+      "shared": [5058],
+      "label": "still01_fullhouse",
+      "image": "StillThumbnail_bg_fullhouse_still01_mosaic_001.webp"
+    },
+    {
       "charId": 5059,
       "seq": 5,
       "shared": [5059],
@@ -2249,6 +2256,13 @@
     },
     {
       "charId": 6057,
+      "seq": 1,
+      "shared": [6057, 96057],
+      "label": "still01_sinbad",
+      "image": "StillThumbnail_bg_sinbad_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 6057,
       "seq": 70,
       "shared": [6057, 96057],
       "label": "mjbc_020",
@@ -2526,6 +2540,13 @@
       "shared": [6083],
       "label": "casino_020",
       "image": "StillThumbnail_bg_billford_still05_mosaic_001.webp"
+    },
+    {
+      "charId": 6084,
+      "seq": 5,
+      "shared": [6084],
+      "label": "still04_amorey",
+      "image": "StillThumbnail_bg_amorey_still04_mosaic_001.webp"
     },
     {
       "charId": 7001,

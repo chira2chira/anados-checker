@@ -2054,3 +2054,33 @@
   limited: true
   release: 8/23/2024
   image: 90px-FS_bonvoy_(awakened).png
+- id: 214
+  unitId: 5067
+  nameJa: サンシャイン・マスク ガムラ
+  nameEn: Sunshine Mask Gamela
+  rarity: 5
+  class: support
+  deployment: high
+  limited: true
+  release: 9/6/2024
+  image: 90px-FS_gamela_(awakened).png
+- id: 215
+  unitId: 5068
+  nameJa: キャプテンノーチラス ダカール
+  nameEn: Captain Nautilus Dakkar
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: true
+  release: 9/6/2024
+  image: 90px-FS_dakkar_(awakened).png
+- id: 216
+  unitId: 6084
+  nameJa: マリンテイマー アモレー
+  nameEn: Marine Tamer Amorey
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: true
+  release: 9/6/2024
+  image: 90px-FS_amorey_(deepsea).png
