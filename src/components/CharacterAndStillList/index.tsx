@@ -225,6 +225,20 @@ const StillCard: React.FC<StillCardProps> = (props) => {
                 ]}
               />
             </div>
+            <div
+              css={css`
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-left: 2px;
+                text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+                  -1px -1px 0 #000;
+                text-align: center;
+                font-size: 95%;
+              `}
+            >
+              {x.label}
+            </div>
           </div>
         ))}
       </div>

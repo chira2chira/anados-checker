@@ -131,8 +131,33 @@ export type CharInfoWithStill = CharInfo & {
   }>;
 };
 
+type StillLabel = {
+  id: string;
+  prefix: string;
+};
+
+function getLabel(label: string, stillLabels: StillLabel[]) {
+  if (label.startsWith("still")) {
+    return "Still";
+  }
+  if (label.match(/^main_[0-9]+_[0-9]+$/)) {
+    const [, capter] = label.split("_");
+    return `Chapter ${Number(capter)}`;
+  }
+  for (const stillLabel of stillLabels) {
+    if (label.startsWith(stillLabel.id)) {
+      return `Event ${stillLabel.prefix}`;
+    }
+  }
+
+  throw new Error("不明なラベル: " + label);
+}
+
 export function loadStillMaster() {
   const charInfo = loadCharactors();
+  const stillLabels: StillLabel[] = loadYaml<StillLabel[]>(
+    "assets/still_label.yaml"
+  );
 
   // 整合性チェック
   const files = fs.readdirSync(
@@ -156,7 +181,7 @@ export function loadStillMaster() {
       .map((y) => ({
         id: y.charId + ":" + y.seq,
         seq: y.seq,
-        label: y.label,
+        label: getLabel(y.label, stillLabels),
         image: y.image,
         read: false,
         rate: -1,
