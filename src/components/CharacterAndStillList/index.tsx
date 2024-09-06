@@ -190,6 +190,19 @@ const StillCard: React.FC<StillCardProps> = (props) => {
               src={"/static/image/still/" + x.image}
               onClick={() => handleReadChange(x.id)}
             />
+            <Button
+              css={css`
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin: auto;
+              `}
+              minimal
+              onClick={() => handleReadChange(x.id)}
+            >
+              <Icon size={60} color={x.read ? "#14d13e" : "gray"} icon="tick" />
+            </Button>
             <div
               css={css`
                 position: absolute;
@@ -210,22 +223,6 @@ const StillCard: React.FC<StillCardProps> = (props) => {
                   { value: "5", label: getRateEmoji(5) },
                   { value: "6", label: getRateEmoji(6) },
                 ]}
-              />
-            </div>
-            <div
-              css={css`
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                margin: auto;
-              `}
-            >
-              <Icon
-                size={60}
-                color={x.read ? "#14d13e" : "gray"}
-                icon="tick"
-                onClick={() => handleReadChange(x.id)}
               />
             </div>
           </div>
