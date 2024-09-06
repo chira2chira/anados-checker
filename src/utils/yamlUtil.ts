@@ -120,15 +120,17 @@ export function loadGachaMaster() {
   };
 }
 
+export type StillInfo = {
+  id: string;
+  seq: number;
+  label: string;
+  image: string;
+  read: boolean;
+  rate: number;
+};
+
 export type CharInfoWithStill = CharInfo & {
-  stills: Array<{
-    id: string;
-    seq: number;
-    label: string;
-    image: string;
-    read: boolean;
-    rate: number;
-  }>;
+  stills: StillInfo[];
 };
 
 type StillLabel = {

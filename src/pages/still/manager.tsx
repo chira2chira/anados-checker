@@ -5,7 +5,7 @@ import { css } from "@emotion/react";
 import { Button, ButtonGroup, Checkbox } from "@blueprintjs/core";
 import * as styles from "@/styles/Home.module";
 import { CharClass, CharInfo } from "..";
-import { CharInfoWithStill, loadStillMaster } from "@/utils/yamlUtil";
+import { CharInfoWithStill, loadStillMaster, StillInfo } from "@/utils/yamlUtil";
 import { Container } from "@/components/Container";
 import FilterSelect from "@/components/FilterSelect";
 import ClassButton from "@/components/ClassButton";
@@ -33,6 +33,10 @@ type StillState = {
   rate: number;
 };
 
+function getUniqueSills(stills: StillState[]) {
+  return Array.from(new Map(stills.map((x) => [x.id, x])).values());
+}
+
 function filterOwnedChar(filter: string) {
   return function (char: CharInfo) {
     switch (filter) {
@@ -59,35 +63,51 @@ function filterLimitedChar(filter: string) {
   };
 }
 
-function filterNotImplementedChar(filter: string) {
+function filterSillAttributeChar(filter: string) {
   return function (char: CharInfoWithStill) {
-    if (filter === "show") {
-      return char;
-    } else {
-      return char.stills.length !== 0;
+    switch (filter) {
+      case "none":
+        return char.stills.length !== 0;
+      case "showStill0":
+        return true;
+      default:
+        return char.stills.length !== 0;
     }
   };
 }
 
-function filterReadChar(filter: string) {
-  return function (char: CharInfoWithStill) {
+function filterSillAttribute(filter: string) {
+  return function (still: StillInfo) {
+    switch (filter) {
+      case "none":
+        return true;
+      case "ignoreStoryStill":
+        return still.label === "Still";
+      case "onlyStoryStill":
+        return still.label !== "Still";
+      default:
+        return true;
+    }
+  };
+}
+
+function filterReadStill(filter: string) {
+  return function (still: StillState) {
     switch (filter) {
       case "none":
         return true;
       case "unread":
-        if (char.stills.length === 0) return false;
-        return char.stills.filter((x) => x.read).length !== char.stills.length;
+        return !still.read;
       case "read":
-        if (char.stills.length === 0) return false;
-        return char.stills.filter((x) => x.read).length === char.stills.length;
+        return still.read;
     }
   };
 }
 
-function filterRateChar(filter: string) {
-  return function (char: CharInfoWithStill) {
+function filterRateStill(filter: string) {
+  return function (still: StillState) {
     if (filter === "none") return true;
-    return char.stills.filter((x) => x.rate === Number(filter)).length > 0;
+    return still.rate === Number(filter);
   };
 }
 
@@ -97,7 +117,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   const [filterClass, setFilterClass] = useState<CharClass[]>([]);
   const [filterOwned, setFilterOwned] = useState("none");
   const [filterLimited, setFilterLimited] = useState("none");
-  const [filterNotImplemented, setFilterNotImplemented] = useState("none");
+  const [filterStill, setFilterNotImplemented] = useState("none");
   const [filterRead, setFilterRead] = useState("none");
   const [filterRate, setFilterRate] = useState("none");
   const [hideSpoiler, setHideSpoiler] = useState(true);
@@ -127,24 +147,26 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
           .map((x) => ({
             ...x,
             owned: owned.includes(x.id),
-            stills: x.stills.map((y) => {
-              const state = stillStates.filter((s) => s.id === y.id);
-              if (state.length === 0) return y;
-              return {
-                ...y,
-                read: state[0].read,
-                rate: state[0].rate,
-              };
-            }),
+            stills: x.stills
+              .map((y) => {
+                const state = stillStates.filter((s) => s.id === y.id);
+                if (state.length === 0) return y;
+                return {
+                  ...y,
+                  read: state[0].read,
+                  rate: state[0].rate,
+                };
+              })
+              .filter(filterReadStill(filterRead))
+              .filter(filterRateStill(filterRate))
+              .filter(filterSillAttribute(filterStill)),
           }))
           .filter((x) =>
             filterClass.length === 0 ? true : filterClass.includes(x.class)
           )
           .filter(filterOwnedChar(filterOwned))
           .filter(filterLimitedChar(filterLimited))
-          .filter(filterNotImplementedChar(filterNotImplemented))
-          .filter(filterReadChar(filterRead))
-          .filter(filterRateChar(filterRate));
+          .filter(filterSillAttributeChar(filterStill));
       const rare0 = applyFilter(0);
       const rare1 = applyFilter(1);
       const rare2 = applyFilter(2);
@@ -153,11 +175,21 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       const rare5 = applyFilter(5);
       const rare6 = applyFilter(6);
       const rare7 = applyFilter(7);
-      return { rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7 };
+
+      return {
+        rare0,
+        rare1,
+        rare2,
+        rare3,
+        rare4,
+        rare5,
+        rare6,
+        rare7,
+      };
     }, [
       filterClass,
       filterLimited,
-      filterNotImplemented,
+      filterStill,
       filterOwned,
       filterRate,
       filterRead,
@@ -186,7 +218,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
 
   const handleBulkRegister = (stills: StillState[]) => {
     let newStates = stillStates.concat(stills);
-    newStates = Array.from(new Map(newStates.map((x) => [x.id, x])).values()); // 重複除去
+    newStates = getUniqueSills(newStates);
     setStillStates(newStates);
   };
 
@@ -311,11 +343,19 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             `}
           >
             <FilterSelect
-              value={filterNotImplemented}
+              value={filterStill}
               onChange={setFilterNotImplemented}
               options={[
-                { value: "none", label: t("ui.filter.notImplementedBy") },
-                { value: "show", label: t("ui.filter.showNotImplemented") },
+                { value: "none", label: t("ui.filter.stillBy") },
+                { value: "showStill0", label: t("ui.filter.showStill0") },
+                {
+                  value: "ignoreStoryStill",
+                  label: t("ui.filter.ignoreStoryStill"),
+                },
+                {
+                  value: "onlyStoryStill",
+                  label: t("ui.filter.onlyStoryStill"),
+                },
               ]}
             />
 
@@ -464,7 +504,7 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
     (p, c) => p.concat(c.stills),
     []
   );
-  allStills = Array.from(new Map(allStills.map((x) => [x.id, x])).values()); // 重複除去
+  allStills = getUniqueSills(allStills);
   const allRead = allStills.filter((x) => x.read).length === allStills.length;
 
   const handleBulkRegister = () => {
