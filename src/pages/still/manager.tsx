@@ -618,6 +618,7 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
         css={css`
           display: flex;
           flex-wrap: wrap;
+          flex-direction: ${props.gridMode ? "row" : "column"};
           gap: 3px;
         `}
       >
