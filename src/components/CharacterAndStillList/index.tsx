@@ -11,6 +11,7 @@ const SPOILER_CHARS = [143, 150];
 
 type CharacterAndStillListProps = {
   characters: CharInfoWithStill[];
+  gridMode: boolean;
   hideSpoiler: boolean;
   onReadChange: (id: string) => void;
   onRateChange: (id: string, rate: number) => void;
@@ -24,6 +25,7 @@ const CharacterAndStillList: React.FC<CharacterAndStillListProps> = (props) => {
       <CharacterPanel
         key={x.id}
         char={x}
+        gridMode={props.gridMode}
         hideSpoiler={useSpoilerFilter}
         onReadChange={props.onReadChange}
         onRateChange={props.onRateChange}
@@ -58,6 +60,7 @@ const classIcon = css`
 
 const CharacterPanel: React.FC<{
   char: CharInfoWithStill;
+  gridMode: boolean;
   hideSpoiler: boolean;
   onReadChange: (id: string) => void;
   onRateChange: (id: string, rate: number) => void;
@@ -76,12 +79,14 @@ const CharacterPanel: React.FC<{
     char.stills.filter((x) => x.read).length === char.stills.length;
 
   const handleOpenToggle = () => {
+    if (!props.gridMode) return;
     setOpen(!open);
   };
 
   return (
     <StillCard
       open={open}
+      gridMode={props.gridMode}
       char={char}
       onReadChange={props.onReadChange}
       onRateChange={props.onRateChange}
@@ -129,6 +134,7 @@ type StillCardProps = {
   children: React.ReactNode;
   char: CharInfoWithStill;
   open: boolean;
+  gridMode: boolean;
   onReadChange: (id: string) => void;
   onRateChange: (id: string, rate: number) => void;
   onClose: () => void;
@@ -137,7 +143,7 @@ type StillCardProps = {
 const StillCard: React.FC<StillCardProps> = (props) => {
   const { t } = useTranslation();
 
-  if (!props.open) return props.children;
+  if (props.gridMode && !props.open) return props.children;
 
   const handleReadChange = (id: string) => {
     props.onReadChange(id);
@@ -164,9 +170,11 @@ const StillCard: React.FC<StillCardProps> = (props) => {
         `}
       >
         <div>{props.children}</div>
-        <Button onClick={props.onClose} small>
-          {t("ui.button.close")}
-        </Button>
+        {props.gridMode && (
+          <Button onClick={props.onClose} small>
+            {t("ui.button.close")}
+          </Button>
+        )}
       </div>
       <div
         css={css`
@@ -186,8 +194,10 @@ const StillCard: React.FC<StillCardProps> = (props) => {
             <img
               css={css`
                 width: 185px;
+                height: 104px;
                 opacity: ${x.read ? 1 : 0.7};
               `}
+              loading="lazy"
               alt={x.label}
               src={"/static/image/still/" + x.image}
               onClick={() => handleReadChange(x.id)}

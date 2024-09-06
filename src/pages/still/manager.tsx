@@ -5,7 +5,11 @@ import { css } from "@emotion/react";
 import { Button, ButtonGroup, Checkbox } from "@blueprintjs/core";
 import * as styles from "@/styles/Home.module";
 import type { CharClass, CharInfo } from "..";
-import { CharInfoWithStill, loadStillMaster, StillInfo } from "@/utils/yamlUtil";
+import {
+  CharInfoWithStill,
+  loadStillMaster,
+  StillInfo,
+} from "@/utils/yamlUtil";
 import { Container } from "@/components/Container";
 import FilterSelect from "@/components/FilterSelect";
 import ClassButton from "@/components/ClassButton";
@@ -121,6 +125,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   const [filterRead, setFilterRead] = useState("none");
   const [filterRate, setFilterRate] = useState("none");
   const [hideSpoiler, setHideSpoiler] = useState(true);
+  const [layout, setLayout] = useState<"grid" | "list">("grid");
   const { t } = useTranslation("common");
   const { t: t2 } = useTranslation("still");
 
@@ -388,6 +393,29 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
         <div
           css={css`
             display: flex;
+            justify-content: flex-end;
+            gap: 3px;
+            width: 100%;
+            margin-bottom: 10px;
+          `}
+        >
+          <Button
+            intent={layout === "grid" ? "success" : "none"}
+            icon="grid-view"
+            outlined
+            onClick={() => setLayout("grid")}
+          />
+          <Button
+            intent={layout === "list" ? "success" : "none"}
+            icon="list"
+            outlined
+            onClick={() => setLayout("list")}
+          />
+        </div>
+
+        <div
+          css={css`
+            display: flex;
             flex-direction: column;
             align-items: center;
           `}
@@ -395,6 +423,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
           <CharacterArea
             rarity={7}
             charInfo={rare7}
+            gridMode={layout === "grid"}
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
@@ -403,6 +432,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
           <CharacterArea
             rarity={6}
             charInfo={rare6}
+            gridMode={layout === "grid"}
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
@@ -411,6 +441,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
           <CharacterArea
             rarity={5}
             charInfo={rare5}
+            gridMode={layout === "grid"}
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
@@ -419,6 +450,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
           <CharacterArea
             rarity={4}
             charInfo={rare4}
+            gridMode={layout === "grid"}
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
@@ -427,6 +459,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
           <CharacterArea
             rarity={3}
             charInfo={rare3}
+            gridMode={layout === "grid"}
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
@@ -435,6 +468,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
           <CharacterArea
             rarity={2}
             charInfo={rare2}
+            gridMode={layout === "grid"}
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
@@ -443,6 +477,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
           <CharacterArea
             rarity={1}
             charInfo={rare1}
+            gridMode={layout === "grid"}
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
@@ -451,6 +486,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
           <CharacterArea
             rarity={0}
             charInfo={rare0}
+            gridMode={layout === "grid"}
             hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
@@ -489,6 +525,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
 type CharacterAreaProps = {
   rarity: number;
   charInfo: CharInfoWithStill[];
+  gridMode: boolean;
   hideSpoiler: boolean;
   onReadChange: (id: string) => void;
   onRateChange: (id: string, rate: number) => void;
@@ -586,6 +623,7 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
       >
         <CharacterAndStillList
           characters={props.charInfo}
+          gridMode={props.gridMode}
           hideSpoiler={props.hideSpoiler}
           onReadChange={props.onReadChange}
           onRateChange={props.onRateChange}
