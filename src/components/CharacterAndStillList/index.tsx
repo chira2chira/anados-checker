@@ -149,6 +149,7 @@ const StillCard: React.FC<StillCardProps> = (props) => {
         display: flex;
         align-items: flex-start;
         width: 100%;
+        padding: 15px;
         gap: 0 10px;
       `}
     >
