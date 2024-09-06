@@ -6,7 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useMemo, useState } from "react";
 import { Button, Checkbox, Tooltip } from "@blueprintjs/core";
 import { css } from "@emotion/react";
-import { CharInfo } from "..";
+import type { CharInfo } from "..";
 import { loadGachaMaster } from "@/utils/yamlUtil";
 import { gacha } from "@/utils/gacha";
 import { displayCharClass } from "@/utils/stringUtil";

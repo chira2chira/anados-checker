@@ -4,7 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { css } from "@emotion/react";
 import { Button, ButtonGroup, Checkbox } from "@blueprintjs/core";
 import * as styles from "@/styles/Home.module";
-import { CharClass, CharInfo } from "..";
+import type { CharClass, CharInfo } from "..";
 import { CharInfoWithStill, loadStillMaster, StillInfo } from "@/utils/yamlUtil";
 import { Container } from "@/components/Container";
 import FilterSelect from "@/components/FilterSelect";
