@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { css } from "@emotion/react";
 import { Button, ButtonGroup, Checkbox } from "@blueprintjs/core";
+import { forceCheck } from "react-lazyload";
 import * as styles from "@/styles/Home.module";
 import type { CharClass, CharInfo } from "..";
 import {
@@ -180,6 +181,9 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       const rare5 = applyFilter(5);
       const rare6 = applyFilter(6);
       const rare7 = applyFilter(7);
+
+      // 次TickでLazyLoadの描画チェックを走らせる
+      setTimeout(forceCheck, 0);
 
       return {
         rare0,
