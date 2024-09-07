@@ -5,8 +5,8 @@ import { useTranslation } from "next-i18next";
 import { Button, Card, Icon, Tooltip } from "@blueprintjs/core";
 import { displayCharClass } from "@/utils/stringUtil";
 import { CharInfoWithStill } from "@/utils/yamlUtil";
-import { getRateEmoji } from "@/utils/rateEnum";
-import RateEmojiSelect from "../RateEmojiSelect";
+import { getUserLabelEmoji } from "@/utils/userLabelEnum";
+import UserLabelEmojiSelect from "../UserLabelEmojiSelect";
 
 const SPOILER_CHARS = [143, 150];
 
@@ -233,18 +233,18 @@ const StillCard: React.FC<StillCardProps> = (props) => {
                     opacity: 0.85;
                   `}
                 >
-                  <RateEmojiSelect
+                  <UserLabelEmojiSelect
                     value={x.rate.toString()}
                     onChange={(v) => props.onRateChange(x.id, Number(v))}
                     options={[
                       { value: "-1", label: "💭" },
-                      { value: "0", label: getRateEmoji(0) },
-                      { value: "1", label: getRateEmoji(1) },
-                      { value: "2", label: getRateEmoji(2) },
-                      { value: "3", label: getRateEmoji(3) },
-                      { value: "4", label: getRateEmoji(4) },
-                      { value: "5", label: getRateEmoji(5) },
-                      { value: "6", label: getRateEmoji(6) },
+                      { value: "0", label: getUserLabelEmoji(0) },
+                      { value: "1", label: getUserLabelEmoji(1) },
+                      { value: "2", label: getUserLabelEmoji(2) },
+                      { value: "3", label: getUserLabelEmoji(3) },
+                      { value: "4", label: getUserLabelEmoji(4) },
+                      { value: "5", label: getUserLabelEmoji(5) },
+                      { value: "6", label: getUserLabelEmoji(6) },
                     ]}
                   />
                 </div>

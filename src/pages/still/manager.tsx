@@ -21,7 +21,7 @@ import {
   parseLocalStorageChar,
   parseLocalStorageStill,
 } from "@/utils/charUtil";
-import { getRateEmoji } from "@/utils/rateEnum";
+import { getUserLabelEmoji } from "@/utils/userLabelEnum";
 import CharacterAndStillList from "@/components/CharacterAndStillList";
 
 const CHAR_KEY = "chars";
@@ -376,14 +376,14 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
               value={filterRate}
               onChange={setFilterRate}
               options={[
-                { value: "none", label: t("ui.filter.rateBy") },
-                { value: "0", label: getRateEmoji(0) },
-                { value: "1", label: getRateEmoji(1) },
-                { value: "2", label: getRateEmoji(2) },
-                { value: "3", label: getRateEmoji(3) },
-                { value: "4", label: getRateEmoji(4) },
-                { value: "5", label: getRateEmoji(5) },
-                { value: "6", label: getRateEmoji(6) },
+                { value: "none", label: t("ui.filter.userLabelBy") },
+                { value: "0", label: getUserLabelEmoji(0) },
+                { value: "1", label: getUserLabelEmoji(1) },
+                { value: "2", label: getUserLabelEmoji(2) },
+                { value: "3", label: getUserLabelEmoji(3) },
+                { value: "4", label: getUserLabelEmoji(4) },
+                { value: "5", label: getUserLabelEmoji(5) },
+                { value: "6", label: getUserLabelEmoji(6) },
               ]}
             />
           </div>

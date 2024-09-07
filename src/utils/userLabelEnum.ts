@@ -1,4 +1,4 @@
-export const Rate = {
+export const UserLabel = {
   RED: 0,
   YELLOW: 1,
   GREEN: 2,
@@ -8,9 +8,9 @@ export const Rate = {
   WHITE: 6,
 } as const;
 
-export type RateType = (typeof Rate)[keyof typeof Rate];
+export type UserLabelType = (typeof UserLabel)[keyof typeof UserLabel];
 
-export function getRateEmoji(rate: RateType): string {
+export function getUserLabelEmoji(rate: UserLabelType): string {
   switch (rate) {
     case 0:
       return "💖";
