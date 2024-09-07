@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next";
 
 type CommonMetaProps = {
   pageTitle?: string;
+  description?: string;
   cardType: "summary" | "summary_large_image";
 };
 
@@ -20,12 +21,13 @@ const CommonMeta: React.FC<CommonMetaProps> = (props) => {
   const { t } = useTranslation("common");
 
   const title = (props.pageTitle ? `${props.pageTitle} | ` : "") + t("title");
+  const description = props.description || t("description");
   return (
     <>
       <Head>
         {/* タイトルタグに複数要素を入れてはいけない */}
         <title>{`${isProd ? "" : "[DEV]"}${title}`}</title>
-        <meta name="description" content={t("description")} />
+        <meta name="description" content={description} />
         <meta
           name="keywords"
           content="龍脈のアナザーエイドスR,アナドスR,アナドス,AnotherEidos of Dragon Vein"
@@ -38,7 +40,7 @@ const CommonMeta: React.FC<CommonMetaProps> = (props) => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={t("title")} />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={t("description")} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content={getCardImage(props.cardType)} />
         <meta name="twitter:card" content={props.cardType} />
       </Head>

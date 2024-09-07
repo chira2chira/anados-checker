@@ -25,6 +25,7 @@ const title = css`
 
 type ContainerProps = {
   title?: string;
+  description?: string;
   titleLink: string;
   children: React.ReactNode;
 };
@@ -43,7 +44,11 @@ export const Container: React.FC<ContainerProps> = (props) => {
 
   return (
     <>
-      <CommonMeta pageTitle={props.title} cardType="summary" />
+      <CommonMeta
+        pageTitle={props.title}
+        description={props.description}
+        cardType="summary"
+      />
 
       <div
         css={css`

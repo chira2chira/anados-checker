@@ -253,7 +253,11 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   };
 
   return (
-    <Container titleLink="/still/manager" title={t2("title")}>
+    <Container
+      titleLink="/still/manager"
+      title={t2("title")}
+      description={t2("description")}
+    >
       <div css={styles.main}>
         <div
           css={css`

@@ -1,5 +1,6 @@
 {
   "title": "AnotherEidos Gacha Simulator",
+  "description": "These are the gacha simulators for AnotherEidos.",
   "ui": {
     "text": {
       "pullCount": "Pulls",

@@ -178,7 +178,11 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   };
 
   return (
-    <Container title={t("title")} titleLink="/gacha/simulator">
+    <Container
+      title={t("title")}
+      description={t("description")}
+      titleLink="/gacha/simulator"
+    >
       <div
         css={css`
           display: flex;
