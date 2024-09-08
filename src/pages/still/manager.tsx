@@ -505,7 +505,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       <div
         css={css`
           position: fixed;
-          top: 23px;
+          top: 10px;
           right: 10px;
           z-index: 10;
           display: flex;

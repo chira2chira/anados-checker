@@ -60,7 +60,7 @@
     },
     "link": {
       "checker": "Collection Tracker",
-      "gachasimu": "Gacha Sim",
+      "gachasimu": "Gacha Simulator",
       "stillmng": "Still Tracker",
       "generator": "Text Generator"
     }

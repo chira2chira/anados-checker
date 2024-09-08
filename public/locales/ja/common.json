@@ -60,9 +60,9 @@
     },
     "link": {
       "checker": "所持率チェッカー",
-      "gachasimu": "ガチャシミュ",
-      "stillmng": "スチル管理",
-      "generator": "会話ジェネレータ"
+      "gachasimu": "ガチャシミュレーター",
+      "stillmng": "スチル管理メモ",
+      "generator": "会話ジェネレーター"
     }
   }
 }
