@@ -84,13 +84,14 @@ function filterSillAttributeChar(filter: string) {
 function filterSillAttribute(filter: string) {
   const CHAR_STILL = ["Still", "Secret"];
   return function (still: StillInfo) {
+    const [stillType] = still.label.split(" ");
     switch (filter) {
       case "none":
         return true;
       case "ignoreStoryStill":
-        return CHAR_STILL.includes(still.label);
+        return CHAR_STILL.includes(stillType);
       case "onlyStoryStill":
-        return !CHAR_STILL.includes(still.label);
+        return !CHAR_STILL.includes(stillType);
       default:
         return true;
     }

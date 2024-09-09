@@ -143,7 +143,10 @@ function getLabel(label: string, stillLabels: StillLabel[]) {
     if (label.match(/secret_[0-9]+$/)) {
       return "Secret";
     }
-    return "Still";
+    if (label.startsWith("still01")) {
+      return "Still";
+    }
+    return "Still (Alt)";
   }
   if (label.match(/^main_[0-9]+_[0-9]+$/)) {
     const [, capter] = label.split("_");
