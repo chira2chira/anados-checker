@@ -140,6 +140,9 @@ type StillLabel = {
 
 function getLabel(label: string, stillLabels: StillLabel[]) {
   if (label.startsWith("still")) {
+    if (label.match(/secret_[0-9]+$/)) {
+      return "Secret";
+    }
     return "Still";
   }
   if (label.match(/^main_[0-9]+_[0-9]+$/)) {
