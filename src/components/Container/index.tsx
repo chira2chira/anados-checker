@@ -186,7 +186,7 @@ const LinkSideBar: React.FC<LinkSideBarProps> = (props) => {
         <img
           css={css`
             width: 60%;
-            margin: 20px auto 30px;
+            margin: 30px auto 30px;
           `}
           src="/static/image/common/logo.svg"
           alt="アナザーエイドス所持率チェッカー"
