@@ -5,14 +5,14 @@
     "text": {
       "pullCount": "Pulls",
       "usedStone": "Total Spent",
-      "pickupRate": "Pick-Up Rates",
+      "pickupRate": "Pickup Rates",
       "standardRate": "Standard Rates",
       "expectation": "Expectations",
       "limited": "Limited",
       "new": "New",
       "revival": "Return",
-      "ended": "Including Ended",
-      "notFound": "There are no banner matches the conditions."
+      "ended": "Show Expired",
+      "notFound": "No matching gacha found."
     },
     "button": {
       "changeBanner": "Change Banner",
@@ -20,7 +20,7 @@
       "pull10": "10 Times",
       "clear": "Clear Results",
       "rate": "Appearance Rate",
-      "highlightPu": "Highlight the pick-up"
+      "highlightPu": "Highlight Pickup Characters"
     }
   }
 }

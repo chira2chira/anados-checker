@@ -1,6 +1,6 @@
 {
   "title": "AnotherEidos Collection Tracker",
-  "description": "AnotherEidos collection tracker tool. You can manage the ownership status of characters and share it with other people.",
+  "description": "AnotherEidos collection tracker tool. Manage your character ownership status and share it with others.",
   "ui": {
     "button": {
       "save": "Save",
@@ -8,11 +8,11 @@
       "downloadScreenshot": "Download Screenshot",
       "checkAll": "Select All",
       "uncheckAll": "Deselect All",
-      "spoilerFilter": "Hide Story Spoiler",
+      "spoilerFilter": "Hide Story Spoilers",
       "close": "Close"
     },
     "filter": {
-      "ownedBy": "By Owned",
+      "ownedBy": "Ownership",
       "notOwned": "Not Owned",
       "owned": "Owned",
       "availabilityBy": "Availability",
@@ -22,12 +22,12 @@
       "lowGround": "Low Ground",
       "highGround": "High Ground",
       "bothGround": "Both",
-      "releaseBy": "By Release Year",
+      "releaseBy": "Release Date",
       "ticketBy": "Anniv Scout Ticket",
-      "stillBy": "Still",
-      "showStill0": "Showing 0 still Characters",
-      "ignoreStoryStill": "Hide Story Stills",
-      "onlyStoryStill": "Only Show Story Stills",
+      "stillBy": "Stills",
+      "showStill0": "Show characters with 0 stills",
+      "ignoreStoryStill": "Exclude Story Stills",
+      "onlyStoryStill": "Show only Story Stills",
       "readBy": "Read Status",
       "read": "Read",
       "unread": "Unread",
@@ -42,9 +42,9 @@
       "aniv2.0": "2nd Anniv",
       "aniv2.5": "2.5 Year Anniv",
       "aniv3.0": "3rd Year Anniv (Temporary)",
-      "resetFilter": "Clearing filter conditions",
-      "showHighRarityOnly": "Display only high rarity characters",
-      "showOverall": "Display overall status"
+      "resetFilter": "Reset Filter",
+      "showHighRarityOnly": "Show High Rarity Only",
+      "showOverall": "Show Overall Status"
     },
     "message": {
       "saved": "Saved.",
