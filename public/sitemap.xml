@@ -2,18 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://anados-collection-tracker.vercel.app/</loc>
-    <lastmod>2023-10-12</lastmod>
+    <lastmod>2024-09-10</lastmod>
   </url>
   <url>
     <loc>https://anados-collection-tracker.vercel.app/en</loc>
-    <lastmod>2023-10-12</lastmod>
+    <lastmod>2024-09-10</lastmod>
   </url>
   <url>
     <loc>https://anados-collection-tracker.vercel.app/gacha/simulator</loc>
-    <lastmod>2023-10-12</lastmod>
+    <lastmod>2024-09-10</lastmod>
   </url>
   <url>
     <loc>https://anados-collection-tracker.vercel.app/en/gacha/simulator</loc>
-    <lastmod>2023-10-12</lastmod>
+    <lastmod>2024-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://anados-collection-tracker.vercel.app/still/manager</loc>
+    <lastmod>2024-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://anados-collection-tracker.vercel.app/en/still/manager</loc>
+    <lastmod>2024-09-10</lastmod>
   </url>
 </urlset>
