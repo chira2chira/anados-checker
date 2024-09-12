@@ -84,14 +84,21 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
   };
 
   const start = () => {
+    let targetStills: StillInfo[];
     if (allStills.length > 20) {
       // 画像読み込みを減らすため予め抽選する
       const shuffledStills = shuffle(allStills);
-      const randomStills = shuffledStills.slice(0, 20);
-      setTargetStills(randomStills);
+      targetStills = shuffledStills.slice(0, 20);
     } else {
-      setTargetStills(allStills);
+      targetStills = allStills;
     }
+    // プリロード（低速回線向け）
+    for (const still of targetStills) {
+      const img = document.createElement("img");
+      img.src = "/static/image/still/" + still.image;
+    }
+
+    setTargetStills(targetStills);
     setState("running");
 
     sendEvent({
