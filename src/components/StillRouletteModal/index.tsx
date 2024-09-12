@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Button, Dialog, DialogBody } from "@blueprintjs/core";
 import { css, keyframes } from "@emotion/react";
 import { CharInfoWithStill, StillInfo } from "@/utils/yamlUtil";
+import { sendEvent } from "@/utils/gtag";
 
 const SPOILER_CHARS = [143, 150];
 
@@ -92,6 +93,12 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
       setTargetStills(allStills);
     }
     setState("running");
+
+    sendEvent({
+      action: "start",
+      category: "roulette",
+      label: "still",
+    });
   };
 
   const next = useCallback(async () => {
