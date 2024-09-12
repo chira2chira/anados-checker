@@ -155,7 +155,12 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
                   height: 162px;
                 `}
               >
-                <Button intent="primary" large onClick={start}>
+                <Button
+                  intent="primary"
+                  large
+                  disabled={allStills.length === 0}
+                  onClick={start}
+                >
                   {t("button.start")}
                 </Button>
                 <div
