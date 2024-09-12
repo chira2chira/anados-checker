@@ -23,6 +23,7 @@ import {
 } from "@/utils/charUtil";
 import { getUserLabelEmoji } from "@/utils/userLabelEnum";
 import CharacterAndStillList from "@/components/CharacterAndStillList";
+import { StillRouletteModal } from "@/components/StillRouletteModal";
 
 const CHAR_KEY = "chars";
 const STILL_KEY = "still";
@@ -129,6 +130,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   const [filterRate, setFilterRate] = useState("none");
   const [hideSpoiler, setHideSpoiler] = useState(true);
   const [layout, setLayout] = useState<"grid" | "list">("grid");
+  const [rouletteOpen, setRouletteOpen] = useState(false);
   const { t } = useTranslation("common");
   const { t: t2 } = useTranslation("still");
 
@@ -403,24 +405,33 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
         <div
           css={css`
             display: flex;
-            justify-content: flex-end;
-            gap: 3px;
+            justify-content: space-between;
             width: 100%;
             margin-bottom: 10px;
           `}
         >
-          <Button
-            intent={layout === "grid" ? "success" : "none"}
-            icon="grid-view"
-            outlined
-            onClick={() => setLayout("grid")}
-          />
-          <Button
-            intent={layout === "list" ? "success" : "none"}
-            icon="list"
-            outlined
-            onClick={() => setLayout("list")}
-          />
+          <Button onClick={() => setRouletteOpen(true)} outlined>
+            {t2("button.stillRoulette")}
+          </Button>
+          <div
+            css={css`
+              display: flex;
+              gap: 3px;
+            `}
+          >
+            <Button
+              intent={layout === "grid" ? "success" : "none"}
+              icon="grid-view"
+              outlined
+              onClick={() => setLayout("grid")}
+            />
+            <Button
+              intent={layout === "list" ? "success" : "none"}
+              icon="list"
+              outlined
+              onClick={() => setLayout("list")}
+            />
+          </div>
         </div>
 
         <div
@@ -528,6 +539,13 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
           <div></div>
         </div>
       </div>
+
+      <StillRouletteModal
+        isOpen={rouletteOpen}
+        charInfoArr={[rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7]}
+        hideSpoiler={hideSpoiler}
+        onClose={() => setRouletteOpen(false)}
+      />
     </Container>
   );
 };
