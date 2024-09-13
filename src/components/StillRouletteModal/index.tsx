@@ -62,7 +62,7 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
   const [stillIndex, setStillIndex] = useState(0);
   const [state, setState] = useState<RouletteState>("pause");
   const [targetStills, setTargetStills] = useState<StillInfo[]>([]);
-  const intervalRef = useRef<number>(0);
+  const intervalRef = useRef(0);
   const { t } = useTranslation("still");
 
   const charInfo = props.charInfoArr.flat();
