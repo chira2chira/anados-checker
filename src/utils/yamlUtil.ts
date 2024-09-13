@@ -143,10 +143,7 @@ function getLabel(label: string, stillLabels: StillLabel[]) {
     if (label.match(/secret_[0-9]+$/)) {
       return "Secret";
     }
-    if (label.startsWith("still01")) {
-      return "Still";
-    }
-    return "Still (Alt)";
+    return "Still";
   }
   if (label.match(/^main_[0-9]+_[0-9]+$/)) {
     const [, capter] = label.split("_");
@@ -185,7 +182,30 @@ export function loadStillMaster() {
 
   const charInfoWithStills: CharInfoWithStill[] = charInfo.map((x) => {
     const stills = still.master
-      .filter((y) => y.shared.includes(x.unitId))
+      .filter((y) => {
+        if (!y.shared.includes(x.unitId)) {
+          return false;
+        }
+        // 恒常と限定で好感度を共有しているか
+        const bondStillRegex = /still[0-9]+_[^_]+$/i;
+        if (y.label.match(bondStillRegex) && y.shared.length > 1) {
+          // 共有スチルを取得
+          const sharedBondStills = still.master
+            .filter(
+              (z) =>
+                z.shared.includes(x.unitId) && z.label.match(bondStillRegex)
+            )
+            .map((z) => z.seq);
+          // sharedのunitIdをidに変換し、実装順に並べる
+          const sharedIds = y.shared
+            .filter((z) => z < 8000)
+            .map((z) => charInfo.filter((c) => c.unitId === z)[0].id)
+            .sort((a, b) => (a < b ? -1 : 1));
+          // 共有スチルのIndexとsharedのIndexが一致するか
+          return sharedBondStills.indexOf(y.seq) === sharedIds.indexOf(x.id);
+        }
+        return true;
+      })
       .map((y) => ({
         id: y.charId + ":" + y.seq,
         seq: y.seq,
