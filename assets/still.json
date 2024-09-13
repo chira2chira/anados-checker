@@ -1842,6 +1842,13 @@
       "image": "StillThumbnail_bg_dakkar_still02_mosaic.webp"
     },
     {
+      "charId": 6013,
+      "seq": 70,
+      "shared": [6013],
+      "label": "dlv_013",
+      "image": "StillThumbnail_bg_dakkar_still04_mosaic_001.webp"
+    },
+    {
       "charId": 6014,
       "seq": 1,
       "shared": [5036, 6014],
