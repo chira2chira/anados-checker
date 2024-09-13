@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button, Dialog, DialogBody } from "@blueprintjs/core";
 import { css, keyframes } from "@emotion/react";
@@ -15,10 +15,6 @@ type StillRouletteModal = {
 };
 
 type RouletteState = "pause" | "running" | "finish";
-
-function wait(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
 
 function shuffle<T>(array: T[]): T[] {
   for (let i = array.length - 1; i > 0; i--) {
@@ -66,7 +62,9 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
   const [stillIndex, setStillIndex] = useState(0);
   const [state, setState] = useState<RouletteState>("pause");
   const [targetStills, setTargetStills] = useState<StillInfo[]>([]);
+  const intervalRef = useRef<number>(0);
   const { t } = useTranslation("still");
+
   const charInfo = props.charInfoArr.flat();
   let allStills = charInfo.reduce<StillInfo[]>(
     (p, c) => p.concat(c.stills),
@@ -108,22 +106,23 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
     });
   };
 
-  const next = useCallback(async () => {
-    await wait(50);
+  const next = useCallback(() => {
+    setStillIndex((index) => {
+      const nextIndex = index + 1;
+      return nextIndex < targetStills.length ? nextIndex : 0;
+    });
+  }, [targetStills.length]);
 
-    if (state !== "running") {
-      // finish
-    } else {
-      const nextIndex = stillIndex + 1;
-      setStillIndex(nextIndex < targetStills.length ? nextIndex : 0);
-    }
-  }, [targetStills.length, state, stillIndex]);
+  const stop = () => {
+    clearInterval(intervalRef.current);
+    setState("finish");
+  };
 
   useEffect(() => {
     if (state === "running") {
-      next();
+      intervalRef.current = window.setInterval(next, 50);
     }
-  }, [state, next]);
+  }, [next, state]);
 
   return (
     <Dialog
@@ -216,7 +215,7 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
             )}
           </div>
           {state === "running" && (
-            <Button intent="primary" large onClick={() => setState("finish")}>
+            <Button intent="primary" large onClick={stop}>
               Stop
             </Button>
           )}
