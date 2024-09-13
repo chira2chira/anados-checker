@@ -183,9 +183,14 @@ export function loadStillMaster() {
   const charInfoWithStills: CharInfoWithStill[] = charInfo.map((x) => {
     const stills = still.master
       .filter((y) => {
-        if (!y.shared.includes(x.unitId)) {
-          return false;
-        }
+        // 秘密とストーリースチルはgroupに入っていたら表示
+        if (
+          (!y.label.startsWith("still") || y.label.match(/(_secret_)/i)) &&
+          y.group.includes(x.unitId)
+        )
+          return true;
+        if (!y.shared.includes(x.unitId)) return false;
+
         // 恒常と限定で好感度を共有しているか
         const bondStillRegex = /still[0-9]+_[^_]+$/i;
         if (y.label.match(bondStillRegex) && y.shared.length > 1) {
@@ -213,7 +218,8 @@ export function loadStillMaster() {
         image: y.image,
         read: false,
         rate: -1,
-      }));
+      }))
+      .sort((a, b) => (a.label === "Still" ? -1 : 1));
     return { ...x, stills };
   });
 
