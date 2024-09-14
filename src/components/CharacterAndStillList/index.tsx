@@ -78,6 +78,8 @@ const CharacterPanel: React.FC<{
   }
   const allRead =
     char.stills.filter((x) => x.read).length === char.stills.length;
+  const countColor =
+    char.stills.length === 0 ? "#cd4246" : allRead ? "#fbd065" : "inherit";
 
   const handleOpenToggle = () => {
     if (!props.gridMode) return;
@@ -120,7 +122,7 @@ const CharacterPanel: React.FC<{
         <div>
           <span
             css={css`
-              color: ${allRead ? "#fbd065" : "inherit"};
+              color: ${countColor};
             `}
           >
             {char.stills.filter((x) => x.read).length} / {char.stills.length}
