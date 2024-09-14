@@ -2,6 +2,9 @@
   "title": "AnotherEidos Still Tracker",
   "description": "You can manage stills from AnotherEidos. You can manage their read status and label each still.",
   "button": {
+    "intimacyStill": "Intimacy Still",
+    "secretStill": "Secret Still",
+    "storyStill": "Story Still",
     "stillRoulette": "Still Roulette",
     "start": "Start",
     "restart": "Draw lots again"

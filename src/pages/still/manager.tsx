@@ -2,7 +2,7 @@ import { GetStaticProps, NextPage } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { css } from "@emotion/react";
-import { Button, ButtonGroup, Checkbox } from "@blueprintjs/core";
+import { Button, ButtonGroup, ButtonProps, Checkbox } from "@blueprintjs/core";
 import { forceCheck } from "react-lazyload";
 import * as styles from "@/styles/Home.module";
 import type { CharClass, CharInfo } from "..";
@@ -38,6 +38,8 @@ type StillState = {
   read: boolean;
   rate: number;
 };
+
+type StillType = "intimacy" | "secret" | "story";
 
 function getUniqueSills(stills: StillState[]) {
   return Array.from(new Map(stills.map((x) => [x.id, x])).values());
@@ -82,20 +84,26 @@ function filterSillAttributeChar(filter: string) {
   };
 }
 
-function filterSillAttribute(filter: string) {
-  const CHAR_STILL = ["Still", "Secret"];
+function filterSillAttribute(filter: StillType[]) {
   return function (still: StillInfo) {
-    const [stillType] = still.label.split(" ");
-    switch (filter) {
-      case "none":
-        return true;
-      case "ignoreStoryStill":
-        return CHAR_STILL.includes(stillType);
-      case "onlyStoryStill":
-        return !CHAR_STILL.includes(stillType);
-      default:
-        return true;
+    if (filter.length === 0) return true;
+    let result = false;
+    for (const type of filter) {
+      if (type === "intimacy") {
+        if (still.label === "Still") {
+          result = true;
+        }
+      } else if (type === "secret") {
+        if (still.label === "Secret") {
+          result = true;
+        }
+      } else if (type === "story") {
+        if (!["Still", "Secret"].includes(still.label)) {
+          result = true;
+        }
+      }
     }
+    return result;
   };
 }
 
@@ -123,6 +131,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   const [owned, setOwned] = useState<number[]>([]);
   const [stillStates, setStillStates] = useState<StillState[]>([]);
   const [filterClass, setFilterClass] = useState<CharClass[]>([]);
+  const [filterStillType, setFilterStillType] = useState<StillType[]>([]);
   const [filterOwned, setFilterOwned] = useState("none");
   const [filterLimited, setFilterLimited] = useState("none");
   const [filterStill, setFilterNotImplemented] = useState("none");
@@ -169,7 +178,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
               })
               .filter(filterReadStill(filterRead))
               .filter(filterRateStill(filterRate))
-              .filter(filterSillAttribute(filterStill)),
+              .filter(filterSillAttribute(filterStillType)),
           }))
           .filter((x) =>
             filterClass.length === 0 ? true : filterClass.includes(x.class)
@@ -200,15 +209,16 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
         rare7,
       };
     }, [
-      filterClass,
+      props.charInfoWithStills,
+      filterOwned,
       filterLimited,
       filterStill,
-      filterOwned,
-      filterRate,
-      filterRead,
       owned,
-      props.charInfoWithStills,
+      filterRead,
+      filterRate,
+      filterStillType,
       stillStates,
+      filterClass,
     ]);
 
   const handleReadChange = (id: string) => {
@@ -243,6 +253,14 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
     }
   };
 
+  const changeFilterStill = (type: StillType) => {
+    if (filterStillType.includes(type)) {
+      setFilterStillType((x) => x.filter((y) => y !== type));
+    } else {
+      setFilterStillType((x) => [...x, type]);
+    }
+  };
+
   const handleSave = () => {
     window.localStorage.setItem(STILL_KEY, JSON.stringify(stillStates));
     TopToaster?.show({
@@ -268,7 +286,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             margin-bottom: 20px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            justify-content: stretch;
             gap: 8px;
           `}
         >
@@ -315,9 +333,32 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             />
           </ButtonGroup>
 
+          <ButtonGroup fill>
+            <StillTypeButton
+              intent={filterStillType.includes("intimacy") ? "primary" : "none"}
+              stillType="intimacy"
+              onStillTypeClick={changeFilterStill}
+            >
+              {t2("button.intimacyStill")}
+            </StillTypeButton>
+            <StillTypeButton
+              intent={filterStillType.includes("secret") ? "primary" : "none"}
+              stillType="secret"
+              onStillTypeClick={changeFilterStill}
+            >
+              {t2("button.secretStill")}
+            </StillTypeButton>
+            <StillTypeButton
+              intent={filterStillType.includes("story") ? "primary" : "none"}
+              stillType="story"
+              onStillTypeClick={changeFilterStill}
+            >
+              {t2("button.storyStill")}
+            </StillTypeButton>
+          </ButtonGroup>
+
           <div
             css={css`
-              width: 100%;
               display: flex;
               gap: 5px;
             `}
@@ -354,7 +395,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
           </div>
           <div
             css={css`
-              width: 100%;
               display: flex;
               gap: 5px;
             `}
@@ -365,14 +405,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
               options={[
                 { value: "none", label: t("ui.filter.stillBy") },
                 { value: "showStill0", label: t("ui.filter.showStill0") },
-                {
-                  value: "ignoreStoryStill",
-                  label: t("ui.filter.ignoreStoryStill"),
-                },
-                {
-                  value: "onlyStoryStill",
-                  label: t("ui.filter.onlyStoryStill"),
-                },
               ]}
             />
 
@@ -547,6 +579,25 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
         onClose={() => setRouletteOpen(false)}
       />
     </Container>
+  );
+};
+
+type StillTypeButtonProps = {
+  stillType: StillType;
+  onStillTypeClick: (type: StillType) => void;
+} & ButtonProps;
+
+const StillTypeButton: React.FC<StillTypeButtonProps> = (props) => {
+  const { stillType, onStillTypeClick, ...buttonProps } = props;
+
+  const handleStillTypeClick = () => {
+    props.onStillTypeClick(stillType);
+  };
+
+  return (
+    <Button {...buttonProps} onClick={handleStillTypeClick}>
+      {props.children}
+    </Button>
   );
 };
 
