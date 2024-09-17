@@ -229,15 +229,17 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
                   gap: 10px 30px;
                 `}
               >
-                {displayChars.map((x) => (
-                  <CharCard
-                    key={x.id}
-                    char={x}
-                    hideSpoiler={
-                      SPOILER_CHARS.includes(x.id) && props.hideSpoiler
-                    }
-                  />
-                ))}
+                {displayChars
+                  .sort((a, b) => (a.id < b.id ? -1 : 1))
+                  .map((x) => (
+                    <CharCard
+                      key={x.id}
+                      char={x}
+                      hideSpoiler={
+                        SPOILER_CHARS.includes(x.id) && props.hideSpoiler
+                      }
+                    />
+                  ))}
               </div>
               <Button intent="primary" large outlined onClick={start}>
                 {t("button.restart")}
