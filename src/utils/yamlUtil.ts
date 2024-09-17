@@ -194,6 +194,10 @@ export function loadStillMaster() {
         // 恒常と限定で好感度を共有しているか
         const bondStillRegex = /still[0-9]+_[^_]+$/i;
         if (y.label.match(bondStillRegex) && y.shared.length > 1) {
+          // 低レアは低レア同士で共有しているので後続の処理不要
+          if (1000 <= y.charId && y.charId < 3000) {
+            return true;
+          }
           // 共有スチルを取得
           const sharedBondStills = still.master
             .filter(
