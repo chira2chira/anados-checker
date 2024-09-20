@@ -20,6 +20,7 @@ const leftLine = css`
   width: 3px;
   border-radius: 4px;
   background-color: #738091;
+  flex-shrink: 0;
 `;
 
 export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
