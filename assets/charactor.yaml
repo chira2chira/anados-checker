@@ -2084,3 +2084,33 @@
   limited: true
   release: 9/6/2024
   image: 90px-FS_amorey_(deepsea).png
+- id: 217
+  unitId: 5069
+  nameJa: ガロード
+  nameEn: Garold
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 9/20/2024
+  image: 90px-FS_garold.png
+- id: 218
+  unitId: 6085
+  nameJa: グルメハンター ロビン
+  nameEn: Gourmet Hunter Robin
+  rarity: 6
+  class: guard
+  deployment: low
+  limited: true
+  release: 9/20/2024
+  image: 90px-FS_robin_(awakened).png
+- id: 219
+  unitId: 6086
+  nameJa: ダイビングバディ シグヴァルディ
+  nameEn: Diving Buddy Sigvaldi
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 9/20/2024
+  image: 90px-FS_sigvaldi_(awakened).png
