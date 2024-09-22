@@ -193,7 +193,7 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
                   `}
                   src={"/static/image/still/" + displayStill.image}
                   alt={displayStill.label}
-                  onClick={() => setState("finish")}
+                  onClick={stop}
                 />
                 {state === "finish" && (
                   <div
