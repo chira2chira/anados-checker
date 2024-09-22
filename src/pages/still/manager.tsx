@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { css } from "@emotion/react";
 import { Button, ButtonGroup, ButtonProps, Checkbox } from "@blueprintjs/core";
 import { forceCheck } from "react-lazyload";
@@ -221,23 +221,31 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       filterClass,
     ]);
 
-  const handleReadChange = (id: string) => {
-    const oldStateTmp = stillStates.filter((x) => x.id === id);
-    const oldState: StillState =
-      oldStateTmp.length === 0 ? { id, read: false, rate: -1 } : oldStateTmp[0];
-    const newStates = stillStates.filter((x) => x.id !== id);
-    newStates.push({ ...oldState, read: !oldState.read });
-    setStillStates(newStates);
-  };
+  const handleReadChange = useCallback((id: string) => {
+    setStillStates((x) => {
+      const oldStateTmp = x.filter((y) => y.id === id);
+      const oldState: StillState =
+        oldStateTmp.length === 0
+          ? { id, read: false, rate: -1 }
+          : oldStateTmp[0];
+      const newStates = x.filter((y) => y.id !== id);
+      newStates.push({ ...oldState, read: !oldState.read });
+      return newStates;
+    });
+  }, []);
 
-  const handleRateChange = (id: string, rate: number) => {
-    const oldStateTmp = stillStates.filter((x) => x.id === id);
-    const oldState: StillState =
-      oldStateTmp.length === 0 ? { id, read: false, rate: -1 } : oldStateTmp[0];
-    const newStates = stillStates.filter((x) => x.id !== id);
-    newStates.push({ ...oldState, rate });
-    setStillStates(newStates);
-  };
+  const handleRateChange = useCallback((id: string, rate: number) => {
+    setStillStates((x) => {
+      const oldStateTmp = x.filter((y) => y.id === id);
+      const oldState: StillState =
+        oldStateTmp.length === 0
+          ? { id, read: false, rate: -1 }
+          : oldStateTmp[0];
+      const newStates = x.filter((y) => y.id !== id);
+      newStates.push({ ...oldState, rate });
+      return newStates;
+    });
+  }, []);
 
   const handleBulkRegister = (stills: StillState[]) => {
     let newStates = stillStates.concat(stills);

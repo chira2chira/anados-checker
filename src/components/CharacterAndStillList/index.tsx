@@ -1,8 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import LazyLoad from "react-lazyload";
 import { css } from "@emotion/react";
 import { useTranslation } from "next-i18next";
 import { Button, Card, Icon, Tooltip } from "@blueprintjs/core";
+import { dequal } from "dequal";
 import { displayCharClass } from "@/utils/stringUtil";
 import { CharInfoWithStill } from "@/utils/yamlUtil";
 import { getUserLabelEmoji } from "@/utils/userLabelEnum";
@@ -23,7 +24,7 @@ const CharacterAndStillList: React.FC<CharacterAndStillListProps> = (props) => {
     const useSpoilerFilter = SPOILER_CHARS.includes(x.id) && props.hideSpoiler;
 
     return (
-      <CharacterPanel
+      <MemoizeCharacterPanel
         key={x.id}
         char={x}
         gridMode={props.gridMode}
@@ -132,6 +133,10 @@ const CharacterPanel: React.FC<{
     </StillCard>
   );
 };
+const MemoizeCharacterPanel = React.memo(
+  CharacterPanel,
+  (prevProps, nextProps) => dequal(prevProps, nextProps)
+);
 
 type StillCardProps = {
   children: React.ReactNode;
