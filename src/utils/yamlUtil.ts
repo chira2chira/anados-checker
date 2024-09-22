@@ -185,7 +185,7 @@ export function loadStillMaster() {
       .filter((y) => {
         // 秘密とストーリースチルはgroupに入っていたら表示
         if (
-          (!y.label.startsWith("still") || y.label.match(/(_secret_)/i)) &&
+          (!y.label.startsWith("still") || y.label.match(/_secret_/i)) &&
           y.group.includes(x.unitId)
         )
           return true;
