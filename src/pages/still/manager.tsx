@@ -439,7 +439,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             display: flex;
             justify-content: space-between;
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
           `}
         >
           <Button onClick={() => setRouletteOpen(true)} outlined>
