@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Button, Checkbox, Tooltip } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import type { CharInfo } from "..";
@@ -442,7 +442,7 @@ function getRarityColor(rarity: number) {
   }
 }
 
-const CharacterImage: React.FC<CharacterImageProps> = (props) => {
+const CharacterImage: React.FC<CharacterImageProps> = React.memo((props) => {
   const { char } = props;
   const { i18n } = useTranslation();
 
@@ -509,7 +509,8 @@ const CharacterImage: React.FC<CharacterImageProps> = (props) => {
       </div>
     </Tooltip>
   );
-};
+});
+CharacterImage.displayName = "CharacterImage";
 
 type ResultRateProps = {
   percent: number;

@@ -4,7 +4,7 @@ import { useTranslation } from "next-i18next";
 import { css } from "@emotion/react";
 import CommonMeta from "@/components/CommonMeta";
 import { Button, Drawer, MenuDivider } from "@blueprintjs/core";
-import { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 const mainWrapper = css`
   position: relative;
@@ -65,6 +65,8 @@ export const Container: React.FC<ContainerProps> = (props) => {
   const { t } = useTranslation("common");
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleCloseMenu = useCallback(() => setMenuOpen(false), []);
+
   return (
     <>
       <CommonMeta
@@ -85,7 +87,7 @@ export const Container: React.FC<ContainerProps> = (props) => {
           isOpen={menuOpen}
           position="left"
           size="260px"
-          onClose={() => setMenuOpen(false)}
+          onClose={handleCloseMenu}
         >
           <LinkSideBar />
         </Drawer>
@@ -150,9 +152,7 @@ export const Container: React.FC<ContainerProps> = (props) => {
   );
 };
 
-type LinkSideBarProps = {};
-
-const LinkSideBar: React.FC<LinkSideBarProps> = (props) => {
+const LinkSideBar: React.FC = React.memo(() => {
   const { asPath } = useRouter();
   const { t } = useTranslation("common");
 
@@ -211,4 +211,5 @@ const LinkSideBar: React.FC<LinkSideBarProps> = (props) => {
       </div>
     </div>
   );
-};
+});
+LinkSideBar.displayName = "LinkSideBar";
