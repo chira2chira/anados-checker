@@ -1,8 +1,10 @@
 import { CharInfo } from "@/pages";
 import { displayCharClass } from "@/utils/stringUtil";
+import React from "react";
 import { Button, Tooltip } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { useTranslation } from "next-i18next";
+import { dequal } from "dequal";
 
 const SPOILER_CHARS = [143, 150];
 
@@ -17,7 +19,7 @@ const CharacterList: React.FC<CharacterListProps> = (props) => {
     const useSpoilerFilter = SPOILER_CHARS.includes(x.id) && props.hideSpoiler;
 
     return (
-      <CharacterPanel
+      <MemoizeCharacterPanel
         key={x.id}
         char={x}
         hideSpoiler={useSpoilerFilter}
@@ -93,5 +95,9 @@ const CharacterPanel: React.FC<{
     </Tooltip>
   );
 };
+const MemoizeCharacterPanel = React.memo(
+  CharacterPanel,
+  (prevProps, nextProps) => dequal(prevProps, nextProps)
+);
 
 export default CharacterList;

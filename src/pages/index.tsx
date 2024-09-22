@@ -2,7 +2,7 @@ import * as styles from "@/styles/Home.module";
 import { GetStaticProps, NextPage } from "next";
 import { loadCharactors } from "@/utils/yamlUtil";
 import CharacterList from "@/components/CharacterList";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { css } from "@emotion/react";
 import {
   Button,
@@ -254,13 +254,18 @@ const Home: NextPage<HomeProps> = (props) => {
       owned,
     ]);
 
-  const handleCharClick = (id: number) => {
-    if (owned.includes(id)) {
-      setOwned((x) => x.filter((y) => y !== id));
-    } else {
-      setOwned((x) => [...x, id]);
-    }
-  };
+  const handleCharClick = useCallback(
+    (id: number) => {
+      setOwned((x) => {
+        if (x.includes(id)) {
+          return x.filter((y) => y !== id);
+        } else {
+          return [...x, id];
+        }
+      });
+    },
+    []
+  );
 
   const handleBulkRegister = (ids: number[]) => {
     ids.forEach((x) => handleCharClick(x));
