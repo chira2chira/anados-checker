@@ -2953,6 +2953,14 @@
       "image": "StillThumbnail_bg_amorey_still04_mosaic_001.webp"
     },
     {
+      "charId": 6086,
+      "seq": 5,
+      "shared": [6086],
+      "group": [],
+      "label": "still03_sigvaldi",
+      "image": "StillThumbnail_bg_sigvaldi_still03_mosaic_001.webp"
+    },
+    {
       "charId": 7001,
       "seq": 1,
       "shared": [7001, 7002],
