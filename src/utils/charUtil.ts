@@ -14,12 +14,12 @@ export function parseLocalStorageStill(value: string): StillState[] {
   if (!Array.isArray(data) || data.length === 0) return [];
 
   if (typeof data[0] === "string") {
-    return data.map((x) => {
+    return data.map((x: string) => {
       const [id, read, rate] = x.split(",");
       return {
         id,
         read: Boolean(read),
-        rate,
+        rate: Number(rate),
       };
     });
   } else {
