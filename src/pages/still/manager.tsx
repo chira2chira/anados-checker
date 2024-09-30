@@ -18,6 +18,7 @@ import ClassButton from "@/components/ClassButton";
 import { sendEvent } from "@/utils/gtag";
 import { TopToaster } from "@/utils/toast";
 import {
+  deserializeStill,
   parseLocalStorageChar,
   parseLocalStorageStill,
 } from "@/utils/charUtil";
@@ -33,7 +34,7 @@ type StillManagerProps = {
   charInfoWithStills: CharInfoWithStill[];
 };
 
-type StillState = {
+export type StillState = {
   id: string;
   read: boolean;
   rate: number;
@@ -270,7 +271,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   };
 
   const handleSave = () => {
-    window.localStorage.setItem(STILL_KEY, JSON.stringify(stillStates));
+    window.localStorage.setItem(STILL_KEY, deserializeStill(stillStates));
     TopToaster?.show({
       intent: "success",
       message: t("ui.message.saved"),
