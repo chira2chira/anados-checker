@@ -1428,7 +1428,7 @@
       "charId": 5037,
       "seq": 1,
       "shared": [5037, 95037],
-      "group": [5037, 95037],
+      "group": [5037, 95037, 6087, 96087],
       "label": "still01_pollonorta",
       "image": "StillThumbnail_bg_pollonorta_still01_mosaic_001.webp"
     },
@@ -1436,9 +1436,17 @@
       "charId": 5037,
       "seq": 70,
       "shared": [5037, 95037],
-      "group": [5037, 95037],
+      "group": [5037, 95037, 6087, 96087],
       "label": "mjbc_026",
       "image": "StillThumbnail_bg_pollonorta_still04_mosaic_002.webp"
+    },
+    {
+      "charId": 5037,
+      "seq": 71,
+      "shared": [5037, 95037],
+      "group": [5037, 95037, 6087, 96087],
+      "label": "dlv_021",
+      "image": "StillThumbnail_bg_pollonorta_still03_mosaic_001.webp"
     },
     {
       "charId": 5038,
@@ -1783,6 +1791,30 @@
       "group": [5069],
       "label": "dlv_012",
       "image": "StillThumbnail_bg_garoad_storystill01_mosaic_003.webp"
+    },
+    {
+      "charId": 5069,
+      "seq": 71,
+      "shared": [5069],
+      "group": [5069],
+      "label": "dlv_021",
+      "image": "StillThumbnail_bg_pollonorta_still03_mosaic_001.webp"
+    },
+    {
+      "charId": 5070,
+      "seq": 70,
+      "shared": [5070],
+      "group": [5070],
+      "label": "dlv_012",
+      "image": "StillThumbnail_bg_garoad_storystill01_mosaic_003.webp"
+    },
+    {
+      "charId": 5070,
+      "seq": 71,
+      "shared": [5070],
+      "group": [5070],
+      "label": "dlv_021",
+      "image": "StillThumbnail_bg_pollonorta_still03_mosaic_001.webp"
     },
     {
       "charId": 6001,
@@ -2959,6 +2991,14 @@
       "group": [],
       "label": "still03_sigvaldi",
       "image": "StillThumbnail_bg_sigvaldi_still03_mosaic_001.webp"
+    },
+    {
+      "charId": 6087,
+      "seq": 5,
+      "shared": [6087, 96087],
+      "group": [],
+      "label": "still02_pollonorta",
+      "image": "StillThumbnail_bg_pollonorta_still02_mosaic_001.webp"
     },
     {
       "charId": 7001,
