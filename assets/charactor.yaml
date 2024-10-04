@@ -2114,3 +2114,23 @@
   limited: true
   release: 9/20/2024
   image: 90px-FS_sigvaldi_(awakened).png
+- id: 220
+  unitId: 5070
+  nameJa: ティリクム
+  nameEn: Tilikum
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 10/4/2024
+  image: 90px-FS_tilikum.png
+- id: 221
+  unitId: 6087
+  nameJa: ふたりのシードッグ オルタとポロン
+  nameEn: Pair of Sea Dogs Orta & Pollon
+  rarity: 6
+  class: support
+  deployment: high
+  limited: true
+  release: 10/4/2024
+  image: 90px-FS_pollon_&_orta_(awakened).png
