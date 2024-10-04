@@ -18,7 +18,7 @@ export function parseLocalStorageStill(value: string): StillState[] {
       const [id, read, rate] = x.split(",");
       return {
         id,
-        read: Boolean(read),
+        read: read === "1",
         rate: Number(rate),
       };
     });
