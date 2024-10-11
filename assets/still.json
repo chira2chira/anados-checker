@@ -1785,6 +1785,22 @@
       "image": "StillThumbnail_bg_bgoremgamma_storystill01_mosaic_001.webp"
     },
     {
+      "charId": 5064,
+      "seq": 3,
+      "shared": [5064],
+      "group": [],
+      "label": "still03_dion",
+      "image": "StillThumbnail_bg_dion_still03_mosaic_001.webp"
+    },
+    {
+      "charId": 5068,
+      "seq": 5,
+      "shared": [5068],
+      "group": [],
+      "label": "still03_dakkar",
+      "image": "StillThumbnail_bg_dakkar_still03_mosaic_001.webp"
+    },
+    {
       "charId": 5069,
       "seq": 70,
       "shared": [5069],
@@ -1815,6 +1831,14 @@
       "group": [5070],
       "label": "dlv_021",
       "image": "StillThumbnail_bg_pollonorta_still03_mosaic_001.webp"
+    },
+    {
+      "charId": 5070,
+      "seq": 72,
+      "shared": [5070],
+      "group": [5070],
+      "label": "dlv_022",
+      "image": "StillThumbnail_bg_tilikum_storystill01_mosaic_001.webp"
     },
     {
       "charId": 6001,
@@ -3071,6 +3095,14 @@
       "group": [7001, 7002],
       "label": "drm_018",
       "image": "StillThumbnail_bg_baquu_still02_mosaic_004.webp"
+    },
+    {
+      "charId": 7001,
+      "seq": 75,
+      "shared": [7001, 7002],
+      "group": [7001, 7002],
+      "label": "dlv_022",
+      "image": "StillThumbnail_bg_tilikum_storystill01_mosaic_001.webp"
     }
   ]
 }
