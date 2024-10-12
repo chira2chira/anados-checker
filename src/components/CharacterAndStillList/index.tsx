@@ -164,7 +164,7 @@ const StillCard: React.FC<StillCardProps> = (props) => {
         padding: 15px;
       `}
     >
-      <LazyLoad height={104}>
+      <LazyLoad height={130}>
         <div
           css={css`
             display: flex;
@@ -206,8 +206,7 @@ const StillCard: React.FC<StillCardProps> = (props) => {
               >
                 <img
                   css={css`
-                    width: 185px;
-                    height: 104px;
+                    width: 175px;
                     opacity: ${x.read ? 1 : 0.7};
                   `}
                   loading="lazy"
