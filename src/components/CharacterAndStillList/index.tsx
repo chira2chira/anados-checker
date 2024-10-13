@@ -207,6 +207,7 @@ const StillCard: React.FC<StillCardProps> = (props) => {
                 <img
                   css={css`
                     width: 175px;
+                    aspect-ratio: 16 / 9; /** 読み込み中のheightを確保 */
                     opacity: ${x.read ? 1 : 0.7};
                   `}
                   loading="lazy"
