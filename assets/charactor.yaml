@@ -2134,3 +2134,23 @@
   limited: true
   release: 10/4/2024
   image: 90px-FS_pollon_&_orta_(awakened).png
+- id: 222
+  unitId: 5071
+  nameJa: やられ上等エロレスヒール わるいバシュカー
+  nameEn: Butt-Kicked Heel Evil Bashkar
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: true
+  release: 10/18/2024
+  image: 90px-FS_bashkar_(awakened).png
+- id: 223
+  unitId: 6088
+  nameJa: もくもく煙の興行主 ゴルドフ
+  nameEn: Billowing Impresario Gordov
+  rarity: 6
+  class: caster
+  deployment: high
+  limited: true
+  release: 10/18/2024
+  image: 90px-FS_gordov_(awakened).png
