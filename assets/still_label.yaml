@@ -30,6 +30,8 @@
   prefix: DI
 - id: ht_001
   prefix: HT
+- id: ht2_011
+  prefix: HT2
 - id: ppc
   prefix: PP
 - id: dlv
