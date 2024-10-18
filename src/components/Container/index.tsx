@@ -202,10 +202,10 @@ const LinkSideBar: React.FC = React.memo(() => {
             margin: 20px 0;
           `}
         />
-        <Link href={asPath} locale="ja">
+        <Link href={asPath} locale="ja" scroll={false}>
           日本語
         </Link>
-        <Link href={asPath} locale="en">
+        <Link href={asPath} locale="en" scroll={false}>
           English
         </Link>
       </div>
