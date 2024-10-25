@@ -825,6 +825,14 @@
       "image": "StillThumbnail_bg_ornis_still01_mosaic_001.webp"
     },
     {
+      "charId": 4012,
+      "seq": 1,
+      "shared": [4012],
+      "group": [4012],
+      "label": "still01_alec",
+      "image": "StillThumbnail_bg_alec_still01_mosaic_001.webp"
+    },
+    {
       "charId": 4014,
       "seq": 1,
       "shared": [4014],
@@ -1761,6 +1769,14 @@
       "image": "StillThumbnail_bg_goh_storystill01_mosaic_001_extra01.webp"
     },
     {
+      "charId": 5061,
+      "seq": 72,
+      "shared": [5061],
+      "group": [5061],
+      "label": "ht2_013",
+      "image": "StillThumbnail_bg_hagane_still02_mosaic_001.webp"
+    },
+    {
       "charId": 5062,
       "seq": 1,
       "shared": [5062],
@@ -1802,6 +1818,14 @@
     },
     {
       "charId": 5069,
+      "seq": 1,
+      "shared": [5069],
+      "group": [5069],
+      "label": "still01_garold",
+      "image": "StillThumbnail_bg_garoad_still01_mosaic_003.webp"
+    },
+    {
+      "charId": 5069,
       "seq": 70,
       "shared": [5069],
       "group": [5069],
@@ -1839,6 +1863,14 @@
       "group": [5070],
       "label": "dlv_022",
       "image": "StillThumbnail_bg_tilikum_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5071,
+      "seq": 5,
+      "shared": [5071],
+      "group": [],
+      "label": "still03_bashkar",
+      "image": "StillThumbnail_bg_bashkar_still03_mosaic_001.webp"
     },
     {
       "charId": 6001,
