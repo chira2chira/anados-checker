@@ -77,6 +77,7 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
   );
 
   const reset = () => {
+    clearInterval(intervalRef.current);
     setStillIndex(0);
     setState("pause");
   };
