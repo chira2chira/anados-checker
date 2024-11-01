@@ -2154,3 +2154,23 @@
   limited: true
   release: 10/18/2024
   image: 90px-FS_gordov_(awakened).png
+- id: 224
+  unitId: 5072
+  nameJa: ウェアウルフ・アルファ ルガロゥ
+  nameEn: Alpha Werewolf Rougarou
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: true
+  release: 11/1/2024
+  image: 90px-FS_rougarou_(awakened).png
+- id: 225
+  unitId: 6089
+  nameJa: ハガネ
+  nameEn: Hagane
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: false
+  release: 11/1/2024
+  image: 90px-FS_hagane.png
