@@ -1881,6 +1881,14 @@
       "image": "StillThumbnail_bg_bashkar_still03_mosaic_001.webp"
     },
     {
+      "charId": 5072,
+      "seq": 5,
+      "shared": [5072],
+      "group": [],
+      "label": "still03_rougarou",
+      "image": "StillThumbnail_bg_rougarou_still03_mosaic_003.webp"
+    },
+    {
       "charId": 6001,
       "seq": 1,
       "shared": [6001, 6034],
