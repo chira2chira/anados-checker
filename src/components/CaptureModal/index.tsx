@@ -119,7 +119,7 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
               onClick={handleCharImageDownload}
               loading={converting}
             >
-              {t("ui.button.downloadScreenshot")}
+              {t("ui.button.download")}
             </Button>
           </div>
           <div>
