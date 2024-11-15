@@ -2174,3 +2174,23 @@
   limited: false
   release: 11/1/2024
   image: 90px-FS_hagane.png
+- id: 226
+  unitId: 5073
+  nameJa: バルクスキー
+  nameEn: Bulkski
+  rarity: 5
+  class: healer
+  deployment: high
+  limited: false
+  release: 11/15/2024
+  image: 90px-FS_bulkski.png
+- id: 227
+  unitId: 6090
+  nameJa: ドスケベモンスター ドワード
+  nameEn: Pervy Monster Dward
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 11/15/2024
+  image: 90px-FS_dward_(awakened).png
