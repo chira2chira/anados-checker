@@ -163,13 +163,13 @@ function filterTicketChar(filter: string) {
             : dayjs(char.release).isBefore(dayjs("2024/6/22")))
         );
       case "aniv3.0":
-        // 仮
+        // https://anothereidos-r.info/news/winterdate/
         if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
         return (
           char.rarity >= 4 &&
           (char.limited
             ? dayjs(char.release).isBefore(dayjs("2024/6/29"))
-            : dayjs(char.release).isBefore(dayjs("2024/12/21")))
+            : dayjs(char.release).isBefore(dayjs("2024/11/16")))
         );
     }
   };
