@@ -1660,7 +1660,7 @@
       "charId": 5053,
       "seq": 1,
       "shared": [5053],
-      "group": [5053],
+      "group": [5053, 6091],
       "label": "still01_lyon",
       "image": "StillThumbnail_bg_rion_still01_mosaic_001.webp"
     },
@@ -1668,7 +1668,7 @@
       "charId": 5053,
       "seq": 4,
       "shared": [5053],
-      "group": [5053],
+      "group": [5053, 6091],
       "label": "still04_lyon_secret_125053",
       "image": "StillThumbnail_bg_lyon_storystill01_mosaic_001.webp"
     },
@@ -1676,9 +1676,25 @@
       "charId": 5053,
       "seq": 70,
       "shared": [5053],
-      "group": [5053],
+      "group": [5053, 6091],
       "label": "ren_021",
       "image": "StillThumbnail_bg_chabo_storystill02_mosaic_A001.webp"
+    },
+    {
+      "charId": 5053,
+      "seq": 71,
+      "shared": [5053],
+      "group": [5053, 6091],
+      "label": "wd_012",
+      "image": "StillThumbnail_bg_chabo_storystill04_mosaic_001.webp"
+    },
+    {
+      "charId": 5053,
+      "seq": 72,
+      "shared": [5053],
+      "group": [5053, 6091],
+      "label": "wd_013",
+      "image": "StillThumbnail_bg_lyon_storystill02_mosaic_001.webp"
     },
     {
       "charId": 5054,
@@ -2897,6 +2913,22 @@
       "image": "StillThumbnail_bg_chabo_storystill02_mosaic_A001.webp"
     },
     {
+      "charId": 6068,
+      "seq": 73,
+      "shared": [6068],
+      "group": [6068],
+      "label": "wd_012",
+      "image": "StillThumbnail_bg_chabo_storystill04_mosaic_001.webp"
+    },
+    {
+      "charId": 6068,
+      "seq": 74,
+      "shared": [6068],
+      "group": [6068],
+      "label": "wd_013",
+      "image": "StillThumbnail_bg_lyon_storystill02_mosaic_001.webp"
+    },
+    {
       "charId": 6069,
       "seq": 5,
       "shared": [6069],
@@ -3151,6 +3183,14 @@
       "group": [],
       "label": "still03_dward",
       "image": "StillThumbnail_bg_dward_still03_mosaic_001.webp"
+    },
+    {
+      "charId": 6091,
+      "seq": 5,
+      "shared": [6091],
+      "group": [],
+      "label": "still02_lyon",
+      "image": "StillThumbnail_bg_rion_still02_mosaic_001.webp"
     },
     {
       "charId": 7001,
