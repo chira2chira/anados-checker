@@ -2194,3 +2194,33 @@
   limited: true
   release: 11/15/2024
   image: 90px-FS_dward_(awakened).png
+- id: 228
+  unitId: 5074
+  nameJa: アナグラ
+  nameEn: Anagura
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: false
+  release: 11/29/2024
+  image: 90px-FS_anagura.png
+- id: 229
+  unitId: 5075
+  nameJa: スヴェン
+  nameEn: Sven
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: false
+  release: 11/29/2024
+  image: 90px-FS_sven.png
+- id: 230
+  unitId: 6091
+  nameJa: 雪の日の約束 リオン
+  nameEn: Snowy Day Promise Lyon
+  rarity: 6
+  class: caster
+  deployment: high
+  limited: true
+  release: 11/29/2024
+  image: 90px-FS_lyon_(awakened).png
