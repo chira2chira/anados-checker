@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { Button, Dialog, DialogBody } from "@blueprintjs/core";
 import { css, keyframes } from "@emotion/react";
 import { CharInfoWithStill, StillInfo } from "@/utils/yamlUtil";

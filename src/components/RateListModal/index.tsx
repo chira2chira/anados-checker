@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { Dialog, DialogBody, Tag } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { GachaInfo } from "@/pages/gacha/simulator";

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { domToPng } from "modern-screenshot";
 import { Button, Dialog, DialogBody, Switch } from "@blueprintjs/core";
 import { css } from "@emotion/react";
