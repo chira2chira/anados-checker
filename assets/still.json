@@ -1905,6 +1905,14 @@
       "image": "StillThumbnail_bg_rougarou_still03_mosaic_003.webp"
     },
     {
+      "charId": 5075,
+      "seq": 70,
+      "shared": [5075],
+      "group": [5075],
+      "label": "wd_023",
+      "image": "StillThumbnail_bg_sven_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 6001,
       "seq": 1,
       "shared": [6001, 6034],
@@ -3119,6 +3127,14 @@
       "group": [],
       "label": "still04_amorey",
       "image": "StillThumbnail_bg_amorey_still04_mosaic_001.webp"
+    },
+    {
+      "charId": 6085,
+      "seq": 5,
+      "shared": [6085],
+      "group": [],
+      "label": "still03_robin",
+      "image": "StillThumbnail_bg_robin_still03_mosaic_001.webp"
     },
     {
       "charId": 6086,
