@@ -63,7 +63,8 @@
       "checker": "所持率チェッカー",
       "gachasimu": "ガチャシミュレーター",
       "stillmng": "スチル管理メモ",
-      "generator": "会話ジェネレーター"
+      "generator": "会話ジェネレーター",
+      "backup": "バックアップ"
     }
   }
 }

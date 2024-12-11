@@ -1,0 +1,18 @@
+{
+  "title": "Backup",
+  "description": "You can backup the data of the collection tracker.",
+  "button": {
+    "export": "Export",
+    "import": "Import"
+  },
+  "message": {
+    "char": "Character",
+    "still": "Still",
+    "importComplete": "Import Complete: ",
+    "e_dataNotFound": "No data available for backup.",
+    "e_dataNotJson": "Please specify a backup file.",
+    "e_readFailed": "Failed to read the file.",
+    "e_invalidFormat": "Invalid format.",
+    "e_dataNotBackupData": "This is not a backup file."
+  }
+}

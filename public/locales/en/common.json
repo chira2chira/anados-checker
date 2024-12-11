@@ -63,7 +63,8 @@
       "checker": "Collection Tracker",
       "gachasimu": "Gacha Simulator",
       "stillmng": "Still Tracker",
-      "generator": "Text Generator"
+      "generator": "Text Generator",
+      "backup": "Backup"
     }
   }
 }

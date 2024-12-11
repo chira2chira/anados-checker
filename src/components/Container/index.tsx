@@ -197,6 +197,7 @@ const LinkSideBar: React.FC = React.memo(() => {
         <Link href={"https://anados-generator.vercel.app/"}>
           {t("ui.link.generator")}
         </Link>
+        <Link href={"/backup"}>{t("ui.link.backup")}</Link>
         <MenuDivider
           css={css`
             margin: 20px 0;

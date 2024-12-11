@@ -1,0 +1,18 @@
+{
+  "title": "バックアップ",
+  "description": "所持率チェッカーのデータをバックアップできます。",
+  "button": {
+    "export": "エクスポート",
+    "import": "インポート"
+  },
+  "message": {
+    "char": "キャラクター",
+    "still": "スチル",
+    "importComplete": "インポート完了：",
+    "e_dataNotFound": "バックアップするデータがありません。",
+    "e_dataNotJson": "バックアップファイルを指定してください。",
+    "e_readFailed": "ファイル読み込みに失敗。",
+    "e_invalidFormat": "不正なフォーマット。",
+    "e_dataNotBackupData": "バックアップファイルではありません。"
+  }
+}
