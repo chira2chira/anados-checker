@@ -126,6 +126,13 @@ const Backup: NextPage<BackupProps> = () => {
     >
       <div
         css={css`
+          margin-bottom: 20px;
+        `}
+      >
+        {t("message.backupOverview")}
+      </div>
+      <div
+        css={css`
           display: flex;
           gap: 10px;
           margin-bottom: 20px;

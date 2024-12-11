@@ -8,6 +8,7 @@
   "message": {
     "char": "キャラクター",
     "still": "スチル",
+    "backupOverview": "所持ステータスとスチル管理データをバックアップできます。",
     "importComplete": "インポート完了：",
     "e_dataNotFound": "バックアップするデータがありません。",
     "e_dataNotJson": "バックアップファイルを指定してください。",

@@ -8,6 +8,7 @@
   "message": {
     "char": "Character",
     "still": "Still",
+    "backupOverview": "Character ownership status and still management data can be backed up.",
     "importComplete": "Import Complete: ",
     "e_dataNotFound": "No data available for backup.",
     "e_dataNotJson": "Please specify a backup file.",
