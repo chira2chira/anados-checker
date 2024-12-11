@@ -10,7 +10,12 @@ export function parseLocalStorageChar(value: string) {
 }
 
 export function parseLocalStorageStill(value: string): StillState[] {
-  const data = JSON.parse(value);
+  let data;
+  try {
+    data = JSON.parse(value);
+  } catch (error) {
+    return [];
+  }
   if (!Array.isArray(data) || data.length === 0) return [];
 
   if (typeof data[0] === "string") {
