@@ -36,7 +36,7 @@ const Backup: NextPage<BackupProps> = () => {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const inputFileRef = useRef<HTMLInputElement>(null);
-  const { t } = useTranslation("backup");
+  const { t } = useTranslation("info");
 
   const exportBackup = () => {
     setError("");
@@ -176,7 +176,7 @@ const Backup: NextPage<BackupProps> = () => {
 export const getStaticProps: GetStaticProps<BackupProps> = async (context) => {
   return {
     props: {
-      ...(await serverSideTranslations(context.locale!, ["common", "backup"])),
+      ...(await serverSideTranslations(context.locale!, ["common", "info"])),
     },
   };
 };
