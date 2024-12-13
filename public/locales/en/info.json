@@ -1,6 +1,9 @@
 {
-  "title": "Backup",
-  "description": "You can backup the data of the collection tracker.",
+  "title": "Info",
+  "description": "Page about the site data of the Collection Tracker.",
+  "head": {
+    "backup": "Backup"
+  },
   "button": {
     "export": "Export",
     "import": "Import"

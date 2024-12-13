@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ChangeEventHandler, useRef, useState } from "react";
 import { css } from "@emotion/react";
-import { Button } from "@blueprintjs/core";
+import { Button, Card, H3 } from "@blueprintjs/core";
 import { Container } from "@/components/Container";
 import { sendEvent } from "@/utils/gtag";
 
@@ -16,7 +16,7 @@ type BackupData = {
   still: string | null;
 };
 
-type BackupProps = {};
+type InfoProps = {};
 
 function isBackupData(data: any): data is BackupData {
   return typeof data.version === "number";
@@ -32,7 +32,7 @@ function readFile(file: File): Promise<string | null> {
   });
 }
 
-const Backup: NextPage<BackupProps> = () => {
+const Info: NextPage<InfoProps> = () => {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const inputFileRef = useRef<HTMLInputElement>(null);
@@ -120,60 +120,83 @@ const Backup: NextPage<BackupProps> = () => {
 
   return (
     <Container
-      titleLink="/backup"
+      titleLink="/info"
       title={t("title")}
       description={t("description")}
     >
       <div
         css={css`
-          margin-bottom: 20px;
-        `}
-      >
-        {t("message.backupOverview")}
-      </div>
-      <div
-        css={css`
           display: flex;
-          gap: 10px;
-          margin-bottom: 20px;
+          flex-direction: column;
+          gap: 20px;
         `}
       >
-        <Button large onClick={exportBackup}>
-          {t("button.export")}
-        </Button>
-        <input
-          ref={inputFileRef}
-          style={{ display: "none" }}
-          type="file"
-          accept=".json"
-          onChange={handleFileChange}
-        />
-        <Button large onClick={importBackup}>
-          {t("button.import")}
-        </Button>
-      </div>
-      <div
-        css={css`
-          margin-bottom: 40lvh;
-          font-size: 110%;
-        `}
-      >
-        {message}
-        {error && (
-          <span
+        <Card>
+          <H3>Special Thanks</H3>
+          <ul
             css={css`
-              color: #cd4246;
+              line-height: 1.7;
             `}
           >
-            ERROR: {error}
-          </span>
-        )}
+            <li>
+              <a href="https://eliya-bot.herokuapp.com/">
+                ワーフリ所有率チェッカー
+              </a>
+            </li>
+            <li>
+              <a href="https://prts.wiki/w/%E9%A6%96%E9%A1%B5">PRTS.WIKI</a>
+            </li>
+          </ul>
+        </Card>
+        <Card>
+          <H3>{t("head.backup")}</H3>
+          <div style={{ marginBottom: "20px" }}>
+            {t("message.backupOverview")}
+          </div>
+          <div
+            css={css`
+              display: flex;
+              gap: 15px;
+              margin-bottom: 20px;
+            `}
+          >
+            <Button large intent="primary" onClick={exportBackup}>
+              {t("button.export")}
+            </Button>
+            <input
+              ref={inputFileRef}
+              style={{ display: "none" }}
+              type="file"
+              accept=".json"
+              onChange={handleFileChange}
+            />
+            <Button large intent="primary" onClick={importBackup}>
+              {t("button.import")}
+            </Button>
+          </div>
+          <div
+            css={css`
+              font-size: 110%;
+            `}
+          >
+            {message}
+            {error && (
+              <span
+                css={css`
+                  color: #cd4246;
+                `}
+              >
+                ERROR: {error}
+              </span>
+            )}
+          </div>
+        </Card>
       </div>
     </Container>
   );
 };
 
-export const getStaticProps: GetStaticProps<BackupProps> = async (context) => {
+export const getStaticProps: GetStaticProps<InfoProps> = async (context) => {
   return {
     props: {
       ...(await serverSideTranslations(context.locale!, ["common", "info"])),
@@ -181,4 +204,4 @@ export const getStaticProps: GetStaticProps<BackupProps> = async (context) => {
   };
 };
 
-export default Backup;
+export default Info;

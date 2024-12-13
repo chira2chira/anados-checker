@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { css } from "@emotion/react";
 import CommonMeta from "@/components/CommonMeta";
-import { Button, Drawer, MenuDivider } from "@blueprintjs/core";
+import { Button, Drawer, EntityTitle, MenuDivider } from "@blueprintjs/core";
 import React, { useCallback, useState } from "react";
 
 const mainWrapper = css`
@@ -131,12 +131,6 @@ export const Container: React.FC<ContainerProps> = (props) => {
                 </a>
               </div>
               <div>
-                <span>{t("ui.text.respect")}: </span>
-                <a href="https://eliya-bot.herokuapp.com/">
-                  ワーフリ所有率チェッカー
-                </a>
-              </div>
-              <div>
                 <span>{t("ui.text.author")}: チラツキ </span>
                 <a href="https://twitter.com/chira2chira">Twitter</a>{" "}
                 <a href="https://www.youtube.com/@chira2chira">YouTube</a>{" "}
@@ -197,7 +191,9 @@ const LinkSideBar: React.FC = React.memo(() => {
         <Link href={"https://anados-generator.vercel.app/"}>
           {t("ui.link.generator")}
         </Link>
-        <Link href={"/backup"}>{t("ui.link.backup")}</Link>
+        <Link href={"/info"}>
+          <EntityTitle icon="cog" title={t("ui.link.info")} />
+        </Link>
         <MenuDivider
           css={css`
             margin: 20px 0;
