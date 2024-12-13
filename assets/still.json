@@ -1508,9 +1508,17 @@
       "charId": 5042,
       "seq": 1,
       "shared": [5042],
-      "group": [5042],
+      "group": [5042, 6092],
       "label": "still01_harold",
       "image": "StillThumbnail_bg_harold_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 5042,
+      "seq": 70,
+      "shared": [5042],
+      "group": [5042, 6092],
+      "label": "wd_024",
+      "image": "StillThumbnail_bg_harold_storystill01_mosaic_001.webp"
     },
     {
       "charId": 5043,
@@ -1911,6 +1919,22 @@
       "group": [5075],
       "label": "wd_023",
       "image": "StillThumbnail_bg_sven_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5075,
+      "seq": 71,
+      "shared": [5075],
+      "group": [5075],
+      "label": "wd_024",
+      "image": "StillThumbnail_bg_harold_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5077,
+      "seq": 70,
+      "shared": [5077],
+      "group": [5077],
+      "label": "wd_026",
+      "image": "StillThumbnail_bg_todorf_storystill01_mosaic_001.webp"
     },
     {
       "charId": 6001,
@@ -2892,7 +2916,7 @@
       "charId": 6068,
       "seq": 1,
       "shared": [6068],
-      "group": [6068],
+      "group": [5076, 6068],
       "label": "still01_chabo",
       "image": "StillThumbnail_bg_chabo_still01_mosaic_001.webp"
     },
@@ -2900,7 +2924,7 @@
       "charId": 6068,
       "seq": 70,
       "shared": [6068],
-      "group": [6068],
+      "group": [5076, 6068],
       "label": "ren_013",
       "image": "StillThumbnail_bg_chabo_storystill01_mosaic_001.webp"
     },
@@ -2908,7 +2932,7 @@
       "charId": 6068,
       "seq": 71,
       "shared": [6068],
-      "group": [6068],
+      "group": [5076, 6068],
       "label": "ren_017",
       "image": "StillThumbnail_bg_chabo_storystill03_mosaic_003.webp"
     },
@@ -2916,7 +2940,7 @@
       "charId": 6068,
       "seq": 72,
       "shared": [6068],
-      "group": [6068],
+      "group": [5076, 6068],
       "label": "ren_021",
       "image": "StillThumbnail_bg_chabo_storystill02_mosaic_A001.webp"
     },
@@ -2924,7 +2948,7 @@
       "charId": 6068,
       "seq": 73,
       "shared": [6068],
-      "group": [6068],
+      "group": [5076, 6068],
       "label": "wd_012",
       "image": "StillThumbnail_bg_chabo_storystill04_mosaic_001.webp"
     },
@@ -2932,7 +2956,7 @@
       "charId": 6068,
       "seq": 74,
       "shared": [6068],
-      "group": [6068],
+      "group": [5076, 6068],
       "label": "wd_013",
       "image": "StillThumbnail_bg_lyon_storystill02_mosaic_001.webp"
     },
