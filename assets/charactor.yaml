@@ -2224,3 +2224,33 @@
   limited: true
   release: 11/29/2024
   image: 90px-FS_lyon_(awakened).png
+- id: 231
+  unitId: 5076
+  nameJa: ウィンターデート チャボ
+  nameEn: Winter Date Chabeau
+  rarity: 5
+  class: shooter
+  deployment: high
+  limited: true
+  release: 12/13/2024
+  image: 90px-FS_chabeau_(awakened).png
+- id: 232
+  unitId: 5077
+  nameJa: トドルフ
+  nameEn: Todolf
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 12/13/2024
+  image: 90px-FS_todolf.png
+- id: 233
+  unitId: 6092
+  nameJa: ゴーストサンタ ハロルド
+  nameEn: Ghost Santa Harold
+  rarity: 6
+  class: support
+  deployment: both
+  limited: true
+  release: 12/13/2024
+  image: 90px-FS_harold_(awakened).png
