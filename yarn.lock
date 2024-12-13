@@ -98,20 +98,20 @@
     "@babel/helper-validator-identifier" "^7.25.7"
     to-fast-properties "^2.0.0"
 
-"@blueprintjs/colors@^5.1.2":
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/@blueprintjs/colors/-/colors-5.1.2.tgz#caa1edf6521670e4be3e9f2061cd3fe14e363a5b"
-  integrity sha512-7CWwVsXK4YTN9Z/wkjnS3p7VE8YfIXXv2UaySAbtcw6rBkmoSHjLRtfohSA5yNy8xYTQ4KY2odKZSUW0W/Nltw==
+"@blueprintjs/colors@^5.1.5":
+  version "5.1.5"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/colors/-/colors-5.1.5.tgz#b66654348008747e84c07a1a99c1e2461bf495bc"
+  integrity sha512-IUZvQLsQmfqumTTzeb5oQLnvskJcQYKcitzhDm5+iTWl42Jn5oyUqPDW96ubH/pfWoQGHzBp91ujq6KREl4GHQ==
   dependencies:
     tslib "~2.6.2"
 
-"@blueprintjs/core@^5.2.0":
-  version "5.13.1"
-  resolved "https://registry.yarnpkg.com/@blueprintjs/core/-/core-5.13.1.tgz#8d84dfb7289958930d0ace19c56e8cf3db572bcb"
-  integrity sha512-PDZ9X/xGBetwU2AqQuCDGVWZZMmt6+/BCnmoKXxsBBZIuWQuHDiKcwvb9rzup0htsA6P7KGl5aw7ocmDvZPpBw==
+"@blueprintjs/core@^5.16.0":
+  version "5.16.2"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/core/-/core-5.16.2.tgz#3e044e28965ac3e87924a0eef2fe3b360d7a8c6a"
+  integrity sha512-iwsrJarNMN9gBxEYja+U/reYX4quqs84AkbGUsNMLXuqbNQ8Mwy5PqK2pdVu01ViMqmEeNNEX19BGfZnWIbLnA==
   dependencies:
-    "@blueprintjs/colors" "^5.1.2"
-    "@blueprintjs/icons" "^5.13.0"
+    "@blueprintjs/colors" "^5.1.5"
+    "@blueprintjs/icons" "^5.16.0"
     "@popperjs/core" "^2.11.8"
     classnames "^2.3.1"
     normalize.css "^8.0.1"
@@ -121,10 +121,10 @@
     tslib "~2.6.2"
     use-sync-external-store "^1.2.0"
 
-"@blueprintjs/icons@^5.13.0":
-  version "5.13.0"
-  resolved "https://registry.yarnpkg.com/@blueprintjs/icons/-/icons-5.13.0.tgz#ae806e17db9980597778aefa1cce59d048ab07ed"
-  integrity sha512-L096dBjzfnWW7fWXM311S2C/5Zn0EuEK9q6G84QvWP0BZJOTowU1EIWLj90IgGtNajld/3ZUAj6eJf+ryt/kjQ==
+"@blueprintjs/icons@^5.16.0":
+  version "5.16.0"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/icons/-/icons-5.16.0.tgz#e8b98878a4ff778c695b7891b22e2c2daa3d6826"
+  integrity sha512-j3jZGHSeAvdQebkDT3axvwlOoddUZQgVTR90f9RCDtA+TyvhEX9gMCOQzr7LD/BG/F4aPoONf2MSsWGkpH+Zew==
   dependencies:
     change-case "^4.1.2"
     classnames "^2.3.1"
