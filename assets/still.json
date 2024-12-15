@@ -1316,7 +1316,7 @@
       "charId": 5028,
       "seq": 1,
       "shared": [5028, 95028],
-      "group": [5028, 95028, 6062],
+      "group": [5028, 6062, 95028],
       "label": "still01_baccarat",
       "image": "StillThumbnail_bg_baccarat_still01_mosaic_001.webp"
     },
@@ -1324,7 +1324,7 @@
       "charId": 5028,
       "seq": 70,
       "shared": [5028, 95028],
-      "group": [5028, 95028, 6062],
+      "group": [5028, 6062, 95028],
       "label": "nyear_014",
       "image": "StillThumbnail_bg_baccarat_storystill01_mosaic_001.webp"
     },
@@ -1332,7 +1332,7 @@
       "charId": 5028,
       "seq": 71,
       "shared": [5028, 95028],
-      "group": [5028, 95028, 6062],
+      "group": [5028, 6062, 95028],
       "label": "nyear_021",
       "image": "StillThumbnail_bg_baccarat_storystill02_mosaic_B001.webp"
     },
@@ -1348,7 +1348,7 @@
       "charId": 5031,
       "seq": 1,
       "shared": [5031, 6044, 96044],
-      "group": [5031, 6044, 96044, 6069],
+      "group": [5031, 6044, 6069, 96044],
       "label": "still01_yuno",
       "image": "StillThumbnail_bg_yuno_still01_mosaic_001.webp"
     },
@@ -1356,7 +1356,7 @@
       "charId": 5031,
       "seq": 3,
       "shared": [5031, 6044, 96044],
-      "group": [5031, 6044, 96044, 6069],
+      "group": [5031, 6044, 6069, 96044],
       "label": "still03_yuno",
       "image": "StillThumbnail_bg_yuno_still03_mosaic_001.webp"
     },
@@ -1364,7 +1364,7 @@
       "charId": 5031,
       "seq": 4,
       "shared": [5031, 6044, 96044],
-      "group": [5031, 6044, 96044, 6069],
+      "group": [5031, 6044, 6069, 96044],
       "label": "still02_yuno_secret_125031",
       "image": "StillThumbnail_bg_yuno_still02_mosaic_001.webp"
     },
@@ -1372,7 +1372,7 @@
       "charId": 5031,
       "seq": 6,
       "shared": [5031, 6044, 96044],
-      "group": [5031, 6044, 96044, 6069],
+      "group": [5031, 6044, 6069, 96044],
       "label": "still05_yuno_secret_145031",
       "image": "StillThumbnail_bg_yuno_still05_mosaic_001.webp"
     },
@@ -1380,7 +1380,7 @@
       "charId": 5031,
       "seq": 50,
       "shared": [5031, 6044, 96044],
-      "group": [5031, 6044, 96044, 6069],
+      "group": [5031, 6044, 6069, 96044],
       "label": "main_004_013",
       "image": "StillThumbnail_bg_maxtla_storystill01_mosaic_001.webp"
     },
@@ -1388,7 +1388,7 @@
       "charId": 5031,
       "seq": 70,
       "shared": [5031, 6044, 96044],
-      "group": [5031, 6044, 96044, 6069],
+      "group": [5031, 6044, 6069, 96044],
       "label": "ppc_022",
       "image": "StillThumbnail_bg_yuno_storystill01_mosaic_001.webp"
     },
@@ -1436,7 +1436,7 @@
       "charId": 5037,
       "seq": 1,
       "shared": [5037, 95037],
-      "group": [5037, 95037, 6087, 96087],
+      "group": [5037, 6087, 95037, 96087],
       "label": "still01_pollonorta",
       "image": "StillThumbnail_bg_pollonorta_still01_mosaic_001.webp"
     },
@@ -1444,7 +1444,7 @@
       "charId": 5037,
       "seq": 70,
       "shared": [5037, 95037],
-      "group": [5037, 95037, 6087, 96087],
+      "group": [5037, 6087, 95037, 96087],
       "label": "mjbc_026",
       "image": "StillThumbnail_bg_pollonorta_still04_mosaic_002.webp"
     },
@@ -1452,7 +1452,7 @@
       "charId": 5037,
       "seq": 71,
       "shared": [5037, 95037],
-      "group": [5037, 95037, 6087, 96087],
+      "group": [5037, 6087, 95037, 96087],
       "label": "dlv_021",
       "image": "StillThumbnail_bg_pollonorta_still03_mosaic_001.webp"
     },
@@ -2451,48 +2451,48 @@
     {
       "charId": 6018,
       "seq": 1,
-      "shared": [5018, 5033, 95033, 6018],
-      "group": [5018, 5033, 95033, 6018],
+      "shared": [5018, 5033, 6018, 95033],
+      "group": [5018, 5033, 6018, 95033],
       "label": "still01_hellion",
       "image": "StillThumbnail_still01_helllion.webp"
     },
     {
       "charId": 6018,
       "seq": 3,
-      "shared": [5018, 5033, 95033, 6018],
-      "group": [5018, 5033, 95033, 6018],
+      "shared": [5018, 5033, 6018, 95033],
+      "group": [5018, 5033, 6018, 95033],
       "label": "still03_hellion",
       "image": "StillThumbnail_hellion_still02_mosaic_03.webp"
     },
     {
       "charId": 6018,
       "seq": 5,
-      "shared": [5018, 5033, 95033, 6018],
-      "group": [5018, 5033, 95033, 6018],
+      "shared": [5018, 5033, 6018, 95033],
+      "group": [5018, 5033, 6018, 95033],
       "label": "still05_hellion",
       "image": "StillThumbnail_bg_hellion_still03_mosaic_002.webp"
     },
     {
       "charId": 6018,
       "seq": 50,
-      "shared": [5018, 5033, 95033, 6018],
-      "group": [5018, 5033, 95033, 6018],
+      "shared": [5018, 5033, 6018, 95033],
+      "group": [5018, 5033, 6018, 95033],
       "label": "main_002_043",
       "image": "StillThumbnail_bg_still04_hellion001_mosaic.webp"
     },
     {
       "charId": 6018,
       "seq": 70,
-      "shared": [5018, 5033, 95033, 6018],
-      "group": [5018, 5033, 95033, 6018],
+      "shared": [5018, 5033, 6018, 95033],
+      "group": [5018, 5033, 6018, 95033],
       "label": "clove_016",
       "image": "StillThumbnail_bg_karetovi_storystill01_mosaic_001.webp"
     },
     {
       "charId": 6018,
       "seq": 71,
-      "shared": [5018, 5033, 95033, 6018],
-      "group": [5018, 5033, 95033, 6018],
+      "shared": [5018, 5033, 6018, 95033],
+      "group": [5018, 5033, 6018, 95033],
       "label": "drm_011",
       "image": "StillThumbnail_bg_baquu_still01_mosaic_001.webp"
     },
