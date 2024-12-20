@@ -99,7 +99,7 @@ function filterSillAttribute(filter: StillType[]) {
           result = true;
         }
       } else if (type === "story") {
-        if (!["Still", "Secret"].includes(still.label)) {
+        if (!["Still", "Secret", "Eidos"].includes(still.label)) {
           result = true;
         }
       } else if (type === "eidos") {
