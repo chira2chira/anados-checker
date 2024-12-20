@@ -2254,3 +2254,33 @@
   limited: true
   release: 12/13/2024
   image: 90px-FS_harold_(awakened).png
+- id: 234
+  unitId: 2022
+  nameJa: スチームマーチャント
+  nameEn: Steam Merchant
+  rarity: 2
+  class: shooter
+  deployment: high
+  limited: false
+  release: 12/20/2024
+  image: 90px-FS_steam_merchant.png
+- id: 235
+  unitId: 2023
+  nameJa: ワーカー
+  nameEn: Worker
+  rarity: 2
+  class: fighter
+  deployment: low
+  limited: false
+  release: 12/20/2024
+  image: 90px-FS_worker.png
+- id: 236
+  unitId: 2024
+  nameJa: ゴーレムエンジニア
+  nameEn: Golem Engineer
+  rarity: 2
+  class: support
+  deployment: high
+  limited: false
+  release: 12/20/2024
+  image: 90px-FS_golem_engineer.png
