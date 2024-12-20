@@ -40,7 +40,7 @@ export type StillState = {
   rate: number;
 };
 
-type StillType = "intimacy" | "secret" | "story";
+type StillType = "intimacy" | "secret" | "story" | "eidos";
 
 function getUniqueSills(stills: StillState[]) {
   return Array.from(new Map(stills.map((x) => [x.id, x])).values());
@@ -100,6 +100,10 @@ function filterSillAttribute(filter: StillType[]) {
         }
       } else if (type === "story") {
         if (!["Still", "Secret"].includes(still.label)) {
+          result = true;
+        }
+      } else if (type === "eidos") {
+        if (still.label === "Eidos") {
           result = true;
         }
       }
@@ -299,7 +303,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             gap: 8px;
           `}
         >
-          <ButtonGroup>
+          <ButtonGroup fill>
             <ClassButton
               intent={filterClass.includes("vanguard") ? "primary" : "none"}
               charClass="vanguard"
@@ -356,6 +360,13 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
               onStillTypeClick={changeFilterStill}
             >
               {t2("button.secretStill")}
+            </StillTypeButton>
+            <StillTypeButton
+              intent={filterStillType.includes("eidos") ? "primary" : "none"}
+              stillType="eidos"
+              onStillTypeClick={changeFilterStill}
+            >
+              {t2("button.eidosStill")}
             </StillTypeButton>
             <StillTypeButton
               intent={filterStillType.includes("story") ? "primary" : "none"}

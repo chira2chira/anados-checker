@@ -2,9 +2,10 @@
   "title": "アナドススチル管理メモ",
   "description": "アナザーエイドスRのスチルを管理できます。既読状態の管理や各スチルにラベリングをすることができます。",
   "button": {
-    "intimacyStill": "好感度スチル",
-    "secretStill": "秘密スチル",
-    "storyStill": "ストーリースチル",
+    "intimacyStill": "好感度",
+    "secretStill": "秘密",
+    "storyStill": "ストーリー",
+    "eidosStill": "エイドス",
     "stillRoulette": "おかずルーレット",
     "start": "抽選開始",
     "restart": "再抽選"

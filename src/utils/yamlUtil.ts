@@ -142,6 +142,8 @@ function getLabel(label: string, stillLabels: StillLabel[]) {
   if (label.startsWith("still")) {
     if (label.match(/secret_[0-9]+$/)) {
       return "Secret";
+    } else if (label.match(/eidos/)) {
+      return "Eidos";
     }
     return "Still";
   }
