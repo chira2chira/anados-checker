@@ -30,15 +30,20 @@ export default function useCharacterAndEidosOwnership() {
 
   const setOwned = useCallback(
     (setStateAction: (state: OwnState) => OwnState) => {
+      if (tmpMode) return;
       setCharOwned((char) => setStateAction({ char, eidos: [] }).char);
       setEidosOwned((eidos) => setStateAction({ char: [], eidos }).eidos);
     },
-    [setCharOwned, setEidosOwned]
+    [setCharOwned, setEidosOwned, tmpMode]
   );
 
   const save = () => {
-    saveChar();
-    saveEidos();
+    if (tmpMode) {
+      saveChar(tmpOwned.char);
+    } else {
+      saveChar();
+      saveEidos();
+    }
   };
 
   useEffect(() => {

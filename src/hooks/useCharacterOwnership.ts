@@ -6,8 +6,13 @@ const CHAR_KEY = "chars";
 export default function useCharacterOwnership() {
   const [owned, setOwned] = useState<number[]>([]);
 
-  const save = () => {
-    window.localStorage.setItem(CHAR_KEY, owned.join(","));
+  const save = (tmpOwned?: number[]) => {
+    if (tmpOwned) {
+      setOwned(tmpOwned);
+      window.localStorage.setItem(CHAR_KEY, tmpOwned.join(","));
+    } else {
+      window.localStorage.setItem(CHAR_KEY, owned.join(","));
+    }
   };
 
   useEffect(() => {
