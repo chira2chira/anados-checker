@@ -122,8 +122,6 @@ const CharacterPanel: React.FC<{
                 }
               `}
               src={"/static/image/char/" + char.image}
-              width="54px"
-              height="54px"
               alt={charName}
             />
             <img
