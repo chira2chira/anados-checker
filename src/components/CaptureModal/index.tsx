@@ -13,7 +13,6 @@ type CaptureModal = {
   charInfo: UnknownInfo[];
   displayChars: UnknownInfo[][];
   owned: number[];
-  hideSpoiler: boolean;
   onClose: () => void;
 };
 
@@ -212,7 +211,6 @@ const Preview: React.FC<PreviewProps> = (props) => {
               key={i}
               rarity={i}
               charInfo={props.chars.filter((x) => x.rarity === i)}
-              hideSpoiler={true}
               hideCheckBUtton={true}
               onCharClick={doNothing}
               onBulkRegister={doNothing}

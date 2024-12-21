@@ -1,23 +1,25 @@
 import { CharInfo, UnknownInfo } from "@/pages";
 import { displayCharClass } from "@/utils/stringUtil";
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Tooltip } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { useTranslation } from "next-i18next";
 import { dequal } from "dequal";
 import { isCharInfo } from "@/utils/types";
+import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 
 const SPOILER_CHARS = [143, 150];
 
 type CharacterListProps = {
   characters: UnknownInfo[];
-  hideSpoiler: boolean;
   onCharClick: (id: number) => void;
 };
 
 const CharacterList: React.FC<CharacterListProps> = (props) => {
+  const { hideSpoiler } = useContext(HideSpoilerContext);
+
   return props.characters.map((x) => {
-    const useSpoilerFilter = SPOILER_CHARS.includes(x.id) && props.hideSpoiler;
+    const useSpoilerFilter = SPOILER_CHARS.includes(x.id) && hideSpoiler;
 
     return (
       <MemoizeCharacterPanel

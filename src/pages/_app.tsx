@@ -11,6 +11,7 @@ import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import GoogleAnalytics from "../components/GoogleAnalytics";
 import usePageView from "../hooks/usePageView";
+import HideSpoilerProvider from "@/providers/HideSpoilerProvider";
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
@@ -24,8 +25,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <GoogleAnalytics />
-      <Component {...pageProps} />
+      <HideSpoilerProvider>
+        <GoogleAnalytics />
+        <Component {...pageProps} />
+      </HideSpoilerProvider>
     </>
   );
 }

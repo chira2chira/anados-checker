@@ -1,16 +1,16 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { Button, Dialog, DialogBody } from "@blueprintjs/core";
 import { css, keyframes } from "@emotion/react";
 import { CharInfoWithStill, StillInfo } from "@/utils/yamlUtil";
 import { sendEvent } from "@/utils/gtag";
+import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 
 const SPOILER_CHARS = [143, 150];
 
 type StillRouletteModal = {
   isOpen: boolean;
   charInfoArr: CharInfoWithStill[][];
-  hideSpoiler: boolean;
   onClose: () => void;
 };
 
@@ -62,6 +62,7 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
   const [stillIndex, setStillIndex] = useState(0);
   const [state, setState] = useState<RouletteState>("pause");
   const [targetStills, setTargetStills] = useState<StillInfo[]>([]);
+  const { hideSpoiler } = useContext(HideSpoilerContext);
   const intervalRef = useRef(0);
   const { t } = useTranslation("still");
 
@@ -236,9 +237,7 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
                     <CharCard
                       key={x.id}
                       char={x}
-                      hideSpoiler={
-                        SPOILER_CHARS.includes(x.id) && props.hideSpoiler
-                      }
+                      hideSpoiler={SPOILER_CHARS.includes(x.id) && hideSpoiler}
                     />
                   ))}
               </div>

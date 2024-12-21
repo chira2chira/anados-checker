@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import LazyLoad from "react-lazyload";
 import { css } from "@emotion/react";
 import { useTranslation } from "next-i18next";
@@ -8,20 +8,22 @@ import { displayCharClass } from "@/utils/stringUtil";
 import { CharInfoWithStill } from "@/utils/yamlUtil";
 import { getUserLabelEmoji } from "@/utils/userLabelEnum";
 import UserLabelEmojiSelect from "../UserLabelEmojiSelect";
+import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 
 const SPOILER_CHARS = [143, 150];
 
 type CharacterAndStillListProps = {
   characters: CharInfoWithStill[];
   gridMode: boolean;
-  hideSpoiler: boolean;
   onReadChange: (id: string) => void;
   onRateChange: (id: string, rate: number) => void;
 };
 
 const CharacterAndStillList: React.FC<CharacterAndStillListProps> = (props) => {
+  const { hideSpoiler } = useContext(HideSpoilerContext);
+
   return props.characters.map((x) => {
-    const useSpoilerFilter = SPOILER_CHARS.includes(x.id) && props.hideSpoiler;
+    const useSpoilerFilter = SPOILER_CHARS.includes(x.id) && hideSpoiler;
 
     return (
       <MemoizeCharacterPanel

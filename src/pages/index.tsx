@@ -2,7 +2,14 @@ import * as styles from "@/styles/Home.module";
 import { GetStaticProps, NextPage } from "next";
 import { loadCharactors, loadEidosMaster } from "@/utils/yamlUtil";
 import CharacterList from "@/components/CharacterList";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { css } from "@emotion/react";
 import {
   Button,
@@ -30,10 +37,10 @@ import useCategoryQuery, { PageCategory } from "@/hooks/useCategoryQuery";
 import { Container } from "@/components/Container";
 import { CaptureModal } from "@/components/CaptureModal";
 import { isCharInfo, PartialForKeys } from "@/utils/types";
+import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 
 const CHAR_KEY = "chars";
 const EIDOS_KEY = "eidos";
-const SPOILER_KEY = "hidespoiler";
 
 export type CharClass =
   | "vanguard"
@@ -221,12 +228,12 @@ const Home: NextPage<HomeProps> = (props) => {
   const [filterDeployment, setFilterDeployment] = useState("none");
   const [filterRelease, setFilterRelease] = useState("none");
   const [filterTicket, setFilterTicket] = useState("none");
-  const [hideSpoiler, setHideSpoiler] = useState(true);
   const [fetching, setFetching] = useState(false);
   const [flash, setFlash] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
   const [openCaptureModal, setOpenCaptureModal] = useState(false);
   const [storageLoaded, setStorageLoaded] = useState(false);
+  const { hideSpoiler, setHideSpoiler } = useContext(HideSpoilerContext);
   const shareUrlElm = useRef<HTMLInputElement>(null);
   const { asPath, locale } = useRouter();
   const category = useCategoryQuery();
@@ -255,9 +262,6 @@ const Home: NextPage<HomeProps> = (props) => {
 
       setOwned({ char: parsedChar, eidos: parsedEidos });
     }
-    setHideSpoiler(
-      window.localStorage.getItem(SPOILER_KEY) === "false" ? false : true
-    );
   }, [asPath, storageLoaded]);
 
   useEffect(() => {
@@ -563,7 +567,6 @@ const Home: NextPage<HomeProps> = (props) => {
             checked={hideSpoiler}
             label={t("ui.button.spoilerFilter")}
             onClick={() => {
-              window.localStorage.setItem(SPOILER_KEY, !hideSpoiler + "");
               setHideSpoiler(!hideSpoiler);
             }}
           />
@@ -579,56 +582,48 @@ const Home: NextPage<HomeProps> = (props) => {
           <CharacterArea
             rarity={7}
             charInfo={rare7}
-            hideSpoiler={hideSpoiler}
             onCharClick={handleCharClick}
             onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={6}
             charInfo={rare6}
-            hideSpoiler={hideSpoiler}
             onCharClick={handleCharClick}
             onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={5}
             charInfo={rare5}
-            hideSpoiler={hideSpoiler}
             onCharClick={handleCharClick}
             onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={4}
             charInfo={rare4}
-            hideSpoiler={hideSpoiler}
             onCharClick={handleCharClick}
             onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={3}
             charInfo={rare3}
-            hideSpoiler={hideSpoiler}
             onCharClick={handleCharClick}
             onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={2}
             charInfo={rare2}
-            hideSpoiler={hideSpoiler}
             onCharClick={handleCharClick}
             onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={1}
             charInfo={rare1}
-            hideSpoiler={hideSpoiler}
             onCharClick={handleCharClick}
             onBulkRegister={handleBulkRegister}
           />
           <CharacterArea
             rarity={0}
             charInfo={rare0}
-            hideSpoiler={hideSpoiler}
             onCharClick={handleCharClick}
             onBulkRegister={handleBulkRegister}
           />
@@ -742,7 +737,6 @@ const Home: NextPage<HomeProps> = (props) => {
         charInfo={props.charInfo}
         displayChars={[rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7]}
         owned={currentOwned}
-        hideSpoiler={hideSpoiler}
         onClose={() => setOpenCaptureModal(false)}
       />
     </Container>
@@ -782,7 +776,6 @@ const SwitchButton: React.FC<SwitchButtonProps> = (props) => {
 type CharacterAreaProps = {
   rarity: number;
   charInfo: UnknownInfo[];
-  hideSpoiler: boolean;
   hideCheckBUtton?: boolean;
   onCharClick: (id: number) => void;
   onBulkRegister: (ids: number[]) => void;
@@ -876,7 +869,6 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
       >
         <CharacterList
           characters={props.charInfo}
-          hideSpoiler={props.hideSpoiler}
           onCharClick={props.onCharClick}
         />
       </div>

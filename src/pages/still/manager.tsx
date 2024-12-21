@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { css } from "@emotion/react";
 import { Button, ButtonGroup, ButtonProps, Checkbox } from "@blueprintjs/core";
 import { forceCheck } from "react-lazyload";
@@ -25,10 +25,10 @@ import {
 import { getUserLabelEmoji } from "@/utils/userLabelEnum";
 import CharacterAndStillList from "@/components/CharacterAndStillList";
 import { StillRouletteModal } from "@/components/StillRouletteModal";
+import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 
 const CHAR_KEY = "chars";
 const STILL_KEY = "still";
-const SPOILER_KEY = "hidespoiler";
 
 type StillManagerProps = {
   charInfoWithStills: CharInfoWithStill[];
@@ -142,9 +142,9 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   const [filterStill, setFilterNotImplemented] = useState("none");
   const [filterRead, setFilterRead] = useState("none");
   const [filterRate, setFilterRate] = useState("none");
-  const [hideSpoiler, setHideSpoiler] = useState(true);
   const [layout, setLayout] = useState<"grid" | "list">("grid");
   const [rouletteOpen, setRouletteOpen] = useState(false);
+  const { hideSpoiler, setHideSpoiler } = useContext(HideSpoilerContext);
   const { t } = useTranslation("common");
   const { t: t2 } = useTranslation("still");
 
@@ -158,9 +158,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
     if (storedStillValue) {
       setStillStates(parseLocalStorageStill(storedStillValue));
     }
-    setHideSpoiler(
-      window.localStorage.getItem(SPOILER_KEY) === "false" ? false : true
-    );
   }, []);
 
   const { rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7 } =
@@ -448,7 +445,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             checked={hideSpoiler}
             label={t("ui.button.spoilerFilter")}
             onClick={() => {
-              window.localStorage.setItem(SPOILER_KEY, !hideSpoiler + "");
               setHideSpoiler(!hideSpoiler);
             }}
           />
@@ -497,7 +493,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             rarity={7}
             charInfo={rare7}
             gridMode={layout === "grid"}
-            hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
             onBulkRegister={handleBulkRegister}
@@ -506,7 +501,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             rarity={6}
             charInfo={rare6}
             gridMode={layout === "grid"}
-            hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
             onBulkRegister={handleBulkRegister}
@@ -515,7 +509,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             rarity={5}
             charInfo={rare5}
             gridMode={layout === "grid"}
-            hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
             onBulkRegister={handleBulkRegister}
@@ -524,7 +517,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             rarity={4}
             charInfo={rare4}
             gridMode={layout === "grid"}
-            hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
             onBulkRegister={handleBulkRegister}
@@ -533,7 +525,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             rarity={3}
             charInfo={rare3}
             gridMode={layout === "grid"}
-            hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
             onBulkRegister={handleBulkRegister}
@@ -542,7 +533,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             rarity={2}
             charInfo={rare2}
             gridMode={layout === "grid"}
-            hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
             onBulkRegister={handleBulkRegister}
@@ -551,7 +541,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             rarity={1}
             charInfo={rare1}
             gridMode={layout === "grid"}
-            hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
             onBulkRegister={handleBulkRegister}
@@ -560,7 +549,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             rarity={0}
             charInfo={rare0}
             gridMode={layout === "grid"}
-            hideSpoiler={hideSpoiler}
             onReadChange={handleReadChange}
             onRateChange={handleRateChange}
             onBulkRegister={handleBulkRegister}
@@ -595,7 +583,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       <StillRouletteModal
         isOpen={rouletteOpen}
         charInfoArr={[rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7]}
-        hideSpoiler={hideSpoiler}
         onClose={() => setRouletteOpen(false)}
       />
     </Container>
@@ -625,7 +612,6 @@ type CharacterAreaProps = {
   rarity: number;
   charInfo: CharInfoWithStill[];
   gridMode: boolean;
-  hideSpoiler: boolean;
   onReadChange: (id: string) => void;
   onRateChange: (id: string, rate: number) => void;
   onBulkRegister: (stills: StillState[]) => void;
@@ -724,7 +710,6 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
         <CharacterAndStillList
           characters={props.charInfo}
           gridMode={props.gridMode}
-          hideSpoiler={props.hideSpoiler}
           onReadChange={props.onReadChange}
           onRateChange={props.onRateChange}
         />
