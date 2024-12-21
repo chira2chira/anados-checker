@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { css } from "@emotion/react";
-import { Button, ButtonGroup, ButtonProps, Checkbox } from "@blueprintjs/core";
+import { Button, ButtonGroup, ButtonProps, Switch } from "@blueprintjs/core";
 import { forceCheck } from "react-lazyload";
 import * as styles from "@/styles/Home.module";
 import type { CharClass, CharInfo } from "..";
@@ -441,10 +441,10 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             />
           </div>
 
-          <Checkbox
+          <Switch
             checked={hideSpoiler}
             label={t("ui.button.spoilerFilter")}
-            onClick={() => {
+            onChange={() => {
               setHideSpoiler(!hideSpoiler);
             }}
           />

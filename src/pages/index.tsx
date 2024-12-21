@@ -14,8 +14,8 @@ import { css } from "@emotion/react";
 import {
   Button,
   ButtonGroup,
-  Checkbox,
   InputGroup,
+  Switch,
   Tooltip,
 } from "@blueprintjs/core";
 import ClassButton from "@/components/ClassButton";
@@ -563,10 +563,10 @@ const Home: NextPage<HomeProps> = (props) => {
             )}
           </div>
 
-          <Checkbox
+          <Switch
             checked={hideSpoiler}
             label={t("ui.button.spoilerFilter")}
-            onClick={() => {
+            onChange={() => {
               setHideSpoiler(!hideSpoiler);
             }}
           />
