@@ -28,8 +28,7 @@ import { isIos } from "@/utils/browser";
 import { useScroll } from "@/hooks/useScroll";
 import { Container } from "@/components/Container";
 import { CaptureModal } from "@/components/CaptureModal";
-import { isEidosInfo, PartialForKeys } from "@/utils/types";
-import Link from "next/link";
+import { isCharInfo, PartialForKeys } from "@/utils/types";
 
 const CHAR_KEY = "chars";
 const EIDOS_KEY = "eidos";
@@ -87,15 +86,15 @@ type HomeProps = {
 };
 
 function filterClassChar(filter: CharClass[]) {
-  return function (info: CharInfo | EidosInfo) {
-    if (isEidosInfo(info)) return true;
+  return function (info: UnknownInfo) {
+    if (!isCharInfo(info)) return true;
 
     return filter.length === 0 ? true : filter.includes(info.class);
   };
 }
 
 function filterOwnedChar(filter: string) {
-  return function (char: CharInfo | EidosInfo) {
+  return function (char: UnknownInfo) {
     switch (filter) {
       case "none":
         return true;
@@ -108,7 +107,7 @@ function filterOwnedChar(filter: string) {
 }
 
 function filterLimitedChar(filter: string) {
-  return function (info: CharInfo | EidosInfo) {
+  return function (info: UnknownInfo) {
     switch (filter) {
       case "none":
         return true;
@@ -121,8 +120,8 @@ function filterLimitedChar(filter: string) {
 }
 
 function filterDeploymentChar(filter: string) {
-  return function (info: CharInfo | EidosInfo) {
-    if (isEidosInfo(info)) return true;
+  return function (info: UnknownInfo) {
+    if (!isCharInfo(info)) return true;
 
     switch (filter) {
       case "none":
@@ -138,7 +137,7 @@ function filterDeploymentChar(filter: string) {
 }
 
 function filterReleaseChar(filter: string) {
-  return function (info: CharInfo | EidosInfo) {
+  return function (info: UnknownInfo) {
     switch (filter) {
       case "none":
         return true;
@@ -155,7 +154,7 @@ function filterReleaseChar(filter: string) {
 }
 const INELIGIBLE_CHAR = ["Gaia", "Barboros", "New Look Barboros"];
 function filterTicketChar(filter: string) {
-  return function (info: CharInfo | EidosInfo) {
+  return function (info: UnknownInfo) {
     // TODO: エイドス装備のフィルタリング
     switch (filter) {
       case "none":
@@ -232,7 +231,8 @@ const Home: NextPage<HomeProps> = (props) => {
   const shareUrlElm = useRef<HTMLInputElement>(null);
   const { asPath, locale, query } = useRouter();
   const category: PageCategory = query.cat === "eidos" ? "eidos" : "char";
-  const currentInfo = category === "char" ? props.charInfo : props.eidosInfo;
+  const currentInfo: UnknownInfo[] =
+    category === "char" ? props.charInfo : props.eidosInfo;
   const currentOwned = category === "char" ? owned.char : owned.eidos;
   const scrolling = useScroll();
   const { t } = useTranslation("common");
