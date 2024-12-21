@@ -2,16 +2,16 @@ import { useTranslation } from "next-i18next";
 import { Dialog, DialogBody, Tag } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { GachaInfo } from "@/pages/gacha/simulator";
-import { CharInfo } from "@/pages";
+import { UnknownInfo } from "@/pages";
 
 type RateListModal = {
   isOpen: boolean;
   gachaInfo: GachaInfo;
-  charInfo: CharInfo[];
+  charInfo: UnknownInfo[];
   onClose: () => void;
 };
 
-export function calcPickUpRate(charInfo: CharInfo, gacha: GachaInfo) {
+export function calcPickUpRate(charInfo: UnknownInfo, gacha: GachaInfo) {
   let prevWeight = 0;
   for (const char of gacha.pool) {
     if (char.id === charInfo.id) {
@@ -114,7 +114,7 @@ const RateSpan: React.FC<{ children: React.ReactNode }> = (props) => {
 
 type StandardRateProps = {
   rarity: number;
-  charInfo: CharInfo[];
+  charInfo: UnknownInfo[];
   gachaInfo: GachaInfo;
 };
 

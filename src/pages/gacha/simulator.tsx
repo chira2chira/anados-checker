@@ -4,16 +4,17 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React, { useEffect, useMemo, useState } from "react";
-import { Button, Checkbox, Tooltip } from "@blueprintjs/core";
+import { Button, ButtonGroup, Checkbox, Tooltip } from "@blueprintjs/core";
 import { css } from "@emotion/react";
-import type { CharInfo } from "..";
-import { loadGachaMaster } from "@/utils/yamlUtil";
+import type { CharInfo, EidosInfo, UnknownInfo } from "..";
+import { loadEidosGachaMaster, loadGachaMaster } from "@/utils/yamlUtil";
 import { gacha } from "@/utils/gacha";
 import { displayCharClass } from "@/utils/stringUtil";
 import { Container } from "@/components/Container";
 import { SelectBannerModal } from "@/components/SelectBannerModal";
 import { RateListModal, calcPickUpRate } from "@/components/RateListModal";
 import { sendEvent } from "@/utils/gtag";
+import { isCharInfo } from "@/utils/types";
 
 type CharWeight = {
   id: number;
@@ -44,12 +45,16 @@ export type GachaInfo = {
 
 type GachaSimulatorProps = {
   charInfo: CharInfo[];
+  eidosInfo: EidosInfo[];
   gachaInfo: GachaInfo[];
+  eidosGachaInfo: GachaInfo[];
 };
 
-type CharInfoPu = CharInfo & {
+type CharInfoPu = UnknownInfo & {
   pickUp: boolean;
 };
+
+type PageCategory = "char" | "eidos";
 
 const winStyle = css`
   color: #fbd065;
@@ -80,12 +85,21 @@ function formatRate(num: number, showSymbol?: boolean) {
 const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   const router = useRouter();
   const { id } = router.query;
-  const banner = getBanner(props.gachaInfo, id);
   const [openSelectBanner, setOpenSelectBanner] = useState(false);
   const [openRateList, setOpenRateList] = useState(false);
   const [highlightPu, setHighlightPu] = useState(false);
   const [pullResult, setPullResult] = useState<CharInfoPu[]>([]);
   const [pullHistory, setPullHistory] = useState<CharInfoPu[]>([]);
+  const category: PageCategory =
+    router.query.cat === "eidos" ? "eidos" : "char";
+  const currentInfo: UnknownInfo[] =
+    category === "char" ? props.charInfo : props.eidosInfo;
+  const currentGachaInfo =
+    category === "char" ? props.gachaInfo : props.eidosGachaInfo;
+  const banner = getBanner(currentGachaInfo, id);
+  const basePath = isCharInfo(currentInfo[0])
+    ? "/static/image/banner/"
+    : "/static/image/banner_eidos/";
   const { t, i18n } = useTranslation("gacha");
   const isJa = i18n.language === "ja";
 
@@ -101,7 +115,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
 
     let rarityWeight = banner.weight.find((x) => x.rarity === rarity)!.weight;
     rarityWeight += banner.pickUp.reduce((prev, current) => {
-      const char = props.charInfo.find((y) => y.nameJa === current.name)!;
+      const char = currentInfo.find((y) => y.nameJa === current.name)!;
       return prev + (char.rarity === rarity ? current.weight : 0);
     }, 0);
 
@@ -118,22 +132,22 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   const puWeight = useMemo(
     () =>
       banner.pickUp.reduce((prev, current) => {
-        const char = props.charInfo.find((y) => y.nameJa === current.name)!;
+        const char = currentInfo.find((y) => y.nameJa === current.name)!;
         return prev + calcPickUpRate(char, banner)! / 100;
       }, 0),
-    [banner, props.charInfo]
+    [banner, currentInfo]
   );
 
   function nPull(n: number) {
     sendEvent({
       action: "pull",
       category: "gacha",
-      label: banner.id.toString(),
+      label: category + "_" + banner.id.toString(),
       value: n.toString(),
     });
     const pullChar = [...Array(n)]
       .map((_) => gacha(banner))
-      .map((x) => props.charInfo.find((y) => y.id === x)!);
+      .map((x) => currentInfo.find((y) => y.id === x)!);
     return pullChar.map((x) => ({
       ...x,
       pickUp: banner.pickUp.map((x) => x.name).includes(x.nameJa),
@@ -170,9 +184,9 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   const handleChangeBanner = (gacha: GachaInfo) => {
     // idの指定がない場合、最新のBannerになるためgetBannerした結果と比較
     if (banner.id !== gacha.id) {
-      router.push({ query: { id: gacha.id } });
+      router.push({ query: { cat: category, id: gacha.id } });
     } else if (id === undefined) {
-      router.replace({ query: { id: gacha.id } });
+      router.replace({ query: { cat: category, id: gacha.id } });
     }
     handleCloseSelectBanner();
   };
@@ -183,6 +197,15 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
       description={t("description")}
       titleLink="/gacha/simulator"
     >
+      <ButtonGroup
+        css={css`
+          margin-bottom: 40px;
+        `}
+      >
+        <SwitchButton currentCategory={category} linkCategory="char" />
+        <SwitchButton currentCategory={category} linkCategory="eidos" />
+      </ButtonGroup>
+
       <div
         css={css`
           display: flex;
@@ -200,9 +223,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
             margin-bottom: 2px;
           `}
           priority
-          src={`/static/image/banner/${isJa ? "ja" : "en"}/main/${
-            banner.id
-          }.png`}
+          src={basePath + `${isJa ? "ja" : "en"}/main/${banner.id}.png`}
           placeholder="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwIAAAGxAgMAAACsE+nZAAAAAXNSR0IArs4c6QAAAAxQTFRFR3BMpaiqpaiqpaiqm8gleQAAAAN0Uk5TADzFYouLHgAAAV5JREFUeNrt2iFOQ0EUhtF5TQCBx1R0CWzhLQGDRqO6hLKECpaAYhG8LbAERBW6goq+n5SkKVggaW56jhr7ZXIz4k4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPiN7vmHp4IFQ75bKVBwmgXvzwdDyYJlO5gXLejKF1w9Vi+Yb6oXDNvqBRn72gVdxt4dHHsOyk/y9Xp3uilccHazOzxVf5PPN4ULvkzHvnjBXaoXLPJau6BLVoUL7lubJB+FC15au0y2dQu6sW+zJH3ZgvMs2yLJsmzBNKtuSPJWtmCW9SRJ1mULFtleJMm2akE3ZLxLkrEvWjDJXtWCi+w9FC2Yli+YlS+4zl5fvuBBwZEKzm732tz+QMHft1A2gQoUKFCgQIECBQoUKFCg4B8L/LsGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE7UJ+JvXqZOadVdAAAAAElFTkSuQmCC"
           alt={isJa ? banner.nameJa : banner.nameEn}
           width={770}
@@ -348,16 +369,46 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
       <RateListModal
         isOpen={openRateList}
         gachaInfo={banner}
-        charInfo={props.charInfo}
+        charInfo={currentInfo}
         onClose={() => setOpenRateList(false)}
       />
       <SelectBannerModal
         isOpen={openSelectBanner}
-        gachaInfo={props.gachaInfo}
+        gachaInfo={currentGachaInfo}
         onSelect={handleChangeBanner}
         onClose={handleCloseSelectBanner}
       />
     </Container>
+  );
+};
+
+type SwitchButtonProps = {
+  currentCategory: PageCategory;
+  linkCategory: PageCategory;
+};
+
+const SwitchButton: React.FC<SwitchButtonProps> = (props) => {
+  const { t } = useTranslation("common");
+  const { push } = useRouter();
+  const label =
+    props.linkCategory === "char"
+      ? t("ui.button.character")
+      : t("ui.button.eidos");
+
+  const handleClick = () => {
+    if (props.currentCategory === props.linkCategory) return;
+    push({ query: { cat: props.linkCategory } });
+  };
+
+  return (
+    <Button
+      onClick={handleClick}
+      intent={
+        props.currentCategory === props.linkCategory ? "primary" : undefined
+      }
+    >
+      {label}
+    </Button>
   );
 };
 
@@ -445,6 +496,9 @@ function getRarityColor(rarity: number) {
 const CharacterImage: React.FC<CharacterImageProps> = React.memo((props) => {
   const { char } = props;
   const { i18n } = useTranslation();
+  const basePath = isCharInfo(char)
+    ? "/static/image/char/"
+    : "/static/image/eidos/";
 
   const charName = i18n.language === "ja" ? char.nameJa : char.nameEn;
   return (
@@ -460,24 +514,26 @@ const CharacterImage: React.FC<CharacterImageProps> = React.memo((props) => {
         `}
       >
         <img
-          src={"/static/image/char/" + char.image}
+          src={basePath + char.image}
           width="54px"
           height="54px"
           alt={charName}
         />
-        <img
-          css={css`
-            position: absolute;
-            top: 3px;
-            left: 3px;
-            width: 18px;
-            height: 18px;
-            padding: 2px;
-            background: rgba(0, 0, 0, 0.7);
-          `}
-          src={"/static/image/class/" + char.class + ".png"}
-          alt={displayCharClass(char.class)}
-        />
+        {isCharInfo(char) && (
+          <img
+            css={css`
+              position: absolute;
+              top: 3px;
+              left: 3px;
+              width: 18px;
+              height: 18px;
+              padding: 2px;
+              background: rgba(0, 0, 0, 0.7);
+            `}
+            src={"/static/image/class/" + char.class + ".png"}
+            alt={displayCharClass(char.class)}
+          />
+        )}
         {props.count && props.count > 1 && (
           <div
             css={css`
@@ -541,12 +597,15 @@ export const getStaticProps: GetStaticProps<GachaSimulatorProps> = async (
   context
 ) => {
   const { charInfo, gachaInfo } = loadGachaMaster();
+  const { eidosInfo, gachaInfo: eidosGachaInfo } = loadEidosGachaMaster();
 
   return {
     props: {
       ...(await serverSideTranslations(context.locale!, ["common", "gacha"])),
       charInfo,
+      eidosInfo,
       gachaInfo,
+      eidosGachaInfo,
     },
   };
 };

@@ -1,7 +1,7 @@
 import yaml from "js-yaml";
 import fs from "fs";
 import path from "path";
-import { CharClass, CharInfo, EidosInfo } from "../pages";
+import { CharClass, CharInfo, EidosInfo, UnknownInfo } from "../pages";
 import { GachaInfo } from "@/pages/gacha/simulator";
 import still from "@/../assets/still.json";
 
@@ -95,44 +95,65 @@ function mergeRarity(rarity: number) {
 
 export function loadGachaMaster() {
   const charInfo = loadCharactors();
-  const gachaInfo: GachaInfo[] = loadYaml<GachaInfo[]>("assets/gacha.yaml").map(
-    (x) => {
-      const chars = [
-        ...x.rarity6.map(mergeRarity(6)),
-        ...x.rarity5.map(mergeRarity(5)),
-        ...x.rarity4.map(mergeRarity(4)),
-        ...x.rarity3.map(mergeRarity(3)),
-      ];
-      let accum = 0;
-      return {
-        ...x,
-        rarity6: [],
-        rarity5: [],
-        rarity4: [],
-        rarity3: [],
-        pool: chars.map((y) => {
-          const id = charInfo.find((z) => z.nameJa === y.name)?.id;
-          if (id === undefined)
-            throw new Error(`ガチャプールに不正なキャラがいる (${y.name})`);
-          const rarityWeight = x.weight.find(
-            (z) => z.rarity === y.rarity
-          )?.weight;
-          if (rarityWeight === undefined) throw new Error("レアリティが不正");
-          // キャラ毎の確率にPU率を足す
-          accum +=
-            rarityWeight / chars.filter((z) => z.rarity === y.rarity).length;
-          const pickUp = x.pickUp.find((z) => z.name === y.name);
-          if (pickUp) {
-            accum += pickUp.weight;
-          }
-          return {
-            id,
-            weight: Math.round(accum * 1_000_000) / 1_000_000, // 小数点第6位で四捨五入
-          };
-        }),
-      };
-    }
-  );
+  const gachaInfo = generateGachaInfo(charInfo, "assets/gacha.yaml");
+
+  return {
+    charInfo,
+    gachaInfo,
+  };
+}
+
+export function loadEidosGachaMaster() {
+  const eidosInfo = loadEidosMaster();
+  const gachaInfo = generateGachaInfo(eidosInfo, "assets/gacha_eidos.yaml");
+
+  return {
+    eidosInfo,
+    gachaInfo,
+  };
+}
+
+function generateGachaInfo(info: UnknownInfo[], yamlPath: string) {
+  const gachaInfo: GachaInfo[] = loadYaml<GachaInfo[]>(yamlPath).map((x) => {
+    const pools = [
+      ...x.rarity6.map(mergeRarity(6)),
+      ...x.rarity5.map(mergeRarity(5)),
+      ...x.rarity4.map(mergeRarity(4)),
+      ...x.rarity3.map(mergeRarity(3)),
+    ];
+    let accum = 0;
+    return {
+      ...x,
+      rarity6: [],
+      rarity5: [],
+      rarity4: [],
+      rarity3: [],
+      pool: pools.map((y) => {
+        const id = info.find((z) => z.nameJa === y.name)?.id;
+        if (id === undefined)
+          throw new Error(
+            `ガチャプールに不正なキャラがいる (${y.name}, ${info.map(
+              (z) => z.nameJa
+            )})`
+          );
+        const rarityWeight = x.weight.find(
+          (z) => z.rarity === y.rarity
+        )?.weight;
+        if (rarityWeight === undefined) throw new Error("レアリティが不正");
+        // キャラ毎の確率にPU率を足す
+        accum +=
+          rarityWeight / pools.filter((z) => z.rarity === y.rarity).length;
+        const pickUp = x.pickUp.find((z) => z.name === y.name);
+        if (pickUp) {
+          accum += pickUp.weight;
+        }
+        return {
+          id,
+          weight: Math.round(accum * 1_000_000) / 1_000_000, // 小数点第6位で四捨五入
+        };
+      }),
+    };
+  });
 
   for (const gacha of gachaInfo) {
     const max = Math.max(...gacha.pool.map((x) => x.weight));
@@ -141,12 +162,10 @@ export function loadGachaMaster() {
     }
   }
 
-  return {
-    charInfo,
-    gachaInfo: gachaInfo.sort(
-      (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime()
-    ), // 開始日で降順。同日で並びを調整する場合は時間を入れる
-  };
+  // 開始日で降順。同日で並びを調整する場合は時間を入れる
+  return gachaInfo.sort(
+    (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime()
+  );
 }
 
 export type StillInfo = {

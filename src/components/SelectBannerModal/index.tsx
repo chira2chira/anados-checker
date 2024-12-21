@@ -123,8 +123,13 @@ type BannerLinkProps = {
 const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
   (props, ref) => {
     const { gachaInfo, onClick } = props;
+    const { query } = useRouter();
     const { t, i18n } = useTranslation("gacha");
     const isJa = i18n.language === "ja";
+    const basePath =
+      query.cat === "eidos"
+        ? "/static/image/banner_eidos/"
+        : "/static/image/banner/";
 
     return (
       <a
@@ -166,9 +171,7 @@ const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
               max-width: 100%;
               height: auto;
             `}
-            src={`/static/image/banner/${isJa ? "ja" : "en"}/header/${
-              gachaInfo.id
-            }.png`}
+            src={basePath + `${isJa ? "ja" : "en"}/header/${gachaInfo.id}.png`}
             alt={isJa ? gachaInfo.nameJa : gachaInfo.nameEn}
             width={449}
             height={86}
