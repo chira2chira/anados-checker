@@ -1,15 +1,16 @@
-import { CharInfo } from "@/pages";
+import { CharInfo, UnknownInfo } from "@/pages";
 import { displayCharClass } from "@/utils/stringUtil";
 import React from "react";
 import { Button, Tooltip } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { useTranslation } from "next-i18next";
 import { dequal } from "dequal";
+import { isEidosInfo } from "@/utils/types";
 
 const SPOILER_CHARS = [143, 150];
 
 type CharacterListProps = {
-  characters: CharInfo[];
+  characters: UnknownInfo[];
   hideSpoiler: boolean;
   onCharClick: (id: number) => void;
 };
@@ -54,12 +55,15 @@ const classIcon = css`
 `;
 
 const CharacterPanel: React.FC<{
-  char: CharInfo;
+  char: UnknownInfo;
   hideSpoiler: boolean;
   onCharClick: (id: number) => void;
 }> = (props) => {
   const { char } = props;
   const { i18n } = useTranslation();
+  const basePath = isEidosInfo(char)
+    ? "/static/image/eidos/"
+    : "/static/image/char/";
 
   let charName = i18n.language === "ja" ? char.nameJa : char.nameEn;
   if (props.hideSpoiler) {
@@ -81,16 +85,18 @@ const CharacterPanel: React.FC<{
       >
         <img
           css={{ filter: props.hideSpoiler ? "blur(8px)" : "none" }}
-          src={"/static/image/char/" + char.image}
+          src={basePath + char.image}
           width="54px"
           height="54px"
           alt={charName}
         />
-        <img
-          css={classIcon}
-          src={"/static/image/class/" + char.class + ".png"}
-          alt={displayCharClass(char.class)}
-        />
+        {char.class !== undefined && (
+          <img
+            css={classIcon}
+            src={"/static/image/class/" + char.class + ".png"}
+            alt={displayCharClass(char.class)}
+          />
+        )}
       </Button>
     </Tooltip>
   );

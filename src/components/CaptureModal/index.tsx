@@ -3,15 +3,15 @@ import { useTranslation } from "next-i18next";
 import { domToPng } from "modern-screenshot";
 import { Button, Dialog, DialogBody, Switch } from "@blueprintjs/core";
 import { css } from "@emotion/react";
-import { CharacterArea, CharInfo } from "@/pages";
+import { CharacterArea, CharInfo, UnknownInfo } from "@/pages";
 import { sendEvent } from "@/utils/gtag";
 
 const BG_COLOR = "#111418";
 
 type CaptureModal = {
   isOpen: boolean;
-  charInfo: CharInfo[];
-  displayChars: CharInfo[][];
+  charInfo: UnknownInfo[];
+  displayChars: UnknownInfo[][];
   owned: number[];
   hideSpoiler: boolean;
   onClose: () => void;
@@ -170,7 +170,7 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
                 text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
                   -1px -1px 0 #000;
                 text-align: center;
-                font-size: 95%; 
+                font-size: 95%;
               `}
             >
               PREVIEW
@@ -183,7 +183,7 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
 };
 
 type PreviewProps = {
-  chars: CharInfo[];
+  chars: UnknownInfo[];
   totalChars: number;
   owned: number[];
   showOverall: boolean;

@@ -9,6 +9,10 @@ export function parseLocalStorageChar(value: string) {
     .filter((x) => !BAN_CHAR.includes(x));
 }
 
+export function parseLocalStorageEidos(value: string) {
+  return value.split(",").map(Number);
+}
+
 export function parseLocalStorageStill(value: string): StillState[] {
   let data;
   try {

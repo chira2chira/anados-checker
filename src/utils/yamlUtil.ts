@@ -1,7 +1,7 @@
 import yaml from "js-yaml";
 import fs from "fs";
 import path from "path";
-import { CharClass, CharInfo } from "../pages";
+import { CharClass, CharInfo, EidosInfo } from "../pages";
 import { GachaInfo } from "@/pages/gacha/simulator";
 import still from "@/../assets/still.json";
 
@@ -53,6 +53,35 @@ export function loadCharactors() {
     throw new Error("UnitIDが未指定");
   }
   return charInfo;
+}
+
+export function loadEidosMaster() {
+  const eidosInfo: EidosInfo[] = loadYaml<EidosInfo[]>("assets/eidos.yaml")
+    .map((x) => ({
+      ...x,
+      image: x.image ?? "now_printing.png",
+      release: x.release,
+      owned: false,
+    }))
+    .sort(
+      (x, y) => new Date(x.release).getTime() - new Date(y.release).getTime()
+    );
+
+  if (
+    eidosInfo.length !== Array.from(new Set(eidosInfo.map((x) => x.id))).length
+  ) {
+    throw new Error("IDが重複している");
+  } else if (eidosInfo.filter((x) => x.id === null).length > 0) {
+    throw new Error("IDが未指定");
+  } else if (
+    eidosInfo.length !==
+    Array.from(new Set(eidosInfo.map((x) => x.eidosId))).length
+  ) {
+    throw new Error("EidosIDが重複している");
+  } else if (eidosInfo.filter((x) => x.eidosId === null).length > 0) {
+    throw new Error("EidosIDが未指定");
+  }
+  return eidosInfo;
 }
 
 function mergeRarity(rarity: number) {

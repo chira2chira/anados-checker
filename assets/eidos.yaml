@@ -1,0 +1,324 @@
+- id: 1
+  eidosId: 3001
+  unitId: 1
+  nemeJa: 竜王のつがい
+  nameEn: The Dragon King's Mate
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3001.png
+- id: 2
+  eidosId: 3002
+  unitId: 4010
+  nemeJa: 船長のアルバイト
+  nameEn: Part-Time Captain
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3002.png
+- id: 3
+  eidosId: 3003
+  unitId: 3008
+  nemeJa: 愛されヒーラーの魔力補給
+  nameEn: Replenishing the Magic of Your Beloved Healer
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3003.png
+- id: 4
+  eidosId: 3004
+  unitId: 5012
+  nemeJa: 半竜精液搾取実験
+  nameEn: Half-Dragon Semen Extraction Experimentation
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3004.png
+- id: 5
+  eidosId: 3005
+  unitId: 5004
+  nemeJa: ガチンコしたいんじゃないのぉ？
+  nameEn: Don't You Want a Head-to-Head Match?
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3005.png
+- id: 6
+  eidosId: 3006
+  unitId: 3012
+  nemeJa: 魔に惹かれる身体
+  nameEn: A Physical Form Drawn By Dastardly Magic
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3006.png
+- id: 7
+  eidosId: 3007
+  unitId: 3006
+  nemeJa: 山賊の花道
+  nameEn: The Bandit's Runway
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3007.png
+- id: 8
+  eidosId: 3008
+  unitId: 3009
+  nemeJa: 宿にて溶ける蜜
+  nameEn: Dissolving into Honey at the Inn
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3008.png
+- id: 9
+  eidosId: 3009
+  unitId: 6009
+  nemeJa: 傭兵隊長の大脱出劇
+  nameEn: The Commanding Mercenary Officer's Dramatic Escape
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3009.png
+- id: 10
+  eidosId: 3010
+  unitId: 4011
+  nemeJa: 大きな愛で抱きしめて
+  nameEn: Embraced in Profound Love
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3010.png
+- id: 11
+  eidosId: 3011
+  unitId: 3001
+  nemeJa: 繁殖の星規
+  nameEn: The Stars Do Say to Breed
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3011.png
+- id: 12
+  eidosId: 3012
+  unitId: 3013
+  nemeJa: 絆されて
+  nameEn: Oh, To Be Bonded!
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3012.png
+- id: 13
+  eidosId: 3013
+  unitId: 1010
+  nemeJa: お客様のために！
+  nameEn: For the Guests!
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3013.png
+- id: 14
+  eidosId: 3014
+  unitId: 1011
+  nemeJa: ドラーのために！
+  nameEn: For Dracos!
+  rarity: 3
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_3014.png
+- id: 15
+  eidosId: 4001
+  unitId: 5013
+  nemeJa: 路地裏の出会い
+  nameEn: Encounter in an Alleyway
+  rarity: 4
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_4001.png
+- id: 16
+  eidosId: 4002
+  unitId: 5017
+  nemeJa: 月下の饗宴
+  nameEn: A Moonlit Banquet
+  rarity: 4
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_4002.png
+- id: 17
+  eidosId: 4003
+  unitId: 5032
+  nemeJa: 狼に変わる時
+  nameEn: Twas When He Transformed into a Werewolf
+  rarity: 4
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_4003.png
+- id: 18
+  eidosId: 4004
+  unitId: 5042
+  nemeJa: バリタチ島での一幕
+  nameEn: A One-Act Scene on Topdom Island
+  rarity: 4
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_4004.png
+- id: 19
+  eidosId: 4005
+  unitId: 5009
+  nemeJa: スペシャルマッサージ
+  nameEn: A Special Massage
+  rarity: 4
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_4005.png
+- id: 20
+  eidosId: 4006
+  unitId: 6015
+  nemeJa: 竜の燈火に身を焦がせば
+  nameEn: Burning with Love from the Light of the Dragon
+  rarity: 4
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_4006.png
+- id: 21
+  eidosId: 4007
+  unitId: 5003
+  nemeJa: これって本当に採寸なの？
+  nameEn: Are You Actually Measuring Me??
+  rarity: 4
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_4007.png
+- id: 22
+  eidosId: 4008
+  unitId: 4002
+  nemeJa: 隠し撮り
+  nameEn: The Sneak Tape
+  rarity: 4
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_4008.png
+- id: 23
+  eidosId: 4009
+  unitId: 5056
+  nemeJa: ハロー、マイフレンズ！
+  nameEn: HELLO TO ALL MY FRIENDS!
+  rarity: 4
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_4009.png
+- id: 24
+  eidosId: 4010
+  unitId: 3005
+  nemeJa: 恋ってなに？
+  nameEn: What is Love?
+  rarity: 4
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_4010.png
+- id: 25
+  eidosId: 5001
+  unitId: 3011
+  nemeJa: しもべコボルトの下剋上
+  nameEn: Getting Your Ass Handed to You by Your Servant Kobold
+  rarity: 5
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_5001.png
+- id: 26
+  eidosId: 5002
+  unitId: 6040
+  nemeJa: 机の下の秘密
+  nameEn: Salacious Secrets Under the Desk
+  rarity: 5
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_5002.png
+- id: 27
+  eidosId: 5003
+  unitId: 5031
+  nemeJa: 理想のカレシは目の前に！？
+  nameEn: My Perfect Boyfriend is Right Before Me?!
+  rarity: 5
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_5003.png
+- id: 28
+  eidosId: 5004
+  unitId: 5034
+  nemeJa: 憧れの人
+  nameEn: The Idol of Your Adoration
+  rarity: 5
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_5004.png
+- id: 29
+  eidosId: 5005
+  unitId: 5002
+  nemeJa: かみさま！いただきます！
+  nameEn: Lord! Time to Dig In!
+  rarity: 5
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_5005.png
+- id: 30
+  eidosId: 5006
+  unitId: 5015
+  nemeJa: おとうさんって言ってごらん
+  nameEn: Call Me Daddy!
+  rarity: 5
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_5006.png
+- id: 31
+  eidosId: 5007
+  unitId: 5001
+  nemeJa: 友達の性欲が強すぎる件
+  nameEn: A Case of Your Friend's Libido Being Too Strong
+  rarity: 5
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_5007.png
+- id: 32
+  eidosId: 5008
+  unitId: 5053
+  nemeJa: 我が家へようこそ
+  nameEn: Welcome to Our Home
+  rarity: 5
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_5008.png
+- id: 33
+  eidosId: 6001
+  unitId: 6010
+  nemeJa: 仲介の勇者エドガー
+  nameEn: The Mediator Hero Edgar
+  rarity: 6
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_6001.png
+- id: 34
+  eidosId: 6002
+  unitId: 6022
+  nemeJa: ディア・マイ・メンズ
+  nameEn: TO ALL MY DEAREST MEN!
+  rarity: 6
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_6002.png
+- id: 35
+  eidosId: 6003
+  unitId: 6011
+  nemeJa: 鬼の姫はじめ
+  nameEn: Demon Breaking Him In for the New Year
+  rarity: 6
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_6003.png
+- id: 36
+  eidosId: 6004
+  unitId: 5050
+  nemeJa: スライム風呂で大パニック！
+  nameEn: Panic Ensues at the Slime Bath!
+  rarity: 6
+  limited: false
+  release: 12/20/2024
+  image: WeaponIcon_6004.png

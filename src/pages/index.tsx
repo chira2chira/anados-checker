@@ -1,6 +1,6 @@
 import * as styles from "@/styles/Home.module";
 import { GetStaticProps, NextPage } from "next";
-import { loadCharactors } from "@/utils/yamlUtil";
+import { loadCharactors, loadEidosMaster } from "@/utils/yamlUtil";
 import CharacterList from "@/components/CharacterList";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { css } from "@emotion/react";
@@ -20,13 +20,19 @@ import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { sendEvent } from "@/utils/gtag";
-import { parseLocalStorageChar } from "@/utils/charUtil";
+import {
+  parseLocalStorageChar,
+  parseLocalStorageEidos,
+} from "@/utils/charUtil";
 import { isIos } from "@/utils/browser";
 import { useScroll } from "@/hooks/useScroll";
 import { Container } from "@/components/Container";
 import { CaptureModal } from "@/components/CaptureModal";
+import { isEidosInfo, PartialForKeys } from "@/utils/types";
+import Link from "next/link";
 
 const CHAR_KEY = "chars";
+const EIDOS_KEY = "eidos";
 const SPOILER_KEY = "hidespoiler";
 
 export type CharClass =
@@ -53,12 +59,43 @@ export type CharInfo = {
   owned: boolean;
 };
 
-type HomeProps = {
-  charInfo: CharInfo[];
+export type EidosInfo = {
+  id: number;
+  eidosId: number;
+  unitId: number;
+  nameJa: string;
+  nameEn: string;
+  rarity: number;
+  limited: boolean;
+  release: string;
+  image: string;
+  owned: boolean;
 };
 
+export type UnknownInfo = PartialForKeys<CharInfo, EidosInfo>;
+
+type PageCategory = "char" | "eidos";
+
+type OwnState = {
+  char: number[];
+  eidos: number[];
+};
+
+type HomeProps = {
+  charInfo: CharInfo[];
+  eidosInfo: EidosInfo[];
+};
+
+function filterClassChar(filter: CharClass[]) {
+  return function (info: CharInfo | EidosInfo) {
+    if (isEidosInfo(info)) return true;
+
+    return filter.length === 0 ? true : filter.includes(info.class);
+  };
+}
+
 function filterOwnedChar(filter: string) {
-  return function (char: CharInfo) {
+  return function (char: CharInfo | EidosInfo) {
     switch (filter) {
       case "none":
         return true;
@@ -71,112 +108,115 @@ function filterOwnedChar(filter: string) {
 }
 
 function filterLimitedChar(filter: string) {
-  return function (char: CharInfo) {
+  return function (info: CharInfo | EidosInfo) {
     switch (filter) {
       case "none":
         return true;
       case "standard":
-        return !char.limited;
+        return !info.limited;
       case "limited":
-        return char.limited;
+        return info.limited;
     }
   };
 }
 
 function filterDeploymentChar(filter: string) {
-  return function (char: CharInfo) {
+  return function (info: CharInfo | EidosInfo) {
+    if (isEidosInfo(info)) return true;
+
     switch (filter) {
       case "none":
         return true;
       case "low":
-        return char.deployment === "low" || char.deployment === "both";
+        return info.deployment === "low" || info.deployment === "both";
       case "high":
-        return char.deployment === "high" || char.deployment === "both";
+        return info.deployment === "high" || info.deployment === "both";
       case "both":
-        return char.deployment === "both";
+        return info.deployment === "both";
     }
   };
 }
 
 function filterReleaseChar(filter: string) {
-  return function (char: CharInfo) {
+  return function (info: CharInfo | EidosInfo) {
     switch (filter) {
       case "none":
         return true;
       case "2021":
-        return dayjs(char.release).year() === 2021;
+        return dayjs(info.release).year() === 2021;
       case "2022":
-        return dayjs(char.release).year() === 2022;
+        return dayjs(info.release).year() === 2022;
       case "2023":
-        return dayjs(char.release).year() === 2023;
+        return dayjs(info.release).year() === 2023;
       case "2024":
-        return dayjs(char.release).year() === 2024;
+        return dayjs(info.release).year() === 2024;
     }
   };
 }
 const INELIGIBLE_CHAR = ["Gaia", "Barboros", "New Look Barboros"];
 function filterTicketChar(filter: string) {
-  return function (char: CharInfo) {
+  return function (info: CharInfo | EidosInfo) {
+    // TODO: エイドス装備のフィルタリング
     switch (filter) {
       case "none":
         return true;
       case "aniv0.5":
         // https://anothereidos-r.info/news/pnote201/
-        if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
+        if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
         return (
-          char.rarity >= 4 && dayjs(char.release).isBefore(dayjs("2022/6/24"))
+          info.rarity >= 4 && dayjs(info.release).isBefore(dayjs("2022/6/24"))
         );
       case "aniv1.0":
         // https://anothereidos-r.info/news/pnote1209/
-        if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
+        if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
         return (
-          char.rarity >= 4 &&
-          (char.limited
-            ? dayjs(char.release).isBefore(dayjs("2022/6/25"))
-            : dayjs(char.release).isBefore(dayjs("2022/9/30")))
+          info.rarity >= 4 &&
+          (info.limited
+            ? dayjs(info.release).isBefore(dayjs("2022/6/25"))
+            : dayjs(info.release).isBefore(dayjs("2022/9/30")))
         );
       case "aniv1.5":
         // https://anothereidos-r.info/news/1-5anniv2023/
-        if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
+        if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
         return (
-          char.rarity >= 4 &&
-          (char.limited
-            ? dayjs(char.release).isBefore(dayjs("2022/12/24"))
-            : dayjs(char.release).isBefore(dayjs("2023/6/23")))
+          info.rarity >= 4 &&
+          (info.limited
+            ? dayjs(info.release).isBefore(dayjs("2022/12/24"))
+            : dayjs(info.release).isBefore(dayjs("2023/6/23")))
         );
       case "aniv2.0":
         // https://anothereidos-r.info/news/casino_01/
-        if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
+        if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
         return (
-          char.rarity >= 4 &&
-          (char.limited
-            ? dayjs(char.release).isBefore(dayjs("2023/6/25"))
-            : dayjs(char.release).isBefore(dayjs("2023/12/23")))
+          info.rarity >= 4 &&
+          (info.limited
+            ? dayjs(info.release).isBefore(dayjs("2023/6/25"))
+            : dayjs(info.release).isBefore(dayjs("2023/12/23")))
         );
       case "aniv2.5":
         // https://anothereidos-r.info/news/2-5anniv2024/
-        if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
+        if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
         return (
-          char.rarity >= 4 &&
-          (char.limited
-            ? dayjs(char.release).isBefore(dayjs("2023/12/23"))
-            : dayjs(char.release).isBefore(dayjs("2024/6/22")))
+          info.rarity >= 4 &&
+          (info.limited
+            ? dayjs(info.release).isBefore(dayjs("2023/12/23"))
+            : dayjs(info.release).isBefore(dayjs("2024/6/22")))
         );
       case "aniv3.0":
         // https://anothereidos-r.info/news/winterdate/
-        if (INELIGIBLE_CHAR.includes(char.nameEn)) return false;
+        if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
         return (
-          char.rarity >= 4 &&
-          (char.limited
-            ? dayjs(char.release).isBefore(dayjs("2024/6/29"))
-            : dayjs(char.release).isBefore(dayjs("2024/11/16")))
+          info.rarity >= 4 &&
+          (info.limited
+            ? dayjs(info.release).isBefore(dayjs("2024/6/29"))
+            : dayjs(info.release).isBefore(dayjs("2024/11/16")))
         );
     }
   };
 }
 
 const Home: NextPage<HomeProps> = (props) => {
-  const [owned, setOwned] = useState<number[]>([]);
+  const [owned, setOwned] = useState<OwnState>({ char: [], eidos: [] });
   const [filterClass, setFilterClass] = useState<CharClass[]>([]);
   const [filterOwned, setFilterOwned] = useState("none");
   const [filterLimited, setFilterLimited] = useState("none");
@@ -188,8 +228,12 @@ const Home: NextPage<HomeProps> = (props) => {
   const [flash, setFlash] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
   const [openCaptureModal, setOpenCaptureModal] = useState(false);
+  const [storageLoaded, setStorageLoaded] = useState(false);
   const shareUrlElm = useRef<HTMLInputElement>(null);
-  const { asPath, locale, push } = useRouter();
+  const { asPath, locale, query } = useRouter();
+  const category: PageCategory = query.cat === "eidos" ? "eidos" : "char";
+  const currentInfo = category === "char" ? props.charInfo : props.eidosInfo;
+  const currentOwned = category === "char" ? owned.char : owned.eidos;
   const scrolling = useScroll();
   const { t } = useTranslation("common");
 
@@ -197,20 +241,25 @@ const Home: NextPage<HomeProps> = (props) => {
     // SSRを避けて取得する
     if (asPath.startsWith("/share/char/")) {
       const tempStoredValue = window.localStorage.getItem(TEMP_CHAR_KEY);
-      if (tempStoredValue) setOwned(parseLocalStorageChar(tempStoredValue));
-    } else {
-      const storedValue = window.localStorage.getItem(CHAR_KEY);
-      if (storedValue) {
-        setOwned(parseLocalStorageChar(storedValue));
-      } else {
-        // 共有ページから戻った際、確実に初期化する
-        setOwned([]);
-      }
+      if (tempStoredValue)
+        setOwned({ char: parseLocalStorageChar(tempStoredValue), eidos: [] });
+    } else if (!storageLoaded) {
+      setStorageLoaded(true);
+      const storedCharValue = window.localStorage.getItem(CHAR_KEY);
+      const storedEidosValue = window.localStorage.getItem(EIDOS_KEY);
+      const parsedChar = storedCharValue
+        ? parseLocalStorageChar(storedCharValue)
+        : [];
+      const parsedEidos = storedEidosValue
+        ? parseLocalStorageEidos(storedEidosValue)
+        : [];
+
+      setOwned({ char: parsedChar, eidos: parsedEidos });
     }
     setHideSpoiler(
       window.localStorage.getItem(SPOILER_KEY) === "false" ? false : true
     );
-  }, [asPath]);
+  }, [asPath, storageLoaded]);
 
   useEffect(() => {
     setFlash(true);
@@ -223,12 +272,10 @@ const Home: NextPage<HomeProps> = (props) => {
   const { rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7 } =
     useMemo(() => {
       const applyFilter = (rarity: number) =>
-        props.charInfo
+        currentInfo
           .filter((x) => x.rarity === rarity)
-          .map((x) => ({ ...x, owned: owned.includes(x.id) }))
-          .filter((x) =>
-            filterClass.length === 0 ? true : filterClass.includes(x.class)
-          )
+          .map((x) => ({ ...x, owned: currentOwned.includes(x.id) }))
+          .filter(filterClassChar(filterClass))
           .filter(filterOwnedChar(filterOwned))
           .filter(filterLimitedChar(filterLimited))
           .filter(filterDeploymentChar(filterDeployment))
@@ -244,27 +291,38 @@ const Home: NextPage<HomeProps> = (props) => {
       const rare7 = applyFilter(7);
       return { rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7 };
     }, [
-      props.charInfo,
+      currentInfo,
+      currentOwned,
+      filterClass,
       filterOwned,
       filterLimited,
       filterDeployment,
       filterRelease,
       filterTicket,
-      filterClass,
-      owned,
     ]);
 
   const handleCharClick = useCallback(
     (id: number) => {
       setOwned((x) => {
-        if (x.includes(id)) {
-          return x.filter((y) => y !== id);
+        let newState = category === "char" ? x.char : x.eidos;
+        if (newState.includes(id)) {
+          newState = newState.filter((y) => y !== id);
+          if (category === "char") {
+            return { ...x, char: newState };
+          } else {
+            return { ...x, eidos: newState };
+          }
         } else {
-          return [...x, id];
+          newState = [...newState, id];
+          if (category === "char") {
+            return { ...x, char: newState };
+          } else {
+            return { ...x, eidos: newState };
+          }
         }
       });
     },
-    []
+    [category]
   );
 
   const handleBulkRegister = (ids: number[]) => {
@@ -280,7 +338,8 @@ const Home: NextPage<HomeProps> = (props) => {
   };
 
   const handleSave = () => {
-    window.localStorage.setItem(CHAR_KEY, owned.join(","));
+    window.localStorage.setItem(CHAR_KEY, owned.char.join(","));
+    window.localStorage.setItem(EIDOS_KEY, owned.eidos.join(","));
     TopToaster?.show({
       intent: "success",
       message: t("ui.message.saved"),
@@ -301,7 +360,7 @@ const Home: NextPage<HomeProps> = (props) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        chars: owned.join(","),
+        chars: owned.char.join(","),
       }),
     });
     const data = await res.json();
@@ -363,6 +422,15 @@ const Home: NextPage<HomeProps> = (props) => {
   return (
     <Container titleLink="/">
       <div css={styles.main} className={flash ? "flash" : undefined}>
+        <ButtonGroup
+          css={css`
+            margin-bottom: 40px;
+          `}
+        >
+          <SwitchButton currentCategory={category} linkCategory="char" />
+          <SwitchButton currentCategory={category} linkCategory="eidos" />
+        </ButtonGroup>
+
         <div
           css={css`
             margin-bottom: 20px;
@@ -372,48 +440,50 @@ const Home: NextPage<HomeProps> = (props) => {
             gap: 8px;
           `}
         >
-          <ButtonGroup>
-            <ClassButton
-              intent={filterClass.includes("vanguard") ? "primary" : "none"}
-              charClass="vanguard"
-              onClassClick={changeFilterClass}
-            />
-            <ClassButton
-              intent={filterClass.includes("fighter") ? "primary" : "none"}
-              charClass="fighter"
-              onClassClick={changeFilterClass}
-            />
-            <ClassButton
-              intent={filterClass.includes("guard") ? "primary" : "none"}
-              charClass="guard"
-              onClassClick={changeFilterClass}
-            />
-            <ClassButton
-              intent={filterClass.includes("shooter") ? "primary" : "none"}
-              charClass="shooter"
-              onClassClick={changeFilterClass}
-            />
-            <ClassButton
-              intent={filterClass.includes("caster") ? "primary" : "none"}
-              charClass="caster"
-              onClassClick={changeFilterClass}
-            />
-            <ClassButton
-              intent={filterClass.includes("healer") ? "primary" : "none"}
-              charClass="healer"
-              onClassClick={changeFilterClass}
-            />
-            <ClassButton
-              intent={filterClass.includes("support") ? "primary" : "none"}
-              charClass="support"
-              onClassClick={changeFilterClass}
-            />
-            <ClassButton
-              intent={filterClass.includes("stranger") ? "primary" : "none"}
-              charClass="stranger"
-              onClassClick={changeFilterClass}
-            />
-          </ButtonGroup>
+          {category === "char" && (
+            <ButtonGroup>
+              <ClassButton
+                intent={filterClass.includes("vanguard") ? "primary" : "none"}
+                charClass="vanguard"
+                onClassClick={changeFilterClass}
+              />
+              <ClassButton
+                intent={filterClass.includes("fighter") ? "primary" : "none"}
+                charClass="fighter"
+                onClassClick={changeFilterClass}
+              />
+              <ClassButton
+                intent={filterClass.includes("guard") ? "primary" : "none"}
+                charClass="guard"
+                onClassClick={changeFilterClass}
+              />
+              <ClassButton
+                intent={filterClass.includes("shooter") ? "primary" : "none"}
+                charClass="shooter"
+                onClassClick={changeFilterClass}
+              />
+              <ClassButton
+                intent={filterClass.includes("caster") ? "primary" : "none"}
+                charClass="caster"
+                onClassClick={changeFilterClass}
+              />
+              <ClassButton
+                intent={filterClass.includes("healer") ? "primary" : "none"}
+                charClass="healer"
+                onClassClick={changeFilterClass}
+              />
+              <ClassButton
+                intent={filterClass.includes("support") ? "primary" : "none"}
+                charClass="support"
+                onClassClick={changeFilterClass}
+              />
+              <ClassButton
+                intent={filterClass.includes("stranger") ? "primary" : "none"}
+                charClass="stranger"
+                onClassClick={changeFilterClass}
+              />
+            </ButtonGroup>
+          )}
 
           <div
             css={css`
@@ -442,16 +512,18 @@ const Home: NextPage<HomeProps> = (props) => {
               ]}
             />
 
-            <FilterSelect
-              value={filterDeployment}
-              onChange={setFilterDeployment}
-              options={[
-                { value: "none", label: t("ui.filter.deploymentBy") },
-                { value: "low", label: t("ui.filter.lowGround") },
-                { value: "high", label: t("ui.filter.highGround") },
-                { value: "both", label: t("ui.filter.bothGround") },
-              ]}
-            />
+            {category === "char" && (
+              <FilterSelect
+                value={filterDeployment}
+                onChange={setFilterDeployment}
+                options={[
+                  { value: "none", label: t("ui.filter.deploymentBy") },
+                  { value: "low", label: t("ui.filter.lowGround") },
+                  { value: "high", label: t("ui.filter.highGround") },
+                  { value: "both", label: t("ui.filter.bothGround") },
+                ]}
+              />
+            )}
           </div>
           <div
             css={css`
@@ -472,18 +544,20 @@ const Home: NextPage<HomeProps> = (props) => {
               ]}
             />
 
-            <FilterSelect
-              value={filterTicket}
-              onChange={setFilterTicket}
-              options={[
-                { value: "none", label: t("ui.filter.ticketBy") },
-                { value: "aniv1.0", label: t("ui.filter.aniv1.0") },
-                { value: "aniv1.5", label: t("ui.filter.aniv1.5") },
-                { value: "aniv2.0", label: t("ui.filter.aniv2.0") },
-                { value: "aniv2.5", label: t("ui.filter.aniv2.5") },
-                { value: "aniv3.0", label: t("ui.filter.aniv3.0") },
-              ]}
-            />
+            {category === "char" && (
+              <FilterSelect
+                value={filterTicket}
+                onChange={setFilterTicket}
+                options={[
+                  { value: "none", label: t("ui.filter.ticketBy") },
+                  { value: "aniv1.0", label: t("ui.filter.aniv1.0") },
+                  { value: "aniv1.5", label: t("ui.filter.aniv1.5") },
+                  { value: "aniv2.0", label: t("ui.filter.aniv2.0") },
+                  { value: "aniv2.5", label: t("ui.filter.aniv2.5") },
+                  { value: "aniv3.0", label: t("ui.filter.aniv3.0") },
+                ]}
+              />
+            )}
           </div>
 
           <Checkbox
@@ -591,10 +665,10 @@ const Home: NextPage<HomeProps> = (props) => {
                 font-weight: 600;
               `}
             >
-              {Math.round((owned.length / props.charInfo.length) * 100)}%
+              {Math.round((currentOwned.length / currentInfo.length) * 100)}%
             </div>
             <span>
-              {owned.length} / {props.charInfo.length}
+              {currentOwned.length} / {currentInfo.length}
             </span>
           </div>
         </div>
@@ -620,42 +694,44 @@ const Home: NextPage<HomeProps> = (props) => {
           <Button onClick={handleSave} intent="primary">
             {t("ui.button.save")}
           </Button>
-          <div>
-            {shareUrl ? (
-              <InputGroup
-                css={css`
-                  width: 180px;
-                  border: 1px solid #5f6b7c;
-                  border-radius: 2px;
-                  direction: rtl;
-                `}
-                inputRef={shareUrlElm}
-                value={shareUrl}
-                readOnly
-                rightElement={
-                  <Tooltip
-                    compact
-                    content={t("ui.message.copyToClipboard")}
-                    position="bottom-right"
-                    defaultIsOpen={true}
-                  >
-                    <Button
-                      css={css`
-                        width: 40px;
-                      `}
-                      intent="success"
-                      icon="clipboard"
-                      onClick={handleClipboardCopy}
-                    />
-                  </Tooltip>
-                }
-              />
-            ) : (
-              <Button loading={fetching} onClick={handleGetShareLink}>
-                {t("ui.button.getShareLink")}
-              </Button>
-            )}
-          </div>
+          {category === "char" && (
+            <div>
+              {shareUrl ? (
+                <InputGroup
+                  css={css`
+                    width: 180px;
+                    border: 1px solid #5f6b7c;
+                    border-radius: 2px;
+                    direction: rtl;
+                  `}
+                  inputRef={shareUrlElm}
+                  value={shareUrl}
+                  readOnly
+                  rightElement={
+                    <Tooltip
+                      compact
+                      content={t("ui.message.copyToClipboard")}
+                      position="bottom-right"
+                      defaultIsOpen={true}
+                    >
+                      <Button
+                        css={css`
+                          width: 40px;
+                        `}
+                        intent="success"
+                        icon="clipboard"
+                        onClick={handleClipboardCopy}
+                      />
+                    </Tooltip>
+                  }
+                />
+              ) : (
+                <Button loading={fetching} onClick={handleGetShareLink}>
+                  {t("ui.button.getShareLink")}
+                </Button>
+              )}
+            </div>
+          )}
         </div>
         <Button onClick={handleCharImageDownload} outlined>
           {t("ui.button.downloadScreenshot")}
@@ -666,7 +742,7 @@ const Home: NextPage<HomeProps> = (props) => {
         isOpen={openCaptureModal}
         charInfo={props.charInfo}
         displayChars={[rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7]}
-        owned={owned}
+        owned={currentOwned}
         hideSpoiler={hideSpoiler}
         onClose={() => setOpenCaptureModal(false)}
       />
@@ -674,9 +750,39 @@ const Home: NextPage<HomeProps> = (props) => {
   );
 };
 
+type SwitchButtonProps = {
+  currentCategory: PageCategory;
+  linkCategory: PageCategory;
+};
+
+const SwitchButton: React.FC<SwitchButtonProps> = (props) => {
+  const { t } = useTranslation("common");
+  const { push } = useRouter();
+  const label =
+    props.linkCategory === "char"
+      ? t("ui.button.character")
+      : t("ui.button.eidos");
+
+  const handleClick = () => {
+    if (props.currentCategory === props.linkCategory) return;
+    push({ pathname: "/", query: { cat: props.linkCategory } });
+  };
+
+  return (
+    <Button
+      onClick={handleClick}
+      intent={
+        props.currentCategory === props.linkCategory ? "primary" : undefined
+      }
+    >
+      {label}
+    </Button>
+  );
+};
+
 type CharacterAreaProps = {
   rarity: number;
-  charInfo: CharInfo[];
+  charInfo: UnknownInfo[];
   hideSpoiler: boolean;
   hideCheckBUtton?: boolean;
   onCharClick: (id: number) => void;
@@ -781,10 +887,12 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async (context) => {
   const charInfo = loadCharactors();
+  const eidosInfo = loadEidosMaster();
   return {
     props: {
       ...(await serverSideTranslations(context.locale!, ["common"])),
       charInfo,
+      eidosInfo,
     },
   };
 };

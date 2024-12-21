@@ -3,6 +3,8 @@
   "description": "アナザーエイドスRのキャラクター所持率チェッカー。キャラクターの所持状況を管理したり、他の人に共有することができます。",
   "ui": {
     "button": {
+      "character": "キャラクター",
+      "eidos": "エイドス装備",
       "save": "保存",
       "getShareLink": "共有リンクを取得",
       "downloadScreenshot": "スクショを保存",
