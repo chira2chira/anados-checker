@@ -22,15 +22,10 @@ import ClassButton from "@/components/ClassButton";
 import FilterSelect from "@/components/FilterSelect";
 import dayjs from "dayjs";
 import { TopToaster } from "@/utils/toast";
-import { TEMP_CHAR_KEY } from "./share/char/[id]";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { sendEvent } from "@/utils/gtag";
-import {
-  parseLocalStorageChar,
-  parseLocalStorageEidos,
-} from "@/utils/charUtil";
 import { isIos } from "@/utils/browser";
 import { useScroll } from "@/hooks/useScroll";
 import useCategoryQuery, { PageCategory } from "@/hooks/useCategoryQuery";
@@ -38,9 +33,7 @@ import { Container } from "@/components/Container";
 import { CaptureModal } from "@/components/CaptureModal";
 import { isCharInfo, PartialForKeys } from "@/utils/types";
 import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
-
-const CHAR_KEY = "chars";
-const EIDOS_KEY = "eidos";
+import useCharacterAndEidosOwnership from "@/hooks/useCharacterAndEidosOwnership";
 
 export type CharClass =
   | "vanguard"
@@ -80,11 +73,6 @@ export type EidosInfo = {
 };
 
 export type UnknownInfo = PartialForKeys<CharInfo, EidosInfo>;
-
-type OwnState = {
-  char: number[];
-  eidos: number[];
-};
 
 type HomeProps = {
   charInfo: CharInfo[];
@@ -221,7 +209,7 @@ function filterTicketChar(filter: string) {
 }
 
 const Home: NextPage<HomeProps> = (props) => {
-  const [owned, setOwned] = useState<OwnState>({ char: [], eidos: [] });
+  const { owned, setOwned, save } = useCharacterAndEidosOwnership();
   const [filterClass, setFilterClass] = useState<CharClass[]>([]);
   const [filterOwned, setFilterOwned] = useState("none");
   const [filterLimited, setFilterLimited] = useState("none");
@@ -232,7 +220,6 @@ const Home: NextPage<HomeProps> = (props) => {
   const [flash, setFlash] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
   const [openCaptureModal, setOpenCaptureModal] = useState(false);
-  const [storageLoaded, setStorageLoaded] = useState(false);
   const { hideSpoiler, setHideSpoiler } = useContext(HideSpoilerContext);
   const shareUrlElm = useRef<HTMLInputElement>(null);
   const { asPath, locale } = useRouter();
@@ -242,27 +229,6 @@ const Home: NextPage<HomeProps> = (props) => {
   const currentOwned = category === "char" ? owned.char : owned.eidos;
   const scrolling = useScroll();
   const { t } = useTranslation("common");
-
-  useEffect(() => {
-    // SSRを避けて取得する
-    if (asPath.startsWith("/share/char/")) {
-      const tempStoredValue = window.localStorage.getItem(TEMP_CHAR_KEY);
-      if (tempStoredValue)
-        setOwned({ char: parseLocalStorageChar(tempStoredValue), eidos: [] });
-    } else if (!storageLoaded) {
-      setStorageLoaded(true);
-      const storedCharValue = window.localStorage.getItem(CHAR_KEY);
-      const storedEidosValue = window.localStorage.getItem(EIDOS_KEY);
-      const parsedChar = storedCharValue
-        ? parseLocalStorageChar(storedCharValue)
-        : [];
-      const parsedEidos = storedEidosValue
-        ? parseLocalStorageEidos(storedEidosValue)
-        : [];
-
-      setOwned({ char: parsedChar, eidos: parsedEidos });
-    }
-  }, [asPath, storageLoaded]);
 
   useEffect(() => {
     setFlash(true);
@@ -325,7 +291,7 @@ const Home: NextPage<HomeProps> = (props) => {
         }
       });
     },
-    [category]
+    [category, setOwned]
   );
 
   const handleBulkRegister = (ids: number[]) => {
@@ -341,8 +307,7 @@ const Home: NextPage<HomeProps> = (props) => {
   };
 
   const handleSave = () => {
-    window.localStorage.setItem(CHAR_KEY, owned.char.join(","));
-    window.localStorage.setItem(EIDOS_KEY, owned.eidos.join(","));
+    save();
     TopToaster?.show({
       intent: "success",
       message: t("ui.message.saved"),

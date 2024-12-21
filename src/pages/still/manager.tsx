@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { useCallback, useContext, useMemo, useState } from "react";
 import { css } from "@emotion/react";
 import { Button, ButtonGroup, ButtonProps, Switch } from "@blueprintjs/core";
 import { forceCheck } from "react-lazyload";
@@ -17,18 +17,12 @@ import FilterSelect from "@/components/FilterSelect";
 import ClassButton from "@/components/ClassButton";
 import { sendEvent } from "@/utils/gtag";
 import { TopToaster } from "@/utils/toast";
-import {
-  deserializeStill,
-  parseLocalStorageChar,
-  parseLocalStorageStill,
-} from "@/utils/charUtil";
 import { getUserLabelEmoji } from "@/utils/userLabelEnum";
 import CharacterAndStillList from "@/components/CharacterAndStillList";
 import { StillRouletteModal } from "@/components/StillRouletteModal";
 import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
-
-const CHAR_KEY = "chars";
-const STILL_KEY = "still";
+import useStillState from "@/hooks/useStillState";
+import useCharacterOwnership from "@/hooks/useCharacterOwnership";
 
 type StillManagerProps = {
   charInfoWithStills: CharInfoWithStill[];
@@ -133,8 +127,8 @@ function filterRateStill(filter: string) {
 }
 
 const StillManager: NextPage<StillManagerProps> = (props) => {
-  const [owned, setOwned] = useState<number[]>([]);
-  const [stillStates, setStillStates] = useState<StillState[]>([]);
+  const { owned } = useCharacterOwnership();
+  const { stillStates, setStillStates, save } = useStillState();
   const [filterClass, setFilterClass] = useState<CharClass[]>([]);
   const [filterStillType, setFilterStillType] = useState<StillType[]>([]);
   const [filterOwned, setFilterOwned] = useState("none");
@@ -147,18 +141,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   const { hideSpoiler, setHideSpoiler } = useContext(HideSpoilerContext);
   const { t } = useTranslation("common");
   const { t: t2 } = useTranslation("still");
-
-  useEffect(() => {
-    // SSRを避けて取得する
-    const storedCharValue = window.localStorage.getItem(CHAR_KEY);
-    const storedStillValue = window.localStorage.getItem(STILL_KEY);
-    if (storedCharValue) {
-      setOwned(parseLocalStorageChar(storedCharValue));
-    }
-    if (storedStillValue) {
-      setStillStates(parseLocalStorageStill(storedStillValue));
-    }
-  }, []);
 
   const { rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7 } =
     useMemo(() => {
@@ -223,31 +205,37 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       filterClass,
     ]);
 
-  const handleReadChange = useCallback((id: string) => {
-    setStillStates((x) => {
-      const oldStateTmp = x.filter((y) => y.id === id);
-      const oldState: StillState =
-        oldStateTmp.length === 0
-          ? { id, read: false, rate: -1 }
-          : oldStateTmp[0];
-      const newStates = x.filter((y) => y.id !== id);
-      newStates.push({ ...oldState, read: !oldState.read });
-      return newStates;
-    });
-  }, []);
+  const handleReadChange = useCallback(
+    (id: string) => {
+      setStillStates((x) => {
+        const oldStateTmp = x.filter((y) => y.id === id);
+        const oldState: StillState =
+          oldStateTmp.length === 0
+            ? { id, read: false, rate: -1 }
+            : oldStateTmp[0];
+        const newStates = x.filter((y) => y.id !== id);
+        newStates.push({ ...oldState, read: !oldState.read });
+        return newStates;
+      });
+    },
+    [setStillStates]
+  );
 
-  const handleRateChange = useCallback((id: string, rate: number) => {
-    setStillStates((x) => {
-      const oldStateTmp = x.filter((y) => y.id === id);
-      const oldState: StillState =
-        oldStateTmp.length === 0
-          ? { id, read: false, rate: -1 }
-          : oldStateTmp[0];
-      const newStates = x.filter((y) => y.id !== id);
-      newStates.push({ ...oldState, rate });
-      return newStates;
-    });
-  }, []);
+  const handleRateChange = useCallback(
+    (id: string, rate: number) => {
+      setStillStates((x) => {
+        const oldStateTmp = x.filter((y) => y.id === id);
+        const oldState: StillState =
+          oldStateTmp.length === 0
+            ? { id, read: false, rate: -1 }
+            : oldStateTmp[0];
+        const newStates = x.filter((y) => y.id !== id);
+        newStates.push({ ...oldState, rate });
+        return newStates;
+      });
+    },
+    [setStillStates]
+  );
 
   const handleBulkRegister = (stills: StillState[]) => {
     let newStates = stillStates.concat(stills);
@@ -272,7 +260,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   };
 
   const handleSave = () => {
-    window.localStorage.setItem(STILL_KEY, deserializeStill(stillStates));
+    save();
     TopToaster?.show({
       intent: "success",
       message: t("ui.message.saved"),
