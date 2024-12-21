@@ -5,7 +5,7 @@ import { Button, Tooltip } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { useTranslation } from "next-i18next";
 import { dequal } from "dequal";
-import { isEidosInfo } from "@/utils/types";
+import { isCharInfo } from "@/utils/types";
 
 const SPOILER_CHARS = [143, 150];
 
@@ -61,9 +61,9 @@ const CharacterPanel: React.FC<{
 }> = (props) => {
   const { char } = props;
   const { i18n } = useTranslation();
-  const basePath = isEidosInfo(char)
-    ? "/static/image/eidos/"
-    : "/static/image/char/";
+  const basePath = isCharInfo(char)
+    ? "/static/image/char/"
+    : "/static/image/eidos/";
 
   let charName = i18n.language === "ja" ? char.nameJa : char.nameEn;
   if (props.hideSpoiler) {
@@ -90,7 +90,7 @@ const CharacterPanel: React.FC<{
           height="54px"
           alt={charName}
         />
-        {char.class !== undefined && (
+        {isCharInfo(char) && (
           <img
             css={classIcon}
             src={"/static/image/class/" + char.class + ".png"}

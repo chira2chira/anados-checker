@@ -1,4 +1,4 @@
-import type { EidosInfo } from "@/pages";
+import type { CharInfo, EidosInfo } from "@/pages";
 
 export type PartialForKeys<T, U> = {
   [K in Exclude<keyof T, keyof U>]?: T[K];
@@ -7,6 +7,10 @@ export type PartialForKeys<T, U> = {
 } & {
   [K in Extract<keyof T, keyof U>]: T[K];
 };
+
+export function isCharInfo(arg: any): arg is CharInfo {
+  return arg.class !== undefined;
+}
 
 export function isEidosInfo(arg: any): arg is EidosInfo {
   return arg.eidosId !== undefined;
