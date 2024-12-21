@@ -1,13 +1,17 @@
 import { css } from "@emotion/react";
 
 export const main = css`
-  max-width: 65em;
   margin: auto;
-  padding: 40px 15px 0;
+  padding: 40px 0 0;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 992px) {
+    max-width: 65em;
+    padding: 40px 15px 0;
+  }
 
   & .char-list {
     opacity: 1;

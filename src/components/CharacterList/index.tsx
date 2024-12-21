@@ -84,10 +84,26 @@ const CharacterPanel: React.FC<{
         onClick={hancleOnClick}
       >
         <img
-          css={{ filter: props.hideSpoiler ? "blur(8px)" : "none" }}
+          css={css`
+            width: 54px;
+            height: 54px;
+            filter: ${props.hideSpoiler ? "blur(8px)" : "none"};
+
+            @media (max-width: 992px) {
+              /** 100vw - 外のPadding - 画像周りのPadding*6 - flex gap*6 */
+              --max-size: calc((100vw - 30px - 36px - 15px) / 6);
+              width: var(--max-size);
+              max-width: 60px;
+              height: var(--max-size);
+              max-height: 60px;
+
+              .image-preview & {
+                width: 54px;
+                height: 54px;
+              }
+            }
+          `}
           src={basePath + char.image}
-          width="54px"
-          height="54px"
           alt={charName}
         />
         {isCharInfo(char) && (

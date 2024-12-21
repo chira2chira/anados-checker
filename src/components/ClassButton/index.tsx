@@ -19,6 +19,10 @@ const ClassButton: React.FC<ClassButtonProps> = (props) => {
     <Button
       css={css`
         width: 45px;
+
+        @media (max-width: 411px) {
+          width: 42px;
+        }
       `}
       {...buttonProps}
       icon={

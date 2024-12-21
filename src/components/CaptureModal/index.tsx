@@ -197,6 +197,7 @@ const Preview: React.FC<PreviewProps> = (props) => {
   return (
     <>
       <div
+        className="image-preview"
         css={css`
           display: flex;
           flex-direction: column;
