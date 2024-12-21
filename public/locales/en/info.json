@@ -10,6 +10,7 @@
   },
   "message": {
     "char": "Character",
+    "eidos": "Eidos",
     "still": "Still",
     "backupOverview": "Character ownership status and still management data can be backed up.",
     "importComplete": "Import Complete: ",

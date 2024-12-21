@@ -8,11 +8,13 @@ import { Container } from "@/components/Container";
 import { sendEvent } from "@/utils/gtag";
 
 const CHAR_KEY = "chars";
+const EIDOS_KEY = "eidos";
 const STILL_KEY = "still";
 
 type BackupData = {
   version: Number;
   char: string | null;
+  eidos: string | null;
   still: string | null;
 };
 
@@ -41,14 +43,16 @@ const Info: NextPage<InfoProps> = () => {
   const exportBackup = () => {
     setError("");
     const storedCharValue = window.localStorage.getItem(CHAR_KEY);
+    const storedEidosValue = window.localStorage.getItem(EIDOS_KEY);
     const storedStillValue = window.localStorage.getItem(STILL_KEY);
-    if (!storedCharValue && !storedStillValue) {
+    if (!storedCharValue && !storedEidosValue && !storedStillValue) {
       return setError(t("message.e_dataNotFound"));
     }
 
     const data: BackupData = {
       version: 1,
       char: storedCharValue,
+      eidos: storedEidosValue,
       still: storedStillValue,
     };
     const blob = new Blob([JSON.stringify(data)], {
@@ -104,6 +108,10 @@ const Info: NextPage<InfoProps> = () => {
     if (!!json.char) {
       imported.push(t("message.char"));
       window.localStorage.setItem(CHAR_KEY, json.char);
+    }
+    if (!!json.eidos) {
+      imported.push(t("message.eidos"));
+      window.localStorage.setItem(EIDOS_KEY, json.eidos);
     }
     if (!!json.still) {
       imported.push(t("message.still"));
