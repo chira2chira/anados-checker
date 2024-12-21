@@ -15,6 +15,7 @@ import { SelectBannerModal } from "@/components/SelectBannerModal";
 import { RateListModal, calcPickUpRate } from "@/components/RateListModal";
 import { sendEvent } from "@/utils/gtag";
 import { isCharInfo } from "@/utils/types";
+import useCategoryQuery, { PageCategory } from "@/hooks/useCategoryQuery";
 
 type CharWeight = {
   id: number;
@@ -54,8 +55,6 @@ type CharInfoPu = UnknownInfo & {
   pickUp: boolean;
 };
 
-type PageCategory = "char" | "eidos";
-
 const winStyle = css`
   color: #fbd065;
   font-weight: 600;
@@ -90,8 +89,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   const [highlightPu, setHighlightPu] = useState(false);
   const [pullResult, setPullResult] = useState<CharInfoPu[]>([]);
   const [pullHistory, setPullHistory] = useState<CharInfoPu[]>([]);
-  const category: PageCategory =
-    router.query.cat === "eidos" ? "eidos" : "char";
+  const category = useCategoryQuery();
   const currentInfo: UnknownInfo[] =
     category === "char" ? props.charInfo : props.eidosInfo;
   const currentGachaInfo =

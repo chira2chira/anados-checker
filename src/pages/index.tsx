@@ -26,6 +26,7 @@ import {
 } from "@/utils/charUtil";
 import { isIos } from "@/utils/browser";
 import { useScroll } from "@/hooks/useScroll";
+import useCategoryQuery, { PageCategory } from "@/hooks/useCategoryQuery";
 import { Container } from "@/components/Container";
 import { CaptureModal } from "@/components/CaptureModal";
 import { isCharInfo, PartialForKeys } from "@/utils/types";
@@ -72,8 +73,6 @@ export type EidosInfo = {
 };
 
 export type UnknownInfo = PartialForKeys<CharInfo, EidosInfo>;
-
-type PageCategory = "char" | "eidos";
 
 type OwnState = {
   char: number[];
@@ -229,8 +228,8 @@ const Home: NextPage<HomeProps> = (props) => {
   const [openCaptureModal, setOpenCaptureModal] = useState(false);
   const [storageLoaded, setStorageLoaded] = useState(false);
   const shareUrlElm = useRef<HTMLInputElement>(null);
-  const { asPath, locale, query } = useRouter();
-  const category: PageCategory = query.cat === "eidos" ? "eidos" : "char";
+  const { asPath, locale } = useRouter();
+  const category = useCategoryQuery();
   const currentInfo: UnknownInfo[] =
     category === "char" ? props.charInfo : props.eidosInfo;
   const currentOwned = category === "char" ? owned.char : owned.eidos;
