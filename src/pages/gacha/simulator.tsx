@@ -223,7 +223,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
           css={css`
             max-width: 100%;
             height: auto;
-            margin-bottom: 2px;
+            margin-bottom: 8px;
           `}
           priority
           src={basePath + `${isJa ? "ja" : "en"}/main/${banner.id}.png`}
