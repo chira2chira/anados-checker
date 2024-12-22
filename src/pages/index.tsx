@@ -481,18 +481,17 @@ const Home: NextPage<HomeProps> = (props) => {
               ]}
             />
 
-            {category === "char" && (
-              <FilterSelect
-                value={filterDeployment}
-                onChange={setFilterDeployment}
-                options={[
-                  { value: "none", label: t("ui.filter.deploymentBy") },
-                  { value: "low", label: t("ui.filter.lowGround") },
-                  { value: "high", label: t("ui.filter.highGround") },
-                  { value: "both", label: t("ui.filter.bothGround") },
-                ]}
-              />
-            )}
+            <FilterSelect
+              style={{ display: category === "char" ? undefined : "none" }}
+              value={filterDeployment}
+              onChange={setFilterDeployment}
+              options={[
+                { value: "none", label: t("ui.filter.deploymentBy") },
+                { value: "low", label: t("ui.filter.lowGround") },
+                { value: "high", label: t("ui.filter.highGround") },
+                { value: "both", label: t("ui.filter.bothGround") },
+              ]}
+            />
           </div>
           <div
             css={css`
@@ -513,20 +512,19 @@ const Home: NextPage<HomeProps> = (props) => {
               ]}
             />
 
-            {category === "char" && (
-              <FilterSelect
-                value={filterTicket}
-                onChange={setFilterTicket}
-                options={[
-                  { value: "none", label: t("ui.filter.ticketBy") },
-                  { value: "aniv1.0", label: t("ui.filter.aniv1.0") },
-                  { value: "aniv1.5", label: t("ui.filter.aniv1.5") },
-                  { value: "aniv2.0", label: t("ui.filter.aniv2.0") },
-                  { value: "aniv2.5", label: t("ui.filter.aniv2.5") },
-                  { value: "aniv3.0", label: t("ui.filter.aniv3.0") },
-                ]}
-              />
-            )}
+            <FilterSelect
+              style={{ display: category === "char" ? undefined : "none" }}
+              value={filterTicket}
+              onChange={setFilterTicket}
+              options={[
+                { value: "none", label: t("ui.filter.ticketBy") },
+                { value: "aniv1.0", label: t("ui.filter.aniv1.0") },
+                { value: "aniv1.5", label: t("ui.filter.aniv1.5") },
+                { value: "aniv2.0", label: t("ui.filter.aniv2.0") },
+                { value: "aniv2.5", label: t("ui.filter.aniv2.5") },
+                { value: "aniv3.0", label: t("ui.filter.aniv3.0") },
+              ]}
+            />
           </div>
 
           <Switch
