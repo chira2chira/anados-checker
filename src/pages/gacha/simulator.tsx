@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { UrlObject } from "url";
 import React, { useEffect, useMemo, useState } from "react";
 import { Button, ButtonGroup, Checkbox, Tooltip } from "@blueprintjs/core";
 import { css } from "@emotion/react";
@@ -180,11 +181,15 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   };
 
   const handleChangeBanner = (gacha: GachaInfo) => {
+    const url: UrlObject = {
+      pathname: router.pathname,
+      query: { cat: category, id: gacha.id },
+    };
     // idの指定がない場合、最新のBannerになるためgetBannerした結果と比較
     if (banner.id !== gacha.id) {
-      router.push({ query: { cat: category, id: gacha.id } });
+      router.push(url);
     } else if (id === undefined) {
-      router.replace({ query: { cat: category, id: gacha.id } });
+      router.replace(url);
     }
     handleCloseSelectBanner();
   };
