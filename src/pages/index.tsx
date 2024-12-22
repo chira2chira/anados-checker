@@ -717,7 +717,7 @@ const Home: NextPage<HomeProps> = (props) => {
 
       <CaptureModal
         isOpen={openCaptureModal}
-        charInfo={props.charInfo}
+        charInfo={currentInfo}
         displayChars={[rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7]}
         owned={currentOwned}
         onClose={() => setOpenCaptureModal(false)}
