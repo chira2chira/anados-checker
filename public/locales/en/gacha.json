@@ -20,7 +20,8 @@
       "pull10": "10 Times",
       "clear": "Clear Results",
       "rate": "Appearance Rate",
-      "highlightPu": "Highlight Pickup Characters"
+      "highlightPu": "Highlight Pickup Characters",
+      "showCharPer": "Show Probabilities for Each Character"
     }
   }
 }

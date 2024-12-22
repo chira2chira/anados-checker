@@ -82,11 +82,18 @@ function formatRate(num: number, showSymbol?: boolean) {
   return symbol + result;
 }
 
+function formatCharPer(num: number) {
+  // 小数点2桁表示
+  const result = (Math.round(num * 10000) / 100).toFixed(2);
+  return result;
+}
+
 const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   const router = useRouter();
   const { id } = router.query;
   const [openSelectBanner, setOpenSelectBanner] = useState(false);
   const [openRateList, setOpenRateList] = useState(false);
+  const [showCharPer, setShowCharPer] = useState(false);
   const [highlightPu, setHighlightPu] = useState(false);
   const [pullResult, setPullResult] = useState<CharInfoPu[]>([]);
   const [pullHistory, setPullHistory] = useState<CharInfoPu[]>([]);
@@ -321,6 +328,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
           <CharacterImage
             key={`${i}:${x.id}`}
             highlightPu={highlightPu}
+            showCharPer={false}
             char={x}
           />
         ))}
@@ -337,21 +345,25 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
         <HistoryArea
           rarity={6}
           highlightPu={highlightPu}
+          showCharPer={showCharPer}
           pullHistory={pullHistory}
         />
         <HistoryArea
           rarity={5}
           highlightPu={highlightPu}
+          showCharPer={showCharPer}
           pullHistory={pullHistory}
         />
         <HistoryArea
           rarity={4}
           highlightPu={highlightPu}
+          showCharPer={showCharPer}
           pullHistory={pullHistory}
         />
         <HistoryArea
           rarity={3}
           highlightPu={highlightPu}
+          showCharPer={showCharPer}
           pullHistory={pullHistory}
         />
       </div>
@@ -359,9 +371,15 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
       <div
         css={css`
           display: flex;
+          flex-direction: column;
           justify-content: flex-start;
         `}
       >
+        <Checkbox
+          checked={showCharPer}
+          label={t("ui.button.showCharPer")}
+          onClick={() => setShowCharPer(!showCharPer)}
+        />
         <Checkbox
           checked={highlightPu}
           label={t("ui.button.highlightPu")}
@@ -435,6 +453,7 @@ const NoData: React.FC = () => {
 type HistoryAreaProps = {
   rarity: number;
   highlightPu: boolean;
+  showCharPer: boolean;
   pullHistory: CharInfoPu[];
 };
 
@@ -464,14 +483,22 @@ const HistoryArea: React.FC<HistoryAreaProps> = (props) => {
         `}
       >
         {uniqueCharList.length === 0 && <NoData />}
-        {uniqueCharList.map((y) => (
-          <CharacterImage
-            key={y.id}
-            char={y}
-            highlightPu={props.highlightPu}
-            count={charList.filter((x) => x.id === y.id).length}
-          />
-        ))}
+        {uniqueCharList.map((y) => {
+          const count = charList.filter((x) => x.id === y.id).length;
+          const charPer = props.showCharPer
+            ? count / props.pullHistory.length
+            : 0; // メモ化しているため表示しないときは固定値
+          return (
+            <CharacterImage
+              key={y.id}
+              char={y}
+              highlightPu={props.highlightPu}
+              showCharPer={props.showCharPer}
+              count={count}
+              charPer={formatCharPer(charPer)}
+            />
+          );
+        })}
       </div>
     </div>
   );
@@ -480,7 +507,9 @@ const HistoryArea: React.FC<HistoryAreaProps> = (props) => {
 type CharacterImageProps = {
   char: CharInfoPu;
   highlightPu: boolean;
+  showCharPer: boolean;
   count?: number;
+  charPer?: string;
 };
 
 function getRarityColor(rarity: number) {
@@ -537,19 +566,23 @@ const CharacterImage: React.FC<CharacterImageProps> = React.memo((props) => {
             alt={displayCharClass(char.class)}
           />
         )}
-        {props.count && props.count > 1 && (
+        {props.count && (
           <div
             css={css`
               position: absolute;
-              bottom: 15px;
+              bottom: ${props.showCharPer ? "10px" : "15px"};
               right: 4px;
-              font-size: 24px;
+              font-size: ${props.showCharPer ? "16px" : "24px"};
               font-weight: 700;
               color: #000000;
               text-shadow: 0 0 4px #ffffff, 0 0 4px #ffffff;
             `}
           >
-            {props.count}
+            {props.showCharPer
+              ? props.charPer
+              : props.count > 1
+              ? props.count
+              : ""}
           </div>
         )}
         {char.pickUp && (
