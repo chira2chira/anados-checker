@@ -53,7 +53,8 @@
       "saved": "Saved.",
       "copiedShareLink": "Share URL Copied.",
       "failedCopyShareLink": "Failed to Copy Share Link.",
-      "copyToClipboard": "Copy to Clipboard"
+      "copyToClipboard": "Copy to Clipboard",
+      "viewingShared": "Viewing shared data"
     },
     "text": {
       "overall": "Overall",

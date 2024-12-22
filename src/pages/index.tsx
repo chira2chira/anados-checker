@@ -21,7 +21,7 @@ import {
 import ClassButton from "@/components/ClassButton";
 import FilterSelect from "@/components/FilterSelect";
 import dayjs from "dayjs";
-import { TopToaster } from "@/utils/toast";
+import { BottomRightToaster, TopToaster } from "@/utils/toast";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -210,7 +210,7 @@ function filterTicketChar(filter: string) {
 }
 
 const Home: NextPage<HomeProps> = (props) => {
-  const { owned, setOwned, save } = useCharacterAndEidosOwnership();
+  const { owned, setOwned, save, tmpMode } = useCharacterAndEidosOwnership();
   const [filterClass, setFilterClass] = useState<CharClass[]>([]);
   const [filterOwned, setFilterOwned] = useState("none");
   const [filterLimited, setFilterLimited] = useState("none");
@@ -223,7 +223,7 @@ const Home: NextPage<HomeProps> = (props) => {
   const [openCaptureModal, setOpenCaptureModal] = useState(false);
   const { hideSpoiler, setHideSpoiler } = useContext(HideSpoilerContext);
   const shareUrlElm = useRef<HTMLInputElement>(null);
-  const { asPath, locale } = useRouter();
+  const { asPath, locale, push } = useRouter();
   const category = useCategoryQuery();
   const currentInfo: UnknownInfo[] =
     category === "char" ? props.charInfo : props.eidosInfo;
@@ -238,6 +238,25 @@ const Home: NextPage<HomeProps> = (props) => {
       setFlash(false);
     }, 0);
   }, [asPath]);
+
+  useEffect(() => {
+    if (tmpMode) {
+      BottomRightToaster?.show({
+        intent: "warning",
+        timeout: 0,
+        isCloseButtonShown: false,
+        message: t("ui.message.viewingShared"),
+        action: {
+          icon: "cross",
+          onClick: () => {
+            push({ pathname: "/" });
+          },
+        },
+      });
+    } else {
+      BottomRightToaster?.clear();
+    }
+  }, [push, t, tmpMode]);
 
   const { rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7 } =
     useMemo(() => {
@@ -602,7 +621,7 @@ const Home: NextPage<HomeProps> = (props) => {
               align-items: center;
               color: #d3d8de;
               position: sticky;
-              bottom: 20px;
+              bottom: ${tmpMode ? "60px" : "20px"};
               background: rgba(17, 20, 24, 0.7);
 
               opacity: 1;

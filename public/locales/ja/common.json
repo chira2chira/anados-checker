@@ -53,7 +53,8 @@
       "saved": "保存しました。",
       "copiedShareLink": "共有リンクをクリップボードにコピーしました。",
       "failedCopyShareLink": "共有リンクのコピーに失敗しました。",
-      "copyToClipboard": "クリップボードにコピーする"
+      "copyToClipboard": "クリップボードにコピーする",
+      "viewingShared": "共有データを表示中"
     },
     "text": {
       "overall": "所持率",

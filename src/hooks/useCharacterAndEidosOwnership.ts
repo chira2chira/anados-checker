@@ -61,5 +61,5 @@ export default function useCharacterAndEidosOwnership() {
     }
   }, [asPath]);
 
-  return { owned, setOwned, setCharOwned, setEidosOwned, save };
+  return { owned, setOwned, setCharOwned, setEidosOwned, save, tmpMode };
 }
