@@ -149,7 +149,8 @@ function filterReleaseChar(filter: string) {
 const INELIGIBLE_CHAR = ["Gaia", "Barboros", "New Look Barboros"];
 function filterTicketChar(filter: string) {
   return function (info: UnknownInfo) {
-    // TODO: エイドス装備のフィルタリング
+    if (!isCharInfo(info)) return true;
+
     switch (filter) {
       case "none":
         return true;
