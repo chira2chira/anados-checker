@@ -1,27 +1,9 @@
 import { isProd } from "../../utils/env";
 import { GA_GA4_ID } from "../../utils/gtag";
+import { GoogleAnalytics as GA } from "@next/third-parties/google";
 
-const GoogleAnalytics: React.FC = (props) => {
-  return (
-    <>
-      {/* Global site tag (gtag.js) - Google Analytics */}
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_GA4_ID}`}
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: isProd
-            ? `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-            `
-            : "",
-        }}
-      />
-    </>
-  );
+const GoogleAnalytics: React.FC = () => {
+  return isProd && <GA gaId={GA_GA4_ID} />;
 };
 
 export default GoogleAnalytics;

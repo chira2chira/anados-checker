@@ -10,7 +10,6 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import GoogleAnalytics from "../components/GoogleAnalytics";
-import usePageView from "../hooks/usePageView";
 import HideSpoilerProvider from "@/providers/HideSpoilerProvider";
 
 FocusStyleManager.onlyShowFocusOnTabs();
@@ -20,9 +19,6 @@ dayjs.extend(timezone);
 dayjs.tz.setDefault("Asia/Tokyo");
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { asPath } = useRouter();
-  usePageView(asPath);
-
   return (
     <>
       <HideSpoilerProvider>
