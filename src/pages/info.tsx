@@ -1,21 +1,25 @@
 import { GetStaticProps, NextPage } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { ChangeEventHandler, useRef, useState } from "react";
+import { ChangeEventHandler, useContext, useRef, useState } from "react";
 import { css } from "@emotion/react";
 import { Button, Card, H3 } from "@blueprintjs/core";
 import { Container } from "@/components/Container";
 import { sendEvent } from "@/utils/gtag";
+import { parseLocalStorageCustomLabel } from "@/utils/charUtil";
+import { CustomLabelContext } from "@/providers/CustomLabelProvider";
 
 const CHAR_KEY = "chars";
 const EIDOS_KEY = "eidos";
 const STILL_KEY = "still";
+const CLABEL_KEY = "still_customlabel";
 
 type BackupData = {
   version: Number;
   char: string | null;
   eidos: string | null;
   still: string | null;
+  customLabel: string | null;
 };
 
 type InfoProps = {};
@@ -38,6 +42,7 @@ const Info: NextPage<InfoProps> = () => {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const inputFileRef = useRef<HTMLInputElement>(null);
+  const { setCustomLabels } = useContext(CustomLabelContext);
   const { t } = useTranslation("info");
 
   const exportBackup = () => {
@@ -45,6 +50,7 @@ const Info: NextPage<InfoProps> = () => {
     const storedCharValue = window.localStorage.getItem(CHAR_KEY);
     const storedEidosValue = window.localStorage.getItem(EIDOS_KEY);
     const storedStillValue = window.localStorage.getItem(STILL_KEY);
+    const storedCustomLabelValue = window.localStorage.getItem(CLABEL_KEY);
     if (!storedCharValue && !storedEidosValue && !storedStillValue) {
       return setError(t("message.e_dataNotFound"));
     }
@@ -54,6 +60,7 @@ const Info: NextPage<InfoProps> = () => {
       char: storedCharValue,
       eidos: storedEidosValue,
       still: storedStillValue,
+      customLabel: storedCustomLabelValue,
     };
     const blob = new Blob([JSON.stringify(data)], {
       type: "application/json",
@@ -116,6 +123,10 @@ const Info: NextPage<InfoProps> = () => {
     if (!!json.still) {
       imported.push(t("message.still"));
       window.localStorage.setItem(STILL_KEY, json.still);
+    }
+    if (!!json.customLabel) {
+      imported.push(t("message.customLabel"));
+      setCustomLabels(parseLocalStorageCustomLabel(json.customLabel));
     }
     setMessage(t("message.importComplete") + imported.join(", "));
 

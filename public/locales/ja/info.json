@@ -12,6 +12,7 @@
     "char": "キャラクター",
     "eidos": "エイドス装備",
     "still": "スチル",
+    "customLabel": "カスタムラベル",
     "backupOverview": "所持ステータスとスチル管理データをバックアップできます。",
     "importComplete": "インポート完了：",
     "e_dataNotFound": "バックアップするデータがありません。",
