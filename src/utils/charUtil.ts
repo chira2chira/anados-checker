@@ -13,6 +13,10 @@ export function parseLocalStorageEidos(value: string) {
   return value.split(",").map(Number);
 }
 
+export function parseLocalStorageCustomLabel(value: string) {
+  return value.split(",");
+}
+
 export function parseLocalStorageStill(value: string): StillState[] {
   let data;
   try {

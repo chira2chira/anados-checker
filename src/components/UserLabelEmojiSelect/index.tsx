@@ -1,4 +1,4 @@
-import { Colors, HTMLSelect, OptionProps } from "@blueprintjs/core";
+import { HTMLSelect, OptionProps } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 
 type UserLabelEmojiSelectProps = {
@@ -8,12 +8,22 @@ type UserLabelEmojiSelectProps = {
 };
 const UserLabelEmojiSelect: React.FC<UserLabelEmojiSelectProps> = (props) => {
   return (
-    <HTMLSelect
-      iconName="caret-down"
-      value={props.value}
-      options={props.options}
-      onChange={(e) => props.onChange(e.currentTarget.value)}
-    />
+    <div
+      css={css`
+        & select {
+          max-width: 6.9em;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      `}
+    >
+      <HTMLSelect
+        iconName="caret-down"
+        value={props.value}
+        options={props.options}
+        onChange={(e) => props.onChange(e.currentTarget.value)}
+      />
+    </div>
   );
 };
 

@@ -8,7 +8,11 @@
     "eidosStill": "Eidos",
     "stillRoulette": "Still Roulette",
     "start": "Start",
-    "restart": "Draw lots again"
+    "restart": "Draw lots again",
+    "labelSettings": "Custom Label",
+    "labelSave": "Save",
+    "labelCancel": "Cancel",
+    "labelReset": "Reset to Defaults"
   },
   "text": {
     "todayStillIs": "Your still for today is...",

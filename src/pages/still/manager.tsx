@@ -17,12 +17,13 @@ import FilterSelect from "@/components/FilterSelect";
 import ClassButton from "@/components/ClassButton";
 import { sendEvent } from "@/utils/gtag";
 import { TopToaster } from "@/utils/toast";
-import { getUserLabelEmoji } from "@/utils/userLabelEnum";
 import CharacterAndStillList from "@/components/CharacterAndStillList";
 import { StillRouletteModal } from "@/components/StillRouletteModal";
 import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 import useStillState from "@/hooks/useStillState";
 import useCharacterOwnership from "@/hooks/useCharacterOwnership";
+import { CustomLabelModal } from "@/components/CustomLabelModal";
+import { CustomLabelContext } from "@/providers/CustomLabelProvider";
 
 type StillManagerProps = {
   charInfoWithStills: CharInfoWithStill[];
@@ -138,7 +139,9 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   const [filterRate, setFilterRate] = useState("none");
   const [layout, setLayout] = useState<"grid" | "list">("grid");
   const [rouletteOpen, setRouletteOpen] = useState(false);
+  const [labelModalOpen, setLabelModalOpen] = useState(false);
   const { hideSpoiler, setHideSpoiler } = useContext(HideSpoilerContext);
+  const { customLabels } = useContext(CustomLabelContext);
   const { t } = useTranslation("common");
   const { t: t2 } = useTranslation("still");
 
@@ -418,24 +421,40 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
               onChange={setFilterRate}
               options={[
                 { value: "none", label: t("ui.filter.userLabelBy") },
-                { value: "0", label: getUserLabelEmoji(0) },
-                { value: "1", label: getUserLabelEmoji(1) },
-                { value: "2", label: getUserLabelEmoji(2) },
-                { value: "3", label: getUserLabelEmoji(3) },
-                { value: "4", label: getUserLabelEmoji(4) },
-                { value: "5", label: getUserLabelEmoji(5) },
-                { value: "6", label: getUserLabelEmoji(6) },
+                { value: "0", label: customLabels[0] },
+                { value: "1", label: customLabels[1] },
+                { value: "2", label: customLabels[2] },
+                { value: "3", label: customLabels[3] },
+                { value: "4", label: customLabels[4] },
+                { value: "5", label: customLabels[5] },
+                { value: "6", label: customLabels[6] },
               ]}
             />
           </div>
 
-          <Switch
-            checked={hideSpoiler}
-            label={t("ui.button.spoilerFilter")}
-            onChange={() => {
-              setHideSpoiler(!hideSpoiler);
-            }}
-          />
+          <div
+            css={css`
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            `}
+          >
+            <Switch
+              style={{ marginBottom: "0" }}
+              checked={hideSpoiler}
+              label={t("ui.button.spoilerFilter")}
+              onChange={() => {
+                setHideSpoiler(!hideSpoiler);
+              }}
+            />
+            <Button
+              minimal
+              onClick={() => setLabelModalOpen(true)}
+              icon="settings"
+            >
+              {t2("button.labelSettings")}
+            </Button>
+          </div>
         </div>
 
         <div
@@ -572,6 +591,10 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
         isOpen={rouletteOpen}
         charInfoArr={[rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7]}
         onClose={() => setRouletteOpen(false)}
+      />
+      <CustomLabelModal
+        isOpen={labelModalOpen}
+        onClose={() => setLabelModalOpen(false)}
       />
     </Container>
   );

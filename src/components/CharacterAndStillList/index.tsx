@@ -6,9 +6,9 @@ import { Button, Card, Icon, Tooltip } from "@blueprintjs/core";
 import { dequal } from "dequal";
 import { displayCharClass } from "@/utils/stringUtil";
 import { CharInfoWithStill } from "@/utils/yamlUtil";
-import { getUserLabelEmoji } from "@/utils/userLabelEnum";
 import UserLabelEmojiSelect from "../UserLabelEmojiSelect";
 import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
+import { CustomLabelContext } from "@/providers/CustomLabelProvider";
 
 const SPOILER_CHARS = [143, 150];
 
@@ -162,6 +162,7 @@ type StillCardProps = {
 };
 
 const StillCard: React.FC<StillCardProps> = (props) => {
+  const { customLabels } = useContext(CustomLabelContext);
   const { t } = useTranslation();
 
   if (props.gridMode && !props.open) return props.children;
@@ -258,13 +259,13 @@ const StillCard: React.FC<StillCardProps> = (props) => {
                     onChange={(v) => props.onRateChange(x.id, Number(v))}
                     options={[
                       { value: "-1", label: "💭" },
-                      { value: "0", label: getUserLabelEmoji(0) },
-                      { value: "1", label: getUserLabelEmoji(1) },
-                      { value: "2", label: getUserLabelEmoji(2) },
-                      { value: "3", label: getUserLabelEmoji(3) },
-                      { value: "4", label: getUserLabelEmoji(4) },
-                      { value: "5", label: getUserLabelEmoji(5) },
-                      { value: "6", label: getUserLabelEmoji(6) },
+                      { value: "0", label: customLabels[0] },
+                      { value: "1", label: customLabels[1] },
+                      { value: "2", label: customLabels[2] },
+                      { value: "3", label: customLabels[3] },
+                      { value: "4", label: customLabels[4] },
+                      { value: "5", label: customLabels[5] },
+                      { value: "6", label: customLabels[6] },
                     ]}
                   />
                 </div>

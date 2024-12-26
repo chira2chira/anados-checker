@@ -8,7 +8,11 @@
     "eidosStill": "エイドス",
     "stillRoulette": "おかずルーレット",
     "start": "抽選開始",
-    "restart": "再抽選"
+    "restart": "再抽選",
+    "labelSettings": "カスタムラベル",
+    "labelSave": "保存",
+    "labelCancel": "キャンセル",
+    "labelReset": "初期値にリセット"
   },
   "text": {
     "todayStillIs": "あなたの今日のおかずは･･････",
