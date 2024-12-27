@@ -1069,7 +1069,7 @@
       "seq": 20,
       "shared": [5003, 6027],
       "group": [5003, 5059, 6027],
-      "label": "still04_brut_eidos",
+      "label": "still04_brute_eidos",
       "image": "StillThumbnail_bg_brute_still03_mosaic_001.webp"
     },
     {
@@ -2177,12 +2177,28 @@
       "image": "StillThumbnail_bg_rougarou_still03_mosaic_003.webp"
     },
     {
+      "charId": 5073,
+      "seq": 1,
+      "shared": [5073],
+      "group": [5073],
+      "label": "still01_bulkski",
+      "image": "StillThumbnail_bg_bulkskiy_still01_mosaic_001.webp"
+    },
+    {
       "charId": 5074,
       "seq": 70,
       "shared": [5074],
       "group": [5074],
       "label": "wd_028",
       "image": "StillThumbnail_bg_todorf_storystill02_mosaic_004.webp"
+    },
+    {
+      "charId": 5074,
+      "seq": 71,
+      "shared": [5074],
+      "group": [5074],
+      "label": "wd_029",
+      "image": "StillThumbnail_bg_anagura_storystill01_mosaic_001.webp"
     },
     {
       "charId": 5075,
@@ -2209,6 +2225,14 @@
       "image": "StillThumbnail_bg_todorf_storystill02_mosaic_004.webp"
     },
     {
+      "charId": 5076,
+      "seq": 5,
+      "shared": [5076],
+      "group": [],
+      "label": "still03_chabo",
+      "image": "StillThumbnail_bg_chabo_still03_mosaic_001.webp"
+    },
+    {
       "charId": 5077,
       "seq": 70,
       "shared": [5077],
@@ -2223,6 +2247,14 @@
       "group": [5077],
       "label": "wd_028",
       "image": "StillThumbnail_bg_todorf_storystill02_mosaic_001.webp"
+    },
+    {
+      "charId": 5077,
+      "seq": 72,
+      "shared": [5077],
+      "group": [5077],
+      "label": "wd_029",
+      "image": "StillThumbnail_bg_anagura_storystill01_mosaic_001.webp"
     },
     {
       "charId": 6001,
