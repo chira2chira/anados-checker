@@ -256,7 +256,8 @@ const Home: NextPage<HomeProps> = (props) => {
     } else {
       BottomRightToaster?.clear();
     }
-  }, [push, t, tmpMode]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [t, tmpMode]); // pushすると再発火してしまうためpushはdepsに入れない
 
   const { rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7 } =
     useMemo(() => {
