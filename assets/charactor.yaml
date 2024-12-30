@@ -2284,3 +2284,23 @@
   limited: false
   release: 12/20/2024
   image: 90px-FS_golem_engineer.png
+- id: 237
+  unitId: 5078
+  nameJa: デモンズモナーク ザハロフ
+  nameEn: Manarch of Demons Zacharoff
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: true
+  release: 1/1/2025
+  image: 90px-FS_zacharoff_(demon).png
+- id: 238
+  unitId: 6093
+  nameJa: ハマム
+  nameEn: Hamamsh
+  rarity: 6
+  class: guard
+  deployment: low
+  limited: false
+  release: 1/1/2025
+  image: 90px-FS_hamamsh.png
