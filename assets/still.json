@@ -2276,7 +2276,7 @@
       "charId": 6002,
       "seq": 1,
       "shared": [6002, 6052],
-      "group": [6002, 6052],
+      "group": [5078, 6002, 6052],
       "label": "still01_zacharoff",
       "image": "StillThumbnail_bg_zacharoff_still01_mosaic_001.webp"
     },
@@ -2284,7 +2284,7 @@
       "charId": 6002,
       "seq": 3,
       "shared": [6002, 6052],
-      "group": [6002, 6052],
+      "group": [5078, 6002, 6052],
       "label": "still03_zacharoff",
       "image": "StillThumbnail_bg_zacharoff_still03_mosaic_B001.webp"
     },
@@ -2292,7 +2292,7 @@
       "charId": 6002,
       "seq": 4,
       "shared": [6002, 6052],
-      "group": [6002, 6052],
+      "group": [5078, 6002, 6052],
       "label": "still04_zacharoff_secret_126002",
       "image": "StillThumbnail_bg_zacharoff_still04_mosaic_001.webp"
     },
@@ -2300,7 +2300,7 @@
       "charId": 6002,
       "seq": 50,
       "shared": [6002, 6052],
-      "group": [6002, 6052],
+      "group": [5078, 6002, 6052],
       "label": "main_005_021",
       "image": "StillThumbnail_bg_zacharoff_storystill01_mosaic_004.webp"
     },
@@ -2308,7 +2308,7 @@
       "charId": 6002,
       "seq": 51,
       "shared": [6002, 6052],
-      "group": [6002, 6052],
+      "group": [5078, 6002, 6052],
       "label": "main_005_032",
       "image": "StillThumbnail_bg_zacharoff_still03_mosaic_001.webp"
     },
