@@ -143,6 +143,8 @@ function filterReleaseChar(filter: string) {
         return dayjs(info.release).year() === 2023;
       case "2024":
         return dayjs(info.release).year() === 2024;
+      case "2025":
+        return dayjs(info.release).year() === 2025;
     }
   };
 }
@@ -204,6 +206,15 @@ function filterTicketChar(filter: string) {
           (info.limited
             ? dayjs(info.release).isBefore(dayjs("2024/6/29"))
             : dayjs(info.release).isBefore(dayjs("2024/11/16")))
+        );
+      case "aniv3.5":
+        // 仮
+        if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
+        return (
+          info.rarity >= 4 &&
+          (info.limited
+            ? dayjs(info.release).isBefore(dayjs("2024/12/21"))
+            : dayjs(info.release).isBefore(dayjs("2025/6/21")))
         );
     }
   };
@@ -529,6 +540,7 @@ const Home: NextPage<HomeProps> = (props) => {
                 { value: "2022", label: t("ui.filter.year2022") },
                 { value: "2023", label: t("ui.filter.year2023") },
                 { value: "2024", label: t("ui.filter.year2024") },
+                { value: "2025", label: t("ui.filter.year2025") },
               ]}
             />
 
@@ -543,6 +555,7 @@ const Home: NextPage<HomeProps> = (props) => {
                 { value: "aniv2.0", label: t("ui.filter.aniv2.0") },
                 { value: "aniv2.5", label: t("ui.filter.aniv2.5") },
                 { value: "aniv3.0", label: t("ui.filter.aniv3.0") },
+                { value: "aniv3.5", label: t("ui.filter.aniv3.5") },
               ]}
             />
           </div>
