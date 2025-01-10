@@ -249,6 +249,14 @@
       "image": "StillThumbnail_bg_seals_ch05_storystill01_mosaic_A001.webp"
     },
     {
+      "charId": 2019,
+      "seq": 70,
+      "shared": [2019],
+      "group": [2019],
+      "label": "db_012",
+      "image": "StillThumbnail_bg_hamamsh_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 2020,
       "seq": 1,
       "shared": [2020],
@@ -2090,6 +2098,14 @@
     },
     {
       "charId": 5063,
+      "seq": 1,
+      "shared": [5063],
+      "group": [5063],
+      "label": "still01_bgoremtheta",
+      "image": "StillThumbnail_bg_biogolemtheta_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 5063,
       "seq": 50,
       "shared": [5063],
       "group": [5063],
@@ -3615,6 +3631,14 @@
       "group": [],
       "label": "still04_harold",
       "image": "StillThumbnail_bg_harold_still04_mosaic_002.webp"
+    },
+    {
+      "charId": 6093,
+      "seq": 70,
+      "shared": [6093],
+      "group": [6093],
+      "label": "db_012",
+      "image": "StillThumbnail_bg_hamamsh_storystill01_mosaic_004.webp"
     },
     {
       "charId": 7001,
