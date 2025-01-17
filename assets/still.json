@@ -956,7 +956,7 @@
       "charId": 4012,
       "seq": 1,
       "shared": [4012],
-      "group": [4012],
+      "group": [4012, 6094],
       "label": "still01_alec",
       "image": "StillThumbnail_bg_alec_still01_mosaic_001.webp"
     },
@@ -1772,7 +1772,7 @@
       "charId": 5044,
       "seq": 1,
       "shared": [5044],
-      "group": [5044, 6078],
+      "group": [5044, 5080, 6078],
       "label": "still01_solve",
       "image": "StillThumbnail_bg_solve_still01_mosaic_001.webp"
     },
@@ -2121,6 +2121,22 @@
       "image": "StillThumbnail_bg_dion_still03_mosaic_001.webp"
     },
     {
+      "charId": 5065,
+      "seq": 3,
+      "shared": [5065],
+      "group": [],
+      "label": "still03_forte",
+      "image": "StillThumbnail_bg_forte_still03_mosaic_001.webp"
+    },
+    {
+      "charId": 5067,
+      "seq": 3,
+      "shared": [5067],
+      "group": [],
+      "label": "still02_gamela",
+      "image": "StillThumbnail_bg_gamela_still02_mosaic_001.webp"
+    },
+    {
       "charId": 5068,
       "seq": 5,
       "shared": [5068],
@@ -2271,6 +2287,22 @@
       "group": [5077],
       "label": "wd_029",
       "image": "StillThumbnail_bg_anagura_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5079,
+      "seq": 70,
+      "shared": [5079],
+      "group": [5079],
+      "label": "db_012",
+      "image": "StillThumbnail_bg_hamamsh_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5079,
+      "seq": 71,
+      "shared": [5079],
+      "group": [5079],
+      "label": "db_015",
+      "image": "StillThumbnail_bg_farouk_storystill01_mosaic_001.webp"
     },
     {
       "charId": 6001,
@@ -3639,6 +3671,14 @@
       "group": [6093],
       "label": "db_012",
       "image": "StillThumbnail_bg_hamamsh_storystill01_mosaic_004.webp"
+    },
+    {
+      "charId": 6093,
+      "seq": 71,
+      "shared": [6093],
+      "group": [6093],
+      "label": "db_015",
+      "image": "StillThumbnail_bg_farouk_storystill01_mosaic_001.webp"
     },
     {
       "charId": 7001,
