@@ -2304,3 +2304,33 @@
   limited: false
   release: 1/1/2025
   image: 90px-FS_hamamsh.png
+- id: 239
+  unitId: 5079
+  nameJa: ファルク
+  nameEn: Farouk
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 1/17/2025
+  image: 90px-FS_farouk.png
+- id: 240
+  unitId: 5080
+  nameJa: シャドープリースト ソルベ
+  nameEn: Priest in the Shadows Solvé
+  rarity: 5
+  class: caster
+  deployment: high
+  limited: true
+  release: 1/17/2025
+  image: 90px-FS_solve_(demon).png
+- id: 241
+  unitId: 6094
+  nameJa: 心躍る冒険 アレク
+  nameEn: Fluttered Adventurer Alec
+  rarity: 6
+  class: guard
+  deployment: low
+  limited: true
+  release: 1/17/2025
+  image: 90px-FS_alec_(awakened).png
