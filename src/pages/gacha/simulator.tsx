@@ -194,7 +194,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
     };
     // idの指定がない場合、最新のBannerになるためgetBannerした結果と比較
     if (banner.id !== gacha.id) {
-      router.push(url);
+      router.push(url, undefined, { scroll: false });
     } else if (id === undefined) {
       router.replace(url);
     }
