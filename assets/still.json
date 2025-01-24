@@ -1689,6 +1689,14 @@
       "image": "StillThumbnail_bg_hybris_still01_mosaic_001.webp"
     },
     {
+      "charId": 5038,
+      "seq": 70,
+      "shared": [5038, 95038],
+      "group": [5038, 95038],
+      "label": "db_019",
+      "image": "StillThumbnail_bg_zacharoff_storystill04_mosaic_014.webp"
+    },
+    {
       "charId": 5039,
       "seq": 1,
       "shared": [5039],
@@ -1775,6 +1783,14 @@
       "group": [5044, 5080, 6078],
       "label": "still01_solve",
       "image": "StillThumbnail_bg_solve_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 5044,
+      "seq": 70,
+      "shared": [5044],
+      "group": [5044, 5080, 6078],
+      "label": "db_019",
+      "image": "StillThumbnail_bg_zacharoff_storystill04_mosaic_009.webp"
     },
     {
       "charId": 5045,
@@ -2305,6 +2321,14 @@
       "image": "StillThumbnail_bg_farouk_storystill01_mosaic_001.webp"
     },
     {
+      "charId": 5079,
+      "seq": 72,
+      "shared": [5079],
+      "group": [5079],
+      "label": "db_019",
+      "image": "StillThumbnail_bg_zacharoff_storystill04_mosaic_014.webp"
+    },
+    {
       "charId": 6001,
       "seq": 1,
       "shared": [6001, 6034],
@@ -2361,6 +2385,14 @@
       "image": "StillThumbnail_bg_zacharoff_still03_mosaic_001.webp"
     },
     {
+      "charId": 6002,
+      "seq": 70,
+      "shared": [6002, 6052],
+      "group": [5078, 6002, 6052],
+      "label": "db_019",
+      "image": "StillThumbnail_bg_zacharoff_storystill04_mosaic_001.webp"
+    },
+    {
       "charId": 6003,
       "seq": 1,
       "shared": [6003],
@@ -2415,6 +2447,14 @@
       "group": [5024, 6004, 6050],
       "label": "mjbc_011",
       "image": "StillThumbnail_bg_mjbcstory001_mosaic_001.webp"
+    },
+    {
+      "charId": 6004,
+      "seq": 71,
+      "shared": [5024, 6004, 6050],
+      "group": [5024, 6004, 6050],
+      "label": "db_019",
+      "image": "StillThumbnail_bg_zacharoff_storystill04_mosaic_001.webp"
     },
     {
       "charId": 6005,
@@ -3679,6 +3719,14 @@
       "group": [6093],
       "label": "db_015",
       "image": "StillThumbnail_bg_farouk_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 6093,
+      "seq": 72,
+      "shared": [6093],
+      "group": [6093],
+      "label": "db_019",
+      "image": "StillThumbnail_bg_zacharoff_storystill04_mosaic_009.webp"
     },
     {
       "charId": 7001,
