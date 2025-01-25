@@ -250,6 +250,7 @@ const Preview: React.FC<PreviewProps> = (props) => {
           css={css`
             width: 100%;
             text-align: right;
+            line-height: 1.3;
             font-size: 80%;
           `}
         >
