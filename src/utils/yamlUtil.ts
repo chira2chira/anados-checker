@@ -56,13 +56,24 @@ export function loadCharactors() {
 }
 
 export function loadEidosMaster() {
+  const charInfo: CharInfo[] = loadYaml<CharInfo[]>("assets/charactor.yaml");
   const eidosInfo: EidosInfo[] = loadYaml<EidosInfo[]>("assets/eidos.yaml")
-    .map((x) => ({
-      ...x,
-      image: x.image ?? "now_printing.png",
-      release: x.release,
-      owned: false,
-    }))
+    .map((x) => {
+      const char = charInfo.find((y) => y.unitId === x.unitId);
+      if (char === undefined) {
+        throw new Error(
+          `エイドスに対応するキャラクターが見つからない: ${x.id}`
+        );
+      }
+      return {
+        ...x,
+        unitNameJa: char.nameJa,
+        unitNameEn: char.nameEn,
+        image: x.image ?? "now_printing.png",
+        release: x.release,
+        owned: false,
+      };
+    })
     .sort(
       (x, y) => new Date(x.release).getTime() - new Date(y.release).getTime()
     );

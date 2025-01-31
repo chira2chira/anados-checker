@@ -15,7 +15,7 @@ import { Container } from "@/components/Container";
 import { SelectBannerModal } from "@/components/SelectBannerModal";
 import { RateListModal, calcPickUpRate } from "@/components/RateListModal";
 import { sendEvent } from "@/utils/gtag";
-import { isCharInfo } from "@/utils/types";
+import { isCharInfo, isEidosInfo } from "@/utils/types";
 import useCategoryQuery, { PageCategory } from "@/hooks/useCategoryQuery";
 
 type CharWeight = {
@@ -528,11 +528,16 @@ function getRarityColor(rarity: number) {
 const CharacterImage: React.FC<CharacterImageProps> = React.memo((props) => {
   const { char } = props;
   const { i18n } = useTranslation();
+  const isJa = i18n.language === "ja";
   const basePath = isCharInfo(char)
     ? "/static/image/char/"
     : "/static/image/eidos/";
 
-  const charName = i18n.language === "ja" ? char.nameJa : char.nameEn;
+  let charName = isJa ? char.nameJa : char.nameEn;
+  if (isEidosInfo(char)) {
+    charName += isJa ? `（${char.unitNameJa}）` : ` (${char.unitNameEn})`;
+  }
+
   return (
     <Tooltip minimal compact content={charName} position="bottom">
       <div

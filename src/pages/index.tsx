@@ -62,9 +62,11 @@ export type CharInfo = {
 export type EidosInfo = {
   id: number;
   eidosId: number;
-  unitId: number;
   nameJa: string;
   nameEn: string;
+  unitId: number;
+  unitNameJa: string;
+  unitNameEn: string;
   rarity: number;
   limited: boolean;
   release: string;
