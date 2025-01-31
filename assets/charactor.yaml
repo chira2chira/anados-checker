@@ -2334,3 +2334,33 @@
   limited: true
   release: 1/17/2025
   image: 90px-FS_alec_(awakened).png
+- id: 242
+  unitId: 2025
+  nameJa: タツノオトシゴ
+  nameEn: Seahorse
+  rarity: 2
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 1/31/2025
+  image: 90px-FS_seahorse.png
+- id: 243
+  unitId: 2026
+  nameJa: デンキウナギ
+  nameEn: Electric Eel
+  rarity: 2
+  class: caster
+  deployment: high
+  limited: false
+  release: 1/31/2025
+  image: 90px-FS_electric_eel.png
+- id: 244
+  unitId: 2027
+  nameJa: タコ海人
+  nameEn: Octopoid Sea Dweller
+  rarity: 2
+  class: shooter
+  deployment: high
+  limited: false
+  release: 1/31/2025
+  image: 90px-FS_octopoid.png
