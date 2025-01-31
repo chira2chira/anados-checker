@@ -281,6 +281,54 @@
       "image": "StillThumbnail_bg_sailor_storystill01_mosaic_cumoff_001.webp"
     },
     {
+      "charId": 2025,
+      "seq": 70,
+      "shared": [2025],
+      "group": [2025],
+      "label": "dlv_021",
+      "image": "StillThumbnail_bg_pollonorta_still03_mosaic_005.webp"
+    },
+    {
+      "charId": 2026,
+      "seq": 70,
+      "shared": [2026],
+      "group": [2026],
+      "label": "dlv_012",
+      "image": "StillThumbnail_bg_garoad_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 2026,
+      "seq": 71,
+      "shared": [2026],
+      "group": [2026],
+      "label": "dlv_014",
+      "image": "StillThumbnail_bg_merman_storystill01_mosaic_A001.webp"
+    },
+    {
+      "charId": 2026,
+      "seq": 72,
+      "shared": [2026],
+      "group": [2026],
+      "label": "dlv_021",
+      "image": "StillThumbnail_bg_pollonorta_still03_mosaic_005.webp"
+    },
+    {
+      "charId": 2027,
+      "seq": 70,
+      "shared": [2027],
+      "group": [2027],
+      "label": "dlv_014",
+      "image": "StillThumbnail_bg_merman_storystill01_mosaic_B001.webp"
+    },
+    {
+      "charId": 2027,
+      "seq": 71,
+      "shared": [2027],
+      "group": [2027],
+      "label": "dlv_021",
+      "image": "StillThumbnail_bg_pollonorta_still03_mosaic_005.webp"
+    },
+    {
       "charId": 3001,
       "seq": 1,
       "shared": [3001],
@@ -1054,7 +1102,7 @@
       "shared": [5002],
       "group": [5002],
       "label": "still02_sol_eidos",
-      "image": "StillThumbnail_bg_sol_still02_mosaic_001.webp"
+      "image": "StillThumbnail_bg_sol_still02_mosaic_009.webp"
     },
     {
       "charId": 5003,
@@ -1754,6 +1802,14 @@
     },
     {
       "charId": 5042,
+      "seq": 21,
+      "shared": [5042],
+      "group": [5042, 6092],
+      "label": "still03_harold_eidos",
+      "image": "StillThumbnail_bg_harold_still03_mosaic_001.webp"
+    },
+    {
+      "charId": 5042,
       "seq": 70,
       "shared": [5042],
       "group": [5042, 6092],
@@ -2145,6 +2201,14 @@
       "image": "StillThumbnail_bg_forte_still03_mosaic_001.webp"
     },
     {
+      "charId": 5066,
+      "seq": 5,
+      "shared": [5066],
+      "group": [],
+      "label": "still03_siddeley",
+      "image": "StillThumbnail_bg_siddeley_still03_mosaic_001.webp"
+    },
+    {
       "charId": 5067,
       "seq": 3,
       "shared": [5067],
@@ -2279,6 +2343,14 @@
       "group": [],
       "label": "still03_chabo",
       "image": "StillThumbnail_bg_chabo_still03_mosaic_001.webp"
+    },
+    {
+      "charId": 5077,
+      "seq": 1,
+      "shared": [5077],
+      "group": [5077],
+      "label": "still01_todolf",
+      "image": "StillThumbnail_bg_todorf_still01_mosaic_001.webp"
     },
     {
       "charId": 5077,
@@ -2567,6 +2639,14 @@
       "group": [6008, 6053],
       "label": "still03_bart",
       "image": "StillThumbnail_bg_bart_still03_mosaic_A001.webp"
+    },
+    {
+      "charId": 6008,
+      "seq": 20,
+      "shared": [6008, 6053],
+      "group": [6008, 6053],
+      "label": "still02_bart_eidos",
+      "image": "StillThumbnail_bg_bart_still02_mosaic_001.webp"
     },
     {
       "charId": 6009,
@@ -3022,7 +3102,7 @@
       "shared": [6022, 6047],
       "group": [6022, 6047],
       "label": "still04_azmond_eidos",
-      "image": "StillThumbnail_bg_azmond_still04_mosaic_001.webp"
+      "image": "StillThumbnail_bg_azmond_still04_mosaic_011.webp"
     },
     {
       "charId": 6022,
@@ -3498,6 +3578,14 @@
     },
     {
       "charId": 6075,
+      "seq": 20,
+      "shared": [6075],
+      "group": [6075],
+      "label": "still02_domey_eidos",
+      "image": "StillThumbnail_bg_domey_still02_mosaic_004.webp"
+    },
+    {
+      "charId": 6075,
       "seq": 50,
       "shared": [6075],
       "group": [6075],
@@ -3511,6 +3599,14 @@
       "group": [6076],
       "label": "still01_mammon",
       "image": "StillThumbnail_bg_drmamon_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 6076,
+      "seq": 20,
+      "shared": [6076],
+      "group": [6076],
+      "label": "still02_mammon_eidos",
+      "image": "StillThumbnail_bg_drmamon_still02_mosaic_004.webp"
     },
     {
       "charId": 6076,
