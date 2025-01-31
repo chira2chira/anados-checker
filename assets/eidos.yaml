@@ -322,3 +322,39 @@
   limited: false
   release: 12/20/2024
   image: WeaponIcon_6004.png
+- id: 37
+  eidosId: 5009
+  unitId: 6076
+  nameJa: こんなのラクショーなんでい！
+  nameEn: This is a Walk in the Park for Me!
+  rarity: 5
+  limited: false
+  release: 1/31/2025
+  image: WeaponIcon_5009.png
+- id: 38
+  eidosId: 5010
+  unitId: 6008
+  nameJa: 温もりを分かち合って
+  nameEn: Sharing Warmth
+  rarity: 5
+  limited: false
+  release: 1/31/2025
+  image: WeaponIcon_5010.png
+- id: 39
+  eidosId: 6005
+  unitId: 6075
+  nameJa: 親方の枕営業
+  nameEn: Boss Sleeping His Way to the Top
+  rarity: 6
+  limited: false
+  release: 1/31/2025
+  image: WeaponIcon_6005.png
+- id: 40
+  eidosId: 6006
+  unitId: 5042
+  nameJa: 対尋問特別訓練
+  nameEn: Specialized Anti-Interrogation Training
+  rarity: 6
+  limited: false
+  release: 1/31/2025
+  image: WeaponIcon_6006.png
