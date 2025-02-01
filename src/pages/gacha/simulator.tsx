@@ -6,7 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { UrlObject } from "url";
 import React, { useEffect, useMemo, useState } from "react";
 import { Button, ButtonGroup, Checkbox, Tooltip } from "@blueprintjs/core";
-import { css } from "@emotion/react";
+import { css, keyframes } from "@emotion/react";
 import type { CharInfo, EidosInfo, UnknownInfo } from "..";
 import { loadEidosGachaMaster, loadGachaMaster } from "@/utils/yamlUtil";
 import { gacha } from "@/utils/gacha";
@@ -326,7 +326,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
         {pullResult.length === 0 && <NoData />}
         {pullResult.map((x, i) => (
           <CharacterImage
-            key={`${i}:${x.id}`}
+            key={`${i}:${pullHistory.length}`}
             highlightPu={highlightPu}
             showCharPer={false}
             char={x}
@@ -550,12 +550,14 @@ const CharacterImage: React.FC<CharacterImageProps> = React.memo((props) => {
           opacity: ${props.highlightPu && !props.char.pickUp ? 0.4 : 1};
         `}
       >
-        <img
-          src={basePath + char.image}
-          width="54px"
-          height="54px"
-          alt={charName}
-        />
+        <ShinyBox>
+          <img
+            src={basePath + char.image}
+            width="54px"
+            height="54px"
+            alt={charName}
+          />
+        </ShinyBox>
         {isCharInfo(char) && (
           <img
             css={css`
@@ -631,6 +633,40 @@ const ResultRate: React.FC<ResultRateProps> = (props) => {
     >
       <span css={style}>{formatRate(percent)}%</span>
     </Tooltip>
+  );
+};
+
+const shiny = keyframes`
+    0% { transform: scale(0) rotate(45deg); opacity: 0; }
+    1% { transform: scale(0) rotate(45deg); opacity: 0.4; }
+    2% { transform: scale(4) rotate(45deg); opacity: 0.8; }
+    100% { transform: scale(50) rotate(45deg); opacity: 0; }
+`;
+
+const ShinyBox: React.FC<{ children: React.ReactNode }> = (props) => {
+  return (
+    <div
+      css={css`
+        margin: -3px;
+        padding: 3px;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          position: absolute;
+          content: "";
+          display: inline-block;
+          top: -180px;
+          left: 0;
+          width: 20px;
+          height: 100%;
+          background-color: #ffffff;
+          animation: 0.8s ${shiny} ease-in-out;
+        }
+      `}
+    >
+      {props.children}
+    </div>
   );
 };
 
