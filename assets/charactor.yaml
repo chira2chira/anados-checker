@@ -2364,3 +2364,23 @@
   limited: false
   release: 1/31/2025
   image: 90px-FS_octopoid.png
+- id: 245
+  unitId: 5081
+  nameJa: ジゴロウ
+  nameEn: Jigoro
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: false
+  release: 2/7/2025
+  image: 90px-FS_jigoro.png
+- id: 246
+  unitId: 6095
+  nameJa: 清き流れの鉄拳 ハバキ
+  nameEn: Iron Fists of Pure Flow Habaki
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: true
+  release: 2/7/2025
+  image: 90px-FS_habaki_(awakened).png
