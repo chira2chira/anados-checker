@@ -1940,7 +1940,7 @@
       "charId": 5051,
       "seq": 1,
       "shared": [5051],
-      "group": [5051],
+      "group": [5051, 6095],
       "label": "still01_habaki",
       "image": "StillThumbnail_bg_habaki_still01_mosaic_001.webp"
     },
@@ -1948,7 +1948,7 @@
       "charId": 5051,
       "seq": 70,
       "shared": [5051],
-      "group": [5051],
+      "group": [5051, 6095],
       "label": "ise_010",
       "image": "StillThumbnail_bg_tengo_storystill02_mosaic_001.webp"
     },
@@ -1956,7 +1956,7 @@
       "charId": 5051,
       "seq": 71,
       "shared": [5051],
-      "group": [5051],
+      "group": [5051, 6095],
       "label": "ise_012",
       "image": "StillThumbnail_bg_tengo_storystill01_mosaic_001.webp"
     },
@@ -1964,7 +1964,7 @@
       "charId": 5051,
       "seq": 72,
       "shared": [5051],
-      "group": [5051],
+      "group": [5051, 6095],
       "label": "ise_015",
       "image": "StillThumbnail_bg_xiaolong_storystill01_mosaic_003.webp"
     },
@@ -1972,7 +1972,7 @@
       "charId": 5051,
       "seq": 73,
       "shared": [5051],
-      "group": [5051],
+      "group": [5051, 6095],
       "label": "ise_022",
       "image": "StillThumbnail_bg_tengo_still03_mosaic_001.webp"
     },
@@ -2377,6 +2377,14 @@
       "image": "StillThumbnail_bg_anagura_storystill01_mosaic_001.webp"
     },
     {
+      "charId": 5078,
+      "seq": 5,
+      "shared": [5078],
+      "group": [],
+      "label": "still02_zacharoff",
+      "image": "StillThumbnail_bg_zacharoff_still02_mosaic_001.webp"
+    },
+    {
       "charId": 5079,
       "seq": 70,
       "shared": [5079],
@@ -2399,6 +2407,14 @@
       "group": [5079],
       "label": "db_019",
       "image": "StillThumbnail_bg_zacharoff_storystill04_mosaic_014.webp"
+    },
+    {
+      "charId": 5081,
+      "seq": 70,
+      "shared": [5081],
+      "group": [5081],
+      "label": "kgr_013",
+      "image": "StillThumbnail_bg_jigoro_storystill01_mosaic_001.webp"
     },
     {
       "charId": 6001,
@@ -3823,6 +3839,14 @@
       "group": [6093],
       "label": "db_019",
       "image": "StillThumbnail_bg_zacharoff_storystill04_mosaic_009.webp"
+    },
+    {
+      "charId": 6094,
+      "seq": 5,
+      "shared": [6094],
+      "group": [],
+      "label": "still02_alec",
+      "image": "StillThumbnail_bg_alec_still02_mosaic_001.webp"
     },
     {
       "charId": 7001,
