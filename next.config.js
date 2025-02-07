@@ -4,6 +4,19 @@ const { i18n } = require("./next-i18next.config");
 const nextConfig = {
   reactStrictMode: true,
   i18n,
+  async headers() {
+    return [
+      {
+        source: "/static/image/char/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=21600, must-revalidate", // 6 hours
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
