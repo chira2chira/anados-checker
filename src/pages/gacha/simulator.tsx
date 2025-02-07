@@ -592,19 +592,7 @@ const CharacterImage: React.FC<CharacterImageProps> = React.memo((props) => {
               : ""}
           </div>
         )}
-        {char.pickUp && (
-          <img
-            css={css`
-              position: absolute;
-              top: -2px;
-              right: -3px;
-            `}
-            src={"/static/image/common/pu.svg"}
-            alt="Pick-Up"
-            width="40px"
-            height="14px"
-          />
-        )}
+        {char.pickUp && <PickUpIcon />}
       </div>
     </Tooltip>
   );
@@ -667,6 +655,30 @@ const ShinyBox: React.FC<{ children: React.ReactNode }> = (props) => {
     >
       {props.children}
     </div>
+  );
+};
+
+const popup = keyframes`
+    0% { transform: scale(1) rotate(0); }
+    20% { transform: scale(1.8, 1.6) rotate(10deg) translateY(-2px); }
+    100% { transform: scale(1) rotate(0); }
+`;
+
+const PickUpIcon: React.FC = () => {
+  return (
+    <img
+      css={css`
+        position: absolute;
+        top: -2px;
+        right: -3px;
+        animation: 0.5s ${popup} ease-in-out;
+        z-index: 1;
+      `}
+      src={"/static/image/common/pu.svg"}
+      alt="Pick-Up"
+      width="40px"
+      height="14px"
+    />
   );
 };
 
