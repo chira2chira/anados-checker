@@ -7,7 +7,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/static/image/char/:path*",
+        source: "/static/image/(char|eidos)/:path*",
         headers: [
           {
             key: "Cache-Control",
