@@ -15,6 +15,15 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: "/static/image/(class|common)/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=43200, must-revalidate", // 12 hours
+          },
+        ],
+      },
     ];
   },
 };
