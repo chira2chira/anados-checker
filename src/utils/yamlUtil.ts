@@ -201,7 +201,7 @@ function getLabel(label: string, stillLabels: StillLabel[]) {
   if (label.startsWith("still")) {
     if (label.match(/secret_[0-9]+$/)) {
       return "Secret";
-    } else if (label.match(/eidos/)) {
+    } else if (label.match(/eidos$/)) {
       return "Eidos";
     }
     return "Still";
@@ -244,9 +244,11 @@ export function loadStillMaster() {
   const charInfoWithStills: CharInfoWithStill[] = charInfo.map((x) => {
     const stills = still.master
       .filter((y) => {
-        // 秘密とストーリースチルはgroupに入っていたら表示
+        // ストーリー、秘密、エイドススチルはgroupに入っていたら表示
         if (
-          (!y.label.startsWith("still") || y.label.match(/_secret_/i)) &&
+          (!y.label.startsWith("still") ||
+            y.label.match(/_secret_/i) ||
+            y.label.match(/eidos$/)) &&
           y.group.includes(x.unitId)
         )
           return true;
