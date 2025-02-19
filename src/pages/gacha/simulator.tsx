@@ -7,7 +7,8 @@ import { UrlObject } from "url";
 import React, { useEffect, useMemo, useState } from "react";
 import { Button, ButtonGroup, Checkbox, Tooltip } from "@blueprintjs/core";
 import { css, keyframes } from "@emotion/react";
-import type { CharInfo, EidosInfo, UnknownInfo } from "..";
+import { CharInfo, EidosInfo, UnknownInfo } from "@/types/unit";
+import { GachaInfo } from "@/types/gacha";
 import { loadEidosGachaMaster, loadGachaMaster } from "@/utils/yamlUtil";
 import { gacha } from "@/utils/gacha";
 import { displayCharClass } from "@/utils/stringUtil";
@@ -17,33 +18,6 @@ import { RateListModal, calcPickUpRate } from "@/components/RateListModal";
 import { sendEvent } from "@/utils/gtag";
 import { isCharInfo, isEidosInfo } from "@/utils/types";
 import useCategoryQuery, { PageCategory } from "@/hooks/useCategoryQuery";
-
-type CharWeight = {
-  id: number;
-  weight: number;
-};
-
-export type GachaInfo = {
-  id: number;
-  nameJa: string;
-  nameEn: string;
-  revival: boolean;
-  start: string;
-  end: string;
-  weight: Array<{
-    rarity: number;
-    weight: number;
-  }>;
-  pickUp: Array<{
-    name: string;
-    weight: number;
-  }>;
-  rarity6: string[];
-  rarity5: string[];
-  rarity4: string[];
-  rarity3: string[];
-  pool: CharWeight[];
-};
 
 type GachaSimulatorProps = {
   charInfo: CharInfo[];

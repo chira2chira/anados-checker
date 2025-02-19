@@ -1,4 +1,4 @@
-import { CharClass } from "@/pages";
+import { CharClass } from "@/types/unit";
 
 export const displayCharClass = (charClass: CharClass) => {
   switch (charClass) {

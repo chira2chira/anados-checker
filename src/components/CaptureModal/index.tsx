@@ -3,7 +3,8 @@ import { useTranslation } from "next-i18next";
 import { domToPng } from "modern-screenshot";
 import { Button, Dialog, DialogBody, Switch } from "@blueprintjs/core";
 import { css } from "@emotion/react";
-import { CharacterArea, CharInfo, UnknownInfo } from "@/pages";
+import { CharacterArea } from "@/pages";
+import { UnknownInfo } from "@/types/unit";
 import { sendEvent } from "@/utils/gtag";
 
 const BG_COLOR = "#111418";

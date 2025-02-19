@@ -1,5 +1,5 @@
 import MersenneTwister from "mersennetwister";
-import { GachaInfo } from "@/pages/gacha/simulator";
+import { GachaInfo } from "@/types/gacha";
 
 const mt = new MersenneTwister();
 

@@ -6,12 +6,9 @@ import { css } from "@emotion/react";
 import { Button, ButtonGroup, ButtonProps, Switch } from "@blueprintjs/core";
 import { forceCheck } from "react-lazyload";
 import * as styles from "@/styles/Home.module";
-import type { CharClass, CharInfo } from "..";
-import {
-  CharInfoWithStill,
-  loadStillMaster,
-  StillInfo,
-} from "@/utils/yamlUtil";
+import { CharClass, CharInfo, CharInfoWithStill } from "@/types/unit";
+import { StillInfo } from "@/types/still";
+import { loadStillMaster } from "@/utils/yamlUtil";
 import { Container } from "@/components/Container";
 import FilterSelect from "@/components/FilterSelect";
 import ClassButton from "@/components/ClassButton";
@@ -24,15 +21,10 @@ import useStillState from "@/hooks/useStillState";
 import useCharacterOwnership from "@/hooks/useCharacterOwnership";
 import { CustomLabelModal } from "@/components/CustomLabelModal";
 import { CustomLabelContext } from "@/providers/CustomLabelProvider";
+import { StillState } from "@/types/still";
 
 type StillManagerProps = {
   charInfoWithStills: CharInfoWithStill[];
-};
-
-export type StillState = {
-  id: string;
-  read: boolean;
-  rate: number;
 };
 
 type StillType = "intimacy" | "secret" | "story" | "eidos";

@@ -1,8 +1,14 @@
 import yaml from "js-yaml";
 import fs from "fs";
 import path from "path";
-import { CharClass, CharInfo, EidosInfo, UnknownInfo } from "../pages";
-import { GachaInfo } from "@/pages/gacha/simulator";
+import {
+  CharClass,
+  CharInfo,
+  EidosInfo,
+  UnknownInfo,
+  CharInfoWithStill,
+} from "@/types/unit";
+import { GachaInfo } from "@/types/gacha";
 import still from "@/../assets/still.json";
 
 const CLASS_SORT_LIST: CharClass[] = [
@@ -178,19 +184,6 @@ function generateGachaInfo(info: UnknownInfo[], yamlPath: string) {
     (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime()
   );
 }
-
-export type StillInfo = {
-  id: string;
-  seq: number;
-  label: string;
-  image: string;
-  read: boolean;
-  rate: number;
-};
-
-export type CharInfoWithStill = CharInfo & {
-  stills: StillInfo[];
-};
 
 type StillLabel = {
   id: string;

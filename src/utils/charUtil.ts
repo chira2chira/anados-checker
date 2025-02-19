@@ -1,4 +1,4 @@
-import type { StillState } from "@/pages/still/manager";
+import type { StillState } from "@/types/still";
 
 /** 間違って追加したキャラとか */
 const BAN_CHAR = [53];

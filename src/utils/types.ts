@@ -1,4 +1,4 @@
-import type { CharInfo, EidosInfo } from "@/pages";
+import type { CharInfo, EidosInfo } from "@/types/unit";
 
 export type PartialForKeys<T, U> = {
   [K in Exclude<keyof T, keyof U>]?: T[K];

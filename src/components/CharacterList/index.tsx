@@ -1,4 +1,4 @@
-import { CharInfo, UnknownInfo } from "@/pages";
+import { UnknownInfo } from "@/types/unit";
 import { displayCharClass } from "@/utils/stringUtil";
 import React, { useContext } from "react";
 import { Button, Tooltip } from "@blueprintjs/core";

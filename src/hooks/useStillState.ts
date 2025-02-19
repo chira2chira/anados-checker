@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { StillState } from "@/pages/still/manager";
+import type { StillState } from "@/types/still";
 import { deserializeStill, parseLocalStorageStill } from "@/utils/charUtil";
 
 const STILL_KEY = "still";

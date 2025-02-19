@@ -1,8 +1,8 @@
 import { useTranslation } from "next-i18next";
 import { Dialog, DialogBody, Tag } from "@blueprintjs/core";
 import { css } from "@emotion/react";
-import { GachaInfo } from "@/pages/gacha/simulator";
-import { UnknownInfo } from "@/pages";
+import { GachaInfo } from "@/types/gacha";
+import { UnknownInfo } from "@/types/unit";
 
 type RateListModal = {
   isOpen: boolean;

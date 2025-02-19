@@ -5,7 +5,7 @@ import { useTranslation } from "next-i18next";
 import { Button, Card, Icon, Tooltip } from "@blueprintjs/core";
 import { dequal } from "dequal";
 import { displayCharClass } from "@/utils/stringUtil";
-import { CharInfoWithStill } from "@/utils/yamlUtil";
+import { CharInfoWithStill } from "@/types/unit";
 import UserLabelEmojiSelect from "../UserLabelEmojiSelect";
 import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 import { CustomLabelContext } from "@/providers/CustomLabelProvider";

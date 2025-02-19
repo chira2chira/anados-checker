@@ -1,4 +1,4 @@
-import { CharClass } from "@/pages";
+import { CharClass } from "@/types/unit";
 import { displayCharClass } from "@/utils/stringUtil";
 import { Button, ButtonProps } from "@blueprintjs/core";
 import { css } from "@emotion/react";

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { Checkbox, Dialog, DialogBody, Tag } from "@blueprintjs/core";
 import { css } from "@emotion/react";
-import { GachaInfo } from "@/pages/gacha/simulator";
+import { GachaInfo } from "@/types/gacha";
 import dayjs from "dayjs";
 
 type SelectBannerModal = {

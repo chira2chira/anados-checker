@@ -2,7 +2,8 @@ import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { Button, Dialog, DialogBody } from "@blueprintjs/core";
 import { css, keyframes } from "@emotion/react";
-import { CharInfoWithStill, StillInfo } from "@/utils/yamlUtil";
+import { CharInfoWithStill } from "@/types/unit";
+import { StillInfo } from "@/types/still";
 import { sendEvent } from "@/utils/gtag";
 import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 
