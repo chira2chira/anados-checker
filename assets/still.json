@@ -652,7 +652,7 @@
       "charId": 4001,
       "seq": 1,
       "shared": [4001],
-      "group": [4001],
+      "group": [4001, 6096, 96096],
       "label": "still01_kagura",
       "image": "StillThumbnail_bg_kagura_still01_mosaic_002.webp"
     },
@@ -660,9 +660,17 @@
       "charId": 4001,
       "seq": 4,
       "shared": [4001],
-      "group": [4001],
+      "group": [4001, 6096, 96096],
       "label": "still02_kagura_secret_124001",
       "image": "StillThumbnail_bg_kagura_still02_mosaic_001.webp"
+    },
+    {
+      "charId": 4001,
+      "seq": 70,
+      "shared": [4001],
+      "group": [4001, 6096, 96096],
+      "label": "kgr_017",
+      "image": "StillThumbnail_bg_kagura_storystill01_mosaic_001.webp"
     },
     {
       "charId": 4002,
@@ -2050,6 +2058,14 @@
     },
     {
       "charId": 5055,
+      "seq": 1,
+      "shared": [5055],
+      "group": [5055],
+      "label": "still03_orion",
+      "image": "StillThumbnail_bg_nightmare_still03_mosaic_002.webp"
+    },
+    {
+      "charId": 5055,
       "seq": 70,
       "shared": [5055],
       "group": [5055],
@@ -2095,6 +2111,14 @@
       "group": [],
       "label": "still02_brute",
       "image": "StillThumbnail_bg_brute_still02_mosaic_001a.webp"
+    },
+    {
+      "charId": 5060,
+      "seq": 1,
+      "shared": [5060],
+      "group": [5060],
+      "label": "still01_eternion",
+      "image": "StillThumbnail_bg_eternion_still01_mosaic_001.webp"
     },
     {
       "charId": 5060,
@@ -2407,6 +2431,22 @@
       "group": [5081],
       "label": "kgr_013",
       "image": "StillThumbnail_bg_jigoro_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5081,
+      "seq": 71,
+      "shared": [5081],
+      "group": [5081],
+      "label": "kgr_017",
+      "image": "StillThumbnail_bg_kagura_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5082,
+      "seq": 70,
+      "shared": [5082],
+      "group": [5082],
+      "label": "kgr_017",
+      "image": "StillThumbnail_bg_kagura_storystill01_mosaic_001.webp"
     },
     {
       "charId": 6001,
