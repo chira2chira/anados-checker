@@ -2384,3 +2384,23 @@
   limited: true
   release: 2/7/2025
   image: 90px-FS_habaki_(awakened).png
+- id: 247
+  unitId: 5082
+  nameJa: ギンジ
+  nameEn: Ginji
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: false
+  release: 2/21/2025
+  image: 90px-FS_ginji.png
+- id: 248
+  unitId: 6096
+  nameJa: 悪鬼調伏道中膝栗毛 カグラ
+  nameEn: Well-Trodden Subjugator of Evil Demons Kagura
+  rarity: 6
+  class: caster
+  deployment: high
+  limited: true
+  release: 2/21/2025
+  image: 90px-FS_kagura_(awakened).png
