@@ -2404,3 +2404,33 @@
   limited: true
   release: 2/21/2025
   image: 90px-FS_kagura_(awakened).png
+- id: 249
+  unitId: 5083
+  nameJa: モミジ
+  nameEn: Momiji
+  rarity: 5
+  class: support
+  deployment: high
+  limited: false
+  release: 3/7/2025
+  image: 90px-FS_momiji.png
+- id: 250
+  unitId: 5084
+  nameJa: リクフネ
+  nameEn: Rikufune
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: false
+  release: 3/7/2025
+  image: 90px-FS_rikufune.png
+- id: 251
+  unitId: 6097
+  nameJa: 温泉拳法純潔の書 シャオロン
+  nameEn: Martial Art Purity Scholarship Xiaolong
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 3/7/2025
+  image: 90px-FS_xiaolong_(awakened).png

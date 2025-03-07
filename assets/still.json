@@ -1884,7 +1884,7 @@
       "charId": 5050,
       "seq": 1,
       "shared": [5050],
-      "group": [5050],
+      "group": [5050, 6097],
       "label": "still01_xiaolong",
       "image": "StillThumbnail_bg_xiaolong_still01_mosaic_001.webp"
     },
@@ -1892,7 +1892,7 @@
       "charId": 5050,
       "seq": 20,
       "shared": [5050],
-      "group": [5050],
+      "group": [5050, 6097],
       "label": "still02_xiaolong_eidos",
       "image": "StillThumbnail_bg_xiaolong_still02_mosaic_001.webp"
     },
@@ -1900,7 +1900,7 @@
       "charId": 5050,
       "seq": 70,
       "shared": [5050],
-      "group": [5050],
+      "group": [5050, 6097],
       "label": "ise_015",
       "image": "StillThumbnail_bg_xiaolong_storystill01_mosaic_003.webp"
     },
@@ -1908,7 +1908,7 @@
       "charId": 5050,
       "seq": 71,
       "shared": [5050],
-      "group": [5050],
+      "group": [5050, 6097],
       "label": "ise_021",
       "image": "StillThumbnail_bg_xiaolong_storystill02_mosaic_001.webp"
     },
