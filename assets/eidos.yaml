@@ -358,3 +358,57 @@
   limited: false
   release: 1/31/2025
   image: WeaponIcon_6006.png
+- id: 41
+  eidosId: 5011
+  unitId: 6023
+  nameJa: 獣欲の向くままに
+  nameEn: At the Whim of Bestial Desire
+  rarity: 5
+  limited: false
+  release: 3/14/2025
+  image: WeaponIcon_5011.png
+- id: 42
+  eidosId: 5012
+  unitId: 4008
+  nameJa: めちゃくちゃにしてくれ！
+  nameEn: Wreck Me!
+  rarity: 5
+  limited: false
+  release: 3/14/2025
+  image: WeaponIcon_5012.png
+- id: 43
+  eidosId: 6007
+  unitId: 6007
+  nameJa: エロレス予行演習
+  nameEn: Erotic Wrestling Not So Dry Run
+  rarity: 6
+  limited: false
+  release: 3/14/2025
+  image: WeaponIcon_6007.png
+- id: 44
+  eidosId: 6008
+  unitId: 6041
+  nameJa: まとめて相手してやるよ
+  nameEn: I’ll Take You Guys on At Once!
+  rarity: 6
+  limited: false
+  release: 3/14/2025
+  image: WeaponIcon_6008.png
+- id: 45
+  eidosId: 3015
+  unitId: 5082
+  nameJa: ソトで見つけたおもしれーヤツ
+  nameEn: The Fun Guys from the Outside World
+  rarity: 3
+  limited: false
+  release: 3/14/2025
+  image: WeaponIcon_3015.png
+- id: 46
+  eidosId: 3016
+  unitId: 5050
+  nameJa: ワシを調伏してくれ！
+  nameEn: Subjugate Me!
+  rarity: 3
+  limited: false
+  release: 3/14/2025
+  image: WeaponIcon_3016.png

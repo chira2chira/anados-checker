@@ -842,6 +842,14 @@
     },
     {
       "charId": 4008,
+      "seq": 20,
+      "shared": [4008, 6029],
+      "group": [4008, 6029],
+      "label": "still02_pugi_eidos",
+      "image": "StillThumbnail_bg_pugi_still02_mosaic_001.webp"
+    },
+    {
+      "charId": 4008,
       "seq": 50,
       "shared": [4008, 6029],
       "group": [4008, 6029],
@@ -1898,6 +1906,14 @@
     },
     {
       "charId": 5050,
+      "seq": 21,
+      "shared": [5050],
+      "group": [5050, 6097],
+      "label": "kgr_901_eidos",
+      "image": "StillThumbnail_bg_xiaolong_storystill03_mosaic_002.webp"
+    },
+    {
+      "charId": 5050,
       "seq": 70,
       "shared": [5050],
       "group": [5050, 6097],
@@ -2434,11 +2450,35 @@
     },
     {
       "charId": 5082,
+      "seq": 20,
+      "shared": [5082],
+      "group": [5082],
+      "label": "kgr_900_eidos",
+      "image": "StillThumbnail_bg_ginji_storystill03_mosaic_A002.webp"
+    },
+    {
+      "charId": 5082,
       "seq": 70,
       "shared": [5082],
       "group": [5082],
       "label": "kgr_017",
       "image": "StillThumbnail_bg_kagura_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5083,
+      "seq": 70,
+      "shared": [5083],
+      "group": [5083],
+      "label": "kgr_027",
+      "image": "StillThumbnail_bg_momiji_storystill02_mosaic_001.webp"
+    },
+    {
+      "charId": 5084,
+      "seq": 70,
+      "shared": [5084],
+      "group": [5084],
+      "label": "kgr_027",
+      "image": "StillThumbnail_bg_momiji_storystill02_mosaic_001.webp"
     },
     {
       "charId": 6001,
@@ -2606,6 +2646,14 @@
       "shared": [6007],
       "group": [5071, 6007],
       "label": "still04_bashkar_secret_126007",
+      "image": "StillThumbnail_bg_bashkar_still02_mosaic_001.webp"
+    },
+    {
+      "charId": 6007,
+      "seq": 20,
+      "shared": [6007],
+      "group": [5071, 6007],
+      "label": "still05_bashkar_eidos",
       "image": "StillThumbnail_bg_bashkar_still05_mosaic_001.webp"
     },
     {
@@ -3154,6 +3202,14 @@
     },
     {
       "charId": 6023,
+      "seq": 20,
+      "shared": [6023],
+      "group": [5065, 6023],
+      "label": "still02_forte_eidos",
+      "image": "StillThumbnail_bg_forte_still02_mosaic_001.webp"
+    },
+    {
+      "charId": 6023,
       "seq": 50,
       "shared": [6023],
       "group": [5065, 6023],
@@ -3263,6 +3319,14 @@
       "group": [5035, 6041],
       "label": "still03_saturn",
       "image": "StillThumbnail_bg_saturn_still03_mosaic_A01.webp"
+    },
+    {
+      "charId": 6041,
+      "seq": 20,
+      "shared": [5035, 6041],
+      "group": [5035, 6041],
+      "label": "still02_saturn_eidos",
+      "image": "StillThumbnail_bg_saturn_still02B_mosaic_001.webp"
     },
     {
       "charId": 6041,
