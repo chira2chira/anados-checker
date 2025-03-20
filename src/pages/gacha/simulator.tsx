@@ -238,7 +238,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
           display: flex;
           gap: 40px;
           justify-content: space-between;
-          margin-bottom: 8px;
+          margin-bottom: 12px;
         `}
       >
         <Button onClick={handleClear}>{t("ui.button.clear")}</Button>
