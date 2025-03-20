@@ -28,7 +28,8 @@ export const DisplayUsedCost: React.FC<DisplayUsedCostProps> = (props) => {
         </>
       ) : (
         <span style={{ marginLeft: "3px" }}>
-          {Math.round(props.stone * UNIT_PRICE).toLocaleString()} JPY
+          {Math.round(props.stone * UNIT_PRICE).toLocaleString()}
+          {t("ui.text.jpy")}
         </span>
       )}
       <Button
