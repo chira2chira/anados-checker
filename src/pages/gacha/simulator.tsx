@@ -18,6 +18,7 @@ import { RateListModal, calcPickUpRate } from "@/components/RateListModal";
 import { sendEvent } from "@/utils/gtag";
 import { isCharInfo, isEidosInfo } from "@/utils/types";
 import useCategoryQuery, { PageCategory } from "@/hooks/useCategoryQuery";
+import { DisplayUsedCost } from "@/components/DisplayUsedCost";
 
 type GachaSimulatorProps = {
   charInfo: CharInfo[];
@@ -269,15 +270,8 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
         >
           <span>
             {t("ui.text.pullCount")}: {pullHistory.length} (
-            {t("ui.text.usedStone")}: {pullHistory.length * 4}
           </span>
-          <img
-            src="/static/image/common/stone.png"
-            alt="龍脈石"
-            width="15px"
-            height="18px"
-            style={{ margin: "0 3px 0 5px" }}
-          />
+          <DisplayUsedCost stone={pullHistory.length * 4} />
           <span>)</span>
         </div>
         <span translate="no">
