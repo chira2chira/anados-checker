@@ -2434,3 +2434,23 @@
   limited: true
   release: 3/7/2025
   image: 90px-FS_xiaolong_(awakened).png
+- id: 252
+  unitId: 5085
+  nameJa: キング
+  nameEn: King
+  rarity: 5
+  class: caster
+  deployment: high
+  limited: false
+  release: 3/21/2025
+  image: 90px-FS_king.png
+- id: 253
+  unitId: 6098
+  nameJa: 犯罪者矯正更生官 フルハウス
+  nameEn: Criminal Correctional Officer FullHouse
+  rarity: 6
+  class: support
+  deployment: both
+  limited: true
+  release: 3/21/2025
+  image: 90px-FS_full_house_(awakened).png
