@@ -1146,6 +1146,14 @@
     },
     {
       "charId": 5005,
+      "seq": 20,
+      "shared": [5005],
+      "group": [5005],
+      "label": "vhr_200_eidos",
+      "image": "StillThumbnail_bg_wrecker_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5005,
       "seq": 50,
       "shared": [5005],
       "group": [5005],
@@ -2100,7 +2108,7 @@
       "charId": 5058,
       "seq": 1,
       "shared": [5058],
-      "group": [5058],
+      "group": [5058, 6098],
       "label": "still01_fullhouse",
       "image": "StillThumbnail_bg_fullhouse_still01_mosaic_001.webp"
     },
