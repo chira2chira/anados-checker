@@ -412,3 +412,12 @@
   limited: false
   release: 3/14/2025
   image: WeaponIcon_3016.png
+- id: 47
+  eidosId: 3017
+  unitId: 5005
+  nameJa: 気高きフォレストキーパーの墜星
+  nameEn: The Noble Forest Protector Turned Fallen Star
+  rarity: 3
+  limited: false
+  release: 3/21/2025
+  image: WeaponIcon_3017.png
