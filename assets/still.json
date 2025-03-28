@@ -105,6 +105,14 @@
       "image": "StillThumbnail_bg_merman_storystill01_mosaic_A001.webp"
     },
     {
+      "charId": 1,
+      "seq": 75,
+      "shared": [1, 2],
+      "group": [1, 2],
+      "label": "vhr_016",
+      "image": "StillThumbnail_bg_fullhouse_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 1001,
       "seq": 1,
       "shared": [1001, 1002, 1003, 1004, 1005],
@@ -2113,6 +2121,14 @@
       "image": "StillThumbnail_bg_fullhouse_still01_mosaic_001.webp"
     },
     {
+      "charId": 5058,
+      "seq": 70,
+      "shared": [5058],
+      "group": [5058, 6098],
+      "label": "vhr_016",
+      "image": "StillThumbnail_bg_fullhouse_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 5059,
       "seq": 5,
       "shared": [5059],
@@ -2441,6 +2457,14 @@
       "image": "StillThumbnail_bg_zacharoff_storystill04_mosaic_014.webp"
     },
     {
+      "charId": 5080,
+      "seq": 6,
+      "shared": [5080],
+      "group": [],
+      "label": "still03_solve",
+      "image": "StillThumbnail_bg_solve_still03_mosaic_A001.webp"
+    },
+    {
       "charId": 5081,
       "seq": 70,
       "shared": [5081],
@@ -2487,6 +2511,14 @@
       "group": [5084],
       "label": "kgr_027",
       "image": "StillThumbnail_bg_momiji_storystill02_mosaic_001.webp"
+    },
+    {
+      "charId": 5085,
+      "seq": 70,
+      "shared": [5085],
+      "group": [5085],
+      "label": "vhr_016",
+      "image": "StillThumbnail_bg_fullhouse_storystill01_mosaic_004.webp"
     },
     {
       "charId": 6001,
@@ -3983,6 +4015,14 @@
       "group": [],
       "label": "kgr_017",
       "image": "StillThumbnail_bg_kagura_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 6099,
+      "seq": 70,
+      "shared": [6099],
+      "group": [6099],
+      "label": "ise_017",
+      "image": "StillThumbnail_bg_fu_storystill01_mosaic_002.webp"
     },
     {
       "charId": 7001,
