@@ -2454,3 +2454,13 @@
   limited: true
   release: 3/21/2025
   image: 90px-FS_full_house_(awakened).png
+- id: 254
+  unitId: 6099
+  nameJa: テツボウ
+  nameEn: Tetsubo
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 3/28/2025
+  image: 90px-FS_tetsubo.png
