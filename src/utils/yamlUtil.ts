@@ -8,7 +8,7 @@ import {
   UnknownInfo,
   CharInfoWithStill,
 } from "@/types/unit";
-import { GachaInfo } from "@/types/gacha";
+import { GachaInfo, GachaPool } from "@/types/gacha";
 import still from "@/../assets/still.json";
 
 const CLASS_SORT_LIST: CharClass[] = [
@@ -112,7 +112,11 @@ function mergeRarity(rarity: number) {
 
 export function loadGachaMaster() {
   const charInfo = loadCharactors();
-  const gachaInfo = generateGachaInfo(charInfo, "assets/gacha.yaml");
+  const gachaInfo = generateGachaInfo(
+    charInfo,
+    "assets/gacha.yaml",
+    "assets/gacha_pool.yaml"
+  );
 
   return {
     charInfo,
@@ -122,7 +126,11 @@ export function loadGachaMaster() {
 
 export function loadEidosGachaMaster() {
   const eidosInfo = loadEidosMaster();
-  const gachaInfo = generateGachaInfo(eidosInfo, "assets/gacha_eidos.yaml");
+  const gachaInfo = generateGachaInfo(
+    eidosInfo,
+    "assets/gacha_eidos.yaml",
+    "assets/gacha_eidos_pool.yaml"
+  );
 
   return {
     eidosInfo,
@@ -130,21 +138,33 @@ export function loadEidosGachaMaster() {
   };
 }
 
-function generateGachaInfo(info: UnknownInfo[], yamlPath: string) {
+function generateGachaInfo(
+  info: UnknownInfo[],
+  yamlPath: string,
+  poolYamlPath: string
+) {
+  const gachaPool: GachaPool[] = loadYaml<GachaPool[]>(poolYamlPath);
   const gachaInfo: GachaInfo[] = loadYaml<GachaInfo[]>(yamlPath).map((x) => {
+    const poolMaster = gachaPool.find((y) => y.id === x.poolId);
+    if (poolMaster === undefined)
+      throw new Error(`不明なガチャプールID: ${x.poolId}`);
     const pools = [
-      ...x.rarity6.map(mergeRarity(6)),
-      ...x.rarity5.map(mergeRarity(5)),
-      ...x.rarity4.map(mergeRarity(4)),
-      ...x.rarity3.map(mergeRarity(3)),
+      ...poolMaster.rarity6.map(mergeRarity(6)),
+      ...poolMaster.rarity5.map(mergeRarity(5)),
+      ...poolMaster.rarity4.map(mergeRarity(4)),
+      ...poolMaster.rarity3.map(mergeRarity(3)),
     ];
+    // PUキャラ追加
+    for (const p of x.pickUp) {
+      if (pools.map((y) => y.name).includes(p.name)) continue;
+      const pickUpChar = info.find((z) => z.nameJa === p.name);
+      if (pickUpChar === undefined)
+        throw new Error(`ピックアップキャラが不正（${p.name}）`);
+      pools.push({ name: pickUpChar.nameJa, rarity: pickUpChar.rarity });
+    }
     let accum = 0;
     return {
       ...x,
-      rarity6: [],
-      rarity5: [],
-      rarity4: [],
-      rarity3: [],
       pool: pools.map((y) => {
         const id = info.find((z) => z.nameJa === y.name)?.id;
         if (id === undefined)
