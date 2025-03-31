@@ -2521,6 +2521,14 @@
       "image": "StillThumbnail_bg_fullhouse_storystill01_mosaic_004.webp"
     },
     {
+      "charId": 5086,
+      "seq": 70,
+      "shared": [5086],
+      "group": [5086],
+      "label": "wd_013",
+      "image": "StillThumbnail_bg_lyon_storystill02_mosaic_001.webp"
+    },
+    {
       "charId": 6001,
       "seq": 1,
       "shared": [6001],

@@ -2464,3 +2464,13 @@
   limited: false
   release: 3/28/2025
   image: 90px-FS_tetsubo.png
+- id: 255
+  unitId: 5086
+  nameJa: リオンパパ
+  nameEn: Lyon’s Dad
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: true
+  release: 4/1/2025
+  image: 90px-FS_lyonsdad.png
