@@ -1836,3 +1836,24 @@
     - name: キング
       weight: 0.01
   poolId: 14
+- id: 132
+  nameJa: ビシバシいくぜ！モーレツシゴき！鉄格子の中のハードプレイ
+  nameEn: Go Down Hard in Insanely Hardcore Play Behind Bars!
+  revival: false
+  start: 4/4/2025
+  end: 5/16/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: アイアンウィルプリズナー レッカー
+      weight: 0.01
+    - name: ハードコアミッション ラグナル
+      weight: 0.01
+  poolId: 14

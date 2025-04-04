@@ -2474,3 +2474,23 @@
   limited: true
   release: 4/1/2025
   image: 90px-FS_lyonsdad.png
+- id: 256
+  unitId: 6100
+  nameJa: アイアンウィルプリズナー レッカー
+  nameEn: Iron-Willed Prisoner Wrecker
+  rarity: 6
+  class: shooter
+  deployment: high
+  limited: true
+  release: 4/4/2025
+  image: 90px-FS_wrecker_(awakened).png
+- id: 257
+  unitId: 6101
+  nameJa: ハードコアミッション ラグナル
+  nameEn: Hardcore Mission Ragnar
+  rarity: 6
+  class: guard
+  deployment: low
+  limited: true
+  release: 4/4/2025
+  image: 90px-FS_ragnar_(awakened).png
