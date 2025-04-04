@@ -361,6 +361,14 @@
       "image": "StillThumbnail_bg_baquu_still02_mosaic_001.webp"
     },
     {
+      "charId": 3002,
+      "seq": 1,
+      "shared": [3002],
+      "group": [3002],
+      "label": "still01_elaine",
+      "image": "StillThumbnail_bg_elaine_still01_mosaicoff_001.webp"
+    },
+    {
       "charId": 3003,
       "seq": 1,
       "shared": [3003],
@@ -1148,7 +1156,7 @@
       "charId": 5005,
       "seq": 1,
       "shared": [5005],
-      "group": [5005],
+      "group": [5005, 6100],
       "label": "still01_wrecker",
       "image": "StillThumbnail_bg_wrecker_still02_mosaic_001.webp"
     },
@@ -1156,7 +1164,7 @@
       "charId": 5005,
       "seq": 20,
       "shared": [5005],
-      "group": [5005],
+      "group": [5005, 6100],
       "label": "vhr_200_eidos",
       "image": "StillThumbnail_bg_wrecker_storystill01_mosaic_001.webp"
     },
@@ -1164,7 +1172,7 @@
       "charId": 5005,
       "seq": 50,
       "shared": [5005],
-      "group": [5005],
+      "group": [5005, 6100],
       "label": "main_003_017",
       "image": "StillThumbnail_bg_wrecker_still01_mosaic_001.webp"
     },
@@ -1212,7 +1220,7 @@
       "charId": 5008,
       "seq": 1,
       "shared": [5008, 6028],
-      "group": [5008, 6028],
+      "group": [5008, 6028, 6101],
       "label": "still01_ragnar",
       "image": "StillThumbnail_bg_ragnar_still01_mosaic_01.webp"
     },
@@ -1220,7 +1228,7 @@
       "charId": 5008,
       "seq": 3,
       "shared": [5008, 6028],
-      "group": [5008, 6028],
+      "group": [5008, 6028, 6101],
       "label": "still03_ragnar",
       "image": "StillThumbnail_bg_ragnar_still04_mosaic_001.webp"
     },
@@ -1543,6 +1551,14 @@
       "group": [5027, 6086],
       "label": "dlv_014",
       "image": "StillThumbnail_bg_merman_storystill01_mosaic_B001.webp"
+    },
+    {
+      "charId": 5027,
+      "seq": 72,
+      "shared": [5027],
+      "group": [5027, 6086],
+      "label": "vhr_020",
+      "image": "StillThumbnail_bg_sigvaldi_storystill01_mosaic_001.webp"
     },
     {
       "charId": 5028,
