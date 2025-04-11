@@ -1857,3 +1857,49 @@
     - name: ハードコアミッション ラグナル
       weight: 0.01
   poolId: 14
+- id: 133
+  nameJa: 待ってろ幸せ！結婚式場で男漁り！
+  nameEn: Happiness Awaits! The Suitable Suitor Search!
+  revival: true
+  start: 4/11/2025
+  end: 5/23/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: マスターブライダリスト フォーカー
+      weight: 0.01
+    - name: 幸せになるのはオレだ！ ユーノ
+      weight: 0.01
+    - name: マシュトラ
+      weight: 0.01
+  poolId: 14
+- id: 134
+  nameJa: 受け取れ！メガトン級のラヴ！
+  nameEn: Come Get Your Megaton of Love!
+  revival: true
+  start: 4/11/2025
+  end: 5/23/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ガムラ
+      weight: 0.01
+    - name: 運命糸の紡ぎ手 バラン
+      weight: 0.01
+    - name: 超新星の新郎 サタン
+      weight: 0.01
+  poolId: 14
