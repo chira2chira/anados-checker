@@ -1903,3 +1903,24 @@
     - name: 超新星の新郎 サタン
       weight: 0.01
   poolId: 14
+- id: 135
+  nameJa: 獄中で燃える禁断の恋！？暴けスパダリ国賊のクリミナル・マインド
+  nameEn: Forbidden Love Ablaze Behind Bars?! Expose the Ideal Man as a Traitorous Criminal Mind!
+  revival: false
+  start: 4/18/2025
+  end: 5/30/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 扉開く尋問官 シグヴァルディ
+      weight: 0.01
+    - name: イーヴァル
+      weight: 0.01
+  poolId: 14

@@ -2494,3 +2494,23 @@
   limited: true
   release: 4/4/2025
   image: 90px-FS_ragnar_(awakened).png
+- id: 258
+  unitId: 5087
+  nameJa: イーヴァル
+  nameEn: Ivar
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: false
+  release: 4/18/2025
+  image: 90px-FS_ivar.png
+- id: 259
+  unitId: 6102
+  nameJa: 扉開く尋問官 シグヴァルディ
+  nameEn: Door-Opening Interrogator Sigvaldi
+  rarity: 6
+  class: caster
+  deployment: high
+  limited: true
+  release: 4/18/2025
+  image: 90px-FS_sigvaldi_(prison).png

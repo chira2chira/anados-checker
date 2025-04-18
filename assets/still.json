@@ -1524,7 +1524,7 @@
       "charId": 5027,
       "seq": 1,
       "shared": [5027],
-      "group": [5027, 6086],
+      "group": [5027, 6086, 6102],
       "label": "still01_sigvaldi",
       "image": "StillThumbnail_bg_sigvaldi_still01_mosaic_001.webp"
     },
@@ -1532,7 +1532,7 @@
       "charId": 5027,
       "seq": 4,
       "shared": [5027],
-      "group": [5027, 6086],
+      "group": [5027, 6086, 6102],
       "label": "still04_sigvaldi_secret_125027",
       "image": "StillThumbnail_bg_sigvaldi_still04_mosaic_001.webp"
     },
@@ -1540,7 +1540,7 @@
       "charId": 5027,
       "seq": 70,
       "shared": [5027],
-      "group": [5027, 6086],
+      "group": [5027, 6086, 6102],
       "label": "snight_013",
       "image": "StillThumbnail_bg_sigvaldi_eventstill01_mosaic_001.webp"
     },
@@ -1548,7 +1548,7 @@
       "charId": 5027,
       "seq": 71,
       "shared": [5027],
-      "group": [5027, 6086],
+      "group": [5027, 6086, 6102],
       "label": "dlv_014",
       "image": "StillThumbnail_bg_merman_storystill01_mosaic_B001.webp"
     },
@@ -1556,7 +1556,7 @@
       "charId": 5027,
       "seq": 72,
       "shared": [5027],
-      "group": [5027, 6086],
+      "group": [5027, 6086, 6102],
       "label": "vhr_020",
       "image": "StillThumbnail_bg_sigvaldi_storystill01_mosaic_001.webp"
     },
@@ -2559,6 +2559,14 @@
       "group": [5086],
       "label": "wd_013",
       "image": "StillThumbnail_bg_lyon_storystill02_mosaic_001.webp"
+    },
+    {
+      "charId": 5087,
+      "seq": 70,
+      "shared": [5087],
+      "group": [5087],
+      "label": "vhr_020",
+      "image": "StillThumbnail_bg_sigvaldi_storystill01_mosaic_001.webp"
     },
     {
       "charId": 6001,
