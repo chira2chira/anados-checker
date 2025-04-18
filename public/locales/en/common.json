@@ -3,8 +3,8 @@
   "description": "AnotherEidos collection tracker tool. Manage your character ownership status and share it with others.",
   "ui": {
     "button": {
-      "character": "Character",
-      "eidos": "Eidos",
+      "character": "Characters",
+      "eidos": "Eidoi",
       "save": "Save",
       "getShareLink": "Generate Share URL",
       "downloadScreenshot": "Download Screenshot",

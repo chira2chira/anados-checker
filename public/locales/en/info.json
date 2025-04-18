@@ -9,10 +9,10 @@
     "import": "Import"
   },
   "message": {
-    "char": "Character",
-    "eidos": "Eidos",
-    "still": "Still",
-    "customLabel": "Custom Label",
+    "char": "Characters",
+    "eidos": "Eidoi",
+    "still": "Stills",
+    "customLabel": "Custom Labels",
     "backupOverview": "Character ownership status and still management data can be backed up.",
     "importComplete": "Import Complete: ",
     "e_dataNotFound": "No data available for backup.",
