@@ -421,3 +421,66 @@
   limited: false
   release: 3/21/2025
   image: WeaponIcon_3017.png
+- id: 48
+  eidosId: 3018
+  unitId: 2023
+  nameJa: ワークマンのアフター５
+  nameEn: Workers After 5
+  rarity: 3
+  limited: false
+  release: 4/25/2025
+  image: WeaponIcon_3018.png
+- id: 49
+  eidosId: 3019
+  unitId: 2026
+  nameJa: ビリビリエクスタシーショック
+  nameEn: Electrifying Ecstasy
+  rarity: 3
+  limited: false
+  release: 4/25/2025
+  image: WeaponIcon_3019.png
+- id: 50
+  eidosId: 3020
+  unitId: 2027
+  nameJa: 深きものの強襲
+  nameEn: Stormed by Creatures of the Deep
+  rarity: 3
+  limited: false
+  release: 4/25/2025
+  image: WeaponIcon_3020.png
+- id: 51
+  eidosId: 5013
+  unitId: 5031
+  nameJa: 教えて！フォーカー先生！
+  nameEn: Teach Me, Folker!
+  rarity: 5
+  limited: false
+  release: 4/25/2025
+  image: WeaponIcon_5013.png
+- id: 52
+  eidosId: 5014
+  unitId: 6001
+  nameJa: 甘え上手のお殿様
+  nameEn: A Lord Pampering His Puppy
+  rarity: 5
+  limited: false
+  release: 4/25/2025
+  image: WeaponIcon_5014.png
+- id: 53
+  eidosId: 6009
+  unitId: 5011
+  nameJa: 主君のためなら
+  nameEn: If It’s For My Master…
+  rarity: 6
+  limited: false
+  release: 4/25/2025
+  image: WeaponIcon_6009.png
+- id: 54
+  eidosId: 6010
+  unitId: 3003
+  nameJa: 神という名の変態、その試練
+  nameEn: Trials from the Perverted Gods
+  rarity: 6
+  limited: false
+  release: 4/25/2025
+  image: WeaponIcon_6010.png

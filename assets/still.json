@@ -289,12 +289,28 @@
       "image": "StillThumbnail_bg_sailor_storystill01_mosaic_cumoff_001.webp"
     },
     {
+      "charId": 2023,
+      "seq": 20,
+      "shared": [2023],
+      "group": [2023],
+      "label": "still01_worker_eidos",
+      "image": "StillThumbnail_bg_worker_still01_mosaic_001.webp"
+    },
+    {
       "charId": 2025,
       "seq": 70,
       "shared": [2025],
       "group": [2025],
       "label": "dlv_021",
       "image": "StillThumbnail_bg_pollonorta_still03_mosaic_005.webp"
+    },
+    {
+      "charId": 2026,
+      "seq": 20,
+      "shared": [2026],
+      "group": [2026],
+      "label": "still01_mermaneel_eidos",
+      "image": "StillThumbnail_bg_merman_eel_still01_mosaic_001.webp"
     },
     {
       "charId": 2026,
@@ -319,6 +335,14 @@
       "group": [2026],
       "label": "dlv_021",
       "image": "StillThumbnail_bg_pollonorta_still03_mosaic_005.webp"
+    },
+    {
+      "charId": 2027,
+      "seq": 20,
+      "shared": [2027],
+      "group": [2027],
+      "label": "still01_mermanoctopus_eidos",
+      "image": "StillThumbnail_bg_merman_octopus_still01_mosaic_001.webp"
     },
     {
       "charId": 2027,
@@ -375,6 +399,14 @@
       "group": [3003, 6032],
       "label": "still01_gymnos",
       "image": "StillThumbnail_bg_gymnos_still01_mosaic_B001.webp"
+    },
+    {
+      "charId": 3003,
+      "seq": 20,
+      "shared": [3003],
+      "group": [3003, 6032],
+      "label": "still04_gymnos_eidos",
+      "image": "StillThumbnail_bg_gymnos_still04_mosaic_001.webp"
     },
     {
       "charId": 3003,
@@ -1313,6 +1345,14 @@
       "image": "StillThumbnail_bg_hanzo_still02_mosaic_A001.webp"
     },
     {
+      "charId": 5011,
+      "seq": 20,
+      "shared": [5011, 6025],
+      "group": [5011, 6025],
+      "label": "still05_hanzo_eidos",
+      "image": "StillThumbnail_bg_hanzo_still05_mosaic_001.webp"
+    },
+    {
       "charId": 5012,
       "seq": 1,
       "shared": [5012],
@@ -1639,6 +1679,14 @@
       "group": [5031, 6044, 6069, 96044],
       "label": "still04_yuno_eidos",
       "image": "StillThumbnail_bg_yuno_still04_mosaic_001.webp"
+    },
+    {
+      "charId": 5031,
+      "seq": 21,
+      "shared": [5031, 6044, 96044],
+      "group": [5031, 6044, 6069, 96044],
+      "label": "still07_yuno_eidos",
+      "image": "StillThumbnail_bg_yuno_still07_mosaic_002.webp"
     },
     {
       "charId": 5031,
@@ -2575,6 +2623,14 @@
       "group": [6001, 6034],
       "label": "still01_jinnosuke",
       "image": "StillThumbnail_bg_still001_mosaic_001.webp"
+    },
+    {
+      "charId": 6001,
+      "seq": 20,
+      "shared": [6001],
+      "group": [6001, 6034],
+      "label": "still05_jinnosuke_eidos",
+      "image": "StillThumbnail_bg_jinnosuke_still03_mosaic_007.webp"
     },
     {
       "charId": 6002,

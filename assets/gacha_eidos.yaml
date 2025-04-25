@@ -73,3 +73,28 @@
     - name: めちゃくちゃにしてくれ！
       weight: 0.01
   poolId: 3
+- id: 4
+  nameJa: 全裸日和の春うらら！ひと肌脱ぎたがりの冒険者
+  nameEn: Spring Days in the Nude for Adventurers Itching to Get Down and Toss Their Clothes Off!
+  revival: false
+  start: 4/25/2025
+  end: 6/6/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: 神という名の変態、その試練
+      weight: 0.01
+    - name: 主君のためなら
+      weight: 0.01
+    - name: 甘え上手のお殿様
+      weight: 0.01
+    - name: 教えて！フォーカー先生！
+      weight: 0.01
+  poolId: 4
