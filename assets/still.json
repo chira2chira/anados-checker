@@ -1601,6 +1601,14 @@
       "image": "StillThumbnail_bg_sigvaldi_storystill01_mosaic_001.webp"
     },
     {
+      "charId": 5027,
+      "seq": 73,
+      "shared": [5027],
+      "group": [5027, 6086, 6102],
+      "label": "vhr_035",
+      "image": "StillThumbnail_bg_sigvaldi_storystill02_mosaic_001.webp"
+    },
+    {
       "charId": 5028,
       "seq": 1,
       "shared": [5028, 95028],
@@ -2615,6 +2623,14 @@
       "group": [5087],
       "label": "vhr_020",
       "image": "StillThumbnail_bg_sigvaldi_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5087,
+      "seq": 71,
+      "shared": [5087],
+      "group": [5087],
+      "label": "vhr_035",
+      "image": "StillThumbnail_bg_sigvaldi_storystill02_mosaic_001.webp"
     },
     {
       "charId": 6001,
