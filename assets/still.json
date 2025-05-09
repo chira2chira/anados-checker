@@ -4153,6 +4153,14 @@
       "image": "StillThumbnail_bg_fu_storystill01_mosaic_002.webp"
     },
     {
+      "charId": 6103,
+      "seq": 70,
+      "shared": [6103],
+      "group": [6103],
+      "label": "mdr_022",
+      "image": "StillThumbnail_bg_proteo_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 7001,
       "seq": 1,
       "shared": [7001, 7002],
