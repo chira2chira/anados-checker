@@ -1924,3 +1924,24 @@
     - name: イーヴァル
       weight: 0.01
   poolId: 14
+- id: 136
+  nameJa: ミルク・パンデミック！ 恐怖！ホルスタインと化した冒険者たち
+  nameEn: Beware! It’s a Milky Epidemic! Adventurers are Turning into Holstein Cattle!
+  revival: false
+  start: 5/9/2025
+  end: 6/20/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: プロテオ
+      weight: 0.01
+    - name: ダンク
+      weight: 0.01
+  poolId: 15

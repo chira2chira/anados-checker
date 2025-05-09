@@ -2514,3 +2514,23 @@
   limited: true
   release: 4/18/2025
   image: 90px-FS_sigvaldi_(prison).png
+- id: 260
+  unitId: 5088
+  nameJa: ダンク
+  nameEn: Dunk
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: false
+  release: 5/9/2025
+  image: 90px-FS_dunk.png
+- id: 261
+  unitId: 6103
+  nameJa: プロテオ
+  nameEn: Proteo
+  rarity: 6
+  class: support
+  deployment: low
+  limited: false
+  release: 5/9/2025
+  image: 90px-FS_proteo.png
