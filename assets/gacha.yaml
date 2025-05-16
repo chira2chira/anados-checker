@@ -1945,3 +1945,70 @@
     - name: ダンク
       weight: 0.01
   poolId: 15
+- id: 137
+  nameJa: 出航せよ！目指すは魔境・バリタチ島！
+  nameEn: Set Sail for the Demonic Island of Topdom!
+  revival: true
+  start: 5/16/2025
+  end: 6/27/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 海風香る艇長 バルト
+      weight: 0.01
+    - name: ガオウ
+      weight: 0.01
+  poolId: 15
+- id: 138
+  nameJa: オレこそバリタチ島の覇者！最強TOP！
+  nameEn: I’ll be the King Dom of Topdom!
+  revival: true
+  start: 5/16/2025
+  end: 6/27/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: 突撃特派員 トルケル
+      weight: 0.01
+    - name: バリタチ船長 レオンハート
+      weight: 0.01
+    - name: ユーノ
+      weight: 0.01
+  poolId: 15
+- id: 139
+  nameJa: 肉体言語で接触中！異文化コミュニケーション！
+  nameEn: Talking with Your Body!? A Foreign Twist on Communication!
+  revival: true
+  start: 5/16/2025
+  end: 6/27/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: スカバンド
+      weight: 0.01
+    - name: 進めマグナム号 パティ
+      weight: 0.01
+    - name: ハロルド
+      weight: 0.01
+  poolId: 15
