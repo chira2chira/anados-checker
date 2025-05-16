@@ -2633,6 +2633,14 @@
       "image": "StillThumbnail_bg_sigvaldi_storystill02_mosaic_001.webp"
     },
     {
+      "charId": 5088,
+      "seq": 70,
+      "shared": [5088],
+      "group": [5088],
+      "label": "mdr_025",
+      "image": "StillThumbnail_bg_deckert_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 6001,
       "seq": 1,
       "shared": [6001],
@@ -4135,6 +4143,14 @@
       "group": [],
       "label": "still02_alec",
       "image": "StillThumbnail_bg_alec_still02_mosaic_001.webp"
+    },
+    {
+      "charId": 6096,
+      "seq": 5,
+      "shared": [6096],
+      "group": [],
+      "label": "still03_kagura",
+      "image": "StillThumbnail_bg_kagura_still03_mosaic_001.webp"
     },
     {
       "charId": 6096,
