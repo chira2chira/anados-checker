@@ -2,11 +2,11 @@
   "title": "Info",
   "description": "Page about the site data of the Collection Tracker.",
   "head": {
-    "backup": "Backup"
+    "backup": "Backups"
   },
   "button": {
-    "export": "Export",
-    "import": "Import"
+    "export": "Export Data",
+    "import": "Import Data"
   },
   "message": {
     "char": "Characters",
