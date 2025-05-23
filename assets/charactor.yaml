@@ -2534,3 +2534,23 @@
   limited: false
   release: 5/9/2025
   image: 90px-FS_proteo.png
+- id: 262
+  unitId: 5089
+  nameJa: デッカート
+  nameEn: Dickert
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 5/23/2025
+  image: 90px-FS_dickert.png
+- id: 263
+  unitId: 6104
+  nameJa: グレートファーマー ソル
+  nameEn: First-Rate Farmer Sol
+  rarity: 6
+  class: guard
+  deployment: low
+  limited: true
+  release: 5/23/2025
+  image: 90px-FS_sol_(awakened).png

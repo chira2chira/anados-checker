@@ -2012,3 +2012,24 @@
     - name: ハロルド
       weight: 0.01
   poolId: 15
+- id: 140
+  nameJa: 都会じゃ会えない！汗と土が育てたカントリーソウル
+  nameEn: Country Soul You Won’t Find in the City, Nurtured by Sweat and Soil!
+  revival: false
+  start: 5/23/2025
+  end: 7/4/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: グレートファーマー ソル
+      weight: 0.01
+    - name: デッカート
+      weight: 0.01
+  poolId: 15
