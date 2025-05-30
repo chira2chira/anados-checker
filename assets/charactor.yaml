@@ -2554,3 +2554,23 @@
   limited: true
   release: 5/23/2025
   image: 90px-FS_sol_(awakened).png
+- id: 264
+  unitId: 1012
+  nameJa: 牧場スタッフ
+  nameEn: Farm Staff
+  rarity: 1
+  class: healer
+  deployment: high
+  limited: false
+  release: 5/30/2025
+  image: 90px-FS_farmstaff.png
+- id: 265
+  unitId: 1013
+  nameJa: ミルク大好き冒険者
+  nameEn: Milk-Addicted Adventurer
+  rarity: 1
+  class: guard
+  deployment: low
+  limited: false
+  release: 5/30/2025
+  image: 90px-FS_milkadventurer.png
