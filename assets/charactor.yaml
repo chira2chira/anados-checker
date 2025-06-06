@@ -2574,3 +2574,23 @@
   limited: false
   release: 5/30/2025
   image: 90px-FS_milkadventurer.png
+- id: 266
+  unitId: 5090
+  nameJa: アルキオン
+  nameEn: Alcyon
+  rarity: 5
+  class: shooter
+  deployment: high
+  limited: false
+  release: 6/6/2025
+  image: 90px-FS_alcyon.png
+- id: 267
+  unitId: 6105
+  nameJa: 実りのラージファームフレット
+  nameEn: Bountiful Farm-Raiser Flet
+  rarity: 6
+  class: healer
+  deployment: high
+  limited: true
+  release: 6/6/2025
+  image: 90px-FS_flet_(farmer).png

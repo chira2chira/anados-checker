@@ -2033,3 +2033,91 @@
     - name: デッカート
       weight: 0.01
   poolId: 15
+- id: 141
+  nameJa: 二人一組！保健体育の実習を始める！
+  nameEn: Paired Up to Square Up!
+  revival: true
+  start: 6/6/2025
+  end: 7/18/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: シンバット
+      weight: 0.01
+    - name: ソルベ
+      weight: 0.01
+    - name: ヤークート
+      weight: 0.01
+  poolId: 15
+- id: 142
+  nameJa: モテモテ青春！大人の秘密を教えて先生！
+  nameEn: 'Adulthood 101: Private Personal Tutoring!'
+  revival: true
+  start: 6/6/2025
+  end: 7/18/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: 熱血個別指導 ヤブサハ
+      weight: 0.01
+    - name: マージナイト ルーク
+      weight: 0.01
+    - name: ラジーン
+      weight: 0.01
+  poolId: 15
+- id: 143
+  nameJa: 就職率120%超え！魔道学院はキミの夢を叶えます！
+  nameEn: 120% Employment Rate! Dream School to Dream Job!
+  revival: true
+  start: 6/6/2025
+  end: 7/18/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 蜃気楼の召喚士 シールズ
+      weight: 0.01
+    - name: ダンジョンボス ゼベク
+      weight: 0.01
+  poolId: 15
+- id: 144
+  nameJa: 搾り立てミルクが飲み放題！大きく育て
+  nameEn: All-You-Can-Drink Milk to Grow Nice and BIG!!!
+  revival: false
+  start: 6/6/2025
+  end: 7/18/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 実りのラージファームフレット
+      weight: 0.01
+    - name: アルキオン
+      weight: 0.01
+  poolId: 15
