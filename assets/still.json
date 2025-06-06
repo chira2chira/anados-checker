@@ -548,7 +548,7 @@
       "charId": 3007,
       "seq": 1,
       "shared": [3007, 6026],
-      "group": [3007, 6026],
+      "group": [3007, 6026, 6105],
       "label": "still01_flet",
       "image": "StillThumbnail_bg_flet_still01_mosaicoff_001.webp"
     },
@@ -556,7 +556,7 @@
       "charId": 3007,
       "seq": 3,
       "shared": [3007, 6026],
-      "group": [3007, 6026],
+      "group": [3007, 6026, 6105],
       "label": "still04_flet",
       "image": "StillThumbnail_bg_flet_still04_mosaic_001.webp"
     },
@@ -564,7 +564,7 @@
       "charId": 3007,
       "seq": 4,
       "shared": [3007, 6026],
-      "group": [3007, 6026],
+      "group": [3007, 6026, 6105],
       "label": "still03_flet_secret_123007",
       "image": "StillThumbnail_bg_flet_still03_mosaic_001.webp"
     },
@@ -572,7 +572,7 @@
       "charId": 3007,
       "seq": 70,
       "shared": [3007, 6026],
-      "group": [3007, 6026],
+      "group": [3007, 6026, 6105],
       "label": "wboom_011",
       "image": "StillThumbnail_bg_flet_storystill01_mosaic_A01.webp"
     },
@@ -580,7 +580,7 @@
       "charId": 3007,
       "seq": 71,
       "shared": [3007, 6026],
-      "group": [3007, 6026],
+      "group": [3007, 6026, 6105],
       "label": "ppc_904",
       "image": "StillThumbnail_bg_ppc_storystill01_mosaic_A001.webp"
     },
@@ -2673,6 +2673,14 @@
       "image": "StillThumbnail_bg_deckert_storystill01_mosaic_001.webp"
     },
     {
+      "charId": 5088,
+      "seq": 71,
+      "shared": [5088],
+      "group": [5088],
+      "label": "mdr_032",
+      "image": "StillThumbnail_bg_dunk_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 5089,
       "seq": 70,
       "shared": [5089],
@@ -3207,6 +3215,14 @@
       "group": [6016],
       "label": "main_001_030",
       "image": "StillThumbnail_storystill01_jade_a.webp"
+    },
+    {
+      "charId": 6016,
+      "seq": 70,
+      "shared": [6016],
+      "group": [6016],
+      "label": "mdr_032",
+      "image": "StillThumbnail_bg_dunk_storystill01_mosaic_003.webp"
     },
     {
       "charId": 6017,
@@ -4239,6 +4255,14 @@
       "group": [6103],
       "label": "mdr_028",
       "image": "StillThumbnail_bg_sol_storystill01_mosaic_003.webp"
+    },
+    {
+      "charId": 6103,
+      "seq": 72,
+      "shared": [6103],
+      "group": [6103],
+      "label": "mdr_032",
+      "image": "StillThumbnail_bg_dunk_storystill01_mosaic_001.webp"
     },
     {
       "charId": 7001,
