@@ -110,7 +110,13 @@ function filterReleaseChar(filter: string) {
     }
   };
 }
-const INELIGIBLE_CHAR = ["Gaia", "Barboros", "New Look Barboros"];
+const INELIGIBLE_CHAR = [
+  "Gaia",
+  "Barboros",
+  "New Look Barboros",
+  "Tetsubo",
+  "Lyon’s Dad",
+];
 function filterTicketChar(filter: string) {
   return function (info: UnknownInfo) {
     if (!isCharInfo(info)) return true;
