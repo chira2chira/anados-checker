@@ -126,8 +126,8 @@ export const Container: React.FC<ContainerProps> = (props) => {
             >
               <div>
                 <span>{t("ui.text.resources")}: </span>
-                <a href="https://anothereidoswiki.ddns.net/index.php/Main_Page">
-                  AnotherEidos Wiki
+                <a href="https://anothereidos.wikioasis.org/wiki/Main_Page">
+                  AnotherEidos R Wiki
                 </a>
               </div>
               <div>
