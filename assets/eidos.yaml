@@ -484,3 +484,39 @@
   limited: false
   release: 4/25/2025
   image: WeaponIcon_6010.png
+- id: 55
+  eidosId: 5015
+  unitId: 2018
+  nameJa: 俺のかわいい奴隷ども
+  nameEn: My Cute Servants
+  rarity: 5
+  limited: false
+  release: 6/13/2025
+  image: WeaponIcon_5015.png
+- id: 56
+  eidosId: 5016
+  unitId: 3008
+  nameJa: ぬくもりの行方
+  nameEn: Where Hath the Warmth Gone?
+  rarity: 5
+  limited: false
+  release: 6/13/2025
+  image: WeaponIcon_5016.png
+- id: 57
+  eidosId: 6011
+  unitId: 6017
+  nameJa: 君に背中を預けたい
+  nameEn: I Want to Have Your Back
+  rarity: 6
+  limited: false
+  release: 6/13/2025
+  image: WeaponIcon_6011.png
+- id: 58
+  eidosId: 6012
+  unitId: 3012
+  nameJa: 行かないで
+  nameEn: Don’t Go!
+  rarity: 6
+  limited: false
+  release: 6/13/2025
+  image: WeaponIcon_6012.png

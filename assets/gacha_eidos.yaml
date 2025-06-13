@@ -98,3 +98,28 @@
     - name: 教えて！フォーカー先生！
       weight: 0.01
   poolId: 4
+- id: 5
+  nameJa: ロマンスファンタジー！燃える恋心VS下心
+  nameEn: A Romantic Fantasy! Burning Love vs Ulterior Motives
+  revival: false
+  start: 6/13/2025
+  end: 7/25/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: 行かないで
+      weight: 0.01
+    - name: 君に背中を預けたい
+      weight: 0.01
+    - name: ぬくもりの行方
+      weight: 0.01
+    - name: 俺のかわいい奴隷ども
+      weight: 0.01
+  poolId: 5
