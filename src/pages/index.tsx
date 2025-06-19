@@ -176,13 +176,13 @@ function filterTicketChar(filter: string) {
             : dayjs(info.release).isBefore(dayjs("2024/11/16")))
         );
       case "aniv3.5":
-        // 仮
+        // https://anothereidos-r.info/news/3-5aniv2025/
         if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
         return (
           info.rarity >= 4 &&
           (info.limited
-            ? dayjs(info.release).isBefore(dayjs("2024/12/21"))
-            : dayjs(info.release).isBefore(dayjs("2025/6/21")))
+            ? dayjs(info.release).isBefore(dayjs("2024/12/14"))
+            : dayjs(info.release).isBefore(dayjs("2025/6/7")))
         );
     }
   };
