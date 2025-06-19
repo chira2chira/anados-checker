@@ -27,6 +27,7 @@
       "bothGround": "Both",
       "releaseBy": "Release Date",
       "ticketBy": "Anniv Scout Ticket",
+      "equipmentTicketBy": "Anniv Select Ticket",
       "stillBy": "Stills",
       "showStill0": "Show characters with 0 stills",
       "ignoreStoryStill": "Exclude Story Stills",
@@ -47,6 +48,7 @@
       "aniv2.5": "2.5 Year Anniv",
       "aniv3.0": "3rd Anniv",
       "aniv3.5": "3.5 Year Anniv",
+      "aniv3.5Eidos": "3.5 Year Anniv",
       "resetFilter": "Reset Filter",
       "showHighRarityOnly": "Show High Rarity Only",
       "showOverall": "Show Overall Status"

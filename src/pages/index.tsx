@@ -32,7 +32,7 @@ import useCategoryQuery, { PageCategory } from "@/hooks/useCategoryQuery";
 import { Container } from "@/components/Container";
 import { CaptureModal } from "@/components/CaptureModal";
 import { CharClass, CharInfo, EidosInfo, UnknownInfo } from "@/types/unit";
-import { isCharInfo } from "@/utils/types";
+import { isCharInfo, isEidosInfo } from "@/utils/types";
 import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 import useCharacterAndEidosOwnership from "@/hooks/useCharacterAndEidosOwnership";
 
@@ -188,6 +188,24 @@ function filterTicketChar(filter: string) {
   };
 }
 
+const INELIGIBLE_EIDOS = ["Dummy"];
+function filterTicketEidos(filter: string) {
+  return function (info: UnknownInfo) {
+    if (!isEidosInfo(info)) return true;
+
+    switch (filter) {
+      case "none":
+        return true;
+      case "aniv3.5":
+        // https://anothereidos-r.info/news/3-5aniv2025/
+        if (INELIGIBLE_EIDOS.includes(info.nameEn)) return false;
+        return (
+          info.rarity >= 4 && dayjs(info.release).isBefore(dayjs("2025/4/26"))
+        );
+    }
+  };
+}
+
 const Home: NextPage<HomeProps> = (props) => {
   const { owned, setOwned, save, tmpMode } = useCharacterAndEidosOwnership();
   const [filterClass, setFilterClass] = useState<CharClass[]>([]);
@@ -196,6 +214,7 @@ const Home: NextPage<HomeProps> = (props) => {
   const [filterDeployment, setFilterDeployment] = useState("none");
   const [filterRelease, setFilterRelease] = useState("none");
   const [filterTicket, setFilterTicket] = useState("none");
+  const [filterEidosTicket, setFilterEidosTicket] = useState("none");
   const [fetching, setFetching] = useState(false);
   const [flash, setFlash] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
@@ -249,7 +268,8 @@ const Home: NextPage<HomeProps> = (props) => {
           .filter(filterLimitedChar(filterLimited))
           .filter(filterDeploymentChar(filterDeployment))
           .filter(filterReleaseChar(filterRelease))
-          .filter(filterTicketChar(filterTicket));
+          .filter(filterTicketChar(filterTicket))
+          .filter(filterTicketEidos(filterEidosTicket));
       const rare0 = applyFilter(0);
       const rare1 = applyFilter(1);
       const rare2 = applyFilter(2);
@@ -268,6 +288,7 @@ const Home: NextPage<HomeProps> = (props) => {
       filterDeployment,
       filterRelease,
       filterTicket,
+      filterEidosTicket,
     ]);
 
   const handleCharClick = useCallback(
@@ -511,7 +532,6 @@ const Home: NextPage<HomeProps> = (props) => {
                 { value: "2025", label: t("ui.filter.year2025") },
               ]}
             />
-
             <FilterSelect
               style={{ display: category === "char" ? undefined : "none" }}
               value={filterTicket}
@@ -524,6 +544,15 @@ const Home: NextPage<HomeProps> = (props) => {
                 { value: "aniv2.5", label: t("ui.filter.aniv2.5") },
                 { value: "aniv3.0", label: t("ui.filter.aniv3.0") },
                 { value: "aniv3.5", label: t("ui.filter.aniv3.5") },
+              ]}
+            />
+            <FilterSelect
+              style={{ display: category === "eidos" ? undefined : "none" }}
+              value={filterEidosTicket}
+              onChange={setFilterEidosTicket}
+              options={[
+                { value: "none", label: t("ui.filter.equipmentTicketBy") },
+                { value: "aniv3.5", label: t("ui.filter.aniv3.5Eidos") },
               ]}
             />
           </div>
