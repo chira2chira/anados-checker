@@ -2594,3 +2594,23 @@
   limited: true
   release: 6/6/2025
   image: 90px-FS_flet_(farmer).png
+- id: 268
+  unitId: 6106
+  nameJa: バル・ド・ラ・ローズ バルボロス
+  nameEn: Bal de la Rose Barboros
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 6/20/2025
+  image: 90px-FS_barboros_(aniv).png
+- id: 269
+  unitId: 6107
+  nameJa: ゴージャスナイトクルージング マグリット
+  nameEn: Luxury Night Cruising Magritte
+  rarity: 6
+  class: support
+  deployment: high
+  limited: true
+  release: 6/20/2025
+  image: 90px-FS_magritte_(aniv).png

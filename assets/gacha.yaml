@@ -2121,3 +2121,24 @@
     - name: アルキオン
       weight: 0.01
   poolId: 15
+- id: 145
+  nameJa: 3.5周年！エレガントセレブレーション！夜の帝王からの招待状
+  nameEn: Invite from the Emperor to Make for a Smashingly Elegant Celebration to Commemorate 3.5 Years!
+  revival: false
+  start: 6/20/2025
+  end: 8/1/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: バル・ド・ラ・ローズ バルボロス
+      weight: 0.01
+    - name: ゴージャスナイトクルージング マグリット
+      weight: 0.01
+  poolId: 16
