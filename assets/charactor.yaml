@@ -2471,7 +2471,7 @@
   rarity: 5
   class: fighter
   deployment: low
-  limited: true
+  limited: false
   release: 4/1/2025
   image: 90px-FS_lyonsdad.png
 - id: 256
