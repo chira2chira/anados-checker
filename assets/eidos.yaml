@@ -520,3 +520,21 @@
   limited: false
   release: 6/13/2025
   image: WeaponIcon_6012.png
+- id: 59
+  eidosId: 3021
+  unitId: 2024
+  nameJa: 発動！夜の大人モード
+  nameEn: Nighttime Adult Mode Triggered!
+  rarity: 3
+  limited: false
+  release: 6/27/2025
+  image: WeaponIcon_3021.png
+- id: 60
+  eidosId: 3022
+  unitId: 2028
+  nameJa: 大型契約獲得！
+  nameEn: Scored a ＂Big＂ Contract!
+  rarity: 3
+  limited: false
+  release: 6/27/2025
+  image: WeaponIcon_3022.png

@@ -2614,3 +2614,13 @@
   limited: true
   release: 6/20/2025
   image: 90px-FS_magritte_(aniv).png
+- id: 270
+  unitId: 2028
+  nameJa: サラリーマン
+  nameEn: Company Employee
+  rarity: 2
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 6/27/2025
+  image: 90px-FS_salaryman.png
