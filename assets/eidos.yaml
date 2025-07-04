@@ -538,3 +538,12 @@
   limited: false
   release: 6/27/2025
   image: WeaponIcon_3022.png
+- id: 61
+  eidosId: 3024
+  unitId: 1018
+  nameJa: 逸れた道の果てで
+  nameEn: What Lies Down the Beaten Path
+  rarity: 3
+  limited: false
+  release: 7/4/2025
+  image: WeaponIcon_3024.png

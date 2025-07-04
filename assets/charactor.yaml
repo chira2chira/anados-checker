@@ -2624,3 +2624,53 @@
   limited: false
   release: 6/27/2025
   image: 90px-FS_salaryman.png
+- id: 271
+  unitId: 1014
+  nameJa: オークシューター
+  nameEn: Orc Shooter
+  rarity: 1
+  class: shooter
+  deployment: high
+  limited: false
+  release: 7/4/2025
+  image: 90px-FS_orc_shooter.png
+- id: 272
+  unitId: 1015
+  nameJa: オークソードマン
+  nameEn: Orc Swordsman
+  rarity: 1
+  class: fighter
+  deployment: low
+  limited: false
+  release: 7/4/2025
+  image: 90px-FS_orc_swordman.png
+- id: 273
+  unitId: 1016
+  nameJa: オークメイジ
+  nameEn: Orc Mage
+  rarity: 1
+  class: caster
+  deployment: high
+  limited: false
+  release: 7/4/2025
+  image: 90px-FS_orc_mage.png
+- id: 274
+  unitId: 1017
+  nameJa: オークガード
+  nameEn: Orc Guard
+  rarity: 1
+  class: guard
+  deployment: low
+  limited: false
+  release: 7/4/2025
+  image: 90px-FS_orc_guard.png
+- id: 275
+  unitId: 1018
+  nameJa: ごろつき冒険者
+  nameEn: Rogue Adventurer
+  rarity: 1
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 7/4/2025
+  image: 90px-FS_rogue.png
