@@ -2142,3 +2142,154 @@
     - name: ゴージャスナイトクルージング マグリット
       weight: 0.01
   poolId: 16
+- id: 146
+  nameJa: 今夜はゴージャスナイト！大人だけの社交場へようこそ！
+  nameEn: Mingle with the Big Boys Tonight in the Glitzy Pleasure Dome!
+  revival: true
+  start: 7/11/2025
+  end: 8/22/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ブラックバニー ウォルサー
+      weight: 0.01
+    - name: 闇夜を駆けるはぐれ刑事 バーリッツ
+      weight: 0.01
+    - name: ドミノ
+      weight: 0.01
+  poolId: 16
+- id: 147
+  nameJa: ありがとう2.0周年！極上ナイトサービスでベッド・イン！
+  nameEn: Thank You for 2 Years! Spend the Night Living Your Dreams!
+  revival: true
+  start: 7/11/2025
+  end: 8/22/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: マフィアブラザーズ ビルフォード
+      weight: 0.01
+    - name: イカサマ勝負師 バカラ
+      weight: 0.01
+    - name: ゴージャスドリーム エドガー
+      weight: 0.01
+  poolId: 16
+- id: 148
+  nameJa: 凍てつく遺伝子、永久凍土に埋もれた超古代
+  nameEn: Genes Frozen in Time, An Ancient World Buried in Permafrost
+  revival: false
+  start: 7/11/2025
+  end: 8/22/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: むかしむかし…… フォーカー
+      weight: 0.01
+    - name: カルフーン
+      weight: 0.01
+  poolId: 16
+- id: 149
+  nameJa: 枕営業部、出動！ズブズブの関係になろうぜ！
+  nameEn: Red Light Merchants, Move Out! Get Busy with Business Partners!
+  revival: true
+  start: 7/11/2025
+  end: 8/22/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: マグリット
+      weight: 0.01
+    - name: 名誉社長 トーマス
+      weight: 0.01
+  poolId: 16
+- id: 150
+  nameJa: 満員満席メトロ、発進！超自由席で常識が壊れる！
+  nameEn: Full Steam Ahead in the Crowded Metro! Norms Break Down in the SUPER “Open” Train Cars!
+  revival: true
+  start: 7/11/2025
+  end: 8/22/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: アラート
+      weight: 0.01
+    - name: フルハウス
+      weight: 0.01
+  poolId: 16
+- id: 151
+  nameJa: オイルまみれ汗まみれの工場でキミだけの親方を作ろう！
+  nameEn: Create Your Boss at the Sweatiest, Oiliest Factory Ever!
+  revival: true
+  start: 7/11/2025
+  end: 8/22/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ドメイ
+      weight: 0.01
+    - name: バイオソルジャー ブルート
+      weight: 0.01
+  poolId: 16
+- id: 152
+  nameJa: 超・合金！超・爆根！最強おもちゃ怪獣あらわる！
+  nameEn: SUPER ALLOY SUPER BOMB ROD The Strongest Monster of a Toy is Born!
+  revival: true
+  start: 7/11/2025
+  end: 8/22/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: マモン
+      weight: 0.01
+    - name: エターニオン
+      weight: 0.01
+  poolId: 16

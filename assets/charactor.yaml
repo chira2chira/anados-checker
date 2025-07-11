@@ -2674,3 +2674,23 @@
   limited: false
   release: 7/4/2025
   image: 90px-FS_rogue.png
+- id: 276
+  unitId: 5091
+  nameJa: カルフーン
+  nameEn: Calhoun
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 7/11/2025
+  image: 90px-FS_calhoun.png
+- id: 277
+  unitId: 6108
+  nameJa: むかしむかし…… フォーカー
+  nameEn: Long, Long Ago… Folker
+  rarity: 6
+  class: healer
+  deployment: high
+  limited: true
+  release: 7/11/2025
+  image: 90px-FS_folker_(storyteller).png

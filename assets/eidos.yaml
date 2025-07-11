@@ -547,3 +547,12 @@
   limited: false
   release: 7/4/2025
   image: WeaponIcon_3024.png
+- id: 62
+  eidosId: 3023
+  unitId: 2022
+  nameJa: 魅惑の接待術
+  nameEn: Seductive Entertaining
+  rarity: 3
+  limited: false
+  release: 7/11/2025
+  image: WeaponIcon_3023.png
