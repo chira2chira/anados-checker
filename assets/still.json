@@ -330,6 +330,14 @@
     },
     {
       "charId": 2022,
+      "seq": 20,
+      "shared": [2022],
+      "group": [2022],
+      "label": "still01_merchant_eidos",
+      "image": "StillThumbnail_bg_merchant_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 2022,
       "seq": 50,
       "shared": [2022],
       "group": [2022],
@@ -1788,7 +1796,7 @@
       "charId": 5032,
       "seq": 1,
       "shared": [5032, 6043],
-      "group": [5032, 6043],
+      "group": [5032, 6043, 6108],
       "label": "still01_folker",
       "image": "StillThumbnail_bg_folker_still01_mosaic_001.webp"
     },
@@ -1796,7 +1804,7 @@
       "charId": 5032,
       "seq": 3,
       "shared": [5032, 6043],
-      "group": [5032, 6043],
+      "group": [5032, 6043, 6108],
       "label": "still03_folker",
       "image": "StillThumbnail_bg_folker_still03_mosaic_001.webp"
     },
@@ -1804,7 +1812,7 @@
       "charId": 5032,
       "seq": 20,
       "shared": [5032, 6043],
-      "group": [5032, 6043],
+      "group": [5032, 6043, 6108],
       "label": "still02_folker_eidos",
       "image": "StillThumbnail_bg_folker_still02_mosaic_001.webp"
     },
