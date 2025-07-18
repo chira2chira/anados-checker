@@ -19,6 +19,7 @@ import { sendEvent } from "@/utils/gtag";
 import { isCharInfo, isEidosInfo } from "@/utils/types";
 import useCategoryQuery, { PageCategory } from "@/hooks/useCategoryQuery";
 import { DisplayUsedCost } from "@/components/DisplayUsedCost";
+import { getImageUrl } from "@/utils/image";
 
 type GachaSimulatorProps = {
   charInfo: CharInfo[];
@@ -78,9 +79,8 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   const currentGachaInfo =
     category === "char" ? props.gachaInfo : props.eidosGachaInfo;
   const banner = getBanner(currentGachaInfo, id);
-  const basePath = isCharInfo(currentInfo[0])
-    ? "/static/image/banner/"
-    : "/static/image/banner_eidos/";
+  const basePath =
+    category === "char" ? "banner/" : "banner_eidos/";
   const { t, i18n } = useTranslation("gacha");
   const isJa = i18n.language === "ja";
 
@@ -208,7 +208,9 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
             margin-bottom: 8px;
           `}
           priority
-          src={basePath + `${isJa ? "ja" : "en"}/main/${banner.id}.png`}
+          src={getImageUrl(
+            basePath + `${isJa ? "ja" : "en"}/main/${banner.id}.png`
+          )}
           placeholder="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwIAAAGxAgMAAACsE+nZAAAAAXNSR0IArs4c6QAAAAxQTFRFR3BMpaiqpaiqpaiqm8gleQAAAAN0Uk5TADzFYouLHgAAAV5JREFUeNrt2iFOQ0EUhtF5TQCBx1R0CWzhLQGDRqO6hLKECpaAYhG8LbAERBW6goq+n5SkKVggaW56jhr7ZXIz4k4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPiN7vmHp4IFQ75bKVBwmgXvzwdDyYJlO5gXLejKF1w9Vi+Yb6oXDNvqBRn72gVdxt4dHHsOyk/y9Xp3uilccHazOzxVf5PPN4ULvkzHvnjBXaoXLPJau6BLVoUL7lubJB+FC15au0y2dQu6sW+zJH3ZgvMs2yLJsmzBNKtuSPJWtmCW9SRJ1mULFtleJMm2akE3ZLxLkrEvWjDJXtWCi+w9FC2Yli+YlS+4zl5fvuBBwZEKzm732tz+QMHft1A2gQoUKFCgQIECBQoUKFCg4B8L/LsGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE7UJ+JvXqZOadVdAAAAAElFTkSuQmCC"
           alt={isJa ? banner.nameJa : banner.nameEn}
           width={770}
@@ -436,7 +438,7 @@ const HistoryArea: React.FC<HistoryAreaProps> = (props) => {
         {[...Array(props.rarity)].map((_, i) => (
           <img
             key={i}
-            src="/static/image/common/star.png"
+            src={getImageUrl("common/star.png")}
             alt="star"
             width="15px"
             height="15px"
@@ -497,9 +499,7 @@ const CharacterImage: React.FC<CharacterImageProps> = React.memo((props) => {
   const { char } = props;
   const { i18n } = useTranslation();
   const isJa = i18n.language === "ja";
-  const basePath = isCharInfo(char)
-    ? "/static/image/char/"
-    : "/static/image/eidos/";
+  const basePath = isCharInfo(char) ? "char/" : "eidos/";
 
   let charName = isJa ? char.nameJa : char.nameEn;
   if (isEidosInfo(char)) {
@@ -520,7 +520,7 @@ const CharacterImage: React.FC<CharacterImageProps> = React.memo((props) => {
       >
         <ShinyBox>
           <img
-            src={basePath + char.image}
+            src={getImageUrl(basePath + char.image)}
             width="54px"
             height="54px"
             alt={charName}
@@ -537,7 +537,7 @@ const CharacterImage: React.FC<CharacterImageProps> = React.memo((props) => {
               padding: 2px;
               background: rgba(0, 0, 0, 0.7);
             `}
-            src={"/static/image/class/" + char.class + ".png"}
+            src={getImageUrl("class/" + char.class + ".png")}
             alt={displayCharClass(char.class)}
           />
         )}
@@ -642,7 +642,7 @@ const PickUpIcon: React.FC = () => {
         animation: 0.5s ${popup} ease-in-out;
         z-index: 1;
       `}
-      src={"/static/image/common/pu.svg"}
+      src={getImageUrl("common/pu.svg")}
       alt="Pick-Up"
       width="40px"
       height="14px"

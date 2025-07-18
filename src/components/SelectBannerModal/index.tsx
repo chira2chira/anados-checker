@@ -6,6 +6,7 @@ import { Checkbox, Dialog, DialogBody, Tag } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { GachaInfo } from "@/types/gacha";
 import dayjs from "dayjs";
+import { getImageUrl } from "@/utils/image";
 
 type SelectBannerModal = {
   isOpen: boolean;
@@ -127,9 +128,7 @@ const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
     const { t, i18n } = useTranslation("gacha");
     const isJa = i18n.language === "ja";
     const basePath =
-      query.cat === "eidos"
-        ? "/static/image/banner_eidos/"
-        : "/static/image/banner/";
+      query.cat === "eidos" ? "banner_eidos/" : "banner/";
 
     return (
       <a
@@ -171,7 +170,9 @@ const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
               max-width: 100%;
               height: auto;
             `}
-            src={basePath + `${isJa ? "ja" : "en"}/header/${gachaInfo.id}.png`}
+            src={getImageUrl(
+              basePath + `${isJa ? "ja" : "en"}/header/${gachaInfo.id}.png`
+            )}
             alt={isJa ? gachaInfo.nameJa : gachaInfo.nameEn}
             width={449}
             height={86}

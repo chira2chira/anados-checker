@@ -1,5 +1,6 @@
 import { CharClass } from "@/types/unit";
 import { displayCharClass } from "@/utils/stringUtil";
+import { getImageUrl } from "@/utils/image";
 import { Button, ButtonProps } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 
@@ -27,7 +28,7 @@ const ClassButton: React.FC<ClassButtonProps> = (props) => {
       {...buttonProps}
       icon={
         <img
-          src={"/static/image/class/" + charClass + ".png"}
+          src={getImageUrl("class/" + charClass + ".png")}
           alt={displayCharClass(charClass)}
           width="20px"
           height="20px"

@@ -5,6 +5,7 @@ import { css, keyframes } from "@emotion/react";
 import { CharInfoWithStill } from "@/types/unit";
 import { StillInfo } from "@/types/still";
 import { sendEvent } from "@/utils/gtag";
+import { getImageUrl } from "@/utils/image";
 import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 
 const SPOILER_CHARS = [143, 150];
@@ -96,7 +97,7 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
     // プリロード（低速回線向け）
     for (const still of targetStills) {
       const img = document.createElement("img");
-      img.src = "/static/image/still/" + still.image;
+      img.src = getImageUrl("still/" + still.image);
     }
 
     setTargetStills(targetStills);
@@ -194,7 +195,7 @@ export const StillRouletteModal: React.FC<StillRouletteModal> = (props) => {
                   css={css`
                     vertical-align: bottom;
                   `}
-                  src={"/static/image/still/" + displayStill.image}
+                  src={getImageUrl("still/" + displayStill.image)}
                   alt={displayStill.label}
                   onClick={stop}
                 />
@@ -283,7 +284,7 @@ const CharCard: React.FC<CharCardProps> = (props) => {
           border-radius: 25px;
           filter: ${props.hideSpoiler ? "blur(8px)" : "none"};
         `}
-        src={"/static/image/char/" + char.image}
+        src={getImageUrl("char/" + char.image)}
         alt={charName}
       />
       <span>{charName}</span>

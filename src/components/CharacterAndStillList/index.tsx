@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next";
 import { Button, Card, Icon, Tooltip } from "@blueprintjs/core";
 import { dequal } from "dequal";
 import { displayCharClass } from "@/utils/stringUtil";
+import { getImageUrl } from "@/utils/image";
 import { CharInfoWithStill } from "@/types/unit";
 import UserLabelEmojiSelect from "../UserLabelEmojiSelect";
 import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
@@ -123,12 +124,12 @@ const CharacterPanel: React.FC<{
                   max-height: 60px;
                 }
               `}
-              src={"/static/image/char/" + char.image}
+              src={getImageUrl("char/" + char.image)}
               alt={charName}
             />
             <img
               css={classIcon}
-              src={"/static/image/class/" + char.class + ".png"}
+              src={getImageUrl("class/" + char.class + ".png")}
               alt={displayCharClass(char.class)}
             />
           </Button>
@@ -226,7 +227,7 @@ const StillCard: React.FC<StillCardProps> = (props) => {
                   `}
                   loading="lazy"
                   alt={x.label}
-                  src={"/static/image/still/" + x.image}
+                  src={getImageUrl("still/" + x.image)}
                   onClick={() => handleReadChange(x.id)}
                 />
                 <Button

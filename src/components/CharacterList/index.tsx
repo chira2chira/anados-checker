@@ -6,6 +6,7 @@ import { css } from "@emotion/react";
 import { useTranslation } from "next-i18next";
 import { dequal } from "dequal";
 import { isCharInfo, isEidosInfo } from "@/utils/types";
+import { getImageUrl } from "@/utils/image";
 import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 
 const SPOILER_CHARS = [143, 150];
@@ -64,9 +65,8 @@ const CharacterPanel: React.FC<{
   const { char } = props;
   const { i18n } = useTranslation();
   const isJa = i18n.language === "ja";
-  const basePath = isCharInfo(char)
-    ? "/static/image/char/"
-    : "/static/image/eidos/";
+  const basePath =
+    isCharInfo(char) ? "char/" : "eidos/";
 
   let charName = isJa ? char.nameJa : char.nameEn;
   if (props.hideSpoiler) {
@@ -109,13 +109,13 @@ const CharacterPanel: React.FC<{
               }
             }
           `}
-          src={basePath + char.image}
+          src={getImageUrl(basePath + char.image)}
           alt={charName}
         />
         {isCharInfo(char) && (
           <img
             css={classIcon}
-            src={"/static/image/class/" + char.class + ".png"}
+            src={getImageUrl("class/" + char.class + ".png")}
             alt={displayCharClass(char.class)}
           />
         )}

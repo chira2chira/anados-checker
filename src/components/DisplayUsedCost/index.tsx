@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { Button } from "@blueprintjs/core";
+import { getImageUrl } from "@/utils/image";
 
 type DisplayUsedCostProps = {
   stone: number;
@@ -19,7 +20,7 @@ export const DisplayUsedCost: React.FC<DisplayUsedCostProps> = (props) => {
             {t("ui.text.usedStone")}: {props.stone}
           </span>
           <img
-            src="/static/image/common/stone.png"
+            src={getImageUrl("common/stone.png")}
             alt="龍脈石"
             width="15px"
             height="18px"

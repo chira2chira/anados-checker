@@ -5,6 +5,7 @@ import { css } from "@emotion/react";
 import CommonMeta from "@/components/CommonMeta";
 import { Button, Drawer, EntityTitle, MenuDivider } from "@blueprintjs/core";
 import React, { useCallback, useState } from "react";
+import { getImageUrl } from "@/utils/image";
 
 const mainWrapper = css`
   position: relative;
@@ -182,7 +183,7 @@ const LinkSideBar: React.FC = React.memo(() => {
             width: 60%;
             margin: 30px auto 30px;
           `}
-          src="/static/image/common/logo.svg"
+          src={getImageUrl("common/logo.svg")}
           alt="アナザーエイドス所持率チェッカー"
         />
         <Link href={"/"}>{t("ui.link.checker")}</Link>

@@ -35,6 +35,7 @@ import { CharClass, CharInfo, EidosInfo, UnknownInfo } from "@/types/unit";
 import { isCharInfo, isEidosInfo } from "@/utils/types";
 import { HideSpoilerContext } from "@/providers/HideSpoilerProvider";
 import useCharacterAndEidosOwnership from "@/hooks/useCharacterAndEidosOwnership";
+import { getImageUrl } from "@/utils/image";
 
 type HomeProps = {
   charInfo: CharInfo[];
@@ -809,7 +810,7 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
             : [...Array(props.rarity)].map((_, i) => (
                 <img
                   key={i}
-                  src="/static/image/common/star.png"
+                  src={getImageUrl("common/star.png")}
                   alt="star"
                   width="15px"
                   height="15px"
