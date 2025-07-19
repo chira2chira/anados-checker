@@ -20,7 +20,7 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=21600, immutable", // 6 hours
+            value: "public, max-age=21600, s-maxage=86400, immutable", // 6 hours / 1 day(CDN)
           },
         ],
       },
@@ -29,7 +29,7 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=43200, immutable", // 12 hours
+            value: "public, max-age=43200, s-maxage=86400, immutable", // 12 hours / 1 day(CDN)
           },
         ],
       },
