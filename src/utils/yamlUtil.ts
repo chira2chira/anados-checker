@@ -292,14 +292,22 @@ export function loadStillMaster() {
         }
         return true;
       })
-      .map((y) => ({
-        id: y.charId + ":" + y.seq,
-        seq: y.seq,
-        label: getLabel(y.label, stillLabels),
-        image: y.image,
-        read: false,
-        rate: -1,
-      }))
+      .map((y) => {
+        // 共有スチルが固有スチルに変更された場合のマイグレーションに必要
+        const groupIds = y.group
+          .filter((z) => z < 8000)
+          .map((z) => charInfo.filter((c) => c.unitId === z)[0].id)
+          .sort((a, b) => (a < b ? -1 : 1));
+        return {
+          id: y.charId + ":" + y.seq,
+          groupIds,
+          seq: y.seq,
+          label: getLabel(y.label, stillLabels),
+          image: y.image,
+          read: false,
+          rate: -1,
+        };
+      })
       .sort((a, b) => (a.label === "Still" ? -1 : 1));
     return { ...x, stills };
   });

@@ -6,6 +6,7 @@ export type StillState = {
 
 export type StillInfo = {
   id: string;
+  groupIds: number[];
   seq: number;
   label: string;
   image: string;

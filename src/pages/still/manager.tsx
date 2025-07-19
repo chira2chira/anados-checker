@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useCallback, useContext, useMemo, useState } from "react";
+import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { css } from "@emotion/react";
 import { Button, ButtonGroup, ButtonProps, Switch } from "@blueprintjs/core";
 import { forceCheck } from "react-lazyload";
@@ -123,6 +123,7 @@ function filterRateStill(filter: string) {
 const StillManager: NextPage<StillManagerProps> = (props) => {
   const { owned } = useCharacterOwnership();
   const { stillStates, setStillStates, save } = useStillState();
+  const [stillInitialized, setStillInitialized] = useState(false);
   const [filterClass, setFilterClass] = useState<CharClass[]>([]);
   const [filterStillType, setFilterStillType] = useState<StillType[]>([]);
   const [filterOwned, setFilterOwned] = useState("none");
@@ -200,6 +201,37 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       stillStates,
       filterClass,
     ]);
+
+  useEffect(() => {
+    if (stillInitialized || stillStates.length === 0) return;
+
+    // スチルの初期化処理
+    const newStillStates = stillStates.map((x) => {
+      // 共有スチルが固有スチルに変更された場合のマイグレーション
+      if (
+        !props.charInfoWithStills.some((y) =>
+          y.stills.some((z) => z.id === x.id)
+        )
+      ) {
+        const char = props.charInfoWithStills.find(
+          (y) => y.unitId === Number(x.id.split(":")[0])
+        );
+        const newChar = props.charInfoWithStills.find(
+          (y) =>
+            y.id ===
+            char?.stills[0]?.groupIds[(Number(x.id.split(":")[1]) - 1) / 2]
+        );
+        const still = newChar?.stills.find((y) => y.label === "Still");
+        // 既に固有スチルが登録されている場合はスキップ
+        if (still && !stillStates.some((y) => y.id === still.id)) {
+          return { ...x, id: still.id };
+        }
+      }
+      return x;
+    });
+    setStillStates(newStillStates);
+    setStillInitialized(true);
+  }, [props.charInfoWithStills, setStillStates, stillInitialized, stillStates]);
 
   const handleReadChange = useCallback(
     (id: string) => {
