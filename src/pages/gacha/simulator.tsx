@@ -80,7 +80,9 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
     category === "char" ? props.gachaInfo : props.eidosGachaInfo;
   const banner = getBanner(currentGachaInfo, id);
   const basePath =
-    category === "char" ? "banner/" : "banner_eidos/";
+    category === "char"
+      ? "/static/image/banner/"
+      : "/static/image/banner_eidos/";
   const { t, i18n } = useTranslation("gacha");
   const isJa = i18n.language === "ja";
 
@@ -208,9 +210,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
             margin-bottom: 8px;
           `}
           priority
-          src={getImageUrl(
-            basePath + `${isJa ? "ja" : "en"}/main/${banner.id}.png`
-          )}
+          src={basePath + `${isJa ? "ja" : "en"}/main/${banner.id}.png`}
           placeholder="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwIAAAGxAgMAAACsE+nZAAAAAXNSR0IArs4c6QAAAAxQTFRFR3BMpaiqpaiqpaiqm8gleQAAAAN0Uk5TADzFYouLHgAAAV5JREFUeNrt2iFOQ0EUhtF5TQCBx1R0CWzhLQGDRqO6hLKECpaAYhG8LbAERBW6goq+n5SkKVggaW56jhr7ZXIz4k4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPiN7vmHp4IFQ75bKVBwmgXvzwdDyYJlO5gXLejKF1w9Vi+Yb6oXDNvqBRn72gVdxt4dHHsOyk/y9Xp3uilccHazOzxVf5PPN4ULvkzHvnjBXaoXLPJau6BLVoUL7lubJB+FC15au0y2dQu6sW+zJH3ZgvMs2yLJsmzBNKtuSPJWtmCW9SRJ1mULFtleJMm2akE3ZLxLkrEvWjDJXtWCi+w9FC2Yli+YlS+4zl5fvuBBwZEKzm732tz+QMHft1A2gQoUKFCgQIECBQoUKFCg4B8L/LsGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE7UJ+JvXqZOadVdAAAAAElFTkSuQmCC"
           alt={isJa ? banner.nameJa : banner.nameEn}
           width={770}

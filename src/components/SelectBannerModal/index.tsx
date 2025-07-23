@@ -128,7 +128,9 @@ const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
     const { t, i18n } = useTranslation("gacha");
     const isJa = i18n.language === "ja";
     const basePath =
-      query.cat === "eidos" ? "banner_eidos/" : "banner/";
+      query.cat === "eidos"
+        ? "/static/image/banner_eidos/"
+        : "/static/image/banner/";
 
     return (
       <a
@@ -170,9 +172,7 @@ const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
               max-width: 100%;
               height: auto;
             `}
-            src={getImageUrl(
-              basePath + `${isJa ? "ja" : "en"}/header/${gachaInfo.id}.png`
-            )}
+            src={basePath + `${isJa ? "ja" : "en"}/header/${gachaInfo.id}.png`}
             alt={isJa ? gachaInfo.nameJa : gachaInfo.nameEn}
             width={449}
             height={86}
