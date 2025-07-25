@@ -66,6 +66,14 @@
     },
     {
       "charId": 1,
+      "seq": 56,
+      "shared": [1, 2],
+      "group": [1, 2],
+      "label": "main_007_016",
+      "image": "StillThumbnail_bg_calhoun_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 1,
       "seq": 70,
       "shared": [1, 2],
       "group": [1, 2],
@@ -868,7 +876,7 @@
       "charId": 4004,
       "seq": 1,
       "shared": [4004],
-      "group": [4004, 6054],
+      "group": [4004, 6054, 6109],
       "label": "still01_thorkell",
       "image": "StillThumbnail_bg_thorkell_still01_mosaic_001.webp"
     },
@@ -876,7 +884,7 @@
       "charId": 4004,
       "seq": 4,
       "shared": [4004],
-      "group": [4004, 6054],
+      "group": [4004, 6054, 6109],
       "label": "still04_thorkell_secret_124004",
       "image": "StillThumbnail_bg_thorkell_still04_mosaic_001.webp"
     },
@@ -884,7 +892,7 @@
       "charId": 4004,
       "seq": 70,
       "shared": [4004],
-      "group": [4004, 6054],
+      "group": [4004, 6054, 6109],
       "label": "baritati_031",
       "image": "StillThumbnail_bg_leonhart_island003_mosaic_B001.webp"
     },
@@ -2825,6 +2833,14 @@
       "image": "StillThumbnail_bg_alcyon_storystill01_mosaic_001.webp"
     },
     {
+      "charId": 5091,
+      "seq": 50,
+      "shared": [5091],
+      "group": [5091],
+      "label": "main_007_016",
+      "image": "StillThumbnail_bg_calhoun_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 6001,
       "seq": 1,
       "shared": [6001],
@@ -4441,6 +4457,14 @@
       "image": "StillThumbnail_bg_fu_storystill01_mosaic_002.webp"
     },
     {
+      "charId": 6102,
+      "seq": 6,
+      "shared": [6102],
+      "group": [],
+      "label": "still05_sigvaldi",
+      "image": "StillThumbnail_bg_sigvaldi_still05_mosaic_001.webp"
+    },
+    {
       "charId": 6103,
       "seq": 70,
       "shared": [6103],
@@ -4471,6 +4495,14 @@
       "group": [6103],
       "label": "mdr_033",
       "image": "StillThumbnail_bg_flet_storystill03_mosaic_001.webp"
+    },
+    {
+      "charId": 6104,
+      "seq": 3,
+      "shared": [6104],
+      "group": [],
+      "label": "still03_sol",
+      "image": "StillThumbnail_bg_sol_still03_mosaic_001.webp"
     },
     {
       "charId": 6105,
