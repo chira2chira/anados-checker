@@ -2694,3 +2694,23 @@
   limited: true
   release: 7/11/2025
   image: 90px-FS_folker_(storyteller).png
+- id: 278
+  unitId: 5092
+  nameJa: フェゴール
+  nameEn: Phegor
+  rarity: 5
+  class: stranger
+  deployment: low
+  limited: false
+  release: 7/25/2025
+  image: 90px-FS_phegor.png
+- id: 279
+  unitId: 6109
+  nameJa: 青き炎の運び手 トルケル
+  nameEn: Bearer of Blue Flames Thorkell
+  rarity: 6
+  class: caster
+  deployment: high
+  limited: true
+  release: 7/25/2025
+  image: 90px-FS_thorkell_(caster).png

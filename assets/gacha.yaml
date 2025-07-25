@@ -2293,3 +2293,24 @@
     - name: エターニオン
       weight: 0.01
   poolId: 16
+- id: 153
+  nameJa: そうさ極度フリーズドライ！凍てつくハートが燃えるとき
+  nameEn: Freeze Drying to the Extreme! When Frozen Hearts Are Set Ablaze!
+  revival: false
+  start: 7/25/2025
+  end: 9/5/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 青き炎の運び手 トルケル
+      weight: 0.01
+    - name: フェゴール
+      weight: 0.01
+  poolId: 16
