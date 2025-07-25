@@ -123,3 +123,20 @@
     - name: 俺のかわいい奴隷ども
       weight: 0.01
   poolId: 5
+- id: 10001
+  nameJa: エイドス装備スカウト 願いの力が冒険者を強くする！
+  nameEn: Eidos Scout The Power of Desire Makes Adventurers Stronger!
+  revival: false
+  start: 7/25/2025
+  end: 12/31/9999
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.38
+  pickUp: []
+  poolId: 6
