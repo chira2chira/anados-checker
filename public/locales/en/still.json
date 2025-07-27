@@ -7,16 +7,16 @@
     "storyStill": "Story",
     "eidosStill": "Eidos",
     "stillRoulette": "Fap Roulette",
-    "start": "Start",
-    "restart": "Draw lots again",
+    "start": "Start Drawing",
+    "restart": "Redraw",
     "labelSettings": "Custom Label",
     "labelSave": "Save",
     "labelCancel": "Cancel",
     "labelReset": "Reset to Defaults"
   },
   "text": {
-    "todayStillIs": "Your still of the day is...",
-    "stillCount": "Number of eligible stills",
+    "todayStillIs": "Your pick of the day is...",
+    "stillCount": "Available stills",
     "appliledFilter": "A filter has been applied to the list."
   }
 }
