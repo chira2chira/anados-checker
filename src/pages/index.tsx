@@ -252,6 +252,13 @@ const Home: NextPage<HomeProps> = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t, tmpMode]); // pushすると再発火してしまうためpushはdepsに入れない
 
+  // クリーンアップ
+  useEffect(() => {
+    return () => {
+      BottomRightToaster?.clear();
+    };
+  }, []);
+
   const { rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7 } =
     useMemo(() => {
       const applyFilter = (rarity: number) =>
