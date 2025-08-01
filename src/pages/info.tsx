@@ -153,7 +153,7 @@ const Info: NextPage<InfoProps> = () => {
         <Card>
           <H3>Contact</H3>
           <div>
-            chira2chira2chira2chira [at] gmail.com
+            <p>chira2chira2chira2chira [at] gmail.com</p>
           </div>
         </Card>
         <Card>
