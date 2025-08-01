@@ -139,6 +139,10 @@ export const Container: React.FC<ContainerProps> = (props) => {
                   GitHub
                 </a>
               </div>
+              <div>
+                <Link href={"/info"}>{t("ui.link.info")}</Link>{" / "}
+                <Link href={"/privacy"}>{t("ui.link.privacy")}</Link>
+              </div>
             </footer>
           </div>
         </div>

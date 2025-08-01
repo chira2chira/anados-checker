@@ -3,6 +3,7 @@ import common from "./public/locales/ja/common.json";
 import gacha from "./public/locales/ja/gacha.json";
 import still from "./public/locales/ja/still.json";
 import info from "./public/locales/ja/info.json";
+import privacy from "./public/locales/ja/privacy.json";
 
 declare module "i18next" {
   // Extend CustomTypeOptions
@@ -15,6 +16,7 @@ declare module "i18next" {
       gacha: typeof gacha;
       still: typeof still;
       info: typeof info;
+      privacy: typeof privacy;
     };
     // other
   }
