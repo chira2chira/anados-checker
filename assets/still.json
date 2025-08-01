@@ -723,23 +723,15 @@
     {
       "charId": 3011,
       "seq": 1,
-      "shared": [3011, 6019],
+      "shared": [3011],
       "group": [3011, 6019, 6084],
       "label": "still01_amorey",
       "image": "StillThumbnail_bg_amorey_still01_mosaic.webp"
     },
     {
       "charId": 3011,
-      "seq": 3,
-      "shared": [3011, 6019],
-      "group": [3011, 6019, 6084],
-      "label": "still03_amorey",
-      "image": "StillThumbnail_bg_amorey_still03_mosaic_001.webp"
-    },
-    {
-      "charId": 3011,
       "seq": 20,
-      "shared": [3011, 6019],
+      "shared": [3011],
       "group": [3011, 6019, 6084],
       "label": "still02_amorey_eidos",
       "image": "StillThumbnail_bg_amorey_still02_mosaic_001.webp"
@@ -747,7 +739,7 @@
     {
       "charId": 3011,
       "seq": 50,
-      "shared": [3011, 6019],
+      "shared": [3011],
       "group": [3011, 6019, 6084],
       "label": "main_003_010",
       "image": "StillThumbnail_bg_bestianoidofverdancia_storystill01_mosaic_001.webp"
@@ -1986,6 +1978,14 @@
     },
     {
       "charId": 5042,
+      "seq": 50,
+      "shared": [5042],
+      "group": [5042, 6092],
+      "label": "main_007_020",
+      "image": "StillThumbnail_bg_harold_storystill02_mosaic_001.webp"
+    },
+    {
+      "charId": 5042,
       "seq": 70,
       "shared": [5042],
       "group": [5042, 6092],
@@ -2841,6 +2841,14 @@
       "image": "StillThumbnail_bg_calhoun_storystill01_mosaic_001.webp"
     },
     {
+      "charId": 5093,
+      "seq": 20,
+      "shared": [5093],
+      "group": [5093],
+      "label": "still01_archaeologist_ilfait_eidos",
+      "image": "StillThumbnail_bg_archaeologist_still01_mosaic_001.webp"
+    },
+    {
       "charId": 6001,
       "seq": 1,
       "shared": [6001],
@@ -2954,6 +2962,14 @@
     },
     {
       "charId": 6005,
+      "seq": 50,
+      "shared": [6005],
+      "group": [6005],
+      "label": "main_007_020",
+      "image": "StillThumbnail_bg_theodor_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 6005,
       "seq": 70,
       "shared": [6005],
       "group": [6005],
@@ -3063,6 +3079,14 @@
       "group": [6008, 6053],
       "label": "still02_bart_eidos",
       "image": "StillThumbnail_bg_bart_still02_mosaic_001.webp"
+    },
+    {
+      "charId": 6008,
+      "seq": 50,
+      "shared": [6008],
+      "group": [6008, 6053],
+      "label": "main_007_020",
+      "image": "StillThumbnail_bg_harold_storystill02_mosaic_001.webp"
     },
     {
       "charId": 6009,
@@ -3415,6 +3439,14 @@
       "group": [5018, 5033, 6018, 95033],
       "label": "drm_011",
       "image": "StillThumbnail_bg_baquu_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 6019,
+      "seq": 3,
+      "shared": [6019],
+      "group": [],
+      "label": "still03_amorey",
+      "image": "StillThumbnail_bg_amorey_still03_mosaic_001.webp"
     },
     {
       "charId": 6020,
@@ -4527,6 +4559,14 @@
       "group": [],
       "label": "still02_magritte",
       "image": "StillThumbnail_bg_magritte_still02_mosaic_001.webp"
+    },
+    {
+      "charId": 6109,
+      "seq": 5,
+      "shared": [6109],
+      "group": [],
+      "label": "still05_thorkell",
+      "image": "StillThumbnail_bg_thorkell_still05_mosaic_001.webp"
     },
     {
       "charId": 7001,
