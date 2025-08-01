@@ -2314,3 +2314,66 @@
     - name: フェゴール
       weight: 0.01
   poolId: 16
+- id: 154
+  nameJa: おめでトラブル2024！温泉郷の龍神様は筆おろしが大スキ！
+  nameEn: Scrappy New Year 2024! The Hot Spring Dragon God Loves First-Timers!
+  revival: true
+  start: 8/1/2025
+  end: 9/12/2025 23:59
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: テンゴ
+      weight: 0.01
+    - name: シャオロン
+      weight: 0.01
+  poolId: 16
+- id: 155
+  nameJa: 散らすなら　いっそ奪わん　ロス・バージン
+  nameEn: Petals Swept Away on the Breeze! Virginity Lost
+  revival: true
+  start: 8/1/2025
+  end: 9/12/2025 23:59
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 男の花道 コンゴウ
+      weight: 0.01
+    - name: ハバキ
+      weight: 0.01
+  poolId: 16
+- id: 156
+  nameJa: 温泉郷に遊郭設立！？パワースポットに急行！
+  nameEn: From Onsen to Pleasure Den?! Non-Stop Ride to Pleasure Town!
+  revival: true
+  start: 8/1/2025
+  end: 9/12/2025 23:59
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 酔狂の夢路 ライ
+      weight: 0.01
+    - name: 伝説の色本作家 フウ
+      weight: 0.01
+  poolId: 16
