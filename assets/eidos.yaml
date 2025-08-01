@@ -556,3 +556,12 @@
   limited: false
   release: 7/11/2025
   image: WeaponIcon_3023.png
+- id: 63
+  eidosId: 3025
+  unitId: 5093
+  nameJa: 邂逅！エロトラップマシン！
+  nameEn: Encounter with an Erotic Trap Machine!
+  rarity: 3
+  limited: false
+  release: 8/1/2025
+  image: WeaponIcon_3025.png
