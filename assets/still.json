@@ -745,6 +745,14 @@
       "image": "StillThumbnail_bg_bestianoidofverdancia_storystill01_mosaic_001.webp"
     },
     {
+      "charId": 3011,
+      "seq": 51,
+      "shared": [3011],
+      "group": [3011, 6019, 6084],
+      "label": "main_007_022",
+      "image": "StillThumbnail_bg_amorey_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 3012,
       "seq": 1,
       "shared": [3012],
@@ -916,7 +924,7 @@
       "charId": 4006,
       "seq": 1,
       "shared": [4006],
-      "group": [4006, 6055],
+      "group": [4006, 6055, 6110],
       "label": "still01_patty",
       "image": "StillThumbnail_bg_patty_still01_mosaic_02.webp"
     },
@@ -924,7 +932,7 @@
       "charId": 4006,
       "seq": 70,
       "shared": [4006],
-      "group": [4006, 6055],
+      "group": [4006, 6055, 6110],
       "label": "clove_017",
       "image": "StillThumbnail_bg_patty_still03_mosaic_001.webp"
     },
@@ -932,7 +940,7 @@
       "charId": 4006,
       "seq": 71,
       "shared": [4006],
-      "group": [4006, 6055],
+      "group": [4006, 6055, 6110],
       "label": "baritati_031",
       "image": "StillThumbnail_bg_leonhart_island003_mosaic_C001.webp"
     },
@@ -2522,6 +2530,14 @@
     },
     {
       "charId": 5074,
+      "seq": 1,
+      "shared": [5074],
+      "group": [5074],
+      "label": "still01_anagura",
+      "image": "StillThumbnail_bg_anagura_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 5074,
       "seq": 70,
       "shared": [5074],
       "group": [5074],
@@ -2956,7 +2972,7 @@
       "charId": 6005,
       "seq": 1,
       "shared": [6005],
-      "group": [6005],
+      "group": [5094, 6005],
       "label": "still01_theodor",
       "image": "StillThumbnail_bg_theodor_still01_mosaic_001.webp"
     },
@@ -2964,7 +2980,7 @@
       "charId": 6005,
       "seq": 50,
       "shared": [6005],
-      "group": [6005],
+      "group": [5094, 6005],
       "label": "main_007_020",
       "image": "StillThumbnail_bg_theodor_storystill01_mosaic_001.webp"
     },
@@ -2972,7 +2988,7 @@
       "charId": 6005,
       "seq": 70,
       "shared": [6005],
-      "group": [6005],
+      "group": [5094, 6005],
       "label": "clove_017",
       "image": "StillThumbnail_bg_patty_still03_mosaic_001.webp"
     },
@@ -4481,6 +4497,14 @@
       "image": "StillThumbnail_bg_kagura_storystill01_mosaic_001.webp"
     },
     {
+      "charId": 6098,
+      "seq": 3,
+      "shared": [6098],
+      "group": [],
+      "label": "still02_fullhouse",
+      "image": "StillThumbnail_bg_fullhouse_still02_mosaic_A001.webp"
+    },
+    {
       "charId": 6099,
       "seq": 70,
       "shared": [6099],
@@ -4607,6 +4631,14 @@
       "group": [6106, 7001, 7002],
       "label": "main_007_014",
       "image": "StillThumbnail_bg_genejack_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 7001,
+      "seq": 54,
+      "shared": [7001, 7002],
+      "group": [6106, 7001, 7002],
+      "label": "main_007_022",
+      "image": "StillThumbnail_bg_amorey_storystill01_mosaic_001.webp"
     },
     {
       "charId": 7001,
