@@ -2714,7 +2714,7 @@
   limited: true
   release: 7/25/2025
   image: 90px-FS_thorkell_(caster).png
-- id: 2800
+- id: 280
   unitId: 5093
   nameJa: イルフェート
   nameEn: Ilfait
@@ -2724,3 +2724,23 @@
   limited: false
   release: 8/1/2025
   image: 90px-FS_ilfait.png
+- id: 281
+  unitId: 5094
+  nameJa: ドラゴンキラー テオドール
+  nameEn: Dragon Killer Theodor
+  rarity: 5
+  class: stranger
+  deployment: low
+  limited: true
+  release: 8/8/2025
+  image: 90px-FS_theodor_(awakened).png
+- id: 282
+  unitId: 6110
+  nameJa: オーロラの聖獣 パティ
+  nameEn: Auroran Sacred Beast Patty
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 8/8/2025
+  image: 90px-FS_patty_(snowgiant).png

@@ -2377,3 +2377,24 @@
     - name: 伝説の色本作家 フウ
       weight: 0.01
   poolId: 16
+- id: 157
+  nameJa: これってエロゲー！？聖獣覚醒
+  nameEn: Is This Some Erotic Game?! The Awakening of the Sacred Beast
+  revival: false
+  start: 8/8/2025
+  end: 9/19/2025 23:59
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: オーロラの聖獣 パティ
+      weight: 0.01
+    - name: ドラゴンキラー テオドール
+      weight: 0.01
+  poolId: 16
