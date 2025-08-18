@@ -289,10 +289,12 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
 
   const handleSave = () => {
     save();
-    TopToaster?.show({
-      intent: "success",
-      message: t("ui.message.saved"),
-    });
+    TopToaster?.then((toaster) =>
+      toaster.show({
+        intent: "success",
+        message: t("ui.message.saved"),
+      })
+    );
     sendEvent({
       action: "save",
       category: "still",
