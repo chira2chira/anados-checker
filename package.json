@@ -44,6 +44,7 @@
     "@types/lodash.throttle": "^4.1.7",
     "@types/mersennetwister": "^0.2.0",
     "@types/react-lazyload": "^3.2.3",
-    "@types/shortid": "^0.0.29"
+    "@types/shortid": "^0.0.29",
+    "@welldone-software/why-did-you-render": "^10.0.1"
   }
 }
