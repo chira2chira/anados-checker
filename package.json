@@ -27,7 +27,7 @@
     "lodash.throttle": "^4.1.1",
     "mersennetwister": "^0.2.3",
     "modern-screenshot": "^4.4.39",
-    "next": "^14.2.14",
+    "next": "^14.2.30",
     "next-i18next": "^14.0.0",
     "normalize.css": "^8.0.1",
     "react": "^18.3.1",
