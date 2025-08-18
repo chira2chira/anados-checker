@@ -18,7 +18,7 @@ class MyDocument extends Document {
             content="6j7nkQOC98vV6s1KKN7f8ZX37jDye8r-PTYxirchmX8"
           />
         </Head>
-        <body className="bp5-dark">
+        <body className="bp6-dark">
           <Main />
           <NextScript />
         </body>

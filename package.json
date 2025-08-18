@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@blueprintjs/core": "^5.16.0",
+    "@blueprintjs/core": "^6.1.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@next/third-parties": "^15.1.2",

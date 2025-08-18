@@ -234,20 +234,22 @@ const Home: NextPage<HomeProps> = (props) => {
 
   useEffect(() => {
     if (tmpMode) {
-      BottomRightToaster?.show({
-        intent: "warning",
-        timeout: 0,
-        isCloseButtonShown: false,
-        message: t("ui.message.viewingShared"),
-        action: {
-          icon: "cross",
-          onClick: () => {
-            push({ pathname: "/" });
+      BottomRightToaster?.then((toaster) =>
+        toaster?.show({
+          intent: "warning",
+          timeout: 0,
+          isCloseButtonShown: false,
+          message: t("ui.message.viewingShared"),
+          action: {
+            icon: "cross",
+            onClick: () => {
+              push({ pathname: "/" });
+            },
           },
-        },
-      });
+        })
+      );
     } else {
-      BottomRightToaster?.clear();
+      BottomRightToaster?.then((t) => t.clear());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t, tmpMode]); // pushすると再発火してしまうためpushはdepsに入れない
@@ -255,7 +257,7 @@ const Home: NextPage<HomeProps> = (props) => {
   // クリーンアップ
   useEffect(() => {
     return () => {
-      BottomRightToaster?.clear();
+      BottomRightToaster?.then((t) => t.clear());
     };
   }, []);
 
@@ -331,10 +333,12 @@ const Home: NextPage<HomeProps> = (props) => {
 
   const handleSave = () => {
     save();
-    TopToaster?.show({
-      intent: "success",
-      message: t("ui.message.saved"),
-    });
+    TopToaster?.then((toaster) =>
+      toaster.show({
+        intent: "success",
+        message: t("ui.message.saved"),
+      })
+    );
     sendEvent({
       action: "save",
       category: "character",
@@ -364,10 +368,12 @@ const Home: NextPage<HomeProps> = (props) => {
       if (!isIos()) {
         try {
           await navigator.clipboard.writeText(url);
-          TopToaster?.show({
-            intent: "success",
-            message: t("ui.message.copiedShareLink"),
-          });
+          TopToaster?.then((toaster) =>
+            toaster.show({
+              intent: "success",
+              message: t("ui.message.copiedShareLink"),
+            })
+          );
         } catch (e) {
           // 失敗したらiOSと同じ方法を取る
           setShareUrl(url);
@@ -382,10 +388,12 @@ const Home: NextPage<HomeProps> = (props) => {
         label: "success",
       });
     } else {
-      TopToaster?.show({
-        intent: "danger",
-        message: data.message,
-      });
+      TopToaster?.then((toaster) =>
+        toaster.show({
+          intent: "danger",
+          message: data.message,
+        })
+      );
       sendEvent({
         action: "share",
         category: "character",
@@ -400,10 +408,12 @@ const Home: NextPage<HomeProps> = (props) => {
     shareUrlElm.current?.select();
     document.execCommand("copy");
     setShareUrl("");
-    TopToaster?.show({
-      intent: "success",
-      message: t("ui.message.copiedShareLink"),
-    });
+    TopToaster?.then((toaster) =>
+      toaster.show({
+        intent: "success",
+        message: t("ui.message.copiedShareLink"),
+      })
+    );
   };
 
   const handleCharImageDownload = () => {

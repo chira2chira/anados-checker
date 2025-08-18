@@ -12,6 +12,6 @@ body {
 }
 
 /* https://github.com/palantir/blueprint/issues/4864 */
-.bp5-toast-container {
+.bp6-toast-container {
   position: fixed !important;
 }
