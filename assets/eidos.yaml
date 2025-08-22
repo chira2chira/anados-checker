@@ -565,3 +565,39 @@
   limited: false
   release: 8/1/2025
   image: WeaponIcon_3025.png
+- id: 64
+  eidosId: 5017
+  unitId: 6014
+  nameJa: 剛腕による査定
+  nameEn: Assessment with an Iron Arm
+  rarity: 5
+  limited: false
+  release: 8/22/2025
+  image: WeaponIcon_5017.png
+- id: 65
+  eidosId: 5018
+  unitId: 5015
+  nameJa: そっくりさんだ！
+  nameEn: He Looks Just Like Him!
+  rarity: 5
+  limited: false
+  release: 8/22/2025
+  image: WeaponIcon_5018.png
+- id: 66
+  eidosId: 6013
+  unitId: 6021
+  nameJa: 木漏れ日のバースデイ
+  nameEn: Birthday Party Beneath the Canopy
+  rarity: 6
+  limited: false
+  release: 8/22/2025
+  image: WeaponIcon_6013.png
+- id: 67
+  eidosId: 6014
+  unitId: 4003
+  nameJa: 対決！縄張りバトル！
+  nameEn: A Showdown Over Turf!
+  rarity: 6
+  limited: false
+  release: 8/22/2025
+  image: WeaponIcon_6014.png
