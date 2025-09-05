@@ -2746,6 +2746,14 @@
     },
     {
       "charId": 5083,
+      "seq": 1,
+      "shared": [5083],
+      "group": [5083],
+      "label": "still01_momiji",
+      "image": "StillThumbnail_bg_momiji_still01_mosaic_006.webp"
+    },
+    {
+      "charId": 5083,
       "seq": 70,
       "shared": [5083],
       "group": [5083],
