@@ -2398,3 +2398,45 @@
     - name: ドラゴンキラー テオドール
       weight: 0.01
   poolId: 16
+- id: 158
+  nameJa: なんでもヤります！レンタルXXX！
+  nameEn: Backshots on Tap and Up for Anything!
+  revival: true
+  start: 9/5/2025
+  end: 10/17/2025 23:59
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: チャボ
+      weight: 0.01
+    - name: レンタルお父さん コルカ
+      weight: 0.01
+  poolId: 16
+- id: 159
+  nameJa: カレシ探すなら今すぐ登録！レンタルパートナー
+  nameEn: Sign Up Now to Find a Boyfriend! Rental Partner
+  revival: true
+  start: 9/5/2025
+  end: 10/17/2025 23:59
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: レンタルパートナー ユーノ
+      weight: 0.01
+    - name: リオン
+      weight: 0.01
+  poolId: 16
