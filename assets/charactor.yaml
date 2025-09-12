@@ -2744,3 +2744,33 @@
   limited: true
   release: 8/8/2025
   image: 90px-FS_patty_(snowgiant).png
+- id: 283
+  unitId: 5095
+  nameJa: バーベキューマスター ドメイ
+  nameEn: BBQ Master Domay
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: true
+  release: 9/12/2025
+  image: 90px-FS_domay_(summer).png
+- id: 284
+  unitId: 5096
+  nameJa: ハリケンとタフ
+  nameEn: Hurricane & Tuff
+  rarity: 5
+  class: healer
+  deployment: high
+  limited: false
+  release: 9/12/2025
+  image: 90px-FS_hurricane.png
+- id: 285
+  unitId: 6111
+  nameJa: ウルトラスーパーノービス ガオウ
+  nameEn: Ultra Super Novice Gaoh
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: true
+  release: 9/12/2025
+  image: 90px-FS_gaoh_(summer).png

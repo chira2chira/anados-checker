@@ -2440,3 +2440,26 @@
     - name: リオン
       weight: 0.01
   poolId: 16
+- id: 160
+  nameJa: マッチング最大効率！ようこそおひとりさまアイランド
+  nameEn: Maximize Your Matchmaking on Bachelor Island!
+  revival: false
+  start: 9/12/2025
+  end: 10/24/2025 23:59
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ウルトラスーパーノービス ガオウ
+      weight: 0.01
+    - name: バーベキューマスター ドメイ
+      weight: 0.01
+    - name: ハリケンとタフ
+      weight: 0.01
+  poolId: 17
