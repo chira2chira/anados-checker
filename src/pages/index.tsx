@@ -179,6 +179,15 @@ function filterTicketChar(filter: string) {
             ? dayjs(info.release).isBefore(dayjs("2024/12/14"))
             : dayjs(info.release).isBefore(dayjs("2025/6/7")))
         );
+      case "aniv4.0":
+        // 仮
+        if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
+        return (
+          info.rarity >= 4 &&
+          (info.limited
+            ? dayjs(info.release).isBefore(dayjs("2025/6/21"))
+            : dayjs(info.release).isBefore(dayjs("2025/12/27")))
+        );
     }
   };
 }
@@ -196,6 +205,12 @@ function filterTicketEidos(filter: string) {
         if (INELIGIBLE_EIDOS.includes(info.nameEn)) return false;
         return (
           info.rarity >= 4 && dayjs(info.release).isBefore(dayjs("2025/4/26"))
+        );
+      case "aniv4.0":
+        // 仮
+        if (INELIGIBLE_EIDOS.includes(info.nameEn)) return false;
+        return (
+          info.rarity >= 4 && dayjs(info.release).isBefore(dayjs("2025/12/27"))
         );
     }
   };
@@ -556,6 +571,7 @@ const Home: NextPage<HomeProps> = (props) => {
                 { value: "aniv2.5", label: t("ui.filter.aniv2.5") },
                 { value: "aniv3.0", label: t("ui.filter.aniv3.0") },
                 { value: "aniv3.5", label: t("ui.filter.aniv3.5") },
+                { value: "aniv4.0", label: t("ui.filter.aniv4.0") },
               ]}
             />
             <FilterSelect
@@ -565,6 +581,7 @@ const Home: NextPage<HomeProps> = (props) => {
               options={[
                 { value: "none", label: t("ui.filter.equipmentTicketBy") },
                 { value: "aniv3.5", label: t("ui.filter.aniv3.5Eidos") },
+                { value: "aniv4.0", label: t("ui.filter.aniv4.0Eidos") },
               ]}
             />
           </div>
