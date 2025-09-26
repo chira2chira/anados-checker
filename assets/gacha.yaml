@@ -2463,3 +2463,26 @@
     - name: ハリケンとタフ
       weight: 0.01
   poolId: 17
+- id: 161
+  nameJa: 一皮剥ける熱帯夜！皆にはナイショだよ
+  nameEn: Break Out of Your Comfort Zone for a Hot, Steamy Night! Just Keep It on the Down-Low!
+  revival: false
+  start: 9/26/2025
+  end: 11/7/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: 君に贈るミルキーウェイ カンクロウ
+      weight: 0.01
+    - name: ひと夏の冒険 バクウ
+      weight: 0.01
+    - name: ラビロウ
+      weight: 0.01
+  poolId: 17

@@ -2774,3 +2774,33 @@
   limited: true
   release: 9/12/2025
   image: 90px-FS_gaoh_(summer).png
+- id: 286
+  unitId: 5097
+  nameJa: ラビロウ
+  nameEn: Rabirou
+  rarity: 5
+  class: support
+  deployment: high
+  limited: false
+  release: 9/26/2025
+  image: 90px-FS_rabirou.png
+- id: 287
+  unitId: 6112
+  nameJa: 君に贈るミルキーウェイ カンクロウ
+  nameEn: A Milky Way for You Kancrow
+  rarity: 6
+  class: caster
+  deployment: low
+  limited: true
+  release: 9/26/2025
+  image: 90px-FS_kancrow_(summer).png
+- id: 288
+  unitId: 6113
+  nameJa: ひと夏の冒険 バクウ
+  nameEn: Summer Adventurer Bakoo
+  rarity: 6
+  class: shooter
+  deployment: low
+  limited: true
+  release: 9/26/2025
+  image: 90px-FS_bakoo_(summer).png
