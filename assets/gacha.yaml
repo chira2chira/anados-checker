@@ -2486,3 +2486,70 @@
     - name: ラビロウ
       weight: 0.01
   poolId: 17
+- id: 162
+  nameJa: 突撃！あなたの淫夢にオジャマします！
+  nameEn: Butting into your Dreams!
+  revival: true
+  start: 10/3/2025
+  end: 11/14/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ネコミミサキュバス シャルロッテ
+      weight: 0.01
+    - name: トランスファービースト ピオス
+      weight: 0.01
+  poolId: 17
+- id: 163
+  nameJa: 夢精注意報発令！ぐっすりおやすみ！
+  nameEn: Warning! Hot and Sticky Nights Ahead! Sleep Soundly Tonight!
+  revival: true
+  start: 10/3/2025
+  end: 11/14/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: ドリームナイト アルカナ
+      weight: 0.01
+    - name: シドレー
+      weight: 0.01
+    - name: バクウ
+      weight: 0.01
+    - name: ロットハルト
+      weight: 0.01
+  poolId: 17
+- id: 164
+  nameJa: G-1グランプリ制覇！種馬スタリオン
+  nameEn: Champion of the Dream Derby! Stallion Studs!
+  revival: true
+  start: 10/3/2025
+  end: 11/14/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: オリオン
+      weight: 0.01
+    - name: スピカ
+      weight: 0.01
+  poolId: 17
