@@ -1753,6 +1753,14 @@
       "image": "StillThumbnail_bg_kancrow_still01_mosaic_001.webp"
     },
     {
+      "charId": 5029,
+      "seq": 70,
+      "shared": [5029],
+      "group": [5029, 6112],
+      "label": "oht_015",
+      "image": "StillThumbnail_bg_kancrow_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 5030,
       "seq": 3,
       "shared": [5030],
@@ -1959,6 +1967,14 @@
       "group": [5039, 6111],
       "label": "baritati_033",
       "image": "StillThumbnail_bg_leonhart_island004_mosaic_B001.webp"
+    },
+    {
+      "charId": 5039,
+      "seq": 72,
+      "shared": [5039],
+      "group": [5039, 6111],
+      "label": "oht_015",
+      "image": "StillThumbnail_bg_kancrow_storystill01_mosaic_001.webp"
     },
     {
       "charId": 5041,
@@ -4711,6 +4727,14 @@
       "group": [],
       "label": "still05_thorkell",
       "image": "StillThumbnail_bg_thorkell_still05_mosaic_001.webp"
+    },
+    {
+      "charId": 6110,
+      "seq": 5,
+      "shared": [6110],
+      "group": [],
+      "label": "still05_patty",
+      "image": "StillThumbnail_bg_patty_still05_mosaic_A001.webp"
     },
     {
       "charId": 6112,
