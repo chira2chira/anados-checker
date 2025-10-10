@@ -2804,3 +2804,23 @@
   limited: true
   release: 9/26/2025
   image: 90px-FS_bakoo_(summer).png
+- id: 289
+  unitId: 5098
+  nameJa: ヒフミ
+  nameEn: Hifumi
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: false
+  release: 10/10/2025
+  image: 90px-FS_hifumi.png
+- id: 290
+  unitId: 6114
+  nameJa: リビドー解放フリーサマー ミラージ
+  nameEn: Libido-Liberating Free Summer Mirage
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: true
+  release: 10/10/2025
+  image: 90px-FS_mirage_(summer).png
