@@ -2790,7 +2790,7 @@
   nameEn: A Milky Way for You Kancrow
   rarity: 6
   class: caster
-  deployment: low
+  deployment: high
   limited: true
   release: 9/26/2025
   image: 90px-FS_kancrow_(summer).png
@@ -2800,7 +2800,7 @@
   nameEn: Summer Adventurer Bakoo
   rarity: 6
   class: shooter
-  deployment: low
+  deployment: high
   limited: true
   release: 9/26/2025
   image: 90px-FS_bakoo_(summer).png
