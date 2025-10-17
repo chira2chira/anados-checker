@@ -601,3 +601,48 @@
   limited: false
   release: 8/22/2025
   image: WeaponIcon_6014.png
+- id: 68
+  eidosId: 5019
+  unitId: 6007
+  nameJa: お前のパンチなんて！
+  nameEn: You’re Punches Are Nothin’!
+  rarity: 5
+  limited: false
+  release: 10/17/2025
+  image: WeaponIcon_5019.png
+- id: 69
+  eidosId: 5020
+  unitId: 5037
+  nameJa: ハイパー・オルタになっちゃった！
+  nameEn: Orta’s Been Gigantified!
+  rarity: 5
+  limited: false
+  release: 10/17/2025
+  image: WeaponIcon_5020.png
+- id: 70
+  eidosId: 5021
+  unitId: 5098
+  nameJa: 潮風が連れてきた蛮勇
+  nameEn: Bravado Carried by the Breeze
+  rarity: 5
+  limited: false
+  release: 10/17/2025
+  image: WeaponIcon_5021.png
+- id: 71
+  eidosId: 6015
+  unitId: 6010
+  nameJa: ついに開催！独身パーティ
+  nameEn: The Bachelor Party Life Has Begun!
+  rarity: 6
+  limited: false
+  release: 10/17/2025
+  image: WeaponIcon_6015.png
+- id: 72
+  eidosId: 6016
+  unitId: 5091
+  nameJa: 愛とやらを教わりに来た！
+  nameEn: Here to Learn About Love… Or Somethin’ Like That!
+  rarity: 6
+  limited: false
+  release: 10/17/2025
+  image: WeaponIcon_6016.png

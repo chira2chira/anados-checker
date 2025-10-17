@@ -165,3 +165,28 @@
     - name: 剛腕による査定
       weight: 0.01
   poolId: 6
+- id: 7
+  nameJa: 恋人レベル１⇢∞！？ 　うるせー！俺はこれから独身パーティなんだよ
+  nameEn: Boyfriend LV 1 ⇢∞ ?! Please, I’m All About The Bachelor Parties!
+  revival: false
+  start: 10/17/2025
+  end: 11/28/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: ついに開催！独身パーティ
+      weight: 0.01
+    - name: 愛とやらを教わりに来た！
+      weight: 0.01
+    - name: お前のパンチなんて！
+      weight: 0.01
+    - name: ハイパー・オルタになっちゃった！
+      weight: 0.01
+  poolId: 7
