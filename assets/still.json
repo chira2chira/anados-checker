@@ -241,6 +241,22 @@
       "image": "StillThumbnail_bg_adventurer_storystill01_mosaic_002.webp"
     },
     {
+      "charId": 1019,
+      "seq": 70,
+      "shared": [1019],
+      "group": [1019],
+      "label": "ht2_011",
+      "image": "StillThumbnail_bg_bashkar_storystill02_mosaic_001_a.webp"
+    },
+    {
+      "charId": 1019,
+      "seq": 71,
+      "shared": [1019],
+      "group": [1019],
+      "label": "ht2_014",
+      "image": "StillThumbnail_bg_gou_storystill03_mosaic_001.webp"
+    },
+    {
       "charId": 2001,
       "seq": 1,
       "shared": [2001, 2002, 2003, 2004],
@@ -2580,7 +2596,7 @@
       "charId": 5073,
       "seq": 1,
       "shared": [5073],
-      "group": [5073],
+      "group": [5073, 6115],
       "label": "still01_bulkski",
       "image": "StillThumbnail_bg_bulkskiy_still01_mosaic_001.webp"
     },
@@ -3015,6 +3031,14 @@
       "group": [5098],
       "label": "oht_017",
       "image": "StillThumbnail_bg_edgar_storystill02_mosaic_001.webp"
+    },
+    {
+      "charId": 5099,
+      "seq": 1,
+      "shared": [5099],
+      "group": [5099],
+      "label": "still01_wilder",
+      "image": "StillThumbnail_bg_wilder_still01_mosaic_001.webp"
     },
     {
       "charId": 6001,
