@@ -2824,3 +2824,53 @@
   limited: true
   release: 10/10/2025
   image: 90px-FS_mirage_(summer).png
+- id: 291
+  unitId: 5099
+  nameJa: ワイルダー
+  nameEn: Wilder
+  rarity: 5
+  class: shooter
+  deployment: high
+  limited: false
+  release: 10/24/2025
+  image: 90px-FS_wilder.png
+- id: 292
+  unitId: 6115
+  nameJa: ホットマンビースト バルクスキー
+  nameEn: Hot Man-Beast Bulkski
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 10/24/2025
+  image: 90px-FS_bulkski_(awakened).png
+- id: 293
+  unitId: 1019
+  nameJa: アンドロゲイナーV
+  nameEn: Androgenizer V
+  rarity: 1
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 10/24/2025
+  image: 90px-FS_androgenizer_v.png
+- id: 294
+  unitId: 1020
+  nameJa: アンドロゲイナーG
+  nameEn: Androgenizer G
+  rarity: 1
+  class: guard
+  deployment: low
+  limited: false
+  release: 10/24/2025
+  image: 90px-FS_androgenizer_g.png
+- id: 295
+  unitId: 1021
+  nameJa: アンドロゲイナーH
+  nameEn: Androgenizer H
+  rarity: 1
+  class: healer
+  deployment: high
+  limited: false
+  release: 10/24/2025
+  image: 90px-FS_androgenizer_h.png

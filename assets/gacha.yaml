@@ -2574,3 +2574,24 @@
     - name: ヒフミ
       weight: 0.01
   poolId: 17
+- id: 166
+  nameJa: 禁忌！ゲノム整形！遺伝子いじくりまわせば、キミこそスターだ！
+  nameEn: Genomic Alterations are so Taboo! Just a Few Tweaks and You’re a Star!
+  revival: false
+  start: 10/24/2025
+  end: 12/5/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ホットマンビースト バルクスキー
+      weight: 0.01
+    - name: ワイルダー
+      weight: 0.01
+  poolId: 18
