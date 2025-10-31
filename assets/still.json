@@ -242,6 +242,14 @@
     },
     {
       "charId": 1019,
+      "seq": 4,
+      "shared": [1019],
+      "group": [1019],
+      "label": "still01_androgenizer_secret_121021",
+      "image": "StillThumbnail_bg_androgenizer_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 1019,
       "seq": 70,
       "shared": [1019],
       "group": [1019],
@@ -255,6 +263,22 @@
       "group": [1019],
       "label": "ht2_014",
       "image": "StillThumbnail_bg_gou_storystill03_mosaic_001.webp"
+    },
+    {
+      "charId": 1020,
+      "seq": 4,
+      "shared": [1020],
+      "group": [1020],
+      "label": "still01_androgenizer_secret_121021",
+      "image": "StillThumbnail_bg_androgenizer_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 1021,
+      "seq": 4,
+      "shared": [1021],
+      "group": [1021],
+      "label": "still01_androgenizer_secret_121021",
+      "image": "StillThumbnail_bg_androgenizer_still01_mosaic_001.webp"
     },
     {
       "charId": 2001,
@@ -2449,6 +2473,14 @@
       "image": "StillThumbnail_bg_gou_storystill03_mosaic_001.webp"
     },
     {
+      "charId": 5061,
+      "seq": 74,
+      "shared": [5061],
+      "group": [5061],
+      "label": "ht3_015",
+      "image": "StillThumbnail_bg_goh_still02_mosaic_001.webp"
+    },
+    {
       "charId": 5062,
       "seq": 1,
       "shared": [5062],
@@ -2975,6 +3007,14 @@
       "group": [5093],
       "label": "still01_archaeologist_ilfait_eidos",
       "image": "StillThumbnail_bg_archaeologist_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 5096,
+      "seq": 1,
+      "shared": [5096],
+      "group": [5096],
+      "label": "still01_hurricane",
+      "image": "StillThumbnail_bg_hurricane_still01_mosaic_001.webp"
     },
     {
       "charId": 5096,
@@ -4553,6 +4593,22 @@
       "image": "StillThumbnail_bg_bashkar_storystill02_mosaic_001_a.webp"
     },
     {
+      "charId": 6080,
+      "seq": 71,
+      "shared": [6080],
+      "group": [6080],
+      "label": "ht3_014",
+      "image": "StillThumbnail_bg_hagane_storystill03_mosaic_001.webp"
+    },
+    {
+      "charId": 6080,
+      "seq": 72,
+      "shared": [6080],
+      "group": [6080],
+      "label": "ht3_015",
+      "image": "StillThumbnail_bg_goh_still02_mosaic_001.webp"
+    },
+    {
       "charId": 6081,
       "seq": 3,
       "shared": [6081],
@@ -4665,6 +4721,14 @@
       "image": "StillThumbnail_bg_hagane_still02_mosaic_001.webp"
     },
     {
+      "charId": 6089,
+      "seq": 73,
+      "shared": [6089, 96089],
+      "group": [6089, 96089],
+      "label": "ht3_014",
+      "image": "StillThumbnail_bg_hagane_storystill03_mosaic_001.webp"
+    },
+    {
       "charId": 6090,
       "seq": 5,
       "shared": [6090],
@@ -4769,6 +4833,14 @@
       "image": "StillThumbnail_bg_fu_storystill01_mosaic_002.webp"
     },
     {
+      "charId": 6101,
+      "seq": 5,
+      "shared": [6101],
+      "group": [],
+      "label": "still02_ragnar",
+      "image": "StillThumbnail_bg_ragnar_still02_mosaic_001.webp"
+    },
+    {
       "charId": 6102,
       "seq": 6,
       "shared": [6102],
@@ -4863,6 +4935,22 @@
       "group": [],
       "label": "still02_kancrow",
       "image": "StillThumbnail_bg_kancrow_still02_mosaic_001.webp"
+    },
+    {
+      "charId": 6113,
+      "seq": 3,
+      "shared": [6113],
+      "group": [],
+      "label": "still02_baquu",
+      "image": "StillThumbnail_bg_baquu_still02b_mosaic_001.webp"
+    },
+    {
+      "charId": 6115,
+      "seq": 3,
+      "shared": [6115],
+      "group": [],
+      "label": "still02_bulkski",
+      "image": "StillThumbnail_bg_bulkskiy_still02_mosaic_001.webp"
     },
     {
       "charId": 7001,
