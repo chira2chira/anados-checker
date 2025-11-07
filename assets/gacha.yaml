@@ -2595,3 +2595,68 @@
     - name: ワイルダー
       weight: 0.01
   poolId: 18
+- id: 167
+  nameJa: スケベをパワーに変えて！童貞ヒーロー誕生！
+  nameEn: Turn Pervs into Power! The Dawn of a Virgin Hero!
+  revival: true
+  start: 11/7/2025
+  end: 12/19/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: イッテツ
+      weight: 0.01
+    - name: ゴウ
+      weight: 0.01
+  poolId: 18
+- id: 168
+  nameJa: 悪役登場！洗脳・凌辱容赦なし！
+  nameEn: A Villain Appears! Neither Disgrace nor Brainwashing Flies!
+  revival: true
+  start: 11/7/2025
+  end: 12/19/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ゼット
+      weight: 0.01
+    - name: バイオゴーレム・γ
+      weight: 0.01
+    - name: バイオゴーレム・θ
+      weight: 0.01
+  poolId: 18
+- id: 169
+  nameJa: ランウェイを荒らせ！ゼット遊撃隊のショータイム
+  nameEn: Tear Up That Runway! It’s Showtime with Zed’s Commando Brigade!
+  revival: false
+  start: 11/7/2025
+  end: 12/19/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: セレブヴィランヘッド ゼット
+      weight: 0.01
+    - name: ガリウム
+      weight: 0.01
+  poolId: 18
