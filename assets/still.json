@@ -2938,6 +2938,14 @@
     },
     {
       "charId": 5088,
+      "seq": 1,
+      "shared": [5088],
+      "group": [5088],
+      "label": "still01_dunk",
+      "image": "StillThumbnail_bg_dunk_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 5088,
       "seq": 70,
       "shared": [5088],
       "group": [5088],
@@ -3087,6 +3095,22 @@
       "group": [5099],
       "label": "still01_wilder",
       "image": "StillThumbnail_bg_wilder_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 5101,
+      "seq": 70,
+      "shared": [5101],
+      "group": [5101],
+      "label": "ht3_020",
+      "image": "StillThumbnail_bg_magicalweapon_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5101,
+      "seq": 71,
+      "shared": [5101],
+      "group": [5101],
+      "label": "ht3_023",
+      "image": "StillThumbnail_bg_zetto_storystill03_mosaic_001.webp"
     },
     {
       "charId": 6001,
@@ -4615,6 +4639,14 @@
       "group": [6080, 6116],
       "label": "ht3_015",
       "image": "StillThumbnail_bg_goh_still02_mosaic_001.webp"
+    },
+    {
+      "charId": 6080,
+      "seq": 73,
+      "shared": [6080],
+      "group": [6080, 6116],
+      "label": "ht3_023",
+      "image": "StillThumbnail_bg_zetto_storystill03_mosaic_001.webp"
     },
     {
       "charId": 6081,
