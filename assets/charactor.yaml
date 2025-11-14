@@ -2894,3 +2894,23 @@
   limited: true
   release: 11/7/2025
   image: 90px-FS_zed_(awakened).png
+- id: 298
+  unitId: 5101
+  nameJa: エイドロン
+  nameEn: Eidolon
+  rarity: 5
+  class: shooter
+  deployment: high
+  limited: false
+  release: 11/14/2025
+  image: 90px-FS_eidolon.png
+- id: 299
+  unitId: 6117
+  nameJa: ディーゼル
+  nameEn: Diesel
+  rarity: 6
+  class: guard
+  deployment: low
+  limited: false
+  release: 11/14/2025
+  image: 90px-FS_diesel.png

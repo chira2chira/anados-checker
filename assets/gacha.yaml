@@ -2660,3 +2660,24 @@
     - name: ガリウム
       weight: 0.01
   poolId: 18
+- id: 170
+  nameJa: 当院は患者様のさらなる美と男らしさをサポートするウェルネスパートナーです！
+  nameEn: Our Clinic Serves as Our Patients’ Wellness Partner to Help Them Achieve Greater Beauty & Manliness!
+  revival: false
+  start: 11/14/2025
+  end: 12/26/2025 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ディーゼル
+      weight: 0.01
+    - name: エイドロン
+      weight: 0.01
+  poolId: 18
