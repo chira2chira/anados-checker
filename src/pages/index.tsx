@@ -210,7 +210,7 @@ function filterTicketEidos(filter: string) {
         // 仮
         if (INELIGIBLE_EIDOS.includes(info.nameEn)) return false;
         return (
-          info.rarity >= 4 && dayjs(info.release).isBefore(dayjs("2025/12/27"))
+          info.rarity >= 4 && dayjs(info.release).isBefore(dayjs("2025/10/18"))
         );
     }
   };
