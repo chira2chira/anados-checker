@@ -1226,6 +1226,14 @@
     },
     {
       "charId": 5001,
+      "seq": 21,
+      "shared": [5001],
+      "group": [5001, 5046, 6031],
+      "label": "still07_rook_eidos",
+      "image": "StillThumbnail_bg_rook_still07_mosaic_002.webp"
+    },
+    {
+      "charId": 5001,
       "seq": 70,
       "shared": [5001],
       "group": [5001, 5046, 6031],
@@ -1655,6 +1663,14 @@
       "group": [5020, 6090],
       "label": "still05_dward_secret_125020",
       "image": "StillThumbnail_bg_dward_still05_mosaic_001.webp"
+    },
+    {
+      "charId": 5020,
+      "seq": 20,
+      "shared": [5020],
+      "group": [5020, 6090],
+      "label": "still02_dward_eidos",
+      "image": "StillThumbnail_bg_dward_still02_mosaic_001.webp"
     },
     {
       "charId": 5020,
@@ -2791,6 +2807,14 @@
       "group": [5081],
       "label": "still01_jigoro",
       "image": "StillThumbnail_bg_jigoro_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 5081,
+      "seq": 20,
+      "shared": [5081],
+      "group": [5081],
+      "label": "still02_jigoro_eidos",
+      "image": "StillThumbnail_bg_jigoro_still02_mosaic_005.webp"
     },
     {
       "charId": 5081,
@@ -4609,6 +4633,22 @@
       "image": "StillThumbnail_bg_ittetsu_still01_mosaic_001.webp"
     },
     {
+      "charId": 6079,
+      "seq": 20,
+      "shared": [6079],
+      "group": [6079],
+      "label": "still03_ittetsu_eidos",
+      "image": "StillThumbnail_bg_ittetsu_still03_mosaic_005.webp"
+    },
+    {
+      "charId": 6079,
+      "seq": 70,
+      "shared": [6079],
+      "group": [6079],
+      "label": "ht3_026",
+      "image": "StillThumbnail_bg_ittetsu_still02_mosaic_001.webp"
+    },
+    {
       "charId": 6080,
       "seq": 1,
       "shared": [6080],
@@ -4647,6 +4687,14 @@
       "group": [6080, 6116],
       "label": "ht3_023",
       "image": "StillThumbnail_bg_zetto_storystill03_mosaic_001.webp"
+    },
+    {
+      "charId": 6080,
+      "seq": 74,
+      "shared": [6080],
+      "group": [6080, 6116],
+      "label": "ht3_026",
+      "image": "StillThumbnail_bg_ittetsu_still02_mosaic_001.webp"
     },
     {
       "charId": 6081,
