@@ -646,3 +646,39 @@
   limited: false
   release: 10/17/2025
   image: WeaponIcon_6016.png
+- id: 73
+  eidosId: 5022
+  unitId: 5081
+  nameJa: これも一種の腐れ縁
+  nameEn: An Unsavory Relationship for Life
+  rarity: 5
+  limited: false
+  release: 11/21/2025
+  image: WeaponIcon_5022.png
+- id: 74
+  eidosId: 5023
+  unitId: 5020
+  nameJa: エロレスラー期待の新人！？
+  nameEn: A Promising Newcomer in Erotic Wrestling?!
+  rarity: 5
+  limited: false
+  release: 11/21/2025
+  image: WeaponIcon_5023.png
+- id: 75
+  eidosId: 6017
+  unitId: 5001
+  nameJa: 先生！二本同時は無理です！
+  nameEn: Teach! Two at Once is Too Much!
+  rarity: 6
+  limited: false
+  release: 11/21/2025
+  image: WeaponIcon_6017.png
+- id: 76
+  eidosId: 6018
+  unitId: 6079
+  nameJa: 童貞５０年、貞操の危機
+  nameEn: 50 Years of Virginity On the Line!
+  rarity: 6
+  limited: false
+  release: 11/21/2025
+  image: WeaponIcon_6018.png

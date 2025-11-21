@@ -139,7 +139,7 @@
     - rarity: 3
       weight: 0.38
   pickUp: []
-  poolId: 7
+  poolId: 8
 - id: 6
   nameJa: セーフなの！？アウトなの！？たまの火遊びご用心！
   nameEn: Be Careful When Playing with Fire! It Could be a Hit or Miss!
@@ -190,3 +190,28 @@
     - name: ハイパー・オルタになっちゃった！
       weight: 0.01
   poolId: 7
+- id: 8
+  nameJa: これって純愛！？不貞！？オールOK！だって男同士はファンタジー
+  nameEn: Pure Love or Infidelity?! Everything Goes in Fantasies Between Fellow Men!
+  revival: false
+  start: 11/21/2025
+  end: 1/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: 先生！二本同時は無理です！
+      weight: 0.01
+    - name: 童貞５０年、貞操の危機
+      weight: 0.01
+    - name: これも一種の腐れ縁
+      weight: 0.01
+    - name: エロレスラー期待の新人！？
+      weight: 0.01
+  poolId: 8
