@@ -180,13 +180,13 @@ function filterTicketChar(filter: string) {
             : dayjs(info.release).isBefore(dayjs("2025/6/7")))
         );
       case "aniv4.0":
-        // 仮
+        // https://anothereidos-r.info/news/santaarmy/
         if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
         return (
           info.rarity >= 4 &&
           (info.limited
             ? dayjs(info.release).isBefore(dayjs("2025/6/21"))
-            : dayjs(info.release).isBefore(dayjs("2025/12/27")))
+            : dayjs(info.release).isBefore(dayjs("2025/11/15")))
         );
     }
   };
@@ -207,7 +207,7 @@ function filterTicketEidos(filter: string) {
           info.rarity >= 4 && dayjs(info.release).isBefore(dayjs("2025/4/26"))
         );
       case "aniv4.0":
-        // 仮
+        // https://anothereidos-r.info/news/santaarmy/
         if (INELIGIBLE_EIDOS.includes(info.nameEn)) return false;
         return (
           info.rarity >= 4 && dayjs(info.release).isBefore(dayjs("2025/10/18"))
