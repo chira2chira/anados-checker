@@ -2914,3 +2914,23 @@
   limited: false
   release: 11/14/2025
   image: 90px-FS_diesel.png
+- id: 300
+  unitId: 5102
+  nameJa: サンダース
+  nameEn: Sanders
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: false
+  release: 11/28/2025
+  image: 90px-FS_sanders.png
+- id: 301
+  unitId: 6118
+  nameJa: 特命！ハニトラ隊長 スヴェン
+  nameEn: "Special Mission: Captain Honeytrap Sven"
+  rarity: 6
+  class: support
+  deployment: high
+  limited: true
+  release: 11/28/2025
+  image: 90px-FS_sven_(awakened).png

@@ -2681,3 +2681,112 @@
     - name: エイドロン
       weight: 0.01
   poolId: 18
+- id: 171
+  nameJa: 2.5周年！ファンタジーセレブレーションをお届け！
+  nameEn: Celebrating 2.5 Years! A Fantasy Celebration Brought to You!
+  revival: true
+  start: 11/28/2025
+  end: 1/9/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ワンダーランドの案内人 ソルベ
+      weight: 0.01
+    - name: ふたりだけの記念日 ヤークート
+      weight: 0.01
+  poolId: 19
+- id: 172
+  nameJa: やったね３周年！爆アゲウインターデートへ出発！
+  nameEn: We’ve Hit 3 Years! Time to Head Off on Explosive Wintry Dates!
+  revival: true
+  start: 11/28/2025
+  end: 1/9/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: 雪の日の約束 リオン
+      weight: 0.01
+    - name: アナグラ
+      weight: 0.01
+    - name: スヴェン
+      weight: 0.01
+  poolId: 19
+- id: 173
+  nameJa: イヴの夜クラッシャー登場！サンタだって恋したい
+  nameEn: Home Wrecker Swoopin’ in on Christmas Eve! Even Santa Needs Some Lovin’!
+  revival: true
+  start: 11/28/2025
+  end: 1/9/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ゴーストサンタ ハロルド
+      weight: 0.01
+    - name: ウィンターデート チャボ
+      weight: 0.01
+    - name: トドルフ
+      weight: 0.01
+  poolId: 19
+- id: 174
+  nameJa: 3.5周年！エレガントセレブレーション！夜の帝王からの招待状
+  nameEn: Invite from the Emperor to Make for a Smashingly Elegant Celebration to Commemorate 3.5 Years!
+  revival: true
+  start: 11/28/2025
+  end: 1/9/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: バル・ド・ラ・ローズ バルボロス
+      weight: 0.01
+    - name: ゴージャスナイトクルージング マグリット
+      weight: 0.01
+  poolId: 19
+- id: 175
+  nameJa: サンタアーミー出動！ハニトラ部隊のねっちょり外交術
+  nameEn: Santa’s Army Deployed! The Honeytrap Brigade & Their Sticky Diplomacy!
+  revival: false
+  start: 11/28/2025
+  end: 1/9/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 特命！ハニトラ隊長 スヴェン
+      weight: 0.01
+    - name: サンダース
+      weight: 0.01
+  poolId: 19
