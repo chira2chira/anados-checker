@@ -593,6 +593,14 @@
       "image": "StillThumbnail_bg_ppc_storystill01_mosaic_A001.webp"
     },
     {
+      "charId": 3003,
+      "seq": 72,
+      "shared": [3003],
+      "group": [3003, 6032],
+      "label": "sar_011",
+      "image": "StillThumbnail_bg_gymnos_storystill02_mosaic_001.webp"
+    },
+    {
       "charId": 3004,
       "seq": 1,
       "shared": [3004],
@@ -2684,7 +2692,7 @@
       "charId": 5075,
       "seq": 1,
       "shared": [5075],
-      "group": [5075],
+      "group": [5075, 6118],
       "label": "still01_sven",
       "image": "StillThumbnail_bg_sven_still01_mosaic_001.webp"
     },
@@ -2692,7 +2700,7 @@
       "charId": 5075,
       "seq": 70,
       "shared": [5075],
-      "group": [5075],
+      "group": [5075, 6118],
       "label": "wd_023",
       "image": "StillThumbnail_bg_sven_storystill01_mosaic_001.webp"
     },
@@ -2700,7 +2708,7 @@
       "charId": 5075,
       "seq": 71,
       "shared": [5075],
-      "group": [5075],
+      "group": [5075, 6118],
       "label": "wd_024",
       "image": "StillThumbnail_bg_harold_storystill01_mosaic_001.webp"
     },
@@ -2708,7 +2716,7 @@
       "charId": 5075,
       "seq": 72,
       "shared": [5075],
-      "group": [5075],
+      "group": [5075, 6118],
       "label": "wd_028",
       "image": "StillThumbnail_bg_todorf_storystill02_mosaic_004.webp"
     },
