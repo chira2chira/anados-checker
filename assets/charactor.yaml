@@ -2930,7 +2930,7 @@
   nameEn: "Special Mission: Captain Honeytrap Sven"
   rarity: 6
   class: support
-  deployment: high
+  deployment: low
   limited: true
   release: 11/28/2025
   image: 90px-FS_sven_(awakened).png
