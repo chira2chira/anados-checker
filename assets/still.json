@@ -2721,6 +2721,14 @@
       "image": "StillThumbnail_bg_todorf_storystill02_mosaic_004.webp"
     },
     {
+      "charId": 5075,
+      "seq": 73,
+      "shared": [5075],
+      "group": [5075, 6118],
+      "label": "sar_013",
+      "image": "StillThumbnail_bg_sven_storystill02_mosaic_004.webp"
+    },
+    {
       "charId": 5076,
       "seq": 5,
       "shared": [5076],
@@ -2759,6 +2767,14 @@
       "group": [5077],
       "label": "wd_029",
       "image": "StillThumbnail_bg_anagura_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5077,
+      "seq": 73,
+      "shared": [5077],
+      "group": [5077],
+      "label": "sar_013",
+      "image": "StillThumbnail_bg_sven_storystill02_mosaic_004.webp"
     },
     {
       "charId": 5078,
@@ -3143,6 +3159,14 @@
       "group": [5101],
       "label": "ht3_023",
       "image": "StillThumbnail_bg_zetto_storystill03_mosaic_001.webp"
+    },
+    {
+      "charId": 5102,
+      "seq": 70,
+      "shared": [5102],
+      "group": [5102],
+      "label": "sar_013",
+      "image": "StillThumbnail_bg_sven_storystill02_mosaic_004.webp"
     },
     {
       "charId": 6001,
