@@ -2934,3 +2934,23 @@
   limited: true
   release: 11/28/2025
   image: 90px-FS_sven_(awakened).png
+- id: 302
+  unitId: 5103
+  nameJa: フィン
+  nameEn: Finn
+  rarity: 5
+  class: shooter
+  deployment: high
+  limited: false
+  release: 12/12/2025
+  image: 90px-FS_finn.png
+- id: 303
+  unitId: 6119
+  nameJa: 聖夜の最強フリーター マッパマン
+  nameEn: Christmas Eve’s Strongest Part-Timer The Barecheeked Thief
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 12/12/2025
+  image: 90px-FS_barecheekedthief.png

@@ -682,3 +682,12 @@
   limited: false
   release: 11/21/2025
   image: WeaponIcon_6018.png
+- id: 77
+  eidosId: 5024
+  unitId: 6099
+  nameJa: 激突！ハレンチ忍術バトル！の巻
+  nameEn: "Latest Edition: A Disgraceful Ninjutsu Battle!"
+  rarity: 5
+  limited: false
+  release: 12/12/2025
+  image: WeaponIcon_5024.png

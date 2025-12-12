@@ -2790,3 +2790,70 @@
     - name: サンダース
       weight: 0.01
   poolId: 19
+- id: 176
+  nameJa: 激アツスポ根ファイト開催！雄比べナンバー１を目指せ！
+  nameEn: Now Hosting Hard ‘n’ Fiery Sports! Aim to be That No. 1 Best Male!
+  revival: true
+  start: 12/12/2025
+  end: 1/23/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: マッスルスモウレスラー ハルク
+      weight: 0.01
+    - name: ハートストライカー マリオン
+      weight: 0.01
+    - name: サマースカイダイビング ディオン
+      weight: 0.01
+  poolId: 19
+- id: 177
+  nameJa: 水着に着替えてビーチクルーズ！エンジョイサマー！
+  nameEn: Cruise on the Beach in Your Trunks & Enjoy the Summer!
+  revival: true
+  start: 12/12/2025
+  end: 1/23/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: エンジョイフィッシング ボンヴォイ
+      weight: 0.01
+    - name: アスレチックカウボーイ フォルテ
+      weight: 0.01
+    - name: サンライズホーク シドレー
+      weight: 0.01
+  poolId: 19
+- id: 178
+  nameJa: 敵かな！？味方かな！？敏腕サンタのビンビン！フリーエージェント宣言
+  nameEn: Is He Friend or Foe?! A Go-Getter, Pumped Santa Declares Himself a “Free Agent”! 
+  revival: false
+  start: 12/12/2025
+  end: 1/23/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 聖夜の最強フリーター マッパマン
+      weight: 0.01
+    - name: フィン
+      weight: 0.01
+  poolId: 19
