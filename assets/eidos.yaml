@@ -691,3 +691,39 @@
   limited: false
   release: 12/12/2025
   image: WeaponIcon_5024.png
+- id: 78
+  eidosId: 6019
+  unitId: 3004
+  nameJa: レイド戦：聖夜の怪異
+  nameEn: A Raid Gone Awry on the Holiest of Nights
+  rarity: 6
+  limited: false
+  release: 12/19/2025
+  image: WeaponIcon_6019.png
+- id: 79
+  eidosId: 6020
+  unitId: 3008
+  nameJa: 起きてください、バクウちゃん！
+  nameEn: Wake up, Bakoo!
+  rarity: 6
+  limited: false
+  release: 12/19/2025
+  image: WeaponIcon_6020.png
+- id: 80
+  eidosId: 5025
+  unitId: 5034
+  nameJa: 夜のサンタさん大歓迎会
+  nameEn: Santa’s Welcome Party At Night
+  rarity: 5
+  limited: false
+  release: 12/19/2025
+  image: WeaponIcon_5025.png
+- id: 81
+  eidosId: 5026
+  unitId: 6008
+  nameJa: サイレントナイト
+  nameEn: Silent Night
+  rarity: 5
+  limited: false
+  release: 12/19/2025
+  image: WeaponIcon_5026.png

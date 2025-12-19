@@ -2954,3 +2954,23 @@
   limited: true
   release: 12/12/2025
   image: 90px-FS_barecheekedthief.png
+- id: 304
+  unitId: 1022
+  nameJa: サンタアーミー（ガード）
+  nameEn: Santa’s Army Member (Guard)
+  rarity: 1
+  class: guard
+  deployment: low
+  limited: false
+  release: 12/19/2025
+  image: 90px-FS_santasarmy_guard.png
+- id: 305
+  unitId: 1023
+  nameJa: サンタアーミー（ヴァンガード）
+  nameEn: Santa’s Army Member (Vanguard)
+  rarity: 1
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 12/19/2025
+  image: 90px-FS_santasarmy_vanguard.png

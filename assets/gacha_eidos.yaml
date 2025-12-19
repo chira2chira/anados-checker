@@ -139,7 +139,7 @@
     - rarity: 3
       weight: 0.38
   pickUp: []
-  poolId: 8
+  poolId: 9
 - id: 6
   nameJa: セーフなの！？アウトなの！？たまの火遊びご用心！
   nameEn: Be Careful When Playing with Fire! It Could be a Hit or Miss!
@@ -215,3 +215,28 @@
     - name: エロレスラー期待の新人！？
       weight: 0.01
   poolId: 8
+- id: 9
+  nameJa: メリークリスマス！性感MAXイヴの夜
+  nameEn: A Merry Christmas on This Christmas Eve Full of Pleasure to the Max!
+  revival: false
+  start: 12/19/2025
+  end: 1/30/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: 起きてください、バクウちゃん！
+      weight: 0.01
+    - name: レイド戦：聖夜の怪異
+      weight: 0.01
+    - name: サイレントナイト
+      weight: 0.01
+    - name: 夜のサンタさん大歓迎会
+      weight: 0.01
+  poolId: 9
