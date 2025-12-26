@@ -2974,3 +2974,23 @@
   limited: false
   release: 12/19/2025
   image: 90px-FS_santasarmy_vanguard.png
+- id: 306
+  unitId: 5104
+  nameJa: フレイヤ
+  nameEn: Freja
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 12/26/2025
+  image: 90px-FS_freja.png
+- id: 307
+  unitId: 6120
+  nameJa: サンタアーミー軍事教官 トドルフ
+  nameEn: Santa’s Army Military Instructor Todolf
+  rarity: 6
+  class: caster
+  deployment: high
+  limited: true
+  release: 12/26/2025
+  image: 90px-FS_todolf_xmas.png

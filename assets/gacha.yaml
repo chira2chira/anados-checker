@@ -2857,3 +2857,24 @@
     - name: フィン
       weight: 0.01
   poolId: 19
+- id: 179
+  nameJa: 性夜に征服者襲来！魔物VS魔物のガチンコバトル
+  nameEn: A Conqueror on the Hole-iest of Nights! Magical Beasts Against Magical Beasts!
+  revival: false
+  start: 12/26/2025
+  end: 2/6/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: サンタアーミー軍事教官 トドルフ
+      weight: 0.01
+    - name: フレイヤ
+      weight: 0.01
+  poolId: 19
