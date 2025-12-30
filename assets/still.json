@@ -3756,7 +3756,7 @@
       "charId": 6015,
       "seq": 1,
       "shared": [6015],
-      "group": [6015, 6036],
+      "group": [6015, 6036, 6121],
       "label": "still01_equus",
       "image": "StillThumbnail_bg_equus_still01_mosaic_001.webp"
     },
@@ -3764,7 +3764,7 @@
       "charId": 6015,
       "seq": 4,
       "shared": [6015],
-      "group": [6015, 6036],
+      "group": [6015, 6036, 6121],
       "label": "still04_equus_secret_126015",
       "image": "StillThumbnail_bg_equus_still04_mosaic_001.webp"
     },
@@ -3772,7 +3772,7 @@
       "charId": 6015,
       "seq": 20,
       "shared": [6015],
-      "group": [6015, 6036],
+      "group": [6015, 6036, 6121],
       "label": "still02_equus_eidos",
       "image": "StillThumbnail_bg_equus_still02_mosaic_001.webp"
     },
@@ -3780,7 +3780,7 @@
       "charId": 6015,
       "seq": 50,
       "shared": [6015],
-      "group": [6015, 6036],
+      "group": [6015, 6036, 6121],
       "label": "main_001_030",
       "image": "StillThumbnail_storystill01_jade_a.webp"
     },
@@ -3788,7 +3788,7 @@
       "charId": 6015,
       "seq": 70,
       "shared": [6015],
-      "group": [6015, 6036],
+      "group": [6015, 6036, 6121],
       "label": "pbnight_021",
       "image": "StillThumbnail_storystill01_edgar_01.webp"
     },
@@ -3796,7 +3796,7 @@
       "charId": 6015,
       "seq": 71,
       "shared": [6015],
-      "group": [6015, 6036],
+      "group": [6015, 6036, 6121],
       "label": "pbnight_032",
       "image": "StillThumbnail_bg_romanes_still03_mosaic_001.webp"
     },
@@ -3804,7 +3804,7 @@
       "charId": 6015,
       "seq": 72,
       "shared": [6015],
-      "group": [6015, 6036],
+      "group": [6015, 6036, 6121],
       "label": "pbnight_050",
       "image": "StillThumbnail_bg_volund_still04_mosaic_001.webp"
     },
@@ -3812,7 +3812,7 @@
       "charId": 6015,
       "seq": 73,
       "shared": [6015],
-      "group": [6015, 6036],
+      "group": [6015, 6036, 6121],
       "label": "baritati_033",
       "image": "StillThumbnail_bg_leonhart_island004_mosaic_C001.webp"
     },
@@ -3820,7 +3820,7 @@
       "charId": 6015,
       "seq": 74,
       "shared": [6015],
-      "group": [6015, 6036],
+      "group": [6015, 6036, 6121],
       "label": "casino_012",
       "image": "StillThumbnail_bg_casino02_mosaic_001.webp"
     },
@@ -3828,7 +3828,7 @@
       "charId": 6015,
       "seq": 75,
       "shared": [6015],
-      "group": [6015, 6036],
+      "group": [6015, 6036, 6121],
       "label": "mdr_034",
       "image": "StillThumbnail_bg_equus_storystill02_mosaic_001.webp"
     },

@@ -2994,3 +2994,23 @@
   limited: true
   release: 12/26/2025
   image: 90px-FS_todolf_xmas.png
+- id: 308
+  unitId: 5105
+  nameJa: フォラス
+  nameEn: Foras
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: false
+  release: 1/1/2026
+  image: 90px-FS_foras.png
+- id: 309
+  unitId: 6121
+  nameJa: 栄冠のダークホース バロン
+  nameEn: Dark Horse of Glory Baron
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 1/1/2026
+  image: 90px-FS_baron_racing.png
