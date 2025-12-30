@@ -108,6 +108,8 @@ function filterReleaseChar(filter: string) {
         return dayjs(info.release).year() === 2024;
       case "2025":
         return dayjs(info.release).year() === 2025;
+      case "2026":
+        return dayjs(info.release).year() === 2026;
     }
   };
 }
@@ -557,6 +559,7 @@ const Home: NextPage<HomeProps> = (props) => {
                 { value: "2023", label: t("ui.filter.year2023") },
                 { value: "2024", label: t("ui.filter.year2024") },
                 { value: "2025", label: t("ui.filter.year2025") },
+                { value: "2026", label: t("ui.filter.year2026") },
               ]}
             />
             <FilterSelect
