@@ -2878,3 +2878,24 @@
     - name: フレイヤ
       weight: 0.01
   poolId: 19
+- id: 180
+  nameJa: 駆け抜けろ！牡馬の頂き 一発2026万ドラーの夢
+  nameEn: Gallop On! Win 20.26 Million Draco as Top Horse!
+  revival: false
+  start: 1/1/2026
+  end: 2/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 栄冠のダークホース バロン
+      weight: 0.01
+    - name: フォラス
+      weight: 0.01
+  poolId: 19
