@@ -2441,6 +2441,14 @@
       "image": "StillThumbnail_bg_nightmare_still01_mosaic_001.webp"
     },
     {
+      "charId": 5055,
+      "seq": 71,
+      "shared": [5055],
+      "group": [5055],
+      "label": "stl_021",
+      "image": "StillThumbnail_bg_equus_storystill03_mosaic_002.webp"
+    },
+    {
       "charId": 5056,
       "seq": 1,
       "shared": [5056],
@@ -2838,7 +2846,7 @@
       "shared": [5077],
       "group": [5077, 6120],
       "label": "sar_021",
-      "image": "StillThumbnail_bg_sinbad_storystill01_mosaic_003.webp"
+      "image": "StillThumbnail_bg_sanders_storystill01_mosaic_003.webp"
     },
     {
       "charId": 5078,
@@ -3831,6 +3839,14 @@
       "group": [6015, 6036, 6121],
       "label": "mdr_034",
       "image": "StillThumbnail_bg_equus_storystill02_mosaic_001.webp"
+    },
+    {
+      "charId": 6015,
+      "seq": 76,
+      "shared": [6015],
+      "group": [6015, 6036, 6121],
+      "label": "stl_021",
+      "image": "StillThumbnail_bg_equus_storystill03_mosaic_002.webp"
     },
     {
       "charId": 6016,
