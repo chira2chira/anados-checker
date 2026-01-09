@@ -3014,3 +3014,13 @@
   limited: true
   release: 1/1/2026
   image: 90px-FS_baron_racing.png
+- id: 310
+  unitId: 1024
+  nameJa: 雪兎族の戦士
+  nameEn: Snow Rabbit Tribe Fighter
+  rarity: 1
+  class: fighter
+  deployment: low
+  limited: false
+  release: 1/9/2026
+  image: 90px-FS_snowrabbit_fighter.png
