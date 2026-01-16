@@ -2899,3 +2899,91 @@
     - name: フォラス
       weight: 0.01
   poolId: 19
+- id: 181
+  nameJa: 世界最後の未開拓地へ発進！イイ男を乗せて
+  nameEn: Off to the Last Unexplored Place in El Dorado with a Crew of Fine Men!
+  revival: true
+  start: 1/16/2026
+  end: 2/27/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: マリンテイマー アモレー
+      weight: 0.01
+    - name: サンシャイン・マスク ガムラ
+      weight: 0.01
+    - name: キャプテンノーチラス ダカール
+      weight: 0.01
+  poolId: 20
+- id: 182
+  nameJa: バディと恋仲深めるなら深海で決まり！ドキドキ迷宮探検！
+  nameEn: What Better Place to Deepen Your Bond with Your Buddy than the Bottom of the Sea! Time for a Heart-Throbbing Lair Expedition!
+  revival: true
+  start: 1/16/2026
+  end: 2/27/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: グルメハンター ロビン
+      weight: 0.01
+    - name: ダイビングバディ シグヴァルディ
+      weight: 0.01
+    - name: ガロード
+      weight: 0.01
+  poolId: 20
+- id: 183
+  nameJa: いただきシードッグ登場！イイ男はぜ～んぶ持ち帰り！
+  nameEn: Seadog for the Win Debut! Bringin’ Home ALL Those Fine Guys!
+  revival: true
+  start: 1/16/2026
+  end: 2/27/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ふたりのシードッグ オルタとポロン
+      weight: 0.01
+    - name: ティリクム
+      weight: 0.01
+  poolId: 20
+- id: 184
+  nameJa: 最強種馬✕最強男馬！配合を究めたオーナーが、ダービーを制する！
+  nameEn: Strongest Stallions X Strongest Male Horses! The Owner Who Has Mastered Breeding Will Win The Derby!
+  revival: false
+  start: 1/16/2026
+  end: 2/27/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: キミだけの夢馬をつくろう オリオン
+      weight: 0.01
+    - name: 囚われし忠義の産駒 ヘリオス
+      weight: 0.01
+  poolId: 20

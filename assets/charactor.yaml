@@ -3024,3 +3024,23 @@
   limited: false
   release: 1/9/2026
   image: 90px-FS_snowrabbit_fighter.png
+- id: 311
+  unitId: 6122
+  nameJa: キミだけの夢馬をつくろう オリオン
+  nameEn: Night-Mare of Your Dreams Orion
+  rarity: 6
+  class: support
+  deployment: low
+  limited: true
+  release: 1/16/2026
+  image: FS_6122_1.png
+- id: 312
+  unitId: 6123
+  nameJa: 囚われし忠義の産駒 ヘリオス
+  nameEn: Captive Loyal Foal Hellios
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 1/16/2026
+  image: FS_6123_1.png
