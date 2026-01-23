@@ -2457,6 +2457,14 @@
       "image": "StillThumbnail_bg_newyear2026_extra03.webp"
     },
     {
+      "charId": 5055,
+      "seq": 73,
+      "shared": [5055],
+      "group": [5055, 6122],
+      "label": "stl_030",
+      "image": "StillThumbnail_bg_spica_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 5056,
       "seq": 1,
       "shared": [5056],
@@ -2479,6 +2487,14 @@
       "group": [5056],
       "label": "stl_023",
       "image": "StillThumbnail_bg_newyear2026_extra03.webp"
+    },
+    {
+      "charId": 5056,
+      "seq": 71,
+      "shared": [5056],
+      "group": [5056],
+      "label": "stl_030",
+      "image": "StillThumbnail_bg_spica_storystill01_mosaic_001.webp"
     },
     {
       "charId": 5057,
