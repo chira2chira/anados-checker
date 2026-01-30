@@ -3044,3 +3044,23 @@
   limited: true
   release: 1/16/2026
   image: FS_6123_1.png
+- id: 313
+  unitId: 6124
+  nameJa: 超必勝スキームの伝道師 スピカ
+  nameEn: Major Wins Scheming Evangelist Spica
+  rarity: 6
+  class: caster
+  deployment: high
+  limited: true
+  release: 1/30/2026
+  image: FS_6124_1.png
+- id: 314
+  unitId: 6125
+  nameJa: 賭博馬並絶頂伝 マンジ
+  nameEn: Legendary Derby Gambler Manji
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: true
+  release: 1/30/2026
+  image: FS_6125_1.png

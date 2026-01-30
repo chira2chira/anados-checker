@@ -2987,3 +2987,24 @@
     - name: 囚われし忠義の産駒 ヘリオス
       weight: 0.01
   poolId: 20
+- id: 185
+  nameJa: 勝ちまくり！モテまくり！種馬オーナーになれば、あの冒険者ともヤリたい放題！
+  nameEn: Win Races Like a Stud Magnet! Own Those Studs & Have Your Way with ALL the Adventurers You Want!
+  revival: false
+  start: 1/30/2026
+  end: 3/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 超必勝スキームの伝道師 スピカ
+      weight: 0.01
+    - name: 賭博馬並絶頂伝 マンジ
+      weight: 0.01
+  poolId: 20
