@@ -139,7 +139,7 @@
     - rarity: 3
       weight: 0.38
   pickUp: []
-  poolId: 9
+  poolId: 10
 - id: 6
   nameJa: セーフなの！？アウトなの！？たまの火遊びご用心！
   nameEn: Be Careful When Playing with Fire! It Could be a Hit or Miss!
