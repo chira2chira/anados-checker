@@ -172,7 +172,7 @@
       "charId": 1010,
       "seq": 20,
       "shared": [1010],
-      "group": [1010],
+      "group": [1010, 6125],
       "label": "still01_gambler_eidos",
       "image": "StillThumbnail_bg_gambler_still01_mosaic_001.webp"
     },
@@ -2465,10 +2465,18 @@
       "image": "StillThumbnail_bg_spica_storystill01_mosaic_001.webp"
     },
     {
+      "charId": 5055,
+      "seq": 74,
+      "shared": [5055],
+      "group": [5055, 6122],
+      "label": "stl_031",
+      "image": "StillThumbnail_bg_hellion_storystill02_mosaic_001.webp"
+    },
+    {
       "charId": 5056,
       "seq": 1,
       "shared": [5056],
-      "group": [5056],
+      "group": [5056, 6124],
       "label": "still01_spica",
       "image": "StillThumbnail_bg_spica_still01_mosaic_001.webp"
     },
@@ -2476,7 +2484,7 @@
       "charId": 5056,
       "seq": 20,
       "shared": [5056],
-      "group": [5056],
+      "group": [5056, 6124],
       "label": "still02_spica_eidos",
       "image": "StillThumbnail_bg_spica_still02_mosaic_001.webp"
     },
@@ -2484,7 +2492,7 @@
       "charId": 5056,
       "seq": 70,
       "shared": [5056],
-      "group": [5056],
+      "group": [5056, 6124],
       "label": "stl_023",
       "image": "StillThumbnail_bg_newyear2026_extra03.webp"
     },
@@ -2492,7 +2500,7 @@
       "charId": 5056,
       "seq": 71,
       "shared": [5056],
-      "group": [5056],
+      "group": [5056, 6124],
       "label": "stl_030",
       "image": "StillThumbnail_bg_spica_storystill01_mosaic_001.webp"
     },
@@ -3074,6 +3082,14 @@
     },
     {
       "charId": 5087,
+      "seq": 1,
+      "shared": [5087],
+      "group": [5087],
+      "label": "still01_ivar",
+      "image": "StillThumbnail_bg_eval_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 5087,
       "seq": 70,
       "shared": [5087],
       "group": [5087],
@@ -3263,6 +3279,14 @@
       "group": [5099],
       "label": "still01_wilder",
       "image": "StillThumbnail_bg_wilder_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 5100,
+      "seq": 1,
+      "shared": [5100],
+      "group": [5100],
+      "label": "still01_gallium",
+      "image": "StillThumbnail_bg_gallium_still01_mosaic_001.webp"
     },
     {
       "charId": 5101,
@@ -3983,6 +4007,14 @@
       "group": [5018, 5033, 6018, 6123, 95033],
       "label": "stl_023",
       "image": "StillThumbnail_bg_newyear2026_extra03.webp"
+    },
+    {
+      "charId": 6018,
+      "seq": 73,
+      "shared": [6018, 95033],
+      "group": [5018, 5033, 6018, 6123, 95033],
+      "label": "stl_031",
+      "image": "StillThumbnail_bg_hellion_storystill02_mosaic_001.webp"
     },
     {
       "charId": 6019,
