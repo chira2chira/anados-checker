@@ -3060,7 +3060,7 @@
   nameEn: Legendary Derby Gambler Manji
   rarity: 6
   class: vanguard
-  deployment: low
+  deployment: high
   limited: true
   release: 1/30/2026
   image: FS_6125_1.png
