@@ -727,3 +727,39 @@
   limited: false
   release: 12/19/2025
   image: WeaponIcon_5026.png
+- id: 82
+  eidosId: 6021
+  unitId: 5086
+  nameJa: パパのエッチな大冒険
+  nameEn: Dad’s Big, Hot Adventure
+  rarity: 6
+  limited: false
+  release: 2/6/2026
+  image: WeaponIcon_6021.png
+- id: 83
+  eidosId: 6022
+  unitId: 6012
+  nameJa: プレジデンテのドキドキ緊縛交渉術
+  nameEn: El Presidente’s Rope-Tight Negotiating
+  rarity: 6
+  limited: false
+  release: 2/6/2026
+  image: WeaponIcon_6022.png
+- id: 84
+  eidosId: 5027
+  unitId: 6074
+  nameJa: 変態発車式
+  nameEn: The Perverted Launch Ceremony
+  rarity: 5
+  limited: false
+  release: 2/6/2026
+  image: WeaponIcon_5027.png
+- id: 85
+  eidosId: 5028
+  unitId: 6001
+  nameJa: ラショウ！愛しとるぞー！
+  nameEn: Rasho, I Freakin’ Love You!!!
+  rarity: 5
+  limited: false
+  release: 2/6/2026
+  image: WeaponIcon_5028.png

@@ -240,3 +240,28 @@
     - name: 夜のサンタさん大歓迎会
       weight: 0.01
   poolId: 9
+- id: 10
+  nameJa: ここでしか見れない！冒険者たちの超特急スケベ・ファンタジー！
+  nameEn: Adventurer-Exclusive Smutty Fantasies Lived Out Nowhere Else!
+  revival: false
+  start: 2/6/2026
+  end: 3/20/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: プレジデンテのドキドキ緊縛交渉術
+      weight: 0.01
+    - name: パパのエッチな大冒険
+      weight: 0.01
+    - name: ラショウ！愛しとるぞー！
+      weight: 0.01
+    - name: 変態発車式
+      weight: 0.01
+  poolId: 10
