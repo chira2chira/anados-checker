@@ -2401,6 +2401,14 @@
       "image": "StillThumbnail_bg_lyon_storystill03_mosaic_002.webp"
     },
     {
+      "charId": 5053,
+      "seq": 75,
+      "shared": [5053],
+      "group": [5053, 6091],
+      "label": "hyp_012",
+      "image": "StillThumbnail_bg_lyon_storystill04_mosaic_004.webp"
+    },
+    {
       "charId": 5054,
       "seq": 1,
       "shared": [5054],
@@ -3217,6 +3225,14 @@
       "image": "StillThumbnail_bg_archaeologist_still01_mosaic_001.webp"
     },
     {
+      "charId": 5094,
+      "seq": 3,
+      "shared": [5094],
+      "group": [],
+      "label": "still02_theodor",
+      "image": "StillThumbnail_bg_theodor_still02_mosaic_001.webp"
+    },
+    {
       "charId": 5095,
       "seq": 3,
       "shared": [5095],
@@ -3228,7 +3244,7 @@
       "charId": 5096,
       "seq": 1,
       "shared": [5096],
-      "group": [5096],
+      "group": [5096, 6126],
       "label": "still01_hurricane",
       "image": "StillThumbnail_bg_hurricane_still01_mosaic_001.webp"
     },
@@ -3236,7 +3252,7 @@
       "charId": 5096,
       "seq": 70,
       "shared": [5096],
-      "group": [5096],
+      "group": [5096, 6126],
       "label": "oht_900",
       "image": "StillThumbnail_bg_hurricaneandtough_storystill01_mosaic_A001.webp"
     },
@@ -3244,7 +3260,7 @@
       "charId": 5096,
       "seq": 71,
       "shared": [5096],
-      "group": [5096],
+      "group": [5096, 6126],
       "label": "oht_906",
       "image": "StillThumbnail_bg_hifumi_storystill01_mosaic_001.webp"
     },
@@ -4839,6 +4855,14 @@
       "group": [5076, 6068],
       "label": "mdr_035",
       "image": "StillThumbnail_bg_lyon_storystill03_mosaic_002.webp"
+    },
+    {
+      "charId": 6068,
+      "seq": 77,
+      "shared": [6068],
+      "group": [5076, 6068],
+      "label": "hyp_012",
+      "image": "StillThumbnail_bg_lyon_storystill04_mosaic_004.webp"
     },
     {
       "charId": 6069,
