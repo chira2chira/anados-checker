@@ -3064,3 +3064,23 @@
   limited: true
   release: 1/30/2026
   image: FS_6125_1.png
+- id: 315
+  unitId: 5106
+  nameJa: セイジ
+  nameEn: Seiji
+  rarity: 5
+  class: caster
+  deployment: high
+  limited: false
+  release: 2/13/2026
+  image: FS_5106_1.png
+- id: 316
+  unitId: 6126
+  nameJa: 声デカハンター教官 ハリケンとタフ
+  nameEn: Deafening Hunter Instructor Hurricane & Tuff
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 2/13/2026
+  image: FS_6126_1.png

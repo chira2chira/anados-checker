@@ -3008,3 +3008,24 @@
     - name: 賭博馬並絶頂伝 マンジ
       weight: 0.01
   poolId: 20
+- id: 186
+  nameJa: チョコレート・ショック！農園荒らしのモンスターを追え
+  nameEn: Chocolate Shocks! Go After the Monsters Raiding the Plantation!
+  revival: false
+  start: 2/13/2026
+  end: 3/27/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 声デカハンター教官 ハリケンとタフ
+      weight: 0.01
+    - name: セイジ
+      weight: 0.01
+  poolId: 21
