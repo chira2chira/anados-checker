@@ -3084,3 +3084,13 @@
   limited: true
   release: 2/13/2026
   image: FS_6126_1.png
+- id: 317
+  unitId: 2029
+  nameJa: かけだしハンター
+  nameEn: Rookie Hunter
+  rarity: 2
+  class: fighter
+  deployment: low
+  limited: false
+  release: 2/20/2026
+  image: FS_2029_1.png
