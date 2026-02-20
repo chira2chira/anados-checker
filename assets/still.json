@@ -3265,6 +3265,14 @@
       "image": "StillThumbnail_bg_hifumi_storystill01_mosaic_001.webp"
     },
     {
+      "charId": 5096,
+      "seq": 72,
+      "shared": [5096],
+      "group": [5096, 6126],
+      "label": "hyp_020",
+      "image": "StillThumbnail_bg_hurricaneandtough_storystill02_mosaic_001.webp"
+    },
+    {
       "charId": 5097,
       "seq": 1,
       "shared": [5097],
