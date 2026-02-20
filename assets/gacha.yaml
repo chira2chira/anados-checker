@@ -3029,3 +3029,66 @@
     - name: セイジ
       weight: 0.01
   poolId: 21
+- id: 187
+  nameJa: どうせお前らこーいうのが好きなんだろ！見せたいもんみせてやるよ！
+  nameEn: If you like what you see, we ain’t stoppin’ ya!
+  revival: true
+  start: 2/20/2026
+  end: 4/3/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: もくもく煙の興行主 ゴルドフ
+      weight: 0.01
+    - name: やられ上等エロレスヒール わるいバシュカー
+      weight: 0.01
+  poolId: 21
+- id: 188
+  nameJa: 帰ってきた兄貴はモテモテ幹部！俺はホモ野郎じゃない！
+  nameEn: Your Bro’s Come Back as a Smashin’ Exec, BUT he’s “NOT GAY”!
+  revival: true
+  start: 2/20/2026
+  end: 4/3/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ハガネ
+      weight: 0.01
+    - name: ウェアウルフ・アルファ ルガロゥ
+      weight: 0.01
+  poolId: 21
+- id: 189
+  nameJa: 真打ち登場！寝技・反則ファイトの決定戦！
+  nameEn: The Headliners’ Foul, Underhanded Moves’ll Decide This Play-Off!
+  revival: true
+  start: 2/20/2026
+  end: 4/3/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ドスケベモンスター ドワード
+      weight: 0.01
+    - name: バルクスキー
+      weight: 0.01
+  poolId: 21
