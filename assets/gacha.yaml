@@ -3092,3 +3092,24 @@
     - name: バルクスキー
       weight: 0.01
   poolId: 21
+- id: 190
+  nameJa: ビッグ・モンスターを退治するならコレ！デッカいブキと、勇猛ハート
+  nameEn: If You Wanna Take Down a HUGE Monster, Be Brave & Put Your Huge Weapon to the Test!
+  revival: false
+  start: 2/27/2026
+  end: 4/10/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: デカブツ狩りだ！ チャボ
+      weight: 0.01
+    - name: ジェフ
+      weight: 0.01
+  poolId: 21

@@ -3094,3 +3094,23 @@
   limited: false
   release: 2/20/2026
   image: FS_2029_1.png
+- id: 318
+  unitId: 5107
+  nameJa: ジェフ
+  nameEn: Jeff
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: false
+  release: 2/27/2026
+  image: FS_5107_1.png
+- id: 319
+  unitId: 6127
+  nameJa: デカブツ狩りだ！ チャボ
+  nameEn: Big Meat Hunter Chabeau
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: true
+  release: 2/27/2026
+  image: FS_6127_1.png
