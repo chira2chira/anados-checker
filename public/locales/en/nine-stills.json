@@ -1,0 +1,18 @@
+{
+  "title": "9 Stills That Define Me",
+  "description": "Select 9 stills to create a composite image.",
+  "button": {
+    "generateImage": "Generate Image",
+    "shareOnX": "Share on 𝕏",
+    "download": "Download",
+    "clear": "Clear",
+    "selectStill": "Select Still"
+  },
+  "message": {
+    "selectNineStills": "Select 9 stills",
+    "generating": "Generating image...",
+    "generated": "Image generated",
+    "selectAtLeastOne": "Please select at least one still",
+    "failed": "Failed to generate image"
+  }
+}
