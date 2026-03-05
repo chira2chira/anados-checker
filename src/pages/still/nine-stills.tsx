@@ -5,6 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { css } from "@emotion/react";
 import { Button, Callout } from "@blueprintjs/core";
+import dayjs from "dayjs";
 import { domToPng } from "modern-screenshot";
 import * as styles from "@/styles/Home.module";
 import { CharInfoWithStill } from "@/types/unit";
@@ -205,11 +206,12 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
   };
 
   const getStillLabel = (still: StillInfo) => {
-    const char = props.charInfoWithStills.find((c) =>
+    const chars = props.charInfoWithStills.filter((c) =>
       c.stills.some((s) => s.id === still.id),
     );
-    const charName = i18n.language === "ja" ? char?.nameJa : char?.nameEn;
-    return char ? `${charName} - ${still.label}` : still.label;
+    const standardChar = chars.sort((a, b) => dayjs(a.release).diff(dayjs(b.release)))[0];
+    const charName = i18n.language === "ja" ? standardChar?.nameJa : standardChar?.nameEn;
+    return standardChar ? `${charName} - ${still.label}` : still.label;
   };
 
   const handleGenerateImage = async () => {
