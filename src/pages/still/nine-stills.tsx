@@ -14,6 +14,7 @@ import { loadStillMaster } from "@/utils/yamlUtil";
 import { Container } from "@/components/Container";
 import { getImageUrl } from "@/utils/image";
 import { TopToaster } from "@/utils/toast";
+import { sendEvent } from "@/utils/gtag";
 import { NineStillsSelectModal } from "@/components/NineStillsSelectModal";
 import useStillState from "@/hooks/useStillState";
 
@@ -209,8 +210,11 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
     const chars = props.charInfoWithStills.filter((c) =>
       c.stills.some((s) => s.id === still.id),
     );
-    const standardChar = chars.sort((a, b) => dayjs(a.release).diff(dayjs(b.release)))[0];
-    const charName = i18n.language === "ja" ? standardChar?.nameJa : standardChar?.nameEn;
+    const standardChar = chars.sort((a, b) =>
+      dayjs(a.release).diff(dayjs(b.release)),
+    )[0];
+    const charName =
+      i18n.language === "ja" ? standardChar?.nameJa : standardChar?.nameEn;
     return standardChar ? `${charName} - ${still.label}` : still.label;
   };
 
@@ -242,6 +246,12 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
       });
 
       setGeneratedImageUrl(dataUrl);
+
+      sendEvent({
+        action: "generate_image",
+        category: "9stills",
+        label: "success",
+      });
 
       TopToaster?.then((toaster) =>
         toaster.show({
