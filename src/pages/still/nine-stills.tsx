@@ -231,13 +231,6 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
 
     setIsGenerating(true);
 
-    TopToaster?.then((toaster) =>
-      toaster.show({
-        intent: "primary",
-        message: t2("message.generating"),
-      }),
-    );
-
     try {
       // iOS向けウォームアップ
       await domToPng(captureRef.current, {
