@@ -1,7 +1,8 @@
 import { Dialog, DialogBody, InputGroup } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { useTranslation } from "next-i18next";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import LazyLoad, { forceCheck } from "react-lazyload";
 import { CharInfoWithStill } from "@/types/unit";
 import { StillInfo } from "@/types/still";
 import { getImageUrl } from "@/utils/image";
@@ -24,6 +25,10 @@ export const NineStillsSelectModal: React.FC<NineStillsSelectModalProps> = (
   const [searchQuery, setSearchQuery] = useState("");
   const [filterRate, setFilterRate] = useState("none");
   const { customLabels } = useContext(CustomLabelContext);
+
+  useEffect(() => {
+    setTimeout(forceCheck, 0);
+  }, [searchQuery, filterRate]);
 
   const filteredChars = props.charInfoWithStills
     .filter((char) => {
@@ -145,140 +150,143 @@ export const NineStillsSelectModal: React.FC<NineStillsSelectModalProps> = (
                     i18n.language === "ja" ? char.nameJa : char.nameEn;
 
                   return (
-                    <div
-                      key={char.id}
-                      css={css`
-                        display: flex;
-                        gap: 10px;
-                        align-items: flex-start;
-
-                        @media (max-width: 992px) {
-                          flex-direction: column;
-                          align-items: center;
-                          justify-content: center;
-                        }
-                      `}
-                    >
-                      <div
-                        css={css`
-                          display: flex;
-                          flex-direction: column;
-                          align-items: center;
-                          gap: 5px;
-                          width: 100px;
-
-                          @media (max-width: 992px) {
-                            width: auto;
-                          }
-                        `}
-                      >
-                        <img
-                          css={css`
-                            width: 50px;
-                            height: 50px;
-                            border-radius: 25px;
-                          `}
-                          src={getImageUrl("char/" + char.image)}
-                          alt={charName}
-                        />
+                    <div key={char.id}>
+                      <LazyLoad overflow height={100} once>
                         <div
                           css={css`
-                            font-size: 85%;
-                            text-align: center;
-                            word-break: break-word;
+                            display: flex;
+                            gap: 10px;
+                            align-items: flex-start;
+
+                            @media (max-width: 992px) {
+                              flex-direction: column;
+                              align-items: center;
+                              justify-content: center;
+                            }
                           `}
                         >
-                          {charName}
-                        </div>
-                      </div>
+                          <div
+                            css={css`
+                              display: flex;
+                              flex-direction: column;
+                              align-items: center;
+                              gap: 5px;
+                              width: 100px;
 
-                      <div
-                        css={css`
-                          display: flex;
-                          flex-wrap: wrap;
-                          gap: 8px;
-                          flex: 1;
-
-                          @media (max-width: 992px) {
-                            justify-content: center;
-                          }
-                        `}
-                      >
-                        {char.stills.map((still) => {
-                          const isSelected = props.selectedStillIds.includes(
-                            still.id,
-                          );
-
-                          return (
-                            <div
-                              key={still.id}
+                              @media (max-width: 992px) {
+                                width: auto;
+                              }
+                            `}
+                          >
+                            <img
                               css={css`
-                                position: relative;
-                                cursor: ${isSelected
-                                  ? "not-allowed"
-                                  : "pointer"};
-                                opacity: ${isSelected ? 0.3 : 1};
-                                transition: opacity 0.2s;
-
-                                &:hover {
-                                  opacity: ${isSelected ? 0.3 : 0.8};
-                                }
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 25px;
                               `}
-                              onClick={() => handleStillClick(still)}
+                              src={getImageUrl("char/" + char.image)}
+                              alt={charName}
+                            />
+                            <div
+                              css={css`
+                                font-size: 85%;
+                                text-align: center;
+                                word-break: break-word;
+                              `}
                             >
-                              <img
-                                css={css`
-                                  width: 144px;
-                                  height: 81px;
-                                  object-fit: cover;
-                                  border-radius: 3px;
-                                `}
-                                src={getImageUrl("still/" + still.image)}
-                                alt={still.label}
-                              />
-                              <div
-                                css={css`
-                                  position: absolute;
-                                  bottom: 2px;
-                                  left: 2px;
-                                  background-color: rgba(0, 0, 0, 0.7);
-                                  padding: 2px 6px;
-                                  border-radius: 2px;
-                                  font-size: 70%;
-                                `}
-                              >
-                                {still.label}
-                              </div>
-                              {isSelected && (
+                              {charName}
+                            </div>
+                          </div>
+
+                          <div
+                            css={css`
+                              display: flex;
+                              flex-wrap: wrap;
+                              gap: 8px;
+                              flex: 1;
+
+                              @media (max-width: 992px) {
+                                justify-content: center;
+                              }
+                            `}
+                          >
+                            {char.stills.map((still) => {
+                              const isSelected = props.selectedStillIds.includes(
+                                still.id,
+                              );
+
+                              return (
                                 <div
+                                  key={still.id}
                                   css={css`
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    right: 0;
-                                    bottom: 0;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    background-color: rgba(0, 0, 0, 0.5);
-                                    border-radius: 3px;
+                                    position: relative;
+                                    cursor: ${isSelected
+                                      ? "not-allowed"
+                                      : "pointer"};
+                                    opacity: ${isSelected ? 0.3 : 1};
+                                    transition: opacity 0.2s;
+
+                                    &:hover {
+                                      opacity: ${isSelected ? 0.3 : 0.8};
+                                    }
                                   `}
+                                  onClick={() => handleStillClick(still)}
                                 >
-                                  <span
+                                  <img
                                     css={css`
-                                      font-size: 120%;
-                                      font-weight: bold;
-                                      color: #fff;
+                                      width: 144px;
+                                      height: 81px;
+                                      object-fit: cover;
+                                      border-radius: 3px;
+                                    `}
+                                    src={getImageUrl("still/" + still.image)}
+                                    alt={still.label}
+                                  />
+                                  <div
+                                    css={css`
+                                      position: absolute;
+                                      bottom: 2px;
+                                      left: 2px;
+                                      background-color: rgba(0, 0, 0, 0.7);
+                                      padding: 2px 6px;
+                                      border-radius: 2px;
+                                      font-size: 70%;
                                     `}
                                   >
-                                    ✓
-                                  </span>
+                                    {still.label}
+                                  </div>
+                                  {isSelected && (
+                                    <div
+                                      css={css`
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        background-color: rgba(0, 0, 0, 0.5);
+                                        border-radius: 3px;
+                                      `}
+                                    >
+                                      <span
+                                        css={css`
+                                          font-size: 120%;
+                                          font-weight: bold;
+                                          color: #fff;
+                                        `}
+                                      >
+                                        ✓
+                                      </span>
+                                    </div>
+                                  )}
                                 </div>
-                              )}
-                            </div>
-                          );
-                        })}
-                      </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </LazyLoad>
                     </div>
                   );
                 })}
