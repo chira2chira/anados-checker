@@ -2,7 +2,7 @@ import { GetStaticProps, NextPage } from "next";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { css } from "@emotion/react";
 import { Button, Callout } from "@blueprintjs/core";
 import { domToPng } from "modern-screenshot";
@@ -14,6 +14,7 @@ import { Container } from "@/components/Container";
 import { getImageUrl } from "@/utils/image";
 import { TopToaster } from "@/utils/toast";
 import { NineStillsSelectModal } from "@/components/NineStillsSelectModal";
+import useStillState from "@/hooks/useStillState";
 
 type NineStillsProps = {
   charInfoWithStills: CharInfoWithStill[];
@@ -133,6 +134,21 @@ const captureLabelStyle = css`
 
 const NineStills: NextPage<NineStillsProps> = (props) => {
   const router = useRouter();
+  const { stillStates } = useStillState();
+
+  const enrichedCharInfoWithStills = useMemo(
+    () =>
+      props.charInfoWithStills.map((char) => ({
+        ...char,
+        stills: char.stills.map((still) => {
+          const state = stillStates.find((s) => s.id === still.id);
+          if (!state) return still;
+          return { ...still, read: state.read, rate: state.rate };
+        }),
+      })),
+    [props.charInfoWithStills, stillStates],
+  );
+
   const [selectedStills, setSelectedStills] = useState<(StillInfo | null)[]>(
     Array(9).fill(null),
   );
@@ -423,7 +439,7 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
           setSelectedIndex(null);
         }}
         onSelect={handleSelectStill}
-        charInfoWithStills={props.charInfoWithStills}
+        charInfoWithStills={enrichedCharInfoWithStills}
         selectedStillIds={selectedStillIds}
       />
     </Container>

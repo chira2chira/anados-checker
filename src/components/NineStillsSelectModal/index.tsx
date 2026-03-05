@@ -1,10 +1,12 @@
 import { Dialog, DialogBody, InputGroup } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { useTranslation } from "next-i18next";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { CharInfoWithStill } from "@/types/unit";
 import { StillInfo } from "@/types/still";
 import { getImageUrl } from "@/utils/image";
+import FilterSelect from "@/components/FilterSelect";
+import { CustomLabelContext } from "@/providers/CustomLabelProvider";
 
 type NineStillsSelectModalProps = {
   isOpen: boolean;
@@ -18,17 +20,28 @@ export const NineStillsSelectModal: React.FC<NineStillsSelectModalProps> = (
   props,
 ) => {
   const { t, i18n } = useTranslation("nine-stills");
+  const { t: tc } = useTranslation("common");
   const [searchQuery, setSearchQuery] = useState("");
+  const [filterRate, setFilterRate] = useState("none");
+  const { customLabels } = useContext(CustomLabelContext);
 
-  const filteredChars = searchQuery.trim()
-    ? props.charInfoWithStills.filter((char) => {
-        const query = searchQuery.toLowerCase();
-        return (
-          char.nameJa.toLowerCase().includes(query) ||
-          char.nameEn.toLowerCase().includes(query)
-        );
-      })
-    : props.charInfoWithStills;
+  const filteredChars = props.charInfoWithStills
+    .filter((char) => {
+      if (!searchQuery.trim()) return true;
+      const query = searchQuery.toLowerCase();
+      return (
+        char.nameJa.toLowerCase().includes(query) ||
+        char.nameEn.toLowerCase().includes(query)
+      );
+    })
+    .map((char) => ({
+      ...char,
+      stills:
+        filterRate === "none"
+          ? char.stills
+          : char.stills.filter((s) => s.rate === Number(filterRate)),
+    }))
+    .filter((char) => char.stills.length > 0);
 
   const groupedByRarity = [7, 6, 5, 4, 3, 2, 1, 0].map((rarity) => ({
     rarity,
@@ -73,13 +86,41 @@ export const NineStillsSelectModal: React.FC<NineStillsSelectModalProps> = (
           leftIcon="search"
           css={css`
             margin: auto;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
             width: 220px;
             position: sticky;
             top: 0;
             z-index: 10;
           `}
         />
+        <div
+          css={css`
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+          `}
+        >
+          <div
+            css={css`
+              width: 220px;
+            `}
+          >
+            <FilterSelect
+              value={filterRate}
+              onChange={setFilterRate}
+              options={[
+                { value: "none", label: tc("ui.filter.userLabelBy") },
+                { value: "0", label: customLabels[0] },
+                { value: "1", label: customLabels[1] },
+                { value: "2", label: customLabels[2] },
+                { value: "3", label: customLabels[3] },
+                { value: "4", label: customLabels[4] },
+                { value: "5", label: customLabels[5] },
+                { value: "6", label: customLabels[6] },
+              ]}
+            />
+          </div>
+        </div>
         {groupedByRarity.map(({ rarity, chars }) => {
           if (chars.length === 0) return null;
 
