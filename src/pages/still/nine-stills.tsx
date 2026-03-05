@@ -266,7 +266,7 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
     const ids = selectedStills.map((s) => s?.id ?? "").join(",");
     const pageUrl = `${window.location.origin}/still/nine-stills?stills=${encodeURIComponent(ids)}`;
     const tweetText = `私を構成する9つのスチル #My9Stills ${pageUrl}`;
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+    const twitterUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
     window.open(twitterUrl, "_blank");
   };
 
