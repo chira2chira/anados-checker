@@ -6,13 +6,15 @@
     "shareOnX": "𝕏でシェア",
     "download": "ダウンロード",
     "clear": "クリア",
-    "selectStill": "スチルを選択"
+    "selectStill": "スチルを選択",
+    "createMyOwn": "自分のを作る"
   },
   "message": {
     "selectNineStills": "9つのスチルを選択してください",
     "generating": "画像を生成中...",
     "generated": "画像を生成しました",
     "selectAtLeastOne": "スチルを選択してください",
-    "failed": "画像生成に失敗しました"
+    "failed": "画像生成に失敗しました",
+    "viewingShared": "シェアされた9スチルを表示しています。"
   }
 }

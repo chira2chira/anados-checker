@@ -1,9 +1,10 @@
 import { GetStaticProps, NextPage } from "next";
+import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { css } from "@emotion/react";
-import { Button } from "@blueprintjs/core";
+import { Button, Callout } from "@blueprintjs/core";
 import { domToPng } from "modern-screenshot";
 import * as styles from "@/styles/Home.module";
 import { CharInfoWithStill } from "@/types/unit";
@@ -131,6 +132,7 @@ const captureLabelStyle = css`
 `;
 
 const NineStills: NextPage<NineStillsProps> = (props) => {
+  const router = useRouter();
   const [selectedStills, setSelectedStills] = useState<(StillInfo | null)[]>(
     Array(9).fill(null),
   );
@@ -140,9 +142,27 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
     null,
   );
   const [isGenerating, setIsGenerating] = useState(false);
+  const [isReadOnly, setIsReadOnly] = useState(false);
   const captureRef = useRef<HTMLDivElement>(null);
   const { t, i18n } = useTranslation("common");
   const { t: t2 } = useTranslation("nine-stills");
+
+  useEffect(() => {
+    if (!router.isReady) return;
+    const { stills: stillsParam } = router.query;
+    if (!stillsParam || typeof stillsParam !== "string") return;
+
+    const ids = stillsParam.split(",");
+    if (ids.every((id) => id === "")) return;
+
+    const allStills = props.charInfoWithStills.flatMap((c) => c.stills);
+    const restored: (StillInfo | null)[] = ids.map((id) =>
+      id ? (allStills.find((s) => s.id === id) ?? null) : null,
+    );
+    while (restored.length < 9) restored.push(null);
+    setSelectedStills(restored.slice(0, 9));
+    setIsReadOnly(true);
+  }, [router.isReady]);
 
   const selectedStillIds = selectedStills
     .filter((x): x is StillInfo => x !== null)
@@ -231,7 +251,20 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
     }
   };
 
-  const handleShareOnX = () => {};
+  const handleShareOnX = () => {
+    const ids = selectedStills.map((s) => s?.id ?? "").join(",");
+    const pageUrl = `${window.location.origin}/still/nine-stills?stills=${encodeURIComponent(ids)}`;
+    const tweetText = `私を構成する9つのスチル #My9Stills ${pageUrl}`;
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+    window.open(twitterUrl, "_blank");
+  };
+
+  const handleCreateMyOwn = () => {
+    setSelectedStills(Array(9).fill(null));
+    setIsReadOnly(false);
+    setGeneratedImageUrl(null);
+    router.push("/still/nine-stills", undefined, { shallow: true });
+  };
 
   const handleDownload = () => {
     if (!generatedImageUrl) return;
@@ -249,6 +282,23 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
       description={t2("description")}
     >
       <div css={styles.main}>
+        {isReadOnly && (
+          <Callout
+            css={css`
+              margin-bottom: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 12px;
+            `}
+          >
+            <span>{t2("message.viewingShared")}</span>
+            <Button intent="primary" onClick={handleCreateMyOwn}>
+              {t2("button.createMyOwn")}
+            </Button>
+          </Callout>
+        )}
+
         <div css={gridStyle}>
           {selectedStills.map((still, index) => (
             <div key={index}>
@@ -263,14 +313,18 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
                       {getStillLabel(still)}
                     </div>
                   </div>
-                  <Button
-                    icon="cross"
-                    minimal
-                    small
-                    css={clearButtonStyle}
-                    onClick={() => handleClear(index)}
-                  />
+                  {!isReadOnly && (
+                    <Button
+                      icon="cross"
+                      minimal
+                      small
+                      css={clearButtonStyle}
+                      onClick={() => handleClear(index)}
+                    />
+                  )}
                 </div>
+              ) : isReadOnly ? (
+                <div css={emptyCellStyle} />
               ) : (
                 <Button
                   icon="plus"
@@ -284,26 +338,31 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
           ))}
         </div>
 
-        <div
-          css={css`
-            display: flex;
-            gap: 10px;
-            align-items: center;
-          `}
-        >
-          <Button
-            onClick={handleGenerateImage}
-            intent="primary"
-            size="large"
-            loading={isGenerating}
-            disabled={isGenerating}
+        {!isReadOnly && (
+          <div
+            css={css`
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            `}
           >
-            {t2("button.generateImage")}
-          </Button>
-          <Button onClick={handleShareOnX} disabled={!generatedImageUrl}>
-            {t2("button.shareOnX")}
-          </Button>
-        </div>
+            <Button
+              onClick={handleGenerateImage}
+              intent="primary"
+              size="large"
+              loading={isGenerating}
+              disabled={isGenerating}
+            >
+              {t2("button.generateImage")}
+            </Button>
+            <Button
+              onClick={handleShareOnX}
+              disabled={selectedStillIds.length === 0}
+            >
+              {t2("button.shareOnX")}
+            </Button>
+          </div>
+        )}
 
         {generatedImageUrl && (
           <div css={previewContainerStyle}>

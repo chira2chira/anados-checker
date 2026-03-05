@@ -6,13 +6,15 @@
     "shareOnX": "Share on 𝕏",
     "download": "Download",
     "clear": "Clear",
-    "selectStill": "Select Still"
+    "selectStill": "Select Still",
+    "createMyOwn": "Create My Own"
   },
   "message": {
     "selectNineStills": "Select 9 stills",
     "generating": "Generating image...",
     "generated": "Image generated",
     "selectAtLeastOne": "Please select at least one still",
-    "failed": "Failed to generate image"
+    "failed": "Failed to generate image",
+    "viewingShared": "Viewing a shared 9 stills selection."
   }
 }
