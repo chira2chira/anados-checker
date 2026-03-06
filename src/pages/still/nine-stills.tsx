@@ -302,7 +302,12 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
       title={t2("title")}
       description={t2("description")}
     >
-      <div css={styles.main}>
+      <div
+        css={css`
+          ${styles.main};
+          width: 100%;
+        `}
+      >
         {isReadOnly && (
           <Callout
             css={css`
