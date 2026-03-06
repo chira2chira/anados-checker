@@ -3,7 +3,13 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { css } from "@emotion/react";
-import { Button, ButtonGroup, ButtonProps, Switch } from "@blueprintjs/core";
+import {
+  AnchorButton,
+  Button,
+  ButtonGroup,
+  ButtonProps,
+  Switch,
+} from "@blueprintjs/core";
 import { forceCheck } from "react-lazyload";
 import * as styles from "@/styles/Home.module";
 import { CharClass, CharInfo, CharInfoWithStill } from "@/types/unit";
@@ -162,7 +168,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
               .filter(filterSillAttribute(filterStillType)),
           }))
           .filter((x) =>
-            filterClass.length === 0 ? true : filterClass.includes(x.class)
+            filterClass.length === 0 ? true : filterClass.includes(x.class),
           )
           .filter(filterOwnedChar(filterOwned))
           .filter(filterLimitedChar(filterLimited))
@@ -210,16 +216,16 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       // 共有スチルが固有スチルに変更された場合のマイグレーション
       if (
         !props.charInfoWithStills.some((y) =>
-          y.stills.some((z) => z.id === x.id)
+          y.stills.some((z) => z.id === x.id),
         )
       ) {
         const char = props.charInfoWithStills.find(
-          (y) => y.unitId === Number(x.id.split(":")[0])
+          (y) => y.unitId === Number(x.id.split(":")[0]),
         );
         const newChar = props.charInfoWithStills.find(
           (y) =>
             y.id ===
-            char?.stills[0]?.groupIds[(Number(x.id.split(":")[1]) - 1) / 2]
+            char?.stills[0]?.groupIds[(Number(x.id.split(":")[1]) - 1) / 2],
         );
         const still = newChar?.stills.find((y) => y.label === "Still");
         // 既に固有スチルが登録されている場合はスキップ
@@ -246,7 +252,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
         return newStates;
       });
     },
-    [setStillStates]
+    [setStillStates],
   );
 
   const handleRateChange = useCallback(
@@ -262,7 +268,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
         return newStates;
       });
     },
-    [setStillStates]
+    [setStillStates],
   );
 
   const handleBulkRegister = (stills: StillState[]) => {
@@ -293,7 +299,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       toaster.show({
         intent: "success",
         message: t("ui.message.saved"),
-      })
+      }),
     );
     sendEvent({
       action: "save",
@@ -492,9 +498,19 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
             margin-bottom: 20px;
           `}
         >
-          <Button onClick={() => setRouletteOpen(true)} outlined>
-            {t2("button.stillRoulette")}
-          </Button>
+          <div
+            css={css`
+              display: flex;
+              gap: 3px;
+            `}
+          >
+            <Button onClick={() => setRouletteOpen(true)} outlined>
+              {t2("button.stillRoulette")}
+            </Button>
+            <AnchorButton href="/still/nine-stills" outlined>
+              {t2("button.nineStills")}
+            </AnchorButton>
+          </div>
           <div
             css={css`
               display: flex;
@@ -662,7 +678,7 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
 
   let allStills = props.charInfo.reduce<StillState[]>(
     (p, c) => p.concat(c.stills),
-    []
+    [],
   );
   allStills = getUniqueSills(allStills);
   const allRead = allStills.filter((x) => x.read).length === allStills.length;
@@ -671,12 +687,12 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
     if (allRead) {
       // すべて既読の場合
       props.onBulkRegister(
-        allStills.map((x) => ({ id: x.id, rate: x.rate, read: false }))
+        allStills.map((x) => ({ id: x.id, rate: x.rate, read: false })),
       );
     } else {
       // 未読がある場合
       props.onBulkRegister(
-        allStills.map((x) => ({ id: x.id, rate: x.rate, read: true }))
+        allStills.map((x) => ({ id: x.id, rate: x.rate, read: true })),
       );
     }
   };
@@ -757,7 +773,7 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps<StillManagerProps> = async (
-  context
+  context,
 ) => {
   const { charInfoWithStills } = loadStillMaster();
 
