@@ -763,3 +763,12 @@
   limited: false
   release: 2/6/2026
   image: WeaponIcon_5028.png
+- id: 86
+  eidosId: 3026
+  unitId: 2025
+  nameJa: 地上の人間だ～いすき！
+  nameEn: Boy, Do I Love Land Dwellers!
+  rarity: 3
+  limited: false
+  release: 3/6/2026
+  image: WeaponIcon_3026.png

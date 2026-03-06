@@ -482,6 +482,14 @@
     },
     {
       "charId": 2025,
+      "seq": 20,
+      "shared": [2025],
+      "group": [2025],
+      "label": "still01_mermanseahorse_eidos",
+      "image": "StillThumbnail_bg_merman_seahorse_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 2025,
       "seq": 70,
       "shared": [2025],
       "group": [2025],
