@@ -11,13 +11,24 @@ type CommonMetaProps = {
   cardType: CardType;
 };
 
-function getCardImage(type: CommonMetaProps["cardType"]): string {
+function getCardImage(type: CardType): string {
   switch (type) {
     case "summary":
     case "summary_large_image":
       return "https://anados-collection-tracker.vercel.app/ogp.png";
     case "9stills":
       return "https://anados-collection-tracker.vercel.app/ogp_9stills.png";
+  }
+}
+
+function getCardType(type: CardType): string {
+  switch (type) {
+    case "summary":
+      return "summary";
+    case "summary_large_image":
+      return "summary_large_image";
+    case "9stills":
+      return "summary";
   }
 }
 
@@ -46,7 +57,7 @@ const CommonMeta: React.FC<CommonMetaProps> = (props) => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={getCardImage(props.cardType)} />
-        <meta name="twitter:card" content={props.cardType} />
+        <meta name="twitter:card" content={getCardType(props.cardType)} />
       </Head>
     </>
   );
