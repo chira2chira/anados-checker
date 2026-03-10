@@ -301,6 +301,7 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
       titleLink="/still/nine-stills"
       title={t2("title")}
       description={t2("description")}
+      cardType="9stills"
     >
       <div
         css={css`

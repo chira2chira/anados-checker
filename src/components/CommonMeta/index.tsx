@@ -3,17 +3,21 @@ import React, { useEffect } from "react";
 import { isProd } from "../../utils/env";
 import { useTranslation } from "next-i18next";
 
+export type CardType = "summary" | "summary_large_image" | "9stills";
+
 type CommonMetaProps = {
   pageTitle?: string;
   description?: string;
-  cardType: "summary" | "summary_large_image";
+  cardType: CardType;
 };
 
-function getCardImage(type: CommonMetaProps["cardType"]) {
+function getCardImage(type: CommonMetaProps["cardType"]): string {
   switch (type) {
     case "summary":
     case "summary_large_image":
       return "https://anados-collection-tracker.vercel.app/ogp.png";
+    case "9stills":
+      return "https://anados-collection-tracker.vercel.app/ogp_9stills.png";
   }
 }
 

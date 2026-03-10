@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { css } from "@emotion/react";
-import CommonMeta from "@/components/CommonMeta";
+import CommonMeta, { CardType } from "@/components/CommonMeta";
 import { Button, Drawer, EntityTitle, MenuDivider } from "@blueprintjs/core";
 import React, { useCallback, useState } from "react";
 import { getImageUrl } from "@/utils/image";
@@ -60,6 +60,7 @@ type ContainerProps = {
   description?: string;
   titleLink: string;
   children: React.ReactNode;
+  cardType?: CardType;
 };
 
 export const Container: React.FC<ContainerProps> = (props) => {
@@ -73,7 +74,7 @@ export const Container: React.FC<ContainerProps> = (props) => {
       <CommonMeta
         pageTitle={props.title}
         description={props.description}
-        cardType="summary"
+        cardType={props.cardType || "summary"}
       />
 
       <div
@@ -140,7 +141,8 @@ export const Container: React.FC<ContainerProps> = (props) => {
                 </a>
               </div>
               <div>
-                <Link href={"/info"}>{t("ui.link.info")}</Link>{" / "}
+                <Link href={"/info"}>{t("ui.link.info")}</Link>
+                {" / "}
                 <Link href={"/privacy"}>{t("ui.link.privacy")}</Link>
               </div>
             </footer>
