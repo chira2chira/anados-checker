@@ -3113,3 +3113,24 @@
     - name: ジェフ
       weight: 0.01
   poolId: 21
+- id: 191
+  nameJa: スナイパーは見た！HYPERモンスターのデッカいヒミツ！
+  nameEn: 'Sniper Confirmed: The Hyper-Charged Monster’s HUGE Secret!'
+  revival: false
+  start: 3/13/2026
+  end: 4/24/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: バルキースナイパー リオン
+      weight: 0.01
+    - name: ラ・ギアス
+      weight: 0.01
+  poolId: 21

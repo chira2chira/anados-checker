@@ -3114,3 +3114,23 @@
   limited: true
   release: 2/27/2026
   image: FS_6127_1.png
+- id: 320
+  unitId: 5108
+  nameJa: ラ・ギアス
+  nameEn: El Goliat
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: false
+  release: 3/13/2026
+  image: FS_5108_1.png
+- id: 321
+  unitId: 6128
+  nameJa: バルキースナイパー リオン
+  nameEn: Bulky Sniper Lyon
+  rarity: 6
+  class: shooter
+  deployment: high
+  limited: true
+  release: 3/13/2026
+  image: FS_6128_1.png
