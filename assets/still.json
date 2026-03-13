@@ -2356,7 +2356,7 @@
       "charId": 5053,
       "seq": 1,
       "shared": [5053],
-      "group": [5053, 6091],
+      "group": [5053, 6091, 6128],
       "label": "still01_lyon",
       "image": "StillThumbnail_bg_rion_still01_mosaic_001.webp"
     },
@@ -2364,7 +2364,7 @@
       "charId": 5053,
       "seq": 4,
       "shared": [5053],
-      "group": [5053, 6091],
+      "group": [5053, 6091, 6128],
       "label": "still04_lyon_secret_125053",
       "image": "StillThumbnail_bg_lyon_storystill01_mosaic_001.webp"
     },
@@ -2372,7 +2372,7 @@
       "charId": 5053,
       "seq": 20,
       "shared": [5053],
-      "group": [5053, 6091],
+      "group": [5053, 6091, 6128],
       "label": "still05_rion_eidos",
       "image": "StillThumbnail_bg_rionstill05_scene01_thumbnail.webp"
     },
@@ -2380,7 +2380,7 @@
       "charId": 5053,
       "seq": 70,
       "shared": [5053],
-      "group": [5053, 6091],
+      "group": [5053, 6091, 6128],
       "label": "ren_021",
       "image": "StillThumbnail_bg_chabo_storystill02_mosaic_A001.webp"
     },
@@ -2388,7 +2388,7 @@
       "charId": 5053,
       "seq": 71,
       "shared": [5053],
-      "group": [5053, 6091],
+      "group": [5053, 6091, 6128],
       "label": "wd_012",
       "image": "StillThumbnail_bg_chabo_storystill04_mosaic_001.webp"
     },
@@ -2396,7 +2396,7 @@
       "charId": 5053,
       "seq": 72,
       "shared": [5053],
-      "group": [5053, 6091],
+      "group": [5053, 6091, 6128],
       "label": "wd_013",
       "image": "StillThumbnail_bg_lyon_storystill02_mosaic_001.webp"
     },
@@ -2404,7 +2404,7 @@
       "charId": 5053,
       "seq": 73,
       "shared": [5053],
-      "group": [5053, 6091],
+      "group": [5053, 6091, 6128],
       "label": "wd_028",
       "image": "StillThumbnail_bg_todorf_storystill02_mosaic_001.webp"
     },
@@ -2412,7 +2412,7 @@
       "charId": 5053,
       "seq": 74,
       "shared": [5053],
-      "group": [5053, 6091],
+      "group": [5053, 6091, 6128],
       "label": "mdr_035",
       "image": "StillThumbnail_bg_lyon_storystill03_mosaic_002.webp"
     },
@@ -2420,7 +2420,7 @@
       "charId": 5053,
       "seq": 75,
       "shared": [5053],
-      "group": [5053, 6091],
+      "group": [5053, 6091, 6128],
       "label": "hyp_012",
       "image": "StillThumbnail_bg_lyon_storystill04_mosaic_004.webp"
     },
@@ -3463,6 +3463,30 @@
       "group": [5107],
       "label": "hyp_023",
       "image": "StillThumbnail_bg_jeff_storystill01_mosaic_001.webp"
+    },
+    {
+      "charId": 5107,
+      "seq": 71,
+      "shared": [5107],
+      "group": [5107],
+      "label": "hyp_031",
+      "image": "StillThumbnail_bg_laguias_storystill01_mosaic_002.webp"
+    },
+    {
+      "charId": 5108,
+      "seq": 70,
+      "shared": [5108],
+      "group": [5108],
+      "label": "hyp_020",
+      "image": "StillThumbnail_bg_hurricaneandtough_storystill02_mosaic_001.webp"
+    },
+    {
+      "charId": 5108,
+      "seq": 71,
+      "shared": [5108],
+      "group": [5108],
+      "label": "hyp_031",
+      "image": "StillThumbnail_bg_laguias_storystill01_mosaic_002.webp"
     },
     {
       "charId": 6001,
