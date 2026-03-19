@@ -3134,3 +3134,49 @@
     - name: ラ・ギアス
       weight: 0.01
   poolId: 21
+- id: 192
+  nameJa: やったね３周年！爆アゲウインターデートへ出発！
+  nameEn: We’ve Hit 3 Years! Time to Head Off on Explosive Wintry Dates!
+  revival: true
+  start: 3/19/2026
+  end: 5/1/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: 雪の日の約束 リオン
+      weight: 0.01
+    - name: アナグラ
+      weight: 0.01
+    - name: スヴェン
+      weight: 0.01
+  poolId: 21
+- id: 193
+  nameJa: イヴの夜クラッシャー登場！サンタだって恋したい
+  nameEn: Home Wrecker Swoopin’ in on Christmas Eve! Even Santa Needs Some Lovin’!
+  revival: true
+  start: 3/19/2026
+  end: 5/1/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ゴーストサンタ ハロルド
+      weight: 0.01
+    - name: ウィンターデート チャボ
+      weight: 0.01
+    - name: トドルフ
+      weight: 0.01
+  poolId: 21
