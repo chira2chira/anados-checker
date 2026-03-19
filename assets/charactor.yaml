@@ -3134,3 +3134,23 @@
   limited: true
   release: 3/13/2026
   image: FS_6128_1.png
+- id: 322
+  unitId: 1025
+  nameJa: 不運な冒険者
+  nameEn: Unlucky Adventurer
+  rarity: 1
+  class: fighter
+  deployment: low
+  limited: false
+  release: 3/19/2026
+  image: FS_1025_1.png
+- id: 323
+  unitId: 1026
+  nameJa: 噂好きの冒険者
+  nameEn: Gossiping Adventurer
+  rarity: 1
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 3/19/2026
+  image: FS_1026_1.png

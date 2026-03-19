@@ -772,3 +772,21 @@
   limited: false
   release: 3/6/2026
   image: WeaponIcon_3026.png
+- id: 87
+  eidosId: 3027
+  unitId: 1025
+  nameJa: こんや12じ だれかがイク
+  nameEn: Somebody’s Getting Off at Midnight!
+  rarity: 3
+  limited: false
+  release: 3/19/2026
+  image: WeaponIcon_3027.png
+- id: 88
+  eidosId: 3028
+  unitId: 1026
+  nameJa: ドスケベアーの噂❤
+  nameEn: Rumors of the Horny Polar Bears
+  rarity: 3
+  limited: false
+  release: 3/19/2026
+  image: WeaponIcon_3028.png
