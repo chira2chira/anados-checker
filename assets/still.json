@@ -313,6 +313,38 @@
       "image": "StillThumbnail_bg_snowbunnywarrior_storystill01_mosaic_006.webp"
     },
     {
+      "charId": 1025,
+      "seq": 20,
+      "shared": [1025],
+      "group": [1025],
+      "label": "still01_youngtraveler_eidos",
+      "image": "StillThumbnail_bg_youngtraveler_still01_mosaic_003_a.webp"
+    },
+    {
+      "charId": 1025,
+      "seq": 70,
+      "shared": [1025],
+      "group": [1025],
+      "label": "wd_021",
+      "image": "StillThumbnail_bg_youngtraveler_storystill01_mosaic_001_a.webp"
+    },
+    {
+      "charId": 1026,
+      "seq": 20,
+      "shared": [1026],
+      "group": [1026],
+      "label": "still01_frightenedtraveler_eidos",
+      "image": "StillThumbnail_bg_frightenedtraveler_still01_mosaic_001.webp"
+    },
+    {
+      "charId": 1026,
+      "seq": 70,
+      "shared": [1026],
+      "group": [1026],
+      "label": "wd_023",
+      "image": "StillThumbnail_bg_sven_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 2001,
       "seq": 1,
       "shared": [2001, 2002, 2003, 2004],
@@ -3457,6 +3489,14 @@
       "image": "StillThumbnail_bg_foras_storystill02_mosaic_009.webp"
     },
     {
+      "charId": 5106,
+      "seq": 70,
+      "shared": [5106],
+      "group": [5106],
+      "label": "hyp_034",
+      "image": "StillThumbnail_bg_sage_storystill01_mosaic_001.webp"
+    },
+    {
       "charId": 5107,
       "seq": 70,
       "shared": [5107],
@@ -3471,6 +3511,14 @@
       "group": [5107],
       "label": "hyp_031",
       "image": "StillThumbnail_bg_laguias_storystill01_mosaic_002.webp"
+    },
+    {
+      "charId": 5107,
+      "seq": 72,
+      "shared": [5107],
+      "group": [5107],
+      "label": "hyp_034",
+      "image": "StillThumbnail_bg_sage_storystill01_mosaic_001.webp"
     },
     {
       "charId": 5108,
@@ -5527,6 +5575,22 @@
       "group": [],
       "label": "still02_bulkski",
       "image": "StillThumbnail_bg_bulkskiy_still02_mosaic_001.webp"
+    },
+    {
+      "charId": 6116,
+      "seq": 3,
+      "shared": [6116],
+      "group": [],
+      "label": "still02_zetto",
+      "image": "StillThumbnail_bg_zetto_still02_mosaic_001.webp"
+    },
+    {
+      "charId": 6126,
+      "seq": 3,
+      "shared": [6126],
+      "group": [],
+      "label": "still03_hurricane",
+      "image": "StillThumbnail_bg_hurricane_still03_mosaic_001.webp"
     },
     {
       "charId": 7001,
