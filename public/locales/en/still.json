@@ -18,6 +18,7 @@
   "text": {
     "todayStillIs": "Your pick of the day is...",
     "stillCount": "Available stills",
-    "appliledFilter": "A filter has been applied to the list."
+    "appliledFilter": "A filter has been applied to the list.",
+    "animated": "Animation"
   }
 }

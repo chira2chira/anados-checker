@@ -164,7 +164,8 @@ type StillCardProps = {
 
 const StillCard: React.FC<StillCardProps> = (props) => {
   const { customLabels } = useContext(CustomLabelContext);
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
+  const { t: t2 } = useTranslation("still");
 
   if (props.gridMode && !props.open) return props.children;
 
@@ -287,6 +288,23 @@ const StillCard: React.FC<StillCardProps> = (props) => {
                 >
                   {x.label}
                 </div>
+                {x.animated && (
+                  <div
+                    css={css`
+                      position: absolute;
+                      top: -3px;
+                      right: -2px;
+                      background: #c22762;
+                      color: white;
+                      font-size: 80%;
+                      padding: 1px 6px;
+                      border-radius: 8px;
+                      opacity: 0.8;
+                    `}
+                  >
+                    {t2("text.animated")}
+                  </div>
+                )}
               </div>
             ))}
           </div>

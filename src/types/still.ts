@@ -10,6 +10,7 @@ export type StillInfo = {
   seq: number;
   label: string;
   image: string;
+  animated: boolean;
   read: boolean;
   rate: number;
 };

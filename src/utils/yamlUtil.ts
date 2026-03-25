@@ -304,6 +304,7 @@ export function loadStillMaster() {
           seq: y.seq,
           label: getLabel(y.label, stillLabels),
           image: y.image,
+          animated: y.animated,
           read: false,
           rate: -1,
         };

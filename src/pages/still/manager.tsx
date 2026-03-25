@@ -126,6 +126,13 @@ function filterRateStill(filter: string) {
   };
 }
 
+function filterAnimatedStill(filter: string) {
+  return function (still: StillInfo) {
+    if (filter === "none") return true;
+    return still.animated === (filter === "animated");
+  };
+}
+
 const StillManager: NextPage<StillManagerProps> = (props) => {
   const { owned } = useCharacterOwnership();
   const { stillStates, setStillStates, save } = useStillState();
@@ -135,6 +142,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   const [filterOwned, setFilterOwned] = useState("none");
   const [filterLimited, setFilterLimited] = useState("none");
   const [filterStill, setFilterNotImplemented] = useState("none");
+  const [filterAnimated, setFilterAnimated] = useState("none");
   const [filterRead, setFilterRead] = useState("none");
   const [filterRate, setFilterRate] = useState("none");
   const [layout, setLayout] = useState<"grid" | "list">("grid");
@@ -165,7 +173,8 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
               })
               .filter(filterReadStill(filterRead))
               .filter(filterRateStill(filterRate))
-              .filter(filterSillAttribute(filterStillType)),
+              .filter(filterSillAttribute(filterStillType))
+              .filter(filterAnimatedStill(filterAnimated)),
           }))
           .filter((x) =>
             filterClass.length === 0 ? true : filterClass.includes(x.class),
@@ -204,6 +213,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       filterRead,
       filterRate,
       filterStillType,
+      filterAnimated,
       stillStates,
       filterClass,
     ]);
@@ -431,6 +441,21 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
                 { value: "none", label: t("ui.filter.readBy") },
                 { value: "unread", label: t("ui.filter.unread") },
                 { value: "read", label: t("ui.filter.read") },
+              ]}
+            />
+          </div>
+          <div
+            css={css`
+              display: flex;
+              gap: 5px;
+            `}
+          >
+            <FilterSelect
+              value={filterAnimated}
+              onChange={setFilterAnimated}
+              options={[
+                { value: "none", label: t("ui.filter.animatedBy") },
+                { value: "animated", label: t("ui.filter.animated") },
               ]}
             />
           </div>

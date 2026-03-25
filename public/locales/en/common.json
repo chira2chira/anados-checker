@@ -29,6 +29,8 @@
       "ticketBy": "Anniv Scout Ticket",
       "equipmentTicketBy": "Anniv Select Ticket",
       "stillBy": "Stills",
+      "animatedBy": "Animated?",
+      "animated": "Animated",
       "showStill0": "Show characters with 0 stills",
       "ignoreStoryStill": "Exclude Story Stills",
       "onlyStoryStill": "Show only Story Stills",

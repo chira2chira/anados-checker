@@ -29,6 +29,8 @@
       "ticketBy": "周年指名券",
       "equipmentTicketBy": "周年セレクト",
       "stillBy": "スチル",
+      "animatedBy": "アニメーション",
+      "animated": "アニメーションあり",
       "showStill0": "スチルが0件のキャラも表示",
       "ignoreStoryStill": "ストーリースチルを除外",
       "onlyStoryStill": "ストーリースチルのみ表示",
