@@ -149,7 +149,7 @@ const CharacterPanel: React.FC<{
 };
 const MemoizeCharacterPanel = React.memo(
   CharacterPanel,
-  (prevProps, nextProps) => dequal(prevProps, nextProps)
+  (prevProps, nextProps) => dequal(prevProps, nextProps),
 );
 
 type StillCardProps = {
@@ -276,8 +276,11 @@ const StillCard: React.FC<StillCardProps> = (props) => {
                     top: 0;
                     left: 0;
                     margin-left: 2px;
-                    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000,
-                      1px -1px 0 #000, -1px -1px 0 #000;
+                    text-shadow:
+                      1px 1px 0 #000,
+                      -1px 1px 0 #000,
+                      1px -1px 0 #000,
+                      -1px -1px 0 #000;
                     text-align: center;
                     font-size: 95%;
                   `}
