@@ -790,3 +790,57 @@
   limited: false
   release: 3/19/2026
   image: WeaponIcon_3028.png
+- id: 89
+  eidosId: 6023
+  unitId: 4006
+  nameJa: おっきなラブを受け止めて！
+  nameEn: Take My Huge Love for You!
+  rarity: 6
+  limited: false
+  release: 3/27/2026
+  image: WeaponIcon_6023.png
+- id: 90
+  eidosId: 6024
+  unitId: 5029
+  nameJa: 今こそおねがい成就
+  nameEn: My Desire Shall Come True This Time!
+  rarity: 6
+  limited: false
+  release: 3/27/2026
+  image: WeaponIcon_6024.png
+- id: 91
+  eidosId: 5029
+  unitId: 3001
+  nameJa: おしえて、竜王様！
+  nameEn: Tell Me, Dragon King!
+  rarity: 5
+  limited: false
+  release: 3/27/2026
+  image: WeaponIcon_5029.png
+- id: 92
+  eidosId: 5030
+  unitId: 5054
+  nameJa: 浜辺の隣の小魔王
+  nameEn: Petty Shadow King by the Shore
+  rarity: 5
+  limited: false
+  release: 3/27/2026
+  image: WeaponIcon_5030.png
+- id: 93
+  eidosId: 3029
+  unitId: 1013
+  nameJa: はじめての乳しぼり
+  nameEn: First Milking
+  rarity: 3
+  limited: false
+  release: 3/27/2026
+  image: WeaponIcon_3029.png
+- id: 94
+  eidosId: 3030
+  unitId: 2029
+  nameJa: 狩り場のエモノ
+  nameEn: Prey of the Huntin’ Grounds
+  rarity: 3
+  limited: false
+  release: 3/27/2026
+  image: WeaponIcon_3030.png

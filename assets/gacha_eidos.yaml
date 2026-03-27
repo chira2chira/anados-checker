@@ -265,3 +265,28 @@
     - name: 変態発車式
       weight: 0.01
   poolId: 10
+- id: 11
+  nameJa: お星様にお願い！あの冒険者とデキたい！
+  nameEn: Wish Upon a Star to Get with That Adventurer!
+  revival: false
+  start: 3/27/2026
+  end: 5/8/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: 今こそおねがい成就
+      weight: 0.01
+    - name: おっきなラブを受け止めて！
+      weight: 0.01
+    - name: 浜辺の隣の小魔王
+      weight: 0.01
+    - name: おしえて、竜王様！
+      weight: 0.01
+  poolId: 11
