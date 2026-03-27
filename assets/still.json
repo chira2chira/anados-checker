@@ -79,7 +79,7 @@
       "group": [1, 2],
       "label": "main_007_016",
       "image": "StillThumbnail_bg_calhoun_storystill01_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 1,
@@ -224,6 +224,15 @@
       "label": "mdr_022",
       "image": "StillThumbnail_bg_proteo_storystill01_mosaic_001.webp",
       "animated": false
+    },
+    {
+      "charId": 1013,
+      "seq": 20,
+      "shared": [1013],
+      "group": [1013],
+      "label": "still01_milklover_eidos",
+      "image": "StillThumbnail_bg_milklover_still01_mosaic_007.webp",
+      "animated": true
     },
     {
       "charId": 1013,
@@ -668,6 +677,15 @@
     },
     {
       "charId": 2029,
+      "seq": 20,
+      "shared": [2029],
+      "group": [2029],
+      "label": "still01_rookiehunter_eidos",
+      "image": "StillThumbnail_bg_rookiehunter_still01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 2029,
       "seq": 70,
       "shared": [2029],
       "group": [2029],
@@ -692,6 +710,15 @@
       "label": "still02_arcana_eidos",
       "image": "StillThumbnail_bg_arcana_still02_mosaic_001.webp",
       "animated": false
+    },
+    {
+      "charId": 3001,
+      "seq": 21,
+      "shared": [3001],
+      "group": [3001, 6072],
+      "label": "still04_arcana_eidos",
+      "image": "StillThumbnail_bg_arcana_still04_mosaic_002.webp",
+      "animated": true
     },
     {
       "charId": 3001,
@@ -1232,6 +1259,15 @@
       "label": "still01_patty",
       "image": "StillThumbnail_bg_patty_still01_mosaic_02.webp",
       "animated": false
+    },
+    {
+      "charId": 4006,
+      "seq": 20,
+      "shared": [4006],
+      "group": [4006, 6055, 6110],
+      "label": "still06_patty_eidos",
+      "image": "StillThumbnail_bg_patty_still06_mosaic_001.webp",
+      "animated": true
     },
     {
       "charId": 4006,
@@ -2162,6 +2198,15 @@
     },
     {
       "charId": 5029,
+      "seq": 20,
+      "shared": [5029],
+      "group": [5029, 6112],
+      "label": "still03_kancrow_eidos",
+      "image": "StillThumbnail_bg_kancrow_still03_mosaic_001.webp",
+      "animated": true
+    },
+    {
+      "charId": 5029,
       "seq": 70,
       "shared": [5029],
       "group": [5029, 6112],
@@ -2771,6 +2816,15 @@
       "label": "still01_bakoo",
       "image": "StillThumbnail_bg_baquu_still03_mosaic_001.webp",
       "animated": false
+    },
+    {
+      "charId": 5054,
+      "seq": 20,
+      "shared": [5054],
+      "group": [5054, 6113],
+      "label": "still04_baquu_eidos",
+      "image": "StillThumbnail_bg_baquu_still04_mosaic_004.webp",
+      "animated": true
     },
     {
       "charId": 5054,
@@ -3670,7 +3724,7 @@
       "group": [5091],
       "label": "main_007_016",
       "image": "StillThumbnail_bg_calhoun_storystill01_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5093,
@@ -6280,7 +6334,7 @@
       "group": [],
       "label": "still02_zetto",
       "image": "StillThumbnail_bg_zetto_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6126,
