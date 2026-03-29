@@ -130,7 +130,8 @@ export const Container: React.FC<ContainerProps> = (props) => {
                 <span>{t("ui.text.resources")}: </span>
                 <a href="https://anothereidos.wikioasis.org/wiki/Main_Page">
                   AnotherEidos R Wiki
-                </a>
+                </a>{", "}
+                <a href="https://you-kai.net/">{t("ui.link.youkai")}</a>
               </div>
               <div>
                 <span>{t("ui.text.author")}: チラツキ </span>
