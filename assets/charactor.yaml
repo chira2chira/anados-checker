@@ -3154,3 +3154,13 @@
   limited: false
   release: 3/19/2026
   image: FS_1026_1.png
+- id: 324
+  unitId: 1027
+  nameJa: 見習い工員
+  nameEn: Apprentice Worker
+  rarity: 1
+  class: support
+  deployment: high
+  limited: false
+  release: 4/1/2026
+  image: FS_1027_1.png

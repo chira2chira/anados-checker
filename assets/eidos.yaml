@@ -844,3 +844,12 @@
   limited: false
   release: 3/27/2026
   image: WeaponIcon_3030.png
+- id: 95
+  eidosId: 6025
+  unitId: 1027
+  nameJa: わくわくインターンシップ
+  nameEn: The Juiced-Up Internship!
+  rarity: 6
+  limited: false
+  release: 4/1/2026
+  image: WeaponIcon_6025.png

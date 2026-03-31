@@ -397,6 +397,15 @@
       "animated": false
     },
     {
+      "charId": 1027,
+      "seq": 20,
+      "shared": [1027],
+      "group": [1027],
+      "label": "still01_sepiatrainee_eidos",
+      "image": "StillThumbnail_bg_sepiatrainee_still01_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 2001,
       "seq": 1,
       "shared": [2001, 2002, 2003, 2004],
