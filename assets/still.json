@@ -97,7 +97,7 @@
       "group": [1, 2],
       "label": "wboom_031",
       "image": "StillThumbnail_bg_atmos_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 1,
@@ -403,7 +403,7 @@
       "group": [1027],
       "label": "still01_sepiatrainee_eidos",
       "image": "StillThumbnail_bg_sepiatrainee_still01_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 2001,
@@ -3451,7 +3451,7 @@
       "charId": 5081,
       "seq": 1,
       "shared": [5081],
-      "group": [5081],
+      "group": [5081, 6129],
       "label": "still01_jigoro",
       "image": "StillThumbnail_bg_jigoro_still01_mosaic_001.webp",
       "animated": false
@@ -3460,7 +3460,7 @@
       "charId": 5081,
       "seq": 20,
       "shared": [5081],
-      "group": [5081],
+      "group": [5081, 6129],
       "label": "still02_jigoro_eidos",
       "image": "StillThumbnail_bg_jigoro_still02_mosaic_005.webp",
       "animated": false
@@ -3469,7 +3469,7 @@
       "charId": 5081,
       "seq": 70,
       "shared": [5081],
-      "group": [5081],
+      "group": [5081, 6129],
       "label": "kgr_013",
       "image": "StillThumbnail_bg_jigoro_storystill01_mosaic_001.webp",
       "animated": false
@@ -3478,7 +3478,7 @@
       "charId": 5081,
       "seq": 71,
       "shared": [5081],
-      "group": [5081],
+      "group": [5081, 6129],
       "label": "kgr_017",
       "image": "StillThumbnail_bg_kagura_storystill01_mosaic_001.webp",
       "animated": false
@@ -3487,7 +3487,7 @@
       "charId": 5081,
       "seq": 72,
       "shared": [5081],
-      "group": [5081],
+      "group": [5081, 6129],
       "label": "mdr_029",
       "image": "StillThumbnail_bg_jigoro_storystill02_mosaic_001.webp",
       "animated": false
@@ -3496,9 +3496,18 @@
       "charId": 5081,
       "seq": 73,
       "shared": [5081],
-      "group": [5081],
+      "group": [5081, 6129],
       "label": "oht_906",
       "image": "StillThumbnail_bg_hifumi_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5081,
+      "seq": 74,
+      "shared": [5081],
+      "group": [5081, 6129],
+      "label": "opr_011",
+      "image": "StillThumbnail_bg_ginji_storystill04_mosaic_003.webp",
       "animated": false
     },
     {
@@ -3535,6 +3544,15 @@
       "group": [5082],
       "label": "mdr_029",
       "image": "StillThumbnail_bg_jigoro_storystill02_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5082,
+      "seq": 72,
+      "shared": [5082],
+      "group": [5082],
+      "label": "opr_011",
+      "image": "StillThumbnail_bg_ginji_storystill04_mosaic_001.webp",
       "animated": false
     },
     {
@@ -5173,7 +5191,7 @@
       "group": [6040],
       "label": "wboom_031",
       "image": "StillThumbnail_bg_atmos_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6041,
@@ -6433,7 +6451,7 @@
       "group": [6106, 7001, 7002],
       "label": "wboom_031",
       "image": "StillThumbnail_bg_atmos_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 7001,
