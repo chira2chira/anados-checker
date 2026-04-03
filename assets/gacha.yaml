@@ -3180,3 +3180,24 @@
     - name: トドルフ
       weight: 0.01
   poolId: 21
+- id: 194
+  nameJa: 大狂宴YOU-KAIネット！光☆GEN-ジゴロウの下剋上デビュー
+  nameEn: A YokaiNet Extravaganza! Hikaru ☆ Gen-Jigoro’s Rise to Power!
+  revival: false
+  start: 4/3/2026
+  end: 5/15/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 魍魎匣の光る君 光☆GEN-ジゴロウ
+      weight: 0.01
+    - name: エンマ
+      weight: 0.01
+  poolId: 22

@@ -3164,3 +3164,23 @@
   limited: false
   release: 4/1/2026
   image: FS_1027_1.png
+- id: 325
+  unitId: 5109
+  nameJa: エンマ
+  nameEn: Enma
+  rarity: 5
+  class: support
+  deployment: high
+  limited: false
+  release: 4/3/2026
+  image: FS_5109_1.png
+- id: 326
+  unitId: 6129
+  nameJa: 魍魎匣の光る君 光☆GEN-ジゴロウ
+  nameEn: Demon Box Shining Prince Hikaru ☆ Gen-jigoro
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 4/3/2026
+  image: FS_6129_1.png
