@@ -6319,6 +6319,15 @@
       "animated": true
     },
     {
+      "charId": 6111,
+      "seq": 3,
+      "shared": [6111],
+      "group": [],
+      "label": "still02_gaoh",
+      "image": "StillThumbnail_bg_gaoh_still01_mosaic_001.webp",
+      "animated": true
+    },
+    {
       "charId": 6112,
       "seq": 3,
       "shared": [6112],
