@@ -3899,6 +3899,15 @@
     },
     {
       "charId": 5101,
+      "seq": 1,
+      "shared": [5101],
+      "group": [5101],
+      "label": "still01_eidolon",
+      "image": "StillThumbnail_bg_magicalweapon_still01_mosaic_002.webp",
+      "animated": false
+    },
+    {
+      "charId": 5101,
       "seq": 70,
       "shared": [5101],
       "group": [5101],
@@ -6324,7 +6333,7 @@
       "shared": [6111],
       "group": [],
       "label": "still02_gaoh",
-      "image": "StillThumbnail_bg_gaoh_still01_mosaic_001.webp",
+      "image": "StillThumbnail_bg_gaoh_still02_mosaic_001A.webp",
       "animated": true
     },
     {
@@ -6379,7 +6388,7 @@
       "group": [],
       "label": "still03_hurricane",
       "image": "StillThumbnail_bg_hurricane_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 7001,
