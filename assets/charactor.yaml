@@ -3184,3 +3184,43 @@
   limited: true
   release: 4/3/2026
   image: FS_6129_1.png
+- id: 327
+  unitId: 5110
+  nameJa: アクロ
+  nameEn: Akuro
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: false
+  release: 4/17/2026
+  image: FS_5110_1.png
+- id: 328
+  unitId: 5111
+  nameJa: カシ
+  nameEn: Kashi
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 4/17/2026
+  image: FS_5111_1.png
+- id: 329
+  unitId: 1028
+  nameJa: サウナ好きの冒険者
+  nameEn: Sauna-Loving Adventurer
+  rarity: 1
+  class: fighter
+  deployment: low
+  limited: false
+  release: 4/17/2026
+  image: FS_1028_1.png
+- id: 330
+  unitId: 1029
+  nameJa: 魔物好きの冒険者
+  nameEn: Magical Beast-Loving Adventurer
+  rarity: 1
+  class: fighter
+  deployment: low
+  limited: false
+  release: 4/17/2026
+  image: FS_1029_1.png

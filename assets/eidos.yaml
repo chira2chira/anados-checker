@@ -853,3 +853,21 @@
   limited: false
   release: 4/1/2026
   image: WeaponIcon_6025.png
+- id: 96
+  eidosId: 3031
+  unitId: 1028
+  nameJa: はじめての大乱交
+  nameEn: His First Orgy
+  rarity: 3
+  limited: false
+  release: 4/17/2026
+  image: WeaponIcon_3031.png
+- id: 97
+  eidosId: 3032
+  unitId: 1029
+  nameJa: サウナーの火遊び
+  nameEn: Sauna-Goer Playing with Fire
+  rarity: 3
+  limited: false
+  release: 4/17/2026
+  image: WeaponIcon_3032.png
