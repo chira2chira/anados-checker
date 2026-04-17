@@ -406,6 +406,24 @@
       "animated": true
     },
     {
+      "charId": 1028,
+      "seq": 20,
+      "shared": [1028],
+      "group": [1028],
+      "label": "still01_saunnertiger_eidos",
+      "image": "StillThumbnail_bg_saunner_tiger_still01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 1029,
+      "seq": 20,
+      "shared": [1029],
+      "group": [1029],
+      "label": "still01_saunner_eidos",
+      "image": "StillThumbnail_bg_saunner_still01_mosaic_001_a.webp",
+      "animated": false
+    },
+    {
       "charId": 2001,
       "seq": 1,
       "shared": [2001, 2002, 2003, 2004],
@@ -3904,7 +3922,7 @@
       "group": [5101],
       "label": "still01_eidolon",
       "image": "StillThumbnail_bg_magicalweapon_still01_mosaic_002.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5101,
@@ -4066,6 +4084,15 @@
       "group": [5108],
       "label": "hyp_031",
       "image": "StillThumbnail_bg_laguias_storystill01_mosaic_002.webp",
+      "animated": false
+    },
+    {
+      "charId": 5109,
+      "seq": 70,
+      "shared": [5109],
+      "group": [5109],
+      "label": "opr_016",
+      "image": "StillThumbnail_bg_enma_storystill01_mosaic_001.webp",
       "animated": false
     },
     {
@@ -6019,7 +6046,7 @@
       "group": [],
       "label": "still02_pollonorta",
       "image": "StillThumbnail_bg_pollonorta_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6088,
@@ -6028,7 +6055,7 @@
       "group": [],
       "label": "still02_gordov",
       "image": "StillThumbnail_bg_goldov_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6089,
@@ -6091,7 +6118,7 @@
       "group": [],
       "label": "still02_lyon",
       "image": "StillThumbnail_bg_rion_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6092,
@@ -6380,6 +6407,15 @@
       "label": "still02_zetto",
       "image": "StillThumbnail_bg_zetto_still02_mosaic_001.webp",
       "animated": true
+    },
+    {
+      "charId": 6117,
+      "seq": 1,
+      "shared": [6117],
+      "group": [6117],
+      "label": "still01_doctordiesel",
+      "image": "StillThumbnail_bg_doctordiesel_still01_mosaic_002.webp",
+      "animated": false
     },
     {
       "charId": 6126,
