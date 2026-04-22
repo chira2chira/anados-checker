@@ -190,6 +190,15 @@ function filterTicketChar(filter: string) {
             ? dayjs(info.release).isBefore(dayjs("2025/6/21"))
             : dayjs(info.release).isBefore(dayjs("2025/11/15")))
         );
+      case "aniv4.5":
+        // 仮
+        if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
+        return (
+          info.rarity >= 4 &&
+          (info.limited
+            ? dayjs(info.release).isBefore(dayjs("2025/12/27"))
+            : dayjs(info.release).isBefore(dayjs("2026/6/20")))
+        );
     }
   };
 }
@@ -575,6 +584,7 @@ const Home: NextPage<HomeProps> = (props) => {
                 { value: "aniv3.0", label: t("ui.filter.aniv3.0") },
                 { value: "aniv3.5", label: t("ui.filter.aniv3.5") },
                 { value: "aniv4.0", label: t("ui.filter.aniv4.0") },
+                { value: "aniv4.5", label: t("ui.filter.aniv4.5") },
               ]}
             />
             <FilterSelect
