@@ -4096,6 +4096,24 @@
       "animated": false
     },
     {
+      "charId": 5110,
+      "seq": 70,
+      "shared": [5110],
+      "group": [5110],
+      "label": "opr_018",
+      "image": "StillThumbnail_bg_tsukimaru_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5111,
+      "seq": 70,
+      "shared": [5111],
+      "group": [5111],
+      "label": "opr_018",
+      "image": "StillThumbnail_bg_tsukimaru_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 6001,
       "seq": 1,
       "shared": [6001],
@@ -5884,7 +5902,7 @@
       "group": [],
       "label": "still02_solve",
       "image": "StillThumbnail_bg_solve_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6079,
@@ -6413,9 +6431,9 @@
       "seq": 1,
       "shared": [6117],
       "group": [6117],
-      "label": "still01_doctordiesel",
+      "label": "still01_diesel",
       "image": "StillThumbnail_bg_doctordiesel_still01_mosaic_002.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6126,
