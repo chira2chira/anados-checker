@@ -3239,8 +3239,8 @@
   nameJa: 光の君親衛隊長 ギン氏
   nameEn: Captain of Team Shining Prince Mr. Gin
   rarity: 6
-  class: fighter
-  deployment: low
+  class: support
+  deployment: high
   limited: false
   release: 5/1/2026
   image: FS_6130_1.png
