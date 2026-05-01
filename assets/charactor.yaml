@@ -3224,3 +3224,23 @@
   limited: false
   release: 4/17/2026
   image: FS_1029_1.png
+- id: 331
+  unitId: 5112
+  nameJa: ツキマル
+  nameEn: Tsukimaru
+  rarity: 5
+  class: fighter
+  deployment: low
+  limited: false
+  release: 5/1/2026
+  image: FS_5112_1.png
+- id: 332
+  unitId: 6130
+  nameJa: 光の君親衛隊長 ギン氏
+  nameEn: Captain of Team Shining Prince Mr. Gin
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: false
+  release: 5/1/2026
+  image: FS_6130_1.png

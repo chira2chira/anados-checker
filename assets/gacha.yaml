@@ -3266,3 +3266,24 @@
     - name: カシ
       weight: 0.01
   poolId: 22
+- id: 198
+  nameJa: 卒業決起！進む先は武の道・芸の道！？ 親衛隊長、推して参る！
+  nameEn: It’s Your Final Rally! Will it be The Way of the Martial Arts of the Way of the Gei?! Either Way, Your Team Captain is There to Cheer You On!
+  revival: false
+  start: 5/1/2026
+  end: 6/12/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 光の君親衛隊長 ギン氏
+      weight: 0.01
+    - name: ツキマル
+      weight: 0.01
+  poolId: 22
