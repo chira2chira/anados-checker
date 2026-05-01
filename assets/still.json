@@ -3529,10 +3529,19 @@
       "animated": false
     },
     {
+      "charId": 5081,
+      "seq": 75,
+      "shared": [5081],
+      "group": [5081, 6129],
+      "label": "opr_020",
+      "image": "StillThumbnail_bg_jigoro_storystill03_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 5082,
       "seq": 1,
       "shared": [5082],
-      "group": [5082],
+      "group": [5082, 6130],
       "label": "still01_ginji",
       "image": "StillThumbnail_bg_ginji_still01_mosaic_001.webp",
       "animated": true
@@ -3541,7 +3550,7 @@
       "charId": 5082,
       "seq": 20,
       "shared": [5082],
-      "group": [5082],
+      "group": [5082, 6130],
       "label": "kgr_900_eidos",
       "image": "StillThumbnail_bg_ginji_storystill03_mosaic_A002.webp",
       "animated": false
@@ -3550,7 +3559,7 @@
       "charId": 5082,
       "seq": 70,
       "shared": [5082],
-      "group": [5082],
+      "group": [5082, 6130],
       "label": "kgr_017",
       "image": "StillThumbnail_bg_kagura_storystill01_mosaic_001.webp",
       "animated": false
@@ -3559,7 +3568,7 @@
       "charId": 5082,
       "seq": 71,
       "shared": [5082],
-      "group": [5082],
+      "group": [5082, 6130],
       "label": "mdr_029",
       "image": "StillThumbnail_bg_jigoro_storystill02_mosaic_001.webp",
       "animated": false
@@ -3568,9 +3577,18 @@
       "charId": 5082,
       "seq": 72,
       "shared": [5082],
-      "group": [5082],
+      "group": [5082, 6130],
       "label": "opr_011",
       "image": "StillThumbnail_bg_ginji_storystill04_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5082,
+      "seq": 73,
+      "shared": [5082],
+      "group": [5082, 6130],
+      "label": "opr_020",
+      "image": "StillThumbnail_bg_jigoro_storystill03_mosaic_001.webp",
       "animated": false
     },
     {
@@ -4109,6 +4127,15 @@
       "seq": 70,
       "shared": [5111],
       "group": [5111],
+      "label": "opr_018",
+      "image": "StillThumbnail_bg_tsukimaru_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5112,
+      "seq": 70,
+      "shared": [5112],
+      "group": [5112],
       "label": "opr_018",
       "image": "StillThumbnail_bg_tsukimaru_storystill01_mosaic_001.webp",
       "animated": false
