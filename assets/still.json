@@ -1699,7 +1699,7 @@
       "group": [5005, 6100],
       "label": "still03_wrecker_eidos",
       "image": "StillThumbnail_bg_wrecker_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5005,
@@ -3166,7 +3166,7 @@
       "group": [],
       "label": "still02_gamela",
       "image": "StillThumbnail_bg_gamela_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5068,
@@ -5371,7 +5371,7 @@
       "group": [],
       "label": "still02_kafka",
       "image": "StillThumbnail_bg_kafka_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6043,
@@ -6415,7 +6415,7 @@
       "group": [],
       "label": "still02_magritte",
       "image": "StillThumbnail_bg_magritte_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6108,
