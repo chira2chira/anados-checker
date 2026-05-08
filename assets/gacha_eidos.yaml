@@ -290,3 +290,28 @@
     - name: おしえて、竜王様！
       weight: 0.01
   poolId: 11
+- id: 12
+  nameJa: 休日ナニする！？トラブルだらけのキラキラウィーク！？
+  nameEn: How About Some Trouble for Your Golden Week! Question Is, What Kind?!
+  revival: false
+  start: 5/8/2026
+  end: 6/19/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: 限界搾精実験
+      weight: 0.01
+    - name: 賢王の密かな願い
+      weight: 0.01
+    - name: 二人ってどういう関係？
+      weight: 0.01
+    - name: 高収入アルバイト
+      weight: 0.01
+  poolId: 12

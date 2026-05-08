@@ -871,3 +871,39 @@
   limited: false
   release: 4/17/2026
   image: WeaponIcon_3032.png
+- id: 98
+  eidosId: 5031
+  unitId: 6007
+  nameJa: 高収入アルバイト
+  nameEn: High-Income Gig
+  rarity: 5
+  limited: false
+  release: 5/8/2026
+  image: WeaponIcon_5031.png
+- id: 99
+  eidosId: 5032
+  unitId: 5005
+  nameJa: 二人ってどういう関係？
+  nameEn: What's the Relationship Between You Two?
+  rarity: 5
+  limited: false
+  release: 5/8/2026
+  image: WeaponIcon_5032.png
+- id: 100
+  eidosId: 6026
+  unitId: 6015
+  nameJa: 賢王の密かな願い
+  nameEn: The Wise King's Secret Desire
+  rarity: 6
+  limited: false
+  release: 5/8/2026
+  image: WeaponIcon_6026.png
+- id: 101
+  eidosId: 6027
+  unitId: 5099
+  nameJa: 限界搾精実験
+  nameEn: Extreme Semenal Fluid Extraction
+  rarity: 6
+  limited: false
+  release: 5/8/2026
+  image: WeaponIcon_6027.png
