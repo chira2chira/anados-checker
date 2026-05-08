@@ -1694,6 +1694,15 @@
     },
     {
       "charId": 5005,
+      "seq": 21,
+      "shared": [5005],
+      "group": [5005, 6100],
+      "label": "still03_wrecker_eidos",
+      "image": "StillThumbnail_bg_wrecker_still03_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5005,
       "seq": 50,
       "shared": [5005],
       "group": [5005, 6100],
@@ -3925,6 +3934,15 @@
       "animated": true
     },
     {
+      "charId": 5099,
+      "seq": 20,
+      "shared": [5099],
+      "group": [5099],
+      "label": "still02_wilder_eidos",
+      "image": "StillThumbnail_bg_wilder_still02_mosaic_002.webp",
+      "animated": true
+    },
+    {
       "charId": 5100,
       "seq": 1,
       "shared": [5100],
@@ -4048,6 +4066,15 @@
       "group": [5105],
       "label": "stl_034",
       "image": "StillThumbnail_bg_foras_storystill02_mosaic_009.webp",
+      "animated": false
+    },
+    {
+      "charId": 5106,
+      "seq": 1,
+      "shared": [5106],
+      "group": [5106],
+      "label": "still01_sage",
+      "image": "StillThumbnail_bg_sage_still01_mosaic_001.webp",
       "animated": false
     },
     {
@@ -4345,6 +4372,15 @@
       "group": [5071, 6007],
       "label": "still07_bashkar_eidos",
       "image": "StillThumbnail_bg_bashkar_still07_mosaic_001.webp",
+      "animated": true
+    },
+    {
+      "charId": 6007,
+      "seq": 22,
+      "shared": [6007],
+      "group": [5071, 6007],
+      "label": "still08_bashkar_eidos",
+      "image": "StillThumbnail_bg_bashkar_still08_mosaic_002.webp",
       "animated": true
     },
     {
@@ -4705,6 +4741,15 @@
       "group": [6015, 6036, 6121],
       "label": "still02_equus_eidos",
       "image": "StillThumbnail_bg_equus_still02_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 6015,
+      "seq": 21,
+      "shared": [6015],
+      "group": [6015, 6036, 6121],
+      "label": "still05_equus_eidos",
+      "image": "StillThumbnail_bg_equus_still05_mosaic_001.webp",
       "animated": false
     },
     {
