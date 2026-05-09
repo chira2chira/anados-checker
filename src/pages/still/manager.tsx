@@ -145,6 +145,10 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   const [filterAnimated, setFilterAnimated] = useState("none");
   const [filterRead, setFilterRead] = useState("none");
   const [filterRate, setFilterRate] = useState("none");
+  // フィルタ条件から外れても表示し続けるスチルIDを保持
+  const [stuckStillIds, setStuckStillIds] = useState<Set<string>>(
+    () => new Set(),
+  );
   const [layout, setLayout] = useState<"grid" | "list">("grid");
   const [rouletteOpen, setRouletteOpen] = useState(false);
   const [labelModalOpen, setLabelModalOpen] = useState(false);
@@ -155,6 +159,8 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
 
   const { rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7 } =
     useMemo(() => {
+      const readFilterFn = filterReadStill(filterRead);
+      const rateFilterFn = filterRateStill(filterRate);
       const applyFilter = (rarity: number) =>
         props.charInfoWithStills
           .filter((x) => x.rarity === rarity)
@@ -171,8 +177,11 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
                   rate: state[0].rate,
                 };
               })
-              .filter(filterReadStill(filterRead))
-              .filter(filterRateStill(filterRate))
+              .filter(
+                (y) =>
+                  stuckStillIds.has(y.id) ||
+                  (readFilterFn(y) && rateFilterFn(y)),
+              )
               .filter(filterSillAttribute(filterStillType))
               .filter(filterAnimatedStill(filterAnimated)),
           }))
@@ -216,7 +225,22 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       filterAnimated,
       stillStates,
       filterClass,
+      stuckStillIds,
     ]);
+
+  // フィルタ条件が変わったら滞留状態をクリア
+  useEffect(() => {
+    setStuckStillIds((prev) => (prev.size === 0 ? prev : new Set()));
+  }, [
+    filterClass,
+    filterStillType,
+    filterOwned,
+    filterLimited,
+    filterStill,
+    filterAnimated,
+    filterRead,
+    filterRate,
+  ]);
 
   useEffect(() => {
     if (stillInitialized || stillStates.length === 0) return;
@@ -249,6 +273,21 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
     setStillInitialized(true);
   }, [props.charInfoWithStills, setStillStates, stillInitialized, stillStates]);
 
+  const markStuck = useCallback((ids: string[]) => {
+    if (ids.length === 0) return;
+    setStuckStillIds((prev) => {
+      let changed = false;
+      const next = new Set(prev);
+      for (const id of ids) {
+        if (!next.has(id)) {
+          next.add(id);
+          changed = true;
+        }
+      }
+      return changed ? next : prev;
+    });
+  }, []);
+
   const handleReadChange = useCallback(
     (id: string) => {
       setStillStates((x) => {
@@ -261,8 +300,9 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
         newStates.push({ ...oldState, read: !oldState.read });
         return newStates;
       });
+      markStuck([id]);
     },
-    [setStillStates],
+    [setStillStates, markStuck],
   );
 
   const handleRateChange = useCallback(
@@ -277,14 +317,16 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
         newStates.push({ ...oldState, rate });
         return newStates;
       });
+      markStuck([id]);
     },
-    [setStillStates],
+    [setStillStates, markStuck],
   );
 
   const handleBulkRegister = (stills: StillState[]) => {
     let newStates = stillStates.concat(stills);
     newStates = getUniqueSills(newStates);
     setStillStates(newStates);
+    markStuck(stills.map((s) => s.id));
   };
 
   const changeFilterClass = (charClass: CharClass) => {
