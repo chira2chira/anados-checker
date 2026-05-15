@@ -3244,3 +3244,23 @@
   limited: false
   release: 5/1/2026
   image: FS_6130_1.png
+- id: 333
+  unitId: 5113
+  nameJa: テックヒッピー ピオス
+  nameEn: Tech Hippie Pios
+  rarity: 5
+  class: caster
+  deployment: high
+  limited: true
+  release: 5/15/2026
+  image: FS_5113_1.png
+- id: 334
+  unitId: 6131
+  nameJa: 抑圧解放戦士 ダンク
+  nameEn: Oppression Liberation Warrior Dunk
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 5/15/2026
+  image: FS_6131_1.png

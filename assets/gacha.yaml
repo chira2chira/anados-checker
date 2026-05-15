@@ -3287,3 +3287,24 @@
     - name: ツキマル
       weight: 0.01
   poolId: 22
+- id: 199
+  nameJa: 眠れるチカラを解き放つのって、気ンもちイィー！
+  nameEn: Who Knew Unleashin’ Your Dormant Power Could Feel SO Good!
+  revival: false
+  start: 5/15/2026
+  end: 6/26/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 抑圧解放戦士 ダンク
+      weight: 0.01
+    - name: テックヒッピー ピオス
+      weight: 0.01
+  poolId: 23
