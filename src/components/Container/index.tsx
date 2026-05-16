@@ -64,7 +64,7 @@ type ContainerProps = {
 };
 
 export const Container: React.FC<ContainerProps> = (props) => {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleCloseMenu = useCallback(() => setMenuOpen(false), []);
@@ -130,8 +130,16 @@ export const Container: React.FC<ContainerProps> = (props) => {
                 <span>{t("ui.text.resources")}: </span>
                 <a href="https://anothereidos.wikioasis.org/wiki/Main_Page">
                   AnotherEidos R Wiki
-                </a>{", "}
-                <a href="https://you-kai.net/">{t("ui.link.youkai")}</a>
+                </a>
+                {", "}
+                <a
+                  href={
+                    "https://you-kai.net/" +
+                    (i18n.language === "en" ? "en" : "")
+                  }
+                >
+                  {t("ui.link.youkai")}
+                </a>
               </div>
               <div>
                 <span>{t("ui.text.author")}: チラツキ </span>
