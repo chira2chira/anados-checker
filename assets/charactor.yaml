@@ -3264,3 +3264,33 @@
   limited: true
   release: 5/15/2026
   image: FS_6131_1.png
+- id: 335
+  unitId: 1030
+  nameJa: 温泉郷の番台
+  nameEn: Hot-Spring Doorkeeper
+  rarity: 1
+  class: healer
+  deployment: high
+  limited: false
+  release: 5/22/2026
+  image: FS_1030_1.png
+- id: 336
+  unitId: 1031
+  nameJa: 温泉郷の狐
+  nameEn: Hot-Spring Fox
+  rarity: 1
+  class: caster
+  deployment: high
+  limited: false
+  release: 5/22/2026
+  image: FS_1031_1.png
+- id: 337
+  unitId: 1032
+  nameJa: 温泉郷の赤鬼
+  nameEn: Hot-Spring Red Demon
+  rarity: 1
+  class: fighter
+  deployment: low
+  limited: false
+  release: 5/22/2026
+  image: FS_1032_1.png
