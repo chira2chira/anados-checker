@@ -3745,6 +3745,15 @@
       "animated": false
     },
     {
+      "charId": 5088,
+      "seq": 72,
+      "shared": [5088],
+      "group": [5088, 6131],
+      "label": "ord_014",
+      "image": "StillThumbnail_bg_dunk_storystill02_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 5089,
       "seq": 70,
       "shared": [5089],
@@ -3904,7 +3913,7 @@
       "group": [5098],
       "label": "still01_hifumi",
       "image": "StillThumbnail_bg_hifumi_still01_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5098,
@@ -5983,7 +5992,7 @@
       "group": [],
       "label": "still02_yaqut",
       "image": "StillThumbnail_bg_yaqut_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6078,
