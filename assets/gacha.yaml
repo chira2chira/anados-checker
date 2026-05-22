@@ -3308,3 +3308,68 @@
     - name: テックヒッピー ピオス
       weight: 0.01
   poolId: 23
+- id: 200
+  nameJa: 我ら極限流柔術！寝技の極意を伝授する！！
+  nameEn: Teaching the Innermost Secrets of Pinning ‘Em Down with Our Kyokugenryu Jujitsu!!!
+  revival: true
+  start: 5/22/2026
+  end: 7/3/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 清き流れの鉄拳 ハバキ
+      weight: 0.01
+    - name: ジゴロウ
+      weight: 0.01
+  poolId: 23
+- id: 201
+  nameJa: 悪鬼襲来、退魔ロボ緊急出動！ハードコア調教＆お色気調伏、開戦！
+  nameEn: "Evil Demons on the Assault! Emergency Subjugating Robots on Deployment! Match Off: Hard-Core Trainin’ VS Adult-Level Subjugation!"
+  revival: true
+  start: 5/22/2026
+  end: 7/3/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 悪鬼調伏道中膝栗毛 カグラ
+      weight: 0.01
+    - name: ギンジ
+      weight: 0.01
+  poolId: 23
+- id: 202
+  nameJa: 山鬼としっぽり混浴するならココ！紅葉湯はナイト営業決行中！
+  nameEn: "Fond Over Mountain Demons as You Bathe with ’em Right Here! Momiji Sento is Now Open at Night!"
+  revival: true
+  start: 5/22/2026
+  end: 7/3/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: 温泉拳法純潔の書 シャオロン
+      weight: 0.01
+    - name: モミジ
+      weight: 0.01
+    - name: リクフネ
+      weight: 0.01
+  poolId: 23
