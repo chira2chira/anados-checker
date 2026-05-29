@@ -3294,3 +3294,23 @@
   limited: false
   release: 5/22/2026
   image: FS_1032_1.png
+- id: 338
+  unitId: 5114
+  nameJa: スプートニク
+  nameEn: Sputnik
+  rarity: 5
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 5/29/2026
+  image: FS_5114_1.png
+- id: 339
+  unitId: 6132
+  nameJa: 獄闇の悪食王 オズワルド
+  nameEn: Gluttonous King of Infernal Darkness Oswald
+  rarity: 6
+  class: stranger
+  deployment: low
+  limited: true
+  release: 5/29/2026
+  image: FS_6132_1.png

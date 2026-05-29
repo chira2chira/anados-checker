@@ -3373,3 +3373,24 @@
     - name: リクフネ
       weight: 0.01
   poolId: 23
+- id: 203
+  nameJa: ワルになろうぜイイ子ちゃん……お前の力はそんなもんじゃねえ！
+  nameEn: Time to Get Naughty, Goody-Two-Shoes! Your Powers Run Far Deeper Than That!
+  revival: false
+  start: 5/29/2026
+  end: 7/10/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 獄闇の悪食王 オズワルド
+      weight: 0.01
+    - name: スプートニク
+      weight: 0.01
+  poolId: 23
