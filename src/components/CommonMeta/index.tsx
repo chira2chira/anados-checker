@@ -47,6 +47,7 @@ const CommonMeta: React.FC<CommonMetaProps> = (props) => {
           name="keywords"
           content="龍脈のアナザーエイドスR,アナドスR,アナドス,AnotherEidos of Dragon Vein"
         />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link
           rel="icon"
           href="/favicon_48x48.png"
