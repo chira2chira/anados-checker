@@ -3763,6 +3763,15 @@
       "animated": false
     },
     {
+      "charId": 5088,
+      "seq": 73,
+      "shared": [5088],
+      "group": [5088, 6131],
+      "label": "ord_017",
+      "image": "StillThumbnail_bg_dunk_storystill03_mosaic_007.webp",
+      "animated": false
+    },
+    {
       "charId": 5089,
       "seq": 70,
       "shared": [5089],
@@ -3778,6 +3787,15 @@
       "group": [5089],
       "label": "mdr_028",
       "image": "StillThumbnail_bg_sol_storystill01_mosaic_003.webp",
+      "animated": false
+    },
+    {
+      "charId": 5089,
+      "seq": 72,
+      "shared": [5089],
+      "group": [5089],
+      "label": "ord_017",
+      "image": "StillThumbnail_bg_dunk_storystill03_mosaic_007.webp",
       "animated": false
     },
     {
@@ -4561,6 +4579,15 @@
       "group": [5026, 6009, 6063, 96063, 106063],
       "label": "casino_020",
       "image": "StillThumbnail_bg_billford_still05_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 6009,
+      "seq": 72,
+      "shared": [6009],
+      "group": [5026, 6009, 6063, 96063, 106063],
+      "label": "ord_017",
+      "image": "StillThumbnail_bg_dunk_storystill03_mosaic_007.webp",
       "animated": false
     },
     {
@@ -5668,7 +5695,7 @@
       "group": [],
       "label": "still02_walther",
       "image": "StillThumbnail_bg_walther_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6061,
@@ -5893,7 +5920,7 @@
       "group": [],
       "label": "still03_arcana",
       "image": "StillThumbnail_bg_arcana_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6073,
@@ -6559,6 +6586,15 @@
       "group": [],
       "label": "still03_spica",
       "image": "StillThumbnail_bg_spica_still03_mosaic_001.webp",
+      "animated": true
+    },
+    {
+      "charId": 6125,
+      "seq": 3,
+      "shared": [6125],
+      "group": [],
+      "label": "still02_manji",
+      "image": "StillThumbnail_bg_manji_still02_mosaic_001.webp",
       "animated": false
     },
     {
