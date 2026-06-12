@@ -3314,3 +3314,23 @@
   limited: true
   release: 5/29/2026
   image: FS_6132_1.png
+- id: 340
+  unitId: 5115
+  nameJa: 暗闇堕ちの傭兵 ボルト
+  nameEn: Mercenary Fallen into Darkness Bolt
+  rarity: 5
+  class: shooter
+  deployment: high
+  limited: true
+  release: 6/12/2026
+  image: FS_5115_1.png
+- id: 341
+  unitId: 6133
+  nameJa: ファガー
+  nameEn: Faegar
+  rarity: 6
+  class: support
+  deployment: both
+  limited: false
+  release: 6/12/2026
+  image: FS_6133_1.png

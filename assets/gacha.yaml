@@ -3394,3 +3394,24 @@
     - name: スプートニク
       weight: 0.01
   poolId: 23
+- id: 204
+  nameJa: シークレットジム完備！洗脳ゴーグルマンと出会える！ブラックマーケットへようこそ
+  nameEn: Featurin’ the Secret Gym… Meet the Brainwashing “Goggle-Wearing Men”! Welcome to the Black Market!
+  revival: false
+  start: 6/12/2026
+  end: 7/24/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ファガー
+      weight: 0.01
+    - name: 暗闇堕ちの傭兵 ボルト
+      weight: 0.01
+  poolId: 23
