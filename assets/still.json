@@ -184,7 +184,7 @@
       "charId": 1009,
       "seq": 1,
       "shared": [1009],
-      "group": [1009],
+      "group": [1009, 5115],
       "label": "still01_ballista",
       "image": "StillThumbnail_bg_ballista_still01_mosaicoff_001.webp",
       "animated": false
@@ -193,7 +193,7 @@
       "charId": 1009,
       "seq": 70,
       "shared": [1009],
-      "group": [1009],
+      "group": [1009, 5115],
       "label": "ord_015",
       "image": "StillThumbnail_bg_bolt_storystill01_mosaic_001.webp",
       "animated": false
@@ -4106,6 +4106,15 @@
     },
     {
       "charId": 5105,
+      "seq": 1,
+      "shared": [5105],
+      "group": [5105],
+      "label": "still01_foras",
+      "image": "StillThumbnail_bg_foras_still01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5105,
       "seq": 70,
       "shared": [5105],
       "group": [5105],
@@ -4789,6 +4798,15 @@
       "animated": false
     },
     {
+      "charId": 6014,
+      "seq": 73,
+      "shared": [6014],
+      "group": [5036, 6014],
+      "label": "ord_019",
+      "image": "StillThumbnail_bg_volund_storystill01_mosaic_003.webp",
+      "animated": false
+    },
+    {
       "charId": 6015,
       "seq": 1,
       "shared": [6015],
@@ -4915,6 +4933,15 @@
       "animated": false
     },
     {
+      "charId": 6015,
+      "seq": 79,
+      "shared": [6015],
+      "group": [6015, 6036, 6121],
+      "label": "ord_019",
+      "image": "StillThumbnail_bg_volund_storystill01_mosaic_003.webp",
+      "animated": false
+    },
+    {
       "charId": 6016,
       "seq": 1,
       "shared": [6016],
@@ -5038,7 +5065,7 @@
       "group": [],
       "label": "still03_amorey",
       "image": "StillThumbnail_bg_amorey_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6020,
@@ -6607,12 +6634,39 @@
       "animated": true
     },
     {
+      "charId": 6129,
+      "seq": 3,
+      "shared": [6129],
+      "group": [],
+      "label": "still03_jigoro",
+      "image": "StillThumbnail_bg_jigoro_still03_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 6132,
       "seq": 70,
       "shared": [6132],
       "group": [6132],
       "label": "ord_015",
       "image": "StillThumbnail_bg_bolt_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 6132,
+      "seq": 71,
+      "shared": [6132],
+      "group": [6132],
+      "label": "ord_020",
+      "image": "StillThumbnail_bg_oswald_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 6133,
+      "seq": 70,
+      "shared": [6133],
+      "group": [6133],
+      "label": "ord_020",
+      "image": "StillThumbnail_bg_oswald_storystill01_mosaic_001.webp",
       "animated": false
     },
     {
