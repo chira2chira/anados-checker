@@ -26,8 +26,8 @@
       "highGround": "High Ground",
       "bothGround": "Both",
       "releaseBy": "Release Date",
-      "ticketBy": "Anniv Scout Ticket",
-      "equipmentTicketBy": "Anniv Select Ticket",
+      "ticketBy": "Anniv Ticket",
+      "equipmentTicketBy": "Anniv Ticket",
       "stillBy": "Stills",
       "animatedBy": "Animated?",
       "animated": "Animated",
@@ -44,7 +44,7 @@
       "year2024": "2024",
       "year2025": "2025",
       "year2026": "2026",
-      "aniv0.5": "The Half-Anniv",
+      "aniv0.5": "0.5 Year Anniv",
       "aniv1.0": "1st Anniv",
       "aniv1.5": "1.5 Year Anniv",
       "aniv2.0": "2nd Anniv",
@@ -69,7 +69,6 @@
     "text": {
       "overall": "Overall",
       "resources": "Resources",
-      "respect": "Respected",
       "author": "Author"
     },
     "link": {
