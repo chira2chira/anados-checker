@@ -191,13 +191,13 @@ function filterTicketChar(filter: string) {
             : dayjs(info.release).isBefore(dayjs("2025/11/15")))
         );
       case "aniv4.5":
-        // 仮
+        // https://anothereidos-r.info/news/4-5aniv2026/
         if (INELIGIBLE_CHAR.includes(info.nameEn)) return false;
         return (
           info.rarity >= 4 &&
           (info.limited
             ? dayjs(info.release).isBefore(dayjs("2025/12/27"))
-            : dayjs(info.release).isBefore(dayjs("2026/6/20")))
+            : dayjs(info.release).isBefore(dayjs("2026/6/27")))
         );
     }
   };
@@ -222,6 +222,12 @@ function filterTicketEidos(filter: string) {
         if (INELIGIBLE_EIDOS.includes(info.nameEn)) return false;
         return (
           info.rarity >= 4 && dayjs(info.release).isBefore(dayjs("2025/10/18"))
+        );
+      case "aniv4.5":
+        // https://anothereidos-r.info/news/4-5aniv2026/
+        if (INELIGIBLE_EIDOS.includes(info.nameEn)) return false;
+        return (
+          info.rarity >= 4 && dayjs(info.release).isBefore(dayjs("2026/5/9"))
         );
     }
   };
@@ -272,7 +278,7 @@ const Home: NextPage<HomeProps> = (props) => {
               push({ pathname: "/" });
             },
           },
-        })
+        }),
       );
     } else {
       BottomRightToaster?.then((t) => t.clear());
@@ -342,7 +348,7 @@ const Home: NextPage<HomeProps> = (props) => {
         }
       });
     },
-    [category, setOwned]
+    [category, setOwned],
   );
 
   const handleBulkRegister = (ids: number[]) => {
@@ -363,7 +369,7 @@ const Home: NextPage<HomeProps> = (props) => {
       toaster.show({
         intent: "success",
         message: t("ui.message.saved"),
-      })
+      }),
     );
     sendEvent({
       action: "save",
@@ -398,7 +404,7 @@ const Home: NextPage<HomeProps> = (props) => {
             toaster.show({
               intent: "success",
               message: t("ui.message.copiedShareLink"),
-            })
+            }),
           );
         } catch (e) {
           // 失敗したらiOSと同じ方法を取る
@@ -418,7 +424,7 @@ const Home: NextPage<HomeProps> = (props) => {
         toaster.show({
           intent: "danger",
           message: data.message,
-        })
+        }),
       );
       sendEvent({
         action: "share",
@@ -438,7 +444,7 @@ const Home: NextPage<HomeProps> = (props) => {
       toaster.show({
         intent: "success",
         message: t("ui.message.copiedShareLink"),
-      })
+      }),
     );
   };
 
@@ -595,6 +601,7 @@ const Home: NextPage<HomeProps> = (props) => {
                 { value: "none", label: t("ui.filter.equipmentTicketBy") },
                 { value: "aniv3.5", label: t("ui.filter.aniv3.5Eidos") },
                 { value: "aniv4.0", label: t("ui.filter.aniv4.0Eidos") },
+                { value: "aniv4.5", label: t("ui.filter.aniv4.5Eidos") },
               ]}
             />
           </div>
@@ -679,7 +686,9 @@ const Home: NextPage<HomeProps> = (props) => {
 
               opacity: 1;
               visibility: visible;
-              transition: opacity 0.5s, visibility 0.5s;
+              transition:
+                opacity 0.5s,
+                visibility 0.5s;
 
               &.scrolling {
                 opacity: 0;
@@ -832,7 +841,7 @@ export const CharacterArea: React.FC<CharacterAreaProps> = (props) => {
     } else {
       // 未所持がある場合は、未所持のみ登録
       props.onBulkRegister(
-        props.charInfo.filter((x) => !x.owned).map((x) => x.id)
+        props.charInfo.filter((x) => !x.owned).map((x) => x.id),
       );
     }
   };
