@@ -907,3 +907,39 @@
   limited: false
   release: 5/8/2026
   image: WeaponIcon_6027.png
+- id: 102
+  eidosId: 5033
+  unitId: 5037
+  nameJa: ダンジョントラブル・メイカー
+  nameEn: Dungeon Troublemakers
+  rarity: 5
+  limited: false
+  release: 6/19/2026
+  image: WeaponIcon_5033.png
+- id: 103
+  eidosId: 5034
+  unitId: 5042
+  nameJa: 真冬の異邦人
+  nameEn: Outsider in the Dead of Winter
+  rarity: 5
+  limited: false
+  release: 6/19/2026
+  image: WeaponIcon_5034.png
+- id: 104
+  eidosId: 6028
+  unitId: 5100
+  nameJa: まだまだ捨てたもんじゃない
+  nameEn: Still Hangin' in There!
+  rarity: 6
+  limited: false
+  release: 6/19/2026
+  image: WeaponIcon_6028.png
+- id: 105
+  eidosId: 6029
+  unitId: 5019
+  nameJa: まさかの逆催眠
+  nameEn: Unexpected Reverse Hypnosis
+  rarity: 6
+  limited: false
+  release: 6/19/2026
+  image: WeaponIcon_6029.png

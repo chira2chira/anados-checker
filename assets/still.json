@@ -199,6 +199,15 @@
       "animated": false
     },
     {
+      "charId": 1009,
+      "seq": 71,
+      "shared": [1009],
+      "group": [1009, 5115],
+      "label": "ord_022",
+      "image": "StillThumbnail_bg_sputnik_storystill02_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 1010,
       "seq": 20,
       "shared": [1010],
@@ -2044,6 +2053,15 @@
       "animated": false
     },
     {
+      "charId": 5019,
+      "seq": 20,
+      "shared": [5019],
+      "group": [5019, 6088],
+      "label": "still04_gordov_eidos",
+      "image": "StillThumbnail_bg_gordov_still04_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 5020,
       "seq": 1,
       "shared": [5020],
@@ -2450,6 +2468,15 @@
     },
     {
       "charId": 5037,
+      "seq": 21,
+      "shared": [5037, 95037],
+      "group": [5037, 6087, 95037, 96087],
+      "label": "still05_pollonorta_eidos",
+      "image": "StillThumbnail_bg_pollonorta_still05_mosaic_001.webp",
+      "animated": true
+    },
+    {
+      "charId": 5037,
       "seq": 70,
       "shared": [5037, 95037],
       "group": [5037, 6087, 95037, 96087],
@@ -2564,6 +2591,15 @@
       "label": "still03_harold_eidos",
       "image": "StillThumbnail_bg_harold_still03_mosaic_001.webp",
       "animated": false
+    },
+    {
+      "charId": 5042,
+      "seq": 22,
+      "shared": [5042],
+      "group": [5042, 6092],
+      "label": "still05_harold_eidos",
+      "image": "StillThumbnail_bg_harold_still05_mosaic_001.webp",
+      "animated": true
     },
     {
       "charId": 5042,
@@ -3031,6 +3067,15 @@
       "group": [5058, 6098],
       "label": "vhr_016",
       "image": "StillThumbnail_bg_fullhouse_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5058,
+      "seq": 71,
+      "shared": [5058],
+      "group": [5058, 6098],
+      "label": "ord_021",
+      "image": "StillThumbnail_bg_fullhouse_storystill02_mosaic_001.webp",
       "animated": false
     },
     {
@@ -4006,6 +4051,15 @@
       "animated": true
     },
     {
+      "charId": 5100,
+      "seq": 20,
+      "shared": [5100],
+      "group": [5100],
+      "label": "still02_gallium_eidos",
+      "image": "StillThumbnail_bg_gallium_still02_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 5101,
       "seq": 1,
       "shared": [5101],
@@ -4039,7 +4093,7 @@
       "group": [5102],
       "label": "still01_sanders",
       "image": "StillThumbnail_bg_sanders_still01_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5102,
@@ -4237,6 +4291,15 @@
       "group": [5112],
       "label": "opr_018",
       "image": "StillThumbnail_bg_tsukimaru_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5114,
+      "seq": 70,
+      "shared": [5114],
+      "group": [5114],
+      "label": "ord_022",
+      "image": "StillThumbnail_bg_sputnik_storystill02_mosaic_001.webp",
       "animated": false
     },
     {

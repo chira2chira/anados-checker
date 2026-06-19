@@ -14,7 +14,7 @@
     - rarity: 3
       weight: 0.38
   pickUp: []
-  poolId: 12
+  poolId: 13
 - id: 1
   nameJa: 「エイドス装備」実装記念
   nameEn: Celebrating the Implementation of “Eidos”
@@ -315,3 +315,28 @@
     - name: 高収入アルバイト
       weight: 0.01
   poolId: 12
+- id: 13
+  nameJa: 嵐の前触れ！？突然のワンナイト・アクシデント！ 何でもアリの冒険譚
+  nameEn: The Calm Before the Storm?! Sudden One-Night Mishap Adventures Where Anything Goes!
+  revival: false
+  start: 6/19/2026
+  end: 7/31/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: まさかの逆催眠
+      weight: 0.01
+    - name: まだまだ捨てたもんじゃない
+      weight: 0.01
+    - name: 真冬の異邦人
+      weight: 0.01
+    - name: ダンジョントラブル・メイカー
+      weight: 0.01
+  poolId: 13
