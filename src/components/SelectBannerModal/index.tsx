@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next";
 import { Checkbox, Dialog, DialogBody, Tag } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { GachaInfo } from "@/types/gacha";
+import { getBannerImageId } from "@/utils/gacha";
 import dayjs from "dayjs";
 import { getImageUrl } from "@/utils/image";
 
@@ -172,7 +173,7 @@ const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
               max-width: 100%;
               height: auto;
             `}
-            src={basePath + `${isJa ? "ja" : "en"}/header/${gachaInfo.id}.png`}
+            src={basePath + `${isJa ? "ja" : "en"}/header/${getBannerImageId(gachaInfo.id)}.png`}
             alt={isJa ? gachaInfo.nameJa : gachaInfo.nameEn}
             width={449}
             height={86}
