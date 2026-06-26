@@ -3415,3 +3415,217 @@
     - name: 暗闇堕ちの傭兵 ボルト
       weight: 0.01
   poolId: 23
+- id: 205
+  nameJa: 罪科愛好！更生担当官が、手クセもハートも超・矯正！
+  nameEn: Lover of Crime? Corrections will Really Set Your Ass and Heart Straight?!
+  revival: true
+  start: 6/26/2026
+  end: 8/7/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 犯罪者矯正更生官 フルハウス
+      weight: 0.01
+    - name: キング
+      weight: 0.01
+  poolId: 23
+- id: 206
+  nameJa: ビシバシいくぜ！モーレツシゴき！鉄格子の中のハードプレイ
+  nameEn: Go Down Hard in Insanely Hardcore Play Behind Bars!
+  revival: true
+  start: 6/26/2026
+  end: 8/7/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: アイアンウィルプリズナー レッカー
+      weight: 0.01
+    - name: ハードコアミッション ラグナル
+      weight: 0.01
+  poolId: 23
+- id: 207
+  nameJa: 獄中で燃える禁断の恋！？暴けスパダリ国賊のクリミナル・マインド
+  nameEn: Forbidden Love Ablaze Behind Bars?! Expose the Ideal Man as a Traitorous Criminal Mind!
+  revival: true
+  start: 6/26/2026
+  end: 8/7/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 扉開く尋問官 シグヴァルディ
+      weight: 0.01
+    - name: イーヴァル
+      weight: 0.01
+  poolId: 23
+- id: 208
+  nameJa: ミルク・パンデミック！ 恐怖！ホルスタインと化した冒険者たち
+  nameEn: Beware! It’s a Milky Epidemic! Adventurers are Turning into Holstein Cattle!
+  revival: true
+  start: 6/26/2026
+  end: 8/7/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: プロテオ
+      weight: 0.01
+    - name: ダンク
+      weight: 0.01
+  poolId: 23
+- id: 209
+  nameJa: 都会じゃ会えない！汗と土が育てたカントリーソウル
+  nameEn: Country Soul You Won’t Find in the City, Nurtured by Sweat and Soil!
+  revival: true
+  start: 6/26/2026
+  end: 8/7/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: グレートファーマー ソル
+      weight: 0.01
+    - name: デッカート
+      weight: 0.01
+  poolId: 23
+- id: 210
+  nameJa: 搾り立てミルクが飲み放題！大きく育て
+  nameEn: All-You-Can-Drink Milk to Grow Nice and BIG!!!
+  revival: true
+  start: 6/26/2026
+  end: 8/7/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 実りのラージファームフレット
+      weight: 0.01
+    - name: アルキオン
+      weight: 0.01
+  poolId: 23
+- id: 211
+  nameJa: ハーフアニバーサリーピックアップ
+  nameEn: Half-Anniversary Pick-Up
+  revival: true
+  start: 6/26/2026
+  end: 8/7/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: ハーフアニバーサリー アモレー
+      weight: 0.01
+    - name: ザハロフ
+      weight: 0.01
+    - name: ジャラム
+      weight: 0.01
+    - name: 若き日の勇姿 ヘリオン
+      weight: 0.01
+  poolId: 23
+- id: 212
+  nameJa: 祝1.5周年！ファンタジー世界の社会見学に行こう！
+  nameEn: Celebrating 1.5 Years! See the wonders of life in a fantasy world!
+  revival: true
+  start: 6/26/2026
+  end: 8/7/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: サイのおじさん ロマネス
+      weight: 0.01
+    - name: スパルタントレーナー ヴェルンド
+      weight: 0.01
+  poolId: 23
+- id: 213
+  nameJa: 2.5周年！ファンタジーセレブレーションをお届け！
+  nameEn: Celebrating 2.5 Years! A Fantasy Celebration Brought to You!
+  revival: true
+  start: 6/26/2026
+  end: 8/7/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ワンダーランドの案内人 ソルベ
+      weight: 0.01
+    - name: ふたりだけの記念日 ヤークート
+      weight: 0.01
+  poolId: 23
+- id: 214
+  nameJa: 3.5周年！エレガントセレブレーション！夜の帝王からの招待状
+  nameEn: Invite from the Emperor to Make for a Smashingly Elegant Celebration to Commemorate 3.5 Years!
+  revival: true
+  start: 6/26/2026
+  end: 8/7/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: バル・ド・ラ・ローズ バルボロス
+      weight: 0.01
+    - name: ゴージャスナイトクルージング マグリット
+      weight: 0.01
+  poolId: 23
