@@ -3629,3 +3629,24 @@
     - name: ゴージャスナイトクルージング マグリット
       weight: 0.01
   poolId: 23
+- id: 215
+  nameJa: 4.5周年！ジョブチェンジ！？新たなる冒険と出会いの予感に胸躍る！
+  nameEn: It’s Our 4.5-Year Anniversary! Maybe It’s Time for a Change of Job?! Get Excited for Brand-New Adventures & Encounters!
+  revival: false
+  start: 6/26/2026
+  end: 8/7/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 徒手空拳の立志伝 テンゴ
+      weight: 0.01
+    - name: 冒険酒場の人気者 ボンヴォイ
+      weight: 0.01
+  poolId: 23

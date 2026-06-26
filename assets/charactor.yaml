@@ -3334,3 +3334,23 @@
   limited: false
   release: 6/12/2026
   image: FS_6133_1.png
+- id: 342
+  unitId: 6134
+  nameJa: 徒手空拳の立志伝 テンゴ
+  nameEn: Tale of Rags-To-Riches Tengo
+  rarity: 6
+  class: guard
+  deployment: low
+  limited: true
+  release: 6/26/2026
+  image: FS_6134_1.png
+- id: 343
+  unitId: 6135
+  nameJa: 冒険酒場の人気者 ボンヴォイ
+  nameEn: Hot Shot of the Adventurer Pub Bonvoy
+  rarity: 6
+  class: fighter
+  deployment: low
+  limited: true
+  release: 6/26/2026
+  image: FS_6135_1.png
