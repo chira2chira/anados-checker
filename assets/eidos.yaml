@@ -943,3 +943,39 @@
   limited: false
   release: 6/19/2026
   image: WeaponIcon_6029.png
+- id: 106
+  eidosId: 5035
+  unitId: 5015
+  nameJa: 父の日の憂鬱
+  nameEn: Father's Day Blues
+  rarity: 5
+  limited: false
+  release: 7/3/2026
+  image: WeaponIcon_5035.png
+- id: 107
+  eidosId: 5036
+  unitId: 5086
+  nameJa: 自慢の息子です
+  nameEn: My Son, My Pride & Joy!
+  rarity: 5
+  limited: false
+  release: 7/3/2026
+  image: WeaponIcon_5036.png
+- id: 108
+  eidosId: 6030
+  unitId: 5098
+  nameJa: 親父にはかなわない
+  nameEn: Can't Beat My Old Man!
+  rarity: 6
+  limited: false
+  release: 7/3/2026
+  image: WeaponIcon_6030.png
+- id: 109
+  eidosId: 6031
+  unitId: 6002
+  nameJa: 恋しい暗がり
+  nameEn: Beloved Gloom
+  rarity: 6
+  limited: false
+  release: 7/3/2026
+  image: WeaponIcon_6031.png

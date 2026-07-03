@@ -459,3 +459,28 @@
     - name: ダンジョントラブル・メイカー
       weight: 0.01
   poolId: 13
+- id: 14
+  nameJa: 全員、実績解除済！家族には言えない！父の日
+  nameEn: Everyone’s Unlocked an Achievement! Father’s Day Secrets You Can’t Tell the Family!
+  revival: false
+  start: 7/3/2026
+  end: 8/14/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: 恋しい暗がり
+      weight: 0.01
+    - name: 親父にはかなわない
+      weight: 0.01
+    - name: 自慢の息子です
+      weight: 0.01
+    - name: 父の日の憂鬱
+      weight: 0.01
+  poolId: 13

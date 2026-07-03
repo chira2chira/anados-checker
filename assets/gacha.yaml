@@ -3650,3 +3650,28 @@
     - name: 冒険酒場の人気者 ボンヴォイ
       weight: 0.01
   poolId: 23
+- id: 216
+  nameJa: 全員、実績解除済！家族には言えない！父の日 スーパーPU
+  nameEn: Everyone’s Unlocked an Achievement! Father’s Day Secrets You Can’t Tell the Family! Super PU
+  revival: false
+  start: 7/3/2026
+  end: 8/14/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.30
+  pickUp:
+    - name: ザハロフ
+      weight: 0.02
+    - name: リオンパパ
+      weight: 0.02
+    - name: コルカ
+      weight: 0.02
+    - name: ヒフミ
+      weight: 0.02
+  poolId: 24
