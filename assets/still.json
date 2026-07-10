@@ -214,7 +214,7 @@
       "group": [],
       "label": "still02_manji",
       "image": "StillThumbnail_bg_manji_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 1010,
@@ -4205,6 +4205,15 @@
     },
     {
       "charId": 5087,
+      "seq": 20,
+      "shared": [5087],
+      "group": [5087],
+      "label": "still02_ivar_eidos",
+      "image": "StillThumbnail_bg_eval_still02_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5087,
       "seq": 70,
       "shared": [5087],
       "group": [5087],
@@ -4633,7 +4642,7 @@
       "group": [],
       "label": "still01_foras",
       "image": "StillThumbnail_bg_foras_still01_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5105,
@@ -4678,6 +4687,15 @@
       "group": [5106],
       "label": "hyp_034",
       "image": "StillThumbnail_bg_sage_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5107,
+      "seq": 1,
+      "shared": [5107],
+      "group": [],
+      "label": "still01_jeff",
+      "image": "StillThumbnail_bg_jeff_still01_mosaic_001.webp",
       "animated": false
     },
     {

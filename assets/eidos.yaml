@@ -979,3 +979,12 @@
   limited: false
   release: 7/3/2026
   image: WeaponIcon_6031.png
+- id: 110
+  eidosId: 6032
+  unitId: 5087
+  nameJa: 蛮族王の悪戯
+  nameEn: The Barbarian King's Mischief
+  rarity: 6
+  limited: false
+  release: 7/10/2026
+  image: WeaponIcon_6032.png
