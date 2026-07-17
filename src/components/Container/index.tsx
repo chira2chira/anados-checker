@@ -150,9 +150,9 @@ export const Container: React.FC<ContainerProps> = (props) => {
                 </a>
               </div>
               <div>
-                <Link href={"/info"}>{t("ui.link.info")}</Link>
+                <Link href={"/info"} prefetch={false}>{t("ui.link.info")}</Link>
                 {" / "}
-                <Link href={"/privacy"}>{t("ui.link.privacy")}</Link>
+                <Link href={"/privacy"} prefetch={false}>{t("ui.link.privacy")}</Link>
               </div>
             </footer>
           </div>
@@ -201,13 +201,13 @@ const LinkSideBar: React.FC = React.memo(() => {
           src={getImageUrl("common/logo.svg")}
           alt="アナザーエイドス所持率チェッカー"
         />
-        <Link href={"/"}>{t("ui.link.checker")}</Link>
-        <Link href={"/gacha/simulator"}>{t("ui.link.gachasimu")}</Link>
-        <Link href={"/still/manager"}>{t("ui.link.stillmng")}</Link>
+        <Link href={"/"} prefetch={false}>{t("ui.link.checker")}</Link>
+        <Link href={"/gacha/simulator"} prefetch={false}>{t("ui.link.gachasimu")}</Link>
+        <Link href={"/still/manager"} prefetch={false}>{t("ui.link.stillmng")}</Link>
         <Link href={"https://anados-generator.vercel.app/"}>
           {t("ui.link.generator")}
         </Link>
-        <Link href={"/info"}>
+        <Link href={"/info"} prefetch={false}>
           <EntityTitle icon="cog" title={t("ui.link.info")} />
         </Link>
         <MenuDivider
@@ -215,10 +215,10 @@ const LinkSideBar: React.FC = React.memo(() => {
             margin: 20px 0;
           `}
         />
-        <Link href={asPath} locale="ja" scroll={false}>
+        <Link href={asPath} locale="ja" scroll={false} prefetch={false}>
           日本語
         </Link>
-        <Link href={asPath} locale="en" scroll={false}>
+        <Link href={asPath} locale="en" scroll={false} prefetch={false}>
           English
         </Link>
       </div>
