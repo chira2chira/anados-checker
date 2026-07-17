@@ -484,3 +484,28 @@
     - name: 父の日の憂鬱
       weight: 0.01
   poolId: 13
+- id: 15
+  nameJa: ハミ出しOKの夏到来！バカンス・クルージングでハジけ放題！
+  nameEn: Summer is the Time to Let Loose! Cruise Beyond the Limits in Vacation Mode!
+  revival: false
+  start: 7/17/2026
+  end: 8/28/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: おじさんのナンパ放浪伝
+      weight: 0.01
+    - name: 祭男とふぁふぁふぁのふぁー！
+      weight: 0.01
+    - name: 泥棒さん、いらっしゃーい！
+      weight: 0.01
+    - name: みんなのあこがれアニキ
+      weight: 0.01
+  poolId: 13

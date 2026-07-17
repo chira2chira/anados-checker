@@ -988,3 +988,39 @@
   limited: false
   release: 7/10/2026
   image: WeaponIcon_6032.png
+- id: 111
+  eidosId: 5037
+  unitId: 5034
+  nameJa: みんなのあこがれアニキ
+  nameEn: The Big Bro Everyone Looks Up To
+  rarity: 5
+  limited: false
+  release: 7/17/2026
+  image: WeaponIcon_5037.png
+- id: 112
+  eidosId: 5038
+  unitId: 6039
+  nameJa: 泥棒さん、いらっしゃーい！
+  nameEn: Giving the Robber a Hot Welcome!
+  rarity: 5
+  limited: false
+  release: 7/17/2026
+  image: WeaponIcon_5038.png
+- id: 113
+  eidosId: 6033
+  unitId: 5050
+  nameJa: 祭男とふぁふぁふぁのふぁー！
+  nameEn: Laughing it Up with the Party Animals!
+  rarity: 6
+  limited: false
+  release: 7/17/2026
+  image: WeaponIcon_6033.png
+- id: 114
+  eidosId: 6034
+  unitId: 4002
+  nameJa: おじさんのナンパ放浪伝
+  nameEn: Your Old Man's Wandering Tales of Picking Up Dudes
+  rarity: 6
+  limited: false
+  release: 7/17/2026
+  image: WeaponIcon_6034.png
