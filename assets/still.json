@@ -451,6 +451,42 @@
       "animated": false
     },
     {
+      "charId": 1033,
+      "seq": 70,
+      "shared": [1033],
+      "group": [1033],
+      "label": "vhr_022",
+      "image": "StillThumbnail_bg_ragnar_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 1034,
+      "seq": 70,
+      "shared": [1034],
+      "group": [1034],
+      "label": "vhr_022",
+      "image": "StillThumbnail_bg_ragnar_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 1035,
+      "seq": 70,
+      "shared": [1035],
+      "group": [1035],
+      "label": "vhr_022",
+      "image": "StillThumbnail_bg_ragnar_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 1036,
+      "seq": 70,
+      "shared": [1036],
+      "group": [1036],
+      "label": "vhr_022",
+      "image": "StillThumbnail_bg_ragnar_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 2001,
       "seq": 1,
       "shared": [2001, 2002, 2003, 2004],
@@ -952,7 +988,7 @@
       "group": [],
       "label": "still03_baran",
       "image": "StillThumbnail_bg_baran_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 3005,
@@ -1367,6 +1403,15 @@
       "label": "still02_karetovi_eidos",
       "image": "StillThumbnail_bg_karetov_still01_mosaic_00.webp",
       "animated": false
+    },
+    {
+      "charId": 4002,
+      "seq": 21,
+      "shared": [4002],
+      "group": [4002, 5030],
+      "label": "still05_karetovi_eidos",
+      "image": "StillThumbnail_bg_karetovi_still05_mosaic_001_a.webp",
+      "animated": true
     },
     {
       "charId": 4002,
@@ -2891,6 +2936,15 @@
     },
     {
       "charId": 5034,
+      "seq": 22,
+      "shared": [5034],
+      "group": [5034],
+      "label": "still03_maxtla_eidos",
+      "image": "StillThumbnail_bg_maxtla_still03_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5034,
       "seq": 50,
       "shared": [5034],
       "group": [5034],
@@ -3229,6 +3283,15 @@
       "group": [5050, 6097],
       "label": "kgr_901_eidos",
       "image": "StillThumbnail_bg_xiaolong_storystill03_mosaic_002.webp",
+      "animated": false
+    },
+    {
+      "charId": 5050,
+      "seq": 22,
+      "shared": [5050],
+      "group": [5050, 6097],
+      "label": "still04_xiaolong_eidos",
+      "image": "StillThumbnail_bg_xiaolong_still04_mosaic_002.webp",
       "animated": false
     },
     {
@@ -6037,6 +6100,15 @@
       "group": [5064, 6039],
       "label": "still04_dion_secret_126039",
       "image": "StillThumbnail_bg_dion_still04_mosaic_B001.webp",
+      "animated": false
+    },
+    {
+      "charId": 6039,
+      "seq": 20,
+      "shared": [6039],
+      "group": [5064, 6039],
+      "label": "still02_dion_eidos",
+      "image": "StillThumbnail_bg_dion_still02_mosaic_001.webp",
       "animated": false
     },
     {
