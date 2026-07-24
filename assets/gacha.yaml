@@ -3700,3 +3700,26 @@
     - name: マシュトラ
       weight: 0.02
   poolId: 24
+- id: 218
+  nameJa: カフェインMAXのガンギマリSUMMER！この夏はゲストハウスのベッドで大冒険♡
+  nameEn: A Caffeine-MAXED, Super-Hyped Summer! Embark on Grand Adventures Right From Your Hostel Bed!
+  revival: false
+  start: 7/24/2026
+  end: 9/4/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: コージー
+      weight: 0.01
+    - name: ドラゴン・ザ・ヘッドターナー ヒーロー
+      weight: 0.01
+    - name: ドーナドーナ
+      weight: 0.01
+  poolId: 24

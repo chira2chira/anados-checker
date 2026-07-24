@@ -3394,3 +3394,33 @@
   limited: false
   release: 7/17/2026
   image: FS_1036_1.png
+- id: 348
+  unitId: 5116
+  nameJa: ドーナドーナ
+  nameEn: Dohnadohna
+  rarity: 5
+  class: support
+  deployment: high
+  limited: false
+  release: 7/24/2026
+  image: FS_5116_1.png
+- id: 349
+  unitId: 6136
+  nameJa: コージー
+  nameEn: Cozey
+  rarity: 6
+  class: healer
+  deployment: high
+  limited: false
+  release: 7/24/2026
+  image: FS_6136_1.png
+- id: 350
+  unitId: 6137
+  nameJa: ドラゴン・ザ・ヘッドターナー ヒーロー
+  nameEn: Head-Turner Dragon Hero
+  rarity: 6
+  class: guard
+  deployment: low
+  limited: false
+  release: 7/24/2026
+  image: FS_6137_1.png
