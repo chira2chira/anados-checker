@@ -13,7 +13,7 @@
       "charId": 1,
       "seq": 20,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "still02_gaia_eidos",
       "image": "StillThumbnail_bg_gaia_still02_mosaic_001.webp",
       "animated": false
@@ -22,7 +22,7 @@
       "charId": 1,
       "seq": 50,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "main_001_041",
       "image": "StillThumbnail_bg_main01_story02_mon.webp",
       "animated": false
@@ -31,7 +31,7 @@
       "charId": 1,
       "seq": 51,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "main_002_022",
       "image": "StillThumbnail_bg_dyne_still02_mosaicoff_001.webp",
       "animated": false
@@ -40,7 +40,7 @@
       "charId": 1,
       "seq": 52,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "main_002_033",
       "image": "StillThumbnail_werewolf_storystill_01_mosaic_001.webp",
       "animated": false
@@ -49,7 +49,7 @@
       "charId": 1,
       "seq": 53,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "main_003_021",
       "image": "StillThumbnail_bg_azmond_storystill02_mosaic_001.webp",
       "animated": false
@@ -58,7 +58,7 @@
       "charId": 1,
       "seq": 54,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "main_000_030",
       "image": "StillThumbnail_bg_barboros_storystill00_mosaic_001.webp",
       "animated": false
@@ -67,7 +67,7 @@
       "charId": 1,
       "seq": 55,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "main_006_041",
       "image": "StillThumbnail_bg_eternion_storystill02_mosaic_001.webp",
       "animated": false
@@ -76,7 +76,7 @@
       "charId": 1,
       "seq": 56,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "main_007_016",
       "image": "StillThumbnail_bg_calhoun_storystill01_mosaic_001.webp",
       "animated": true
@@ -85,7 +85,7 @@
       "charId": 1,
       "seq": 57,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "main_007_038",
       "image": "StillThumbnail_bg_barboros_storystill03_mosaic_001.webp",
       "animated": false
@@ -94,7 +94,7 @@
       "charId": 1,
       "seq": 70,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "wboom_031",
       "image": "StillThumbnail_bg_atmos_still02_mosaic_001.webp",
       "animated": true
@@ -103,7 +103,7 @@
       "charId": 1,
       "seq": 71,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "mjbc_020",
       "image": "StillThumbnail_bg_rook_still05_mosaic_focus_001.webp",
       "animated": false
@@ -112,7 +112,7 @@
       "charId": 1,
       "seq": 72,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "drm_014",
       "image": "StillThumbnail_bg_dyne_still05_mosaic_010.webp",
       "animated": false
@@ -121,7 +121,7 @@
       "charId": 1,
       "seq": 73,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "drm_018",
       "image": "StillThumbnail_bg_baquu_still02_mosaic_003.webp",
       "animated": false
@@ -130,7 +130,7 @@
       "charId": 1,
       "seq": 74,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "dlv_014",
       "image": "StillThumbnail_bg_merman_storystill01_mosaic_A001.webp",
       "animated": false
@@ -139,7 +139,7 @@
       "charId": 1,
       "seq": 75,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "vhr_016",
       "image": "StillThumbnail_bg_fullhouse_storystill01_mosaic_001.webp",
       "animated": false
@@ -148,7 +148,7 @@
       "charId": 1,
       "seq": 76,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "oht_900",
       "image": "StillThumbnail_bg_hurricaneandtough_storystill01_mosaic_A001.webp",
       "animated": false
@@ -157,7 +157,7 @@
       "charId": 1,
       "seq": 77,
       "shared": [1, 2],
-      "group": [1, 2],
+      "group": [1, 2, 6137],
       "label": "oht_017",
       "image": "StillThumbnail_bg_edgar_storystill02_mosaic_001.webp",
       "animated": false
@@ -2455,7 +2455,7 @@
       "group": [5015, 5052, 6037],
       "label": "still07_corca_eidos",
       "image": "StillThumbnail_bg_corca_still07_mosaic_011.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5015,
@@ -3392,6 +3392,15 @@
       "label": "still02_lyon",
       "image": "StillThumbnail_bg_rion_still02_mosaic_001.webp",
       "animated": true
+    },
+    {
+      "charId": 6128,
+      "seq": 6,
+      "shared": [6128],
+      "group": [],
+      "label": "still06_rion",
+      "image": "StillThumbnail_bg_rion_still06_mosaic_001.webp",
+      "animated": false
     },
     {
       "charId": 5053,
@@ -4790,6 +4799,15 @@
     },
     {
       "charId": 5108,
+      "seq": 1,
+      "shared": [5108],
+      "group": [],
+      "label": "still01_laguias",
+      "image": "StillThumbnail_bg_laguias_still01_mosaic_001.webp",
+      "animated": true
+    },
+    {
+      "charId": 5108,
       "seq": 70,
       "shared": [5108],
       "group": [5108],
@@ -4849,6 +4867,15 @@
       "group": [5114],
       "label": "ord_022",
       "image": "StillThumbnail_bg_sputnik_storystill02_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5116,
+      "seq": 70,
+      "shared": [5116],
+      "group": [5116],
+      "label": "fir_012",
+      "image": "StillThumbnail_bg_dohnadohna_storystill01_mosaic_001.webp",
       "animated": false
     },
     {
@@ -6919,6 +6946,15 @@
       "group": [6133],
       "label": "ord_020",
       "image": "StillThumbnail_bg_oswald_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 6136,
+      "seq": 70,
+      "shared": [6136],
+      "group": [6136],
+      "label": "fir_012",
+      "image": "StillThumbnail_bg_dohnadohna_storystill01_mosaic_001.webp",
       "animated": false
     },
     {
