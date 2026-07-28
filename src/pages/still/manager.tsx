@@ -10,7 +10,6 @@ import {
   ButtonProps,
   Switch,
 } from "@blueprintjs/core";
-import { forceCheck } from "react-lazyload";
 import * as styles from "@/styles/Home.module";
 import { CharClass, CharInfo, CharInfoWithStill } from "@/types/unit";
 import { StillInfo } from "@/types/still";
@@ -199,9 +198,6 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       const rare5 = applyFilter(5);
       const rare6 = applyFilter(6);
       const rare7 = applyFilter(7);
-
-      // 次TickでLazyLoadの描画チェックを走らせる
-      setTimeout(forceCheck, 0);
 
       return {
         rare0,

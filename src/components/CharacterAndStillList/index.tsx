@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import LazyLoad from "react-lazyload";
+import LazyLoad from "@/components/LazyLoad";
 import { css } from "@emotion/react";
 import { useTranslation } from "next-i18next";
 import { Button, Card, Icon, Tooltip } from "@blueprintjs/core";

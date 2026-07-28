@@ -33,7 +33,6 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.0.2",
-    "react-lazyload": "^3.2.1",
     "sharp": "^0.33.2",
     "shortid": "^2.2.16",
     "typescript": "5.1.6"
@@ -43,7 +42,6 @@
     "@types/js-yaml": "^4.0.5",
     "@types/lodash.throttle": "^4.1.7",
     "@types/mersennetwister": "^0.2.0",
-    "@types/react-lazyload": "^3.2.3",
     "@types/shortid": "^0.0.29",
     "@welldone-software/why-did-you-render": "^10.0.1"
   }

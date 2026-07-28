@@ -1,8 +1,8 @@
 import { Dialog, DialogBody, InputGroup } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { useTranslation } from "next-i18next";
-import { useContext, useEffect, useState } from "react";
-import LazyLoad, { forceCheck } from "react-lazyload";
+import { useContext, useState } from "react";
+import LazyLoad from "@/components/LazyLoad";
 import { CharInfoWithStill } from "@/types/unit";
 import { StillInfo } from "@/types/still";
 import { getImageUrl } from "@/utils/image";
@@ -25,10 +25,6 @@ export const NineStillsSelectModal: React.FC<NineStillsSelectModalProps> = (
   const [searchQuery, setSearchQuery] = useState("");
   const [filterRate, setFilterRate] = useState("none");
   const { customLabels } = useContext(CustomLabelContext);
-
-  useEffect(() => {
-    setTimeout(forceCheck, 0);
-  }, [searchQuery, filterRate]);
 
   const filteredChars = props.charInfoWithStills
     .filter((char) => {
@@ -151,7 +147,7 @@ export const NineStillsSelectModal: React.FC<NineStillsSelectModalProps> = (
 
                   return (
                     <div key={char.id}>
-                      <LazyLoad overflow height={100} once>
+                      <LazyLoad height={100}>
                         <div
                           css={css`
                             display: flex;
