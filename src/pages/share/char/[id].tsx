@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { writeLocalStorage } from "@/utils/localStorageStore";
 
 export const TEMP_CHAR_KEY = "tmp_chars";
 
@@ -24,7 +25,7 @@ const ShareId: NextPage<ShareIdProps> = (props) => {
   })`;
 
   useEffect(() => {
-    window.localStorage.setItem(TEMP_CHAR_KEY, props.chars);
+    writeLocalStorage(TEMP_CHAR_KEY, props.chars);
     push("/", asPath, { locale: i18n.language });
   }, [push, asPath, props.chars, i18n]);
 

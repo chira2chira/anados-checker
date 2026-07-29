@@ -2,7 +2,7 @@ import { GetStaticProps, NextPage } from "next";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { css } from "@emotion/react";
 import { Button, Callout } from "@blueprintjs/core";
 import dayjs from "dayjs";
@@ -21,6 +21,8 @@ import useStillState from "@/hooks/useStillState";
 type NineStillsProps = {
   charInfoWithStills: CharInfoWithStill[];
 };
+
+const EMPTY_STILLS: (StillInfo | null)[] = Array(9).fill(null);
 
 const gridStyle = css`
   display: grid;
@@ -151,8 +153,8 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
     [props.charInfoWithStills, stillStates],
   );
 
-  const [selectedStills, setSelectedStills] = useState<(StillInfo | null)[]>(
-    Array(9).fill(null),
+  const [editedStills, setEditedStills] = useState<(StillInfo | null)[]>(
+    EMPTY_STILLS,
   );
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -160,27 +162,31 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
     null,
   );
   const [isGenerating, setIsGenerating] = useState(false);
-  const [isReadOnly, setIsReadOnly] = useState(false);
   const captureRef = useRef<HTMLDivElement>(null);
   const { t, i18n } = useTranslation("common");
   const { t: t2 } = useTranslation("nine-stills");
 
-  useEffect(() => {
-    if (!router.isReady) return;
-    const { stills: stillsParam } = router.query;
-    if (!stillsParam || typeof stillsParam !== "string") return;
+  const { isReady: routerIsReady } = router;
+  const stillsParam = router.query.stills;
+
+  // クエリ指定がある場合は共有されたスチルの閲覧モードになる
+  const sharedStills = useMemo(() => {
+    if (!routerIsReady) return null;
+    if (!stillsParam || typeof stillsParam !== "string") return null;
 
     const ids = stillsParam.split(",");
-    if (ids.every((id) => id === "")) return;
+    if (ids.every((id) => id === "")) return null;
 
     const allStills = props.charInfoWithStills.flatMap((c) => c.stills);
     const restored: (StillInfo | null)[] = ids.map((id) =>
       id ? (allStills.find((s) => s.id === id) ?? null) : null,
     );
     while (restored.length < 9) restored.push(null);
-    setSelectedStills(restored.slice(0, 9));
-    setIsReadOnly(true);
-  }, [router.isReady]);
+    return restored.slice(0, 9);
+  }, [routerIsReady, stillsParam, props.charInfoWithStills]);
+
+  const isReadOnly = sharedStills !== null;
+  const selectedStills = sharedStills ?? editedStills;
 
   const selectedStillIds = selectedStills
     .filter((x): x is StillInfo => x !== null)
@@ -196,14 +202,14 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
 
     const newSelectedStills = [...selectedStills];
     newSelectedStills[selectedIndex] = still;
-    setSelectedStills(newSelectedStills);
+    setEditedStills(newSelectedStills);
     setSelectedIndex(null);
   };
 
   const handleClear = (index: number) => {
     const newSelectedStills = [...selectedStills];
     newSelectedStills[index] = null;
-    setSelectedStills(newSelectedStills);
+    setEditedStills(newSelectedStills);
   };
 
   const getStillLabel = (still: StillInfo) => {
@@ -281,8 +287,8 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
   };
 
   const handleCreateMyOwn = () => {
-    setSelectedStills(Array(9).fill(null));
-    setIsReadOnly(false);
+    // クエリを外すことで閲覧モードが解除される
+    setEditedStills(EMPTY_STILLS);
     setGeneratedImageUrl(null);
     router.push("/still/nine-stills", undefined, { shallow: true });
   };

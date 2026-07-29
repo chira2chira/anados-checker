@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useSyncExternalStore } from "react";
 
 /**
  * react-lazyload の置き換え。
@@ -46,22 +46,27 @@ function getObserver(offset: number) {
   return observer;
 }
 
+// IntersectionObserverの有無はレンダー中に直接見るとSSRと不一致になるため、
+// 外部ストアとして購読しサーバ側は「対応あり(=プレースホルダーを描画)」とみなす
+const subscribeNever = () => () => {};
+const getSupported = () => typeof IntersectionObserver !== "undefined";
+const getSupportedOnServer = () => true;
+
 const LazyLoad: React.FC<LazyLoadProps> = (props) => {
   const { offset = 0 } = props;
   const [visible, setVisible] = useState(false);
   const placeholder = useRef<HTMLDivElement>(null);
+  const supported = useSyncExternalStore(
+    subscribeNever,
+    getSupported,
+    getSupportedOnServer,
+  );
 
   useEffect(() => {
-    if (visible) return;
+    if (visible || !supported) return;
 
     const element = placeholder.current;
     if (!element) return;
-
-    if (typeof IntersectionObserver === "undefined") {
-      // 非対応環境ではLazyLoadせずそのまま表示する
-      setVisible(true);
-      return;
-    }
 
     const observer = getObserver(offset);
     callbacks.set(element, () => setVisible(true));
@@ -71,9 +76,10 @@ const LazyLoad: React.FC<LazyLoadProps> = (props) => {
       callbacks.delete(element);
       observer.unobserve(element);
     };
-  }, [visible, offset]);
+  }, [visible, supported, offset]);
 
-  if (visible) return <>{props.children}</>;
+  // 非対応環境ではLazyLoadせずそのまま表示する
+  if (visible || !supported) return <>{props.children}</>;
 
   return (
     <div

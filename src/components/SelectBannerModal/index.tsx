@@ -1,4 +1,4 @@
-import { RefObject, createRef, forwardRef, useRef, useState } from "react";
+import { forwardRef, useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
@@ -32,11 +32,19 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
   const [includeEnded, setIncludeEnded] = useState(true);
   const { id } = router.query;
   const { t } = useTranslation("gacha");
-  const bannerRefs = useRef<RefObject<HTMLAnchorElement | null>[]>([]);
+  const bannerRefs = useRef(new Map<number, HTMLAnchorElement>());
 
-  props.gachaInfo.forEach((x) => {
-    bannerRefs.current[x.id] = createRef<HTMLAnchorElement>();
-  });
+  // レンダー中にrefを触らないよう、コールバックrefでマウント時に登録する
+  const registerBanner = useCallback(
+    (bannerId: number) => (element: HTMLAnchorElement | null) => {
+      if (element) {
+        bannerRefs.current.set(bannerId, element);
+      } else {
+        bannerRefs.current.delete(bannerId);
+      }
+    },
+    []
+  );
 
   const filteredBanner = [...props.gachaInfo]
     .reverse()
@@ -45,12 +53,9 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
     .filter((x) => includeEnded || dayjs.tz().isBefore(dayjs(x.end).tz()));
 
   const scrollToCurrentBanner = () => {
-    const bannerRef = bannerRefs.current[Number(id)];
-    if (!!bannerRef) {
-      bannerRef.current?.scrollIntoView({
-        block: "center",
-      });
-    }
+    bannerRefs.current.get(Number(id))?.scrollIntoView({
+      block: "center",
+    });
   };
 
   return (
@@ -69,7 +74,7 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
         >
           {filteredBanner.map((x) => (
             <BannerLink
-              ref={bannerRefs.current[x.id]}
+              ref={registerBanner(x.id)}
               key={x.id}
               gachaInfo={x}
               onClick={props.onSelect}

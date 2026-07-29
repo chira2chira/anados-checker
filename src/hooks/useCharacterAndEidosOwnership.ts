@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useMemo } from "react";
 import { useRouter } from "next/router";
 import useCharacterOwnership from "./useCharacterOwnership";
 import useEidosOwnership from "./useEidosOwnership";
 import { parseLocalStorageChar } from "@/utils/charUtil";
+import { useLocalStorageRaw } from "@/utils/localStorageStore";
 import { TEMP_CHAR_KEY } from "@/pages/share/char/[id]";
 
 type OwnState = {
@@ -11,7 +12,6 @@ type OwnState = {
 };
 
 export default function useCharacterAndEidosOwnership() {
-  const [tmpMode, setTmpMode] = useState(false);
   const {
     owned: charOwned,
     setOwned: setCharOwned,
@@ -22,11 +22,23 @@ export default function useCharacterAndEidosOwnership() {
     setOwned: setEidosOwned,
     save: saveEidos,
   } = useEidosOwnership();
-  const [tmpOwned, setTmpOwned] = useState<OwnState>({ char: [], eidos: [] });
-  const owned: OwnState = tmpMode
-    ? tmpOwned
-    : { char: charOwned, eidos: eidosOwned };
   const { asPath } = useRouter();
+  // 共有URLの閲覧中かはパスから直接導出できる
+  const tmpMode = asPath.startsWith("/share/char/");
+  const tmpRaw = useLocalStorageRaw(TEMP_CHAR_KEY);
+
+  const tmpOwned = useMemo<OwnState>(
+    () => ({
+      char: tmpRaw ? parseLocalStorageChar(tmpRaw) : [],
+      eidos: [],
+    }),
+    [tmpRaw],
+  );
+
+  const owned = useMemo<OwnState>(
+    () => (tmpMode ? tmpOwned : { char: charOwned, eidos: eidosOwned }),
+    [tmpMode, tmpOwned, charOwned, eidosOwned],
+  );
 
   const setOwned = useCallback(
     (setStateAction: (state: OwnState) => OwnState) => {
@@ -34,7 +46,7 @@ export default function useCharacterAndEidosOwnership() {
       setCharOwned((char) => setStateAction({ char, eidos: [] }).char);
       setEidosOwned((eidos) => setStateAction({ char: [], eidos }).eidos);
     },
-    [setCharOwned, setEidosOwned, tmpMode]
+    [setCharOwned, setEidosOwned, tmpMode],
   );
 
   const save = () => {
@@ -45,21 +57,6 @@ export default function useCharacterAndEidosOwnership() {
       saveEidos();
     }
   };
-
-  useEffect(() => {
-    // SSRを避けて取得する
-    if (asPath.startsWith("/share/char/")) {
-      setTmpMode(true);
-      const tempStoredValue = window.localStorage.getItem(TEMP_CHAR_KEY);
-      if (tempStoredValue)
-        setTmpOwned({
-          char: parseLocalStorageChar(tempStoredValue),
-          eidos: [],
-        });
-    } else {
-      setTmpMode(false);
-    }
-  }, [asPath]);
 
   return { owned, setOwned, setCharOwned, setEidosOwned, save, tmpMode };
 }

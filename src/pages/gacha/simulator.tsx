@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { UrlObject } from "url";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useState } from "react";
 import { Button, ButtonGroup, Checkbox, Tooltip } from "@blueprintjs/core";
 import { css, keyframes } from "@emotion/react";
 import { CharInfo, EidosInfo, UnknownInfo } from "@/types/unit";
@@ -30,6 +30,20 @@ type GachaSimulatorProps = {
 
 type CharInfoPu = UnknownInfo & {
   pickUp: boolean;
+};
+
+/** ガチャ結果はバナー単位で保持し、バナーが変わったら破棄する */
+type PullState = {
+  bannerId: number | null;
+  result: CharInfoPu[];
+  history: CharInfoPu[];
+};
+
+const NO_PULLS: CharInfoPu[] = [];
+const INITIAL_PULL_STATE: PullState = {
+  bannerId: null,
+  result: NO_PULLS,
+  history: NO_PULLS,
 };
 
 const winStyle = css`
@@ -71,8 +85,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   const [openRateList, setOpenRateList] = useState(false);
   const [showCharPer, setShowCharPer] = useState(false);
   const [highlightPu, setHighlightPu] = useState(false);
-  const [pullResult, setPullResult] = useState<CharInfoPu[]>([]);
-  const [pullHistory, setPullHistory] = useState<CharInfoPu[]>([]);
+  const [pulls, setPulls] = useState<PullState>(INITIAL_PULL_STATE);
   const category = useCategoryQuery();
   const currentInfo: UnknownInfo[] =
     category === "char" ? props.charInfo : props.eidosInfo;
@@ -86,9 +99,14 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   const { t, i18n } = useTranslation("gacha");
   const isJa = i18n.language === "ja";
 
-  useEffect(() => {
-    handleClear();
-  }, [banner.id]);
+  // 保持中のバナーが現在のバナーと違えば、そのガチャ結果は破棄する
+  const pullResult = pulls.bannerId === banner.id ? pulls.result : NO_PULLS;
+  const pullHistory = pulls.bannerId === banner.id ? pulls.history : NO_PULLS;
+
+  const puWeight = banner.pickUp.reduce((prev, current) => {
+    const char = currentInfo.find((y) => y.nameJa === current.name)!;
+    return prev + calcPickUpRate(char, banner)! / 100;
+  }, 0);
 
   function getRarityPer(rarity: number) {
     const per =
@@ -112,15 +130,6 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
     return <ResultRate percent={per} weight={puWeight} />;
   }
 
-  const puWeight = useMemo(
-    () =>
-      banner.pickUp.reduce((prev, current) => {
-        const char = currentInfo.find((y) => y.nameJa === current.name)!;
-        return prev + calcPickUpRate(char, banner)! / 100;
-      }, 0),
-    [banner, currentInfo]
-  );
-
   function nPull(n: number) {
     sendEvent({
       action: "pull",
@@ -140,20 +149,25 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
   const handle1pull = () => {
     const result = nPull(1);
 
-    setPullResult(result);
-    setPullHistory(pullHistory.concat(result));
+    setPulls({
+      bannerId: banner.id,
+      result,
+      history: pullHistory.concat(result),
+    });
   };
 
   const handle10pull = () => {
     const result = nPull(10);
 
-    setPullResult(result);
-    setPullHistory(pullHistory.concat(result));
+    setPulls({
+      bannerId: banner.id,
+      result,
+      history: pullHistory.concat(result),
+    });
   };
 
   const handleClear = () => {
-    setPullResult([]);
-    setPullHistory([]);
+    setPulls(INITIAL_PULL_STATE);
   };
 
   const handleOpenSelectBanner = () => {

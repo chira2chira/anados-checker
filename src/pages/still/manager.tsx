@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { useCallback, useContext, useMemo, useState } from "react";
 import { css } from "@emotion/react";
 import {
   AnchorButton,
@@ -35,8 +35,48 @@ type StillManagerProps = {
 
 type StillType = "intimacy" | "secret" | "story" | "eidos";
 
+/** フィルタ条件から外れても表示し続けるスチルID(条件が変わったら破棄する) */
+type StuckState = {
+  filterKey: string;
+  ids: Set<string>;
+};
+
+const NO_STUCK_IDS: ReadonlySet<string> = new Set();
+const INITIAL_STUCK: StuckState = { filterKey: "", ids: new Set() };
+
 function getUniqueSills(stills: StillState[]) {
   return Array.from(new Map(stills.map((x) => [x.id, x])).values());
+}
+
+/** 共有スチルが固有スチルに変更された場合のマイグレーション */
+function migrateStillStates(
+  stillStates: StillState[],
+  charInfoWithStills: CharInfoWithStill[],
+) {
+  let migrated = false;
+  const newStillStates = stillStates.map((x) => {
+    if (charInfoWithStills.some((y) => y.stills.some((z) => z.id === x.id))) {
+      return x;
+    }
+
+    const char = charInfoWithStills.find(
+      (y) => y.unitId === Number(x.id.split(":")[0]),
+    );
+    const newChar = charInfoWithStills.find(
+      (y) =>
+        y.id === char?.stills[0]?.groupIds[(Number(x.id.split(":")[1]) - 1) / 2],
+    );
+    const still = newChar?.stills.find((y) => y.label === "Still");
+    // 既に固有スチルが登録されている場合はスキップ
+    if (still && !stillStates.some((y) => y.id === still.id)) {
+      migrated = true;
+      return { ...x, id: still.id };
+    }
+    return x;
+  });
+
+  // 変換対象がなければ参照を維持する
+  return migrated ? newStillStates : stillStates;
 }
 
 function filterOwnedChar(filter: string) {
@@ -134,8 +174,11 @@ function filterAnimatedStill(filter: string) {
 
 const StillManager: NextPage<StillManagerProps> = (props) => {
   const { owned } = useCharacterOwnership();
-  const { stillStates, setStillStates, save } = useStillState();
-  const [stillInitialized, setStillInitialized] = useState(false);
+  const {
+    stillStates: storedStillStates,
+    setStillStates,
+    save,
+  } = useStillState();
   const [filterClass, setFilterClass] = useState<CharClass[]>([]);
   const [filterStillType, setFilterStillType] = useState<StillType[]>([]);
   const [filterOwned, setFilterOwned] = useState("none");
@@ -144,10 +187,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   const [filterAnimated, setFilterAnimated] = useState("none");
   const [filterRead, setFilterRead] = useState("none");
   const [filterRate, setFilterRate] = useState("none");
-  // フィルタ条件から外れても表示し続けるスチルIDを保持
-  const [stuckStillIds, setStuckStillIds] = useState<Set<string>>(
-    () => new Set(),
-  );
+  const [stuck, setStuck] = useState<StuckState>(INITIAL_STUCK);
   const [layout, setLayout] = useState<"grid" | "list">("grid");
   const [rouletteOpen, setRouletteOpen] = useState(false);
   const [labelModalOpen, setLabelModalOpen] = useState(false);
@@ -155,6 +195,27 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   const { customLabels } = useContext(CustomLabelContext);
   const { t } = useTranslation("common");
   const { t: t2 } = useTranslation("still");
+
+  // マスタから消えた共有スチルIDは表示・更新の直前に固有スチルIDへ読み替える
+  const charInfoWithStills = props.charInfoWithStills;
+  const stillStates = useMemo(
+    () => migrateStillStates(storedStillStates, charInfoWithStills),
+    [storedStillStates, charInfoWithStills],
+  );
+
+  const filterKey = [
+    filterClass.join("/"),
+    filterStillType.join("/"),
+    filterOwned,
+    filterLimited,
+    filterStill,
+    filterAnimated,
+    filterRead,
+    filterRate,
+  ].join("|");
+  // フィルタ条件が変わったら滞留状態は破棄する
+  const stuckStillIds =
+    stuck.filterKey === filterKey ? stuck.ids : NO_STUCK_IDS;
 
   const { rare0, rare1, rare2, rare3, rare4, rare5, rare6, rare7 } =
     useMemo(() => {
@@ -224,69 +285,22 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       stuckStillIds,
     ]);
 
-  // フィルタ条件が変わったら滞留状態をクリア
-  useEffect(() => {
-    setStuckStillIds((prev) => (prev.size === 0 ? prev : new Set()));
-  }, [
-    filterClass,
-    filterStillType,
-    filterOwned,
-    filterLimited,
-    filterStill,
-    filterAnimated,
-    filterRead,
-    filterRate,
-  ]);
-
-  useEffect(() => {
-    if (stillInitialized || stillStates.length === 0) return;
-
-    // スチルの初期化処理
-    const newStillStates = stillStates.map((x) => {
-      // 共有スチルが固有スチルに変更された場合のマイグレーション
-      if (
-        !props.charInfoWithStills.some((y) =>
-          y.stills.some((z) => z.id === x.id),
-        )
-      ) {
-        const char = props.charInfoWithStills.find(
-          (y) => y.unitId === Number(x.id.split(":")[0]),
-        );
-        const newChar = props.charInfoWithStills.find(
-          (y) =>
-            y.id ===
-            char?.stills[0]?.groupIds[(Number(x.id.split(":")[1]) - 1) / 2],
-        );
-        const still = newChar?.stills.find((y) => y.label === "Still");
-        // 既に固有スチルが登録されている場合はスキップ
-        if (still && !stillStates.some((y) => y.id === still.id)) {
-          return { ...x, id: still.id };
-        }
-      }
-      return x;
-    });
-    setStillStates(newStillStates);
-    setStillInitialized(true);
-  }, [props.charInfoWithStills, setStillStates, stillInitialized, stillStates]);
-
-  const markStuck = useCallback((ids: string[]) => {
-    if (ids.length === 0) return;
-    setStuckStillIds((prev) => {
-      let changed = false;
-      const next = new Set(prev);
-      for (const id of ids) {
-        if (!next.has(id)) {
-          next.add(id);
-          changed = true;
-        }
-      }
-      return changed ? next : prev;
-    });
-  }, []);
+  const markStuck = useCallback(
+    (ids: string[]) => {
+      if (ids.length === 0) return;
+      setStuck((prev) => {
+        const next = new Set(prev.filterKey === filterKey ? prev.ids : []);
+        for (const id of ids) next.add(id);
+        return { filterKey, ids: next };
+      });
+    },
+    [filterKey],
+  );
 
   const handleReadChange = useCallback(
     (id: string) => {
-      setStillStates((x) => {
+      setStillStates((prev) => {
+        const x = migrateStillStates(prev, charInfoWithStills);
         const oldStateTmp = x.filter((y) => y.id === id);
         const oldState: StillState =
           oldStateTmp.length === 0
@@ -298,12 +312,13 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       });
       markStuck([id]);
     },
-    [setStillStates, markStuck],
+    [charInfoWithStills, setStillStates, markStuck],
   );
 
   const handleRateChange = useCallback(
     (id: string, rate: number) => {
-      setStillStates((x) => {
+      setStillStates((prev) => {
+        const x = migrateStillStates(prev, charInfoWithStills);
         const oldStateTmp = x.filter((y) => y.id === id);
         const oldState: StillState =
           oldStateTmp.length === 0
@@ -315,7 +330,7 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
       });
       markStuck([id]);
     },
-    [setStillStates, markStuck],
+    [charInfoWithStills, setStillStates, markStuck],
   );
 
   const handleBulkRegister = (stills: StillState[]) => {
@@ -342,7 +357,8 @@ const StillManager: NextPage<StillManagerProps> = (props) => {
   };
 
   const handleSave = () => {
-    save();
+    // マイグレーション後の内容を保存する
+    save(stillStates);
     TopToaster?.then((toaster) =>
       toaster.show({
         intent: "success",

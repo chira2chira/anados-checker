@@ -1,4 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useMemo } from "react";
+import {
+  useLocalStorageRaw,
+  writeLocalStorage,
+} from "@/utils/localStorageStore";
 
 const SPOILER_KEY = "hidespoiler";
 
@@ -16,23 +20,21 @@ export const HideSpoilerContext = React.createContext<HideSpoilerContextProps>(
 );
 
 const HideSpoilerProvider: React.FC<HideSpoilerProviderProps> = (props) => {
-  const [hideSpoiler, _setHideSpoiler] = useState(true);
+  // 保存値をそのまま参照するため、ローカルstateは持たない
+  const raw = useLocalStorageRaw(SPOILER_KEY);
+  const hideSpoiler = raw === null ? true : raw !== "false";
 
-  const setHideSpoiler = (newValue: boolean) => {
-    _setHideSpoiler(newValue);
-    window.localStorage.setItem(SPOILER_KEY, newValue + "");
-  };
-
-  useEffect(() => {
-    // SSRを避けて取得する
-    const storedValue = window.localStorage.getItem(SPOILER_KEY);
-    if (storedValue) {
-      _setHideSpoiler(storedValue === "false" ? false : true);
-    }
+  const setHideSpoiler = useCallback((newValue: boolean) => {
+    writeLocalStorage(SPOILER_KEY, newValue + "");
   }, []);
 
+  const value = useMemo(
+    () => ({ hideSpoiler, setHideSpoiler }),
+    [hideSpoiler, setHideSpoiler]
+  );
+
   return (
-    <HideSpoilerContext.Provider value={{ hideSpoiler, setHideSpoiler }}>
+    <HideSpoilerContext.Provider value={value}>
       {props.children}
     </HideSpoilerContext.Provider>
   );

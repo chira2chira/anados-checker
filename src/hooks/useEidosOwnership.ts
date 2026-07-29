@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
 import { parseLocalStorageEidos } from "@/utils/charUtil";
+import { useLocalStorageDraft } from "@/utils/localStorageStore";
 
 const EIDOS_KEY = "eidos";
 
+function parse(raw: string | null) {
+  return raw ? parseLocalStorageEidos(raw) : [];
+}
+
+function serialize(owned: number[]) {
+  return owned.join(",");
+}
+
 export default function useEidosOwnership() {
-  const [owned, setOwned] = useState<number[]>([]);
-
-  const save = () => {
-    window.localStorage.setItem(EIDOS_KEY, owned.join(","));
-  };
-
-  useEffect(() => {
-    // SSRを避けて取得する
-    const storedCharValue = window.localStorage.getItem(EIDOS_KEY);
-    if (storedCharValue) {
-      setOwned(parseLocalStorageEidos(storedCharValue));
-    }
-  }, []);
+  const {
+    value: owned,
+    setValue: setOwned,
+    save,
+  } = useLocalStorageDraft(EIDOS_KEY, parse, serialize);
 
   return { owned, setOwned, save };
 }

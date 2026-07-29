@@ -243,7 +243,6 @@ const Home: NextPage<HomeProps> = (props) => {
   const [filterTicket, setFilterTicket] = useState("none");
   const [filterEidosTicket, setFilterEidosTicket] = useState("none");
   const [fetching, setFetching] = useState(false);
-  const [flash, setFlash] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
   const [openCaptureModal, setOpenCaptureModal] = useState(false);
   const { hideSpoiler, setHideSpoiler } = useContext(HideSpoilerContext);
@@ -255,14 +254,20 @@ const Home: NextPage<HomeProps> = (props) => {
   const currentOwned = category === "char" ? owned.char : owned.eidos;
   const scrolling = useScroll();
   const { t } = useTranslation("common");
+  // フェードイン済みのパス。現在のパスと異なる間はchar-listを非表示にする
+  const [flashedPath, setFlashedPath] = useState(() => asPath);
+
+  const flash = flashedPath !== asPath;
 
   useEffect(() => {
-    setFlash(true);
+    if (!flash) return;
 
-    setTimeout(() => {
-      setFlash(false);
+    // 一度描画してからクラスを外すことでtransitionを走らせる
+    const timer = setTimeout(() => {
+      setFlashedPath(asPath);
     }, 0);
-  }, [asPath]);
+    return () => clearTimeout(timer);
+  }, [flash, asPath]);
 
   useEffect(() => {
     if (tmpMode) {

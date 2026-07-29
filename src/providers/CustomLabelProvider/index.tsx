@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useMemo } from "react";
 import { INITIAL_LABELS } from "@/components/CustomLabelModal";
 import { parseLocalStorageCustomLabel } from "@/utils/charUtil";
+import {
+  useLocalStorageRaw,
+  writeLocalStorage,
+} from "@/utils/localStorageStore";
 
 const CLABEL_KEY = "still_customlabel";
 
@@ -18,23 +22,24 @@ export const CustomLabelContext = React.createContext<CustomLabelContextProps>(
 );
 
 const CustomLabelProvider: React.FC<CustomLabelProviderProps> = (props) => {
-  const [customLabels, _setCustomLabels] = useState(INITIAL_LABELS);
+  // 保存値をそのまま参照するため、ローカルstateは持たない
+  const raw = useLocalStorageRaw(CLABEL_KEY);
+  const customLabels = useMemo(
+    () => (raw ? parseLocalStorageCustomLabel(raw) : INITIAL_LABELS),
+    [raw]
+  );
 
-  const setCustomLabels = (newValue: string[]) => {
-    _setCustomLabels(newValue);
-    window.localStorage.setItem(CLABEL_KEY, newValue.join(","));
-  };
-
-  useEffect(() => {
-    // SSRを避けて取得する
-    const storedValue = window.localStorage.getItem(CLABEL_KEY);
-    if (storedValue) {
-      setCustomLabels(parseLocalStorageCustomLabel(storedValue));
-    }
+  const setCustomLabels = useCallback((newValue: string[]) => {
+    writeLocalStorage(CLABEL_KEY, newValue.join(","));
   }, []);
 
+  const value = useMemo(
+    () => ({ customLabels, setCustomLabels }),
+    [customLabels, setCustomLabels]
+  );
+
   return (
-    <CustomLabelContext.Provider value={{ customLabels, setCustomLabels }}>
+    <CustomLabelContext.Provider value={value}>
       {props.children}
     </CustomLabelContext.Provider>
   );

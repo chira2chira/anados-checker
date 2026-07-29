@@ -8,6 +8,7 @@ import { Container } from "@/components/Container";
 import { sendEvent } from "@/utils/gtag";
 import { parseLocalStorageCustomLabel } from "@/utils/charUtil";
 import { CustomLabelContext } from "@/providers/CustomLabelProvider";
+import { writeLocalStorage } from "@/utils/localStorageStore";
 
 const CHAR_KEY = "chars";
 const EIDOS_KEY = "eidos";
@@ -114,15 +115,15 @@ const Info: NextPage<InfoProps> = () => {
     const imported: string[] = [];
     if (!!json.char) {
       imported.push(t("message.char"));
-      window.localStorage.setItem(CHAR_KEY, json.char);
+      writeLocalStorage(CHAR_KEY, json.char);
     }
     if (!!json.eidos) {
       imported.push(t("message.eidos"));
-      window.localStorage.setItem(EIDOS_KEY, json.eidos);
+      writeLocalStorage(EIDOS_KEY, json.eidos);
     }
     if (!!json.still) {
       imported.push(t("message.still"));
-      window.localStorage.setItem(STILL_KEY, json.still);
+      writeLocalStorage(STILL_KEY, json.still);
     }
     if (!!json.customLabel) {
       imported.push(t("message.customLabel"));
