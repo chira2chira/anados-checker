@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import LazyLoad from "@/components/LazyLoad";
 import { css } from "@emotion/react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { Button, Card, Icon, Tooltip } from "@blueprintjs/core";
 import { dequal } from "dequal";
 import { displayCharClass } from "@/utils/stringUtil";

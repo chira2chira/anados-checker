@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
 import { isProd } from "../../utils/env";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 
 export type CardType = "summary" | "summary_large_image" | "9stills";
 

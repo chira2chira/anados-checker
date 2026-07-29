@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { Button } from "@blueprintjs/core";
 import { getImageUrl } from "@/utils/image";
 

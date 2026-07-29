@@ -1,8 +1,8 @@
 import { GetStaticProps, NextPage } from "next";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next/pages";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import { UrlObject } from "url";
 import React, { useState } from "react";
 import { Button, ButtonGroup, Checkbox, Tooltip } from "@blueprintjs/core";

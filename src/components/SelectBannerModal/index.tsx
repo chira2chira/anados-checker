@@ -1,7 +1,7 @@
 import { forwardRef, useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { Checkbox, Dialog, DialogBody, Tag } from "@blueprintjs/core";
 import { css } from "@emotion/react";
 import { GachaInfo } from "@/types/gacha";

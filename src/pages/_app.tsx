@@ -4,7 +4,7 @@ import "@blueprintjs/core/lib/css/blueprint.css";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import React from "react";
-import { appWithTranslation } from "next-i18next";
+import { appWithTranslation } from "next-i18next/pages";
 import { FocusStyleManager } from "@blueprintjs/core";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";

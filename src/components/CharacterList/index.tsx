@@ -3,7 +3,7 @@ import { displayCharClass } from "@/utils/stringUtil";
 import React, { useContext } from "react";
 import { Button, Tooltip } from "@blueprintjs/core";
 import { css } from "@emotion/react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { dequal } from "dequal";
 import { isCharInfo, isEidosInfo } from "@/utils/types";
 import { getImageUrl } from "@/utils/image";

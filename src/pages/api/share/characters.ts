@@ -1,5 +1,5 @@
 import { db } from "@/utils/db";
-import shortid from "shortid";
+import { nanoid } from "nanoid";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { loadCharactors } from "@/utils/yamlUtil";
 
@@ -30,7 +30,8 @@ export default async function handler(
   const owned = charList.length;
   const percent = Math.round((owned / charCount) * 100);
 
-  const id = shortid.generate();
+  // shortidと同じURL安全文字（A-Za-z0-9_-）で、従来と同程度の長さになるよう10文字を指定
+  const id = nanoid(10);
 
   try {
     await db

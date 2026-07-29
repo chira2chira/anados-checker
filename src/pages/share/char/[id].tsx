@@ -3,8 +3,8 @@ import { db } from "@/utils/db";
 import { GetServerSideProps, NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
+import { useTranslation } from "next-i18next/pages";
 import { writeLocalStorage } from "@/utils/localStorageStore";
 
 export const TEMP_CHAR_KEY = "tmp_chars";

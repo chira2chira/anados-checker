@@ -1,6 +1,6 @@
 import { Dialog, DialogBody, InputGroup } from "@blueprintjs/core";
 import { css } from "@emotion/react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { useContext, useState } from "react";
 import LazyLoad from "@/components/LazyLoad";
 import { CharInfoWithStill } from "@/types/unit";

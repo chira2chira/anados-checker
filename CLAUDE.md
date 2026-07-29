@@ -43,7 +43,7 @@ public/
 
 ```tsx
 import { GetStaticProps, NextPage } from "next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import { Container } from "@/components/Container";
 
 type PageProps = {
@@ -167,7 +167,8 @@ img.src = getImageUrl("still/" + still.image);
 
 **使用方法**:
 ```tsx
-import { useTranslation } from "next-i18next";
+// next-i18next v16以降、Pages Router用のエントリは "next-i18next/pages" 配下
+import { useTranslation } from "next-i18next/pages";
 
 const Component = () => {
   const { t } = useTranslation("namespace");

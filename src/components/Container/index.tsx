@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { css } from "@emotion/react";
 import CommonMeta, { CardType } from "@/components/CommonMeta";
 import { Button, Drawer, EntityTitle, MenuDivider } from "@blueprintjs/core";
