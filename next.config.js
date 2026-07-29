@@ -4,6 +4,13 @@ const { i18n } = require("./next-i18next.config");
 const nextConfig = {
   reactStrictMode: true,
   i18n,
+  // yamlUtil.tsがprocess.cwd()基点でfs.readdirSync("public/static/image/still")を実行するため、
+  // Turbopackのファイルトレースがpublic配下の画像(約700MB)をServerless Functionに丸ごと同梱してしまう。
+  // publicの読み取りはSSG(still/manager, still/nine-stills)のビルド時のみでランタイムには不要、
+  // かつVercelではpublic配下は静的アセットとして別途配信されるため、トレース対象から除外する。
+  outputFileTracingExcludes: {
+    "**": ["./public/**"],
+  },
   images: {
     remotePatterns: [
       {
