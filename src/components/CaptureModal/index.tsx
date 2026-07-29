@@ -6,6 +6,8 @@ import { css } from "@emotion/react";
 import { CharacterArea } from "@/pages";
 import { UnknownInfo } from "@/types/unit";
 import { sendEvent } from "@/utils/gtag";
+import { downloadImage } from "@/utils/image";
+import { waitForPaint } from "@/utils/browser";
 
 const BG_COLOR = "#111418";
 
@@ -54,10 +56,12 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
     const previewElm = previewRef.current!;
     const previewChildInfo = previewElm.firstElementChild!;
 
-    const aElm = document.createElement("a");
+    // ローディング表示を描画させてから重い処理に入る
+    await waitForPaint();
+
     // iOSだと画像のfetchが上手くいかないことが多いため1回素振り
     await domToPng(previewElm, { features: { fixSvgXmlDecode: false } });
-    aElm.href = await domToPng(previewElm, {
+    const dataUrl = await domToPng(previewElm, {
       width: previewChildInfo.clientWidth,
       height: previewChildInfo.clientHeight,
       backgroundColor: BG_COLOR,
@@ -65,11 +69,7 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
         fixSvgXmlDecode: false, // iOSのパフォーマンス向上
       },
     });
-    aElm.setAttribute(
-      "download",
-      "anadoschars_" + new Date().getTime() + ".png"
-    );
-    aElm.click();
+    downloadImage(dataUrl, "anadoschars_" + new Date().getTime() + ".png");
 
     setConverting(false);
 

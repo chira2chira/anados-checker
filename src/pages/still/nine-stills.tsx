@@ -12,7 +12,7 @@ import { CharInfoWithStill } from "@/types/unit";
 import { StillInfo } from "@/types/still";
 import { loadStillMaster } from "@/utils/yamlUtil";
 import { Container } from "@/components/Container";
-import { getImageUrl } from "@/utils/image";
+import { downloadImage, getImageUrl } from "@/utils/image";
 import { TopToaster } from "@/utils/toast";
 import { sendEvent } from "@/utils/gtag";
 import { NineStillsSelectModal } from "@/components/NineStillsSelectModal";
@@ -296,10 +296,7 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
   const handleDownload = () => {
     if (!generatedImageUrl) return;
 
-    const link = document.createElement("a");
-    link.href = generatedImageUrl;
-    link.download = `nine-stills-${Date.now()}.png`;
-    link.click();
+    downloadImage(generatedImageUrl, `nine-stills-${Date.now()}.png`);
   };
 
   return (
