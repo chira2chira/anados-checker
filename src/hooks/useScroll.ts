@@ -3,7 +3,7 @@ import throttle from "lodash.throttle";
 
 export function useScroll() {
   const [scrolling, setScrolling] = useState(false);
-  const timer = useRef<number | undefined>();
+  const timer = useRef<number | undefined>(undefined);
 
   const handleScroll = useCallback(() => {
     setScrolling(true);

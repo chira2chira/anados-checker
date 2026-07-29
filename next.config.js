@@ -34,7 +34,7 @@ const nextConfig = {
         ],
       },
 {
-        source: "/favicon:path*",
+        source: "/:path(favicon.*)",
         headers: [
           {
             key: "Cache-Control",

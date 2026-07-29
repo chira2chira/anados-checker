@@ -32,7 +32,7 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
   const [includeEnded, setIncludeEnded] = useState(true);
   const { id } = router.query;
   const { t } = useTranslation("gacha");
-  const bannerRefs = useRef<RefObject<HTMLAnchorElement>[]>([]);
+  const bannerRefs = useRef<RefObject<HTMLAnchorElement | null>[]>([]);
 
   props.gachaInfo.forEach((x) => {
     bannerRefs.current[x.id] = createRef<HTMLAnchorElement>();
