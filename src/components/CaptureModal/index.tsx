@@ -59,8 +59,6 @@ export const CaptureModal: React.FC<CaptureModal> = (props) => {
     // ローディング表示を描画させてから重い処理に入る
     await waitForPaint();
 
-    // iOSだと画像のfetchが上手くいかないことが多いため1回素振り
-    await domToPng(previewElm, { features: { fixSvgXmlDecode: false } });
     const dataUrl = await domToPng(previewElm, {
       width: previewChildInfo.clientWidth,
       height: previewChildInfo.clientHeight,
