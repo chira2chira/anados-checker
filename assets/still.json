@@ -2620,6 +2620,15 @@
       "animated": false
     },
     {
+      "charId": 5113,
+      "seq": 4,
+      "shared": [5113],
+      "group": [],
+      "label": "still04_pius",
+      "image": "StillThumbnail_bg_pius_still04_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 5021,
       "seq": 20,
       "shared": [5021],
@@ -4002,7 +4011,7 @@
       "shared": [5077],
       "group": [5077, 6120],
       "label": "sar_021",
-      "image": "StillThumbnail_bg_sinbad_storystill01_mosaic_003.webp",
+      "image": "StillThumbnail_bg_sanders_storystill01_mosaic_003.webp",
       "animated": false
     },
     {
@@ -4543,7 +4552,7 @@
       "group": [5098],
       "label": "still03_hifumi_eidos",
       "image": "StillThumbnail_bg_hifumi_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5098,
@@ -4768,7 +4777,7 @@
       "group": [],
       "label": "still01_jeff",
       "image": "StillThumbnail_bg_jeff_still01_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5107,
@@ -4957,7 +4966,7 @@
       "group": [5078, 6002, 6052],
       "label": "still05_zacharoff_eidos",
       "image": "StillThumbnail_bg_zacharoff_still05_mosaic_011.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6002,
@@ -5131,6 +5140,15 @@
       "animated": false
     },
     {
+      "charId": 6006,
+      "seq": 70,
+      "shared": [6006],
+      "group": [5057, 6006],
+      "label": "fir_015",
+      "image": "StillThumbnail_bg_fafnir_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 6007,
       "seq": 1,
       "shared": [6007],
@@ -5155,7 +5173,7 @@
       "group": [],
       "label": "still03_bashkar",
       "image": "StillThumbnail_bg_bashkar_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6007,
