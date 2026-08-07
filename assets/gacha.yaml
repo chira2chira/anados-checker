@@ -3723,3 +3723,26 @@
     - name: ドーナドーナ
       weight: 0.01
   poolId: 24
+- id: 219
+  nameJa: ドラゴンイーターのテント夜襲！食べられたがりの冒険者さまの大ピンチ
+  nameEn: The Dragon-Eaters’ Nighttime Tent Raid! A Dire Situation for Adventurers Hopin’ to Get Eaten Up Themselves!
+  revival: false
+  start: 8/7/2026
+  end: 9/18/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: うろつき魔の旅路 メイヘム
+      weight: 0.01
+    - name: ライディーン
+      weight: 0.01
+    - name: 真夏の商戦 トーマス
+      weight: 0.01
+  poolId: 24
