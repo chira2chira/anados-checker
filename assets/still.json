@@ -607,7 +607,7 @@
       "charId": 2019,
       "seq": 50,
       "shared": [2019],
-      "group": [2019],
+      "group": [2019, 6138],
       "label": "main_005_011",
       "image": "StillThumbnail_bg_seals_ch05_storystill01_mosaic_A001.webp",
       "animated": false
@@ -616,7 +616,7 @@
       "charId": 2019,
       "seq": 70,
       "shared": [2019],
-      "group": [2019],
+      "group": [2019, 6138],
       "label": "db_012",
       "image": "StillThumbnail_bg_hamamsh_storystill01_mosaic_001.webp",
       "animated": false
@@ -4888,6 +4888,15 @@
       "animated": false
     },
     {
+      "charId": 5116,
+      "seq": 71,
+      "shared": [5116],
+      "group": [5116],
+      "label": "fir_019",
+      "image": "StillThumbnail_bg_dohnadohna_storystill02_mosaic_008.webp",
+      "animated": false
+    },
+    {
       "charId": 6001,
       "seq": 1,
       "shared": [6001],
@@ -5134,7 +5143,7 @@
       "charId": 6006,
       "seq": 50,
       "shared": [6006],
-      "group": [5057, 6006],
+      "group": [5057, 5118, 6006],
       "label": "main_006_022",
       "image": "StillThumbnail_bg_thomas_still02_mosaic_001.webp",
       "animated": false
@@ -5143,7 +5152,7 @@
       "charId": 6006,
       "seq": 70,
       "shared": [6006],
-      "group": [5057, 6006],
+      "group": [5057, 5118, 6006],
       "label": "fir_015",
       "image": "StillThumbnail_bg_fafnir_storystill01_mosaic_001.webp",
       "animated": false
@@ -6454,6 +6463,15 @@
       "animated": false
     },
     {
+      "charId": 6127,
+      "seq": 3,
+      "shared": [6127],
+      "group": [],
+      "label": "still04_chabo",
+      "image": "StillThumbnail_bg_chabo_still04_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 5076,
       "seq": 5,
       "shared": [5076],
@@ -6976,6 +6994,15 @@
       "animated": false
     },
     {
+      "charId": 6136,
+      "seq": 71,
+      "shared": [6136],
+      "group": [6136],
+      "label": "fir_019",
+      "image": "StillThumbnail_bg_dohnadohna_storystill02_mosaic_008.webp",
+      "animated": false
+    },
+    {
       "charId": 7001,
       "seq": 1,
       "shared": [7001],
@@ -7109,6 +7136,15 @@
       "label": "ord_024",
       "image": "StillThumbnail_bg_dunk_storystill04_mosaic_B001.webp",
       "animated": true
+    },
+    {
+      "charId": 7001,
+      "seq": 77,
+      "shared": [7001, 7002],
+      "group": [6106, 7001, 7002],
+      "label": "fir_019",
+      "image": "StillThumbnail_bg_dohnadohna_storystill02_mosaic_008.webp",
+      "animated": false
     }
   ]
 }
