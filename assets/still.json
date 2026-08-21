@@ -2626,7 +2626,7 @@
       "group": [],
       "label": "still04_pius",
       "image": "StillThumbnail_bg_pius_still04_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5021,
@@ -3409,7 +3409,7 @@
       "group": [],
       "label": "still06_rion",
       "image": "StillThumbnail_bg_rion_still06_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5053,
@@ -4844,11 +4844,29 @@
     },
     {
       "charId": 5110,
+      "seq": 1,
+      "shared": [5110],
+      "group": [],
+      "label": "still01_akuro",
+      "image": "StillThumbnail_bg_akuro_still01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5110,
       "seq": 70,
       "shared": [5110],
       "group": [5110],
       "label": "opr_018",
       "image": "StillThumbnail_bg_tsukimaru_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5111,
+      "seq": 1,
+      "shared": [5111],
+      "group": [],
+      "label": "still01_kashi",
+      "image": "StillThumbnail_bg_kashi_still01_mosaic_001.webp",
       "animated": false
     },
     {
