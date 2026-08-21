@@ -3746,3 +3746,413 @@
     - name: 真夏の商戦 トーマス
       weight: 0.01
   poolId: 24
+- id: 220
+  nameJa: モテモテGメン出動！守れ、ハッテンビーチの平和！
+  nameEn: Sexy G-Men Deployed! Protect the Peace on Cruisin’ Beach!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: レペゼンラスト アズモンド
+      weight: 0.01
+    - name: ビーチハンター レオンハート
+      weight: 0.01
+    - name: 渚の風雲 フウ
+      weight: 0.01
+    - name: 渚の雷光 ライ
+      weight: 0.01
+  poolId: 24
+- id: 221
+  nameJa: ひと夏のホットメモリー！ビーチの支配者！
+  nameEn: Hot Memories This Summer! Master of the Beach!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: レペゼンラスト アズモンド
+      weight: 0.01
+    - name: 出張海の家 フレット
+      weight: 0.01
+    - name: レスキュードッグ ハンゾウ
+      weight: 0.01
+    - name: ビーチの支配者 ジャラム
+      weight: 0.01
+  poolId: 24
+- id: 222
+  nameJa: 朝まで盛り上がれ！ゴキゲンナイト
+  nameEn: Party Till the Break of Dawn! Good Vibrations Tonight!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: ゴーゴーボーイ ラグナル
+      weight: 0.01
+    - name: 海上保安官 ブルート
+      weight: 0.01
+    - name: レペゼンラスト アズモンド
+      weight: 0.01
+    - name: 特大花火師 ニトロ
+      weight: 0.01
+  poolId: 24
+- id: 223
+  nameJa: VIP限定！ダークルームへ潜入調査！
+  nameEn: VIPs Only! Undercover Darkroom Investigation!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: ライフセーバー プージ
+      weight: 0.01
+    - name: ロックフェス リュート
+      weight: 0.01
+    - name: レペゼンラスト アズモンド
+      weight: 0.01
+    - name: 水遊び隊長 ビルフォード
+      weight: 0.01
+  poolId: 24
+- id: 224
+  nameJa: 出航せよ！目指すは魔境・バリタチ島！
+  nameEn: Set Sail for the Demonic Island of Topdom!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 海風香る艇長 バルト
+      weight: 0.01
+    - name: ガオウ
+      weight: 0.01
+  poolId: 24
+- id: 225
+  nameJa: オレこそバリタチ島の覇者！最強TOP！
+  nameEn: I’ll be the King Dom of Topdom!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: 突撃特派員 トルケル
+      weight: 0.01
+    - name: バリタチ船長 レオンハート
+      weight: 0.01
+    - name: ユーノ
+      weight: 0.01
+  poolId: 24
+- id: 226
+  nameJa: 肉体言語で接触中！異文化コミュニケーション！
+  nameEn: Talking with Your Body!? A Foreign Twist on Communication!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: スカバンド
+      weight: 0.01
+    - name: 進めマグナム号 パティ
+      weight: 0.01
+    - name: ハロルド
+      weight: 0.01
+  poolId: 24
+- id: 227
+  nameJa: 激アツスポ根ファイト開催！雄比べナンバー１を目指せ！
+  nameEn: Now Hosting Hard ‘n’ Fiery Sports! Aim to be That No. 1 Best Male!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: マッスルスモウレスラー ハルク
+      weight: 0.01
+    - name: ハートストライカー マリオン
+      weight: 0.01
+    - name: サマースカイダイビング ディオン
+      weight: 0.01
+  poolId: 24
+- id: 228
+  nameJa: 水着に着替えてビーチクルーズ！エンジョイサマー！
+  nameEn: Cruise on the Beach in Your Trunks & Enjoy the Summer!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: エンジョイフィッシング ボンヴォイ
+      weight: 0.01
+    - name: アスレチックカウボーイ フォルテ
+      weight: 0.01
+    - name: サンライズホーク シドレー
+      weight: 0.01
+  poolId: 24
+- id: 229
+  nameJa: 世界最後の未開拓地へ発進！イイ男を乗せて
+  nameEn: Off to the Last Unexplored Place in El Dorado with a Crew of Fine Men!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: マリンテイマー アモレー
+      weight: 0.01
+    - name: サンシャイン・マスク ガムラ
+      weight: 0.01
+    - name: キャプテンノーチラス ダカール
+      weight: 0.01
+  poolId: 24
+- id: 230
+  nameJa: バディと恋仲深めるなら深海で決まり！ドキドキ迷宮探検！
+  nameEn: What Better Place to Deepen Your Bond with Your Buddy than the Bottom of the Sea! Time for a Heart-Throbbing Lair Expedition!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: グルメハンター ロビン
+      weight: 0.01
+    - name: ダイビングバディ シグヴァルディ
+      weight: 0.01
+    - name: ガロード
+      weight: 0.01
+  poolId: 24
+- id: 231
+  nameJa: いただきシードッグ登場！イイ男はぜ～んぶ持ち帰り！
+  nameEn: Seadog for the Win Debut! Bringin’ Home ALL Those Fine Guys!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ふたりのシードッグ オルタとポロン
+      weight: 0.01
+    - name: ティリクム
+      weight: 0.01
+  poolId: 24
+- id: 232
+  nameJa: マッチング最大効率！ようこそおひとりさまアイランド
+  nameEn: Maximize Your Matchmaking on Bachelor Island!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ウルトラスーパーノービス ガオウ
+      weight: 0.01
+    - name: バーベキューマスター ドメイ
+      weight: 0.01
+    - name: ハリケンとタフ
+      weight: 0.01
+  poolId: 24
+- id: 233
+  nameJa: ひと皮剥ける熱帯夜！皆にはナイショだよ
+  nameEn: Break Out of Your Comfort Zone for a Hot, Steamy Night! Just Keep It on the Down-Low!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: 君に贈るミルキーウェイ カンクロウ
+      weight: 0.01
+    - name: ひと夏の冒険 バクウ
+      weight: 0.01
+    - name: ラビロウ
+      weight: 0.01
+  poolId: 24
+- id: 234
+  nameJa: てや！極限流極意！本能解放パンチ！
+  nameEn: Hiya! The Essence of Kyokugenryu Jujitsu! An Instinct-Releasing Punch Away!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: リビドー解放フリーサマー ミラージ
+      weight: 0.01
+    - name: ヒフミ
+      weight: 0.01
+  poolId: 24
+- id: 235
+  nameJa: 禁忌！ゲノム整形！遺伝子いじくりまわせば、キミこそスターだ！
+  nameEn: Genomic Alterations are so Taboo! Just a Few Tweaks and You’re a Star!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ホットマンビースト バルクスキー
+      weight: 0.01
+    - name: ワイルダー
+      weight: 0.01
+  poolId: 24
+- id: 236
+  nameJa: ランウェイを荒らせ！ゼット遊撃隊のショータイム
+  nameEn: Tear Up That Runway! It’s Showtime with Zed’s Commando Brigade!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: セレブヴィランヘッド ゼット
+      weight: 0.01
+    - name: ガリウム
+      weight: 0.01
+  poolId: 24
+- id: 237
+  nameJa: 当院は患者様のさらなる美と男らしさをサポートするウェルネスパートナーです！
+  nameEn: Our Clinic Serves as Our Patients’ Wellness Partner to Help Them Achieve Greater Beauty & Manliness!
+  revival: true
+  start: 8/21/2026
+  end: 10/2/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ディーゼル
+      weight: 0.01
+    - name: エイドロン
+      weight: 0.01
+  poolId: 24
