@@ -3454,3 +3454,33 @@
   limited: true
   release: 8/7/2026
   image: FS_6138_1.png
+- id: 354
+  unitId: 5119
+  nameJa: タフ
+  nameEn: Tuff
+  rarity: 5
+  class: caster
+  deployment: high
+  limited: false
+  release: 8/28/2026
+  image: FS_5119_1.png
+- id: 355
+  unitId: 6139
+  nameJa: トロピカルスター ドワード
+  nameEn: Tropical Star Dward
+  rarity: 6
+  class: vanguard
+  deployment: low
+  limited: true
+  release: 8/28/2026
+  image: FS_6139_1.png
+- id: 356
+  unitId: 6140
+  nameJa: ファフニル
+  nameEn: Fafnir
+  rarity: 6
+  class: support
+  deployment: high
+  limited: false
+  release: 8/28/2026
+  image: FS_6140_1.png

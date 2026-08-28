@@ -4156,3 +4156,26 @@
     - name: エイドロン
       weight: 0.01
   poolId: 24
+- id: 238
+  nameJa: 男同士の未解決関係にQ.E.D.　そうか！付き合っちゃえばいいんだ！！
+  nameEn: Man-2-Man Relationship Not Set in Stone? Just Date Already, It’s Fine!
+  revival: false
+  start: 8/28/2026
+  end: 10/9/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ファフニル
+      weight: 0.01
+    - name: トロピカルスター ドワード
+      weight: 0.01
+    - name: タフ
+      weight: 0.01
+  poolId: 24
