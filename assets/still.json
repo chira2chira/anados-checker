@@ -2023,7 +2023,7 @@
       "group": [],
       "label": "still03_brute",
       "image": "StillThumbnail_bg_brut_still04_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5059,
@@ -2569,7 +2569,7 @@
       "charId": 5020,
       "seq": 4,
       "shared": [5020],
-      "group": [5020, 6090],
+      "group": [5020, 6090, 6139],
       "label": "still05_dward_secret_125020",
       "image": "StillThumbnail_bg_dward_still05_mosaic_001.webp",
       "animated": false
@@ -2587,7 +2587,7 @@
       "charId": 5020,
       "seq": 20,
       "shared": [5020],
-      "group": [5020, 6090],
+      "group": [5020, 6090, 6139],
       "label": "still02_dward_eidos",
       "image": "StillThumbnail_bg_dward_still02_mosaic_001.webp",
       "animated": false
@@ -2596,9 +2596,18 @@
       "charId": 5020,
       "seq": 70,
       "shared": [5020],
-      "group": [5020, 6090],
+      "group": [5020, 6090, 6139],
       "label": "ew_013",
       "image": "StillThumbnail_bg_dward_still04_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5020,
+      "seq": 71,
+      "shared": [5020],
+      "group": [5020, 6090, 6139],
+      "label": "fir_022",
+      "image": "StillThumbnail_bg_rydeen_storystill01_mosaic_001.webp",
       "animated": false
     },
     {
@@ -3544,6 +3553,15 @@
       "group": [],
       "label": "still03_orion",
       "image": "StillThumbnail_bg_nightmare_still03_mosaic_002.webp",
+      "animated": false
+    },
+    {
+      "charId": 6122,
+      "seq": 3,
+      "shared": [6122],
+      "group": [],
+      "label": "still02_orion",
+      "image": "StillThumbnail_bg_nightmare_still02_mosaic_A01.webp",
       "animated": false
     },
     {
@@ -4510,6 +4528,15 @@
       "animated": false
     },
     {
+      "charId": 5096,
+      "seq": 74,
+      "shared": [5096],
+      "group": [5096, 6126],
+      "label": "fir_022",
+      "image": "StillThumbnail_bg_rydeen_storystill01_mosaic_003_a.webp",
+      "animated": false
+    },
+    {
       "charId": 5097,
       "seq": 1,
       "shared": [5097],
@@ -4912,6 +4939,42 @@
       "group": [5116],
       "label": "fir_019",
       "image": "StillThumbnail_bg_dohnadohna_storystill02_mosaic_008.webp",
+      "animated": false
+    },
+    {
+      "charId": 5117,
+      "seq": 70,
+      "shared": [5117],
+      "group": [5117],
+      "label": "fir_015",
+      "image": "StillThumbnail_bg_fafnir_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5117,
+      "seq": 71,
+      "shared": [5117],
+      "group": [5117],
+      "label": "fir_022",
+      "image": "StillThumbnail_bg_rydeen_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5119,
+      "seq": 1,
+      "shared": [5119],
+      "group": [],
+      "label": "still01_bigtough",
+      "image": "StillThumbnail_bg_bigtough_still01_mosaic_001.webp",
+      "animated": true
+    },
+    {
+      "charId": 5119,
+      "seq": 70,
+      "shared": [5119],
+      "group": [5119],
+      "label": "fir_022",
+      "image": "StillThumbnail_bg_rydeen_storystill01_mosaic_003_a.webp",
       "animated": false
     },
     {
@@ -7018,6 +7081,15 @@
       "group": [6136],
       "label": "fir_019",
       "image": "StillThumbnail_bg_dohnadohna_storystill02_mosaic_008.webp",
+      "animated": false
+    },
+    {
+      "charId": 6140,
+      "seq": 70,
+      "shared": [6140],
+      "group": [6140],
+      "label": "fir_015",
+      "image": "StillThumbnail_bg_fafnir_storystill01_mosaic_001.webp",
       "animated": false
     },
     {
