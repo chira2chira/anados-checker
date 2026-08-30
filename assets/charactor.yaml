@@ -3461,7 +3461,7 @@
   rarity: 5
   class: caster
   deployment: high
-  limited: false
+  limited: true
   release: 8/28/2026
   image: FS_5119_1.png
 - id: 355
