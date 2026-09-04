@@ -163,6 +163,15 @@
       "animated": false
     },
     {
+      "charId": 1,
+      "seq": 78,
+      "shared": [1, 2],
+      "group": [1, 2, 6137],
+      "label": "fir_024",
+      "image": "StillThumbnail_bg_gaia_storystill03_mosaic_002.webp",
+      "animated": false
+    },
+    {
       "charId": 1001,
       "seq": 1,
       "shared": [1001, 1002, 1003, 1004, 1005],
@@ -622,6 +631,15 @@
       "animated": false
     },
     {
+      "charId": 2019,
+      "seq": 71,
+      "shared": [2019],
+      "group": [2019, 6138],
+      "label": "fir_024",
+      "image": "StillThumbnail_bg_gaia_storystill03_mosaic_002.webp",
+      "animated": false
+    },
+    {
       "charId": 2020,
       "seq": 1,
       "shared": [2020],
@@ -664,6 +682,15 @@
       "group": [2023],
       "label": "still01_worker_eidos",
       "image": "StillThumbnail_bg_worker_still01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 2023,
+      "seq": 21,
+      "shared": [2023],
+      "group": [2023],
+      "label": "still02_worker_eidos",
+      "image": "StillThumbnail_bg_worker_still02_mosaic_001.webp",
       "animated": false
     },
     {
@@ -1171,6 +1198,15 @@
       "animated": false
     },
     {
+      "charId": 3009,
+      "seq": 21,
+      "shared": [3009],
+      "group": [3009],
+      "label": "still03_yurt_eidos",
+      "image": "StillThumbnail_bg_yurt_still03_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 3010,
       "seq": 1,
       "shared": [3010],
@@ -1663,6 +1699,15 @@
       "group": [4008, 6029],
       "label": "still02_pugi_eidos",
       "image": "StillThumbnail_bg_pugi_still02_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 4008,
+      "seq": 21,
+      "shared": [4008, 6029],
+      "group": [4008, 6029],
+      "label": "still05_pugi_eidos",
+      "image": "StillThumbnail_bg_pugi_still05_mosaic_001.webp",
       "animated": false
     },
     {
@@ -3697,7 +3742,7 @@
       "group": [5058, 6098],
       "label": "ord_021",
       "image": "StillThumbnail_bg_fullhouse_storystill02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5060,
@@ -4457,6 +4502,15 @@
     },
     {
       "charId": 5091,
+      "seq": 21,
+      "shared": [5091],
+      "group": [5091],
+      "label": "still03_calhoun_eidos",
+      "image": "StillThumbnail_bg_calhoun_still03_mosaic_001.webp",
+      "animated": true
+    },
+    {
+      "charId": 5091,
       "seq": 50,
       "shared": [5091],
       "group": [5091],
@@ -4957,6 +5011,15 @@
       "group": [5117],
       "label": "fir_022",
       "image": "StillThumbnail_bg_rydeen_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5117,
+      "seq": 72,
+      "shared": [5117],
+      "group": [5117],
+      "label": "fir_024",
+      "image": "StillThumbnail_bg_gaia_storystill03_mosaic_002.webp",
       "animated": false
     },
     {
