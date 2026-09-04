@@ -1,9 +1,26 @@
+- id: 10009
+  nameJa: エイドス装備スカウト 願いの力が冒険者を強くする！
+  nameEn: Eidos Scout The Power of Desire Makes Adventurers Stronger!
+  revival: false
+  start: 9/4/2026
+  end: 12/31/9999
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.38
+  pickUp: []
+  poolId: 14
 - id: 10008
   nameJa: エイドス装備スカウト 願いの力が冒険者を強くする！
   nameEn: Eidos Scout The Power of Desire Makes Adventurers Stronger!
   revival: false
   start: 6/19/2026
-  end: 12/31/9999
+  end: 9/4/2026 13:00
   weight:
     - rarity: 6
       weight: 0.02
@@ -509,3 +526,28 @@
     - name: みんなのあこがれアニキ
       weight: 0.01
   poolId: 13
+- id: 16
+  nameJa: 間違いだらけの合体リゾート！全部夏のせいだ
+  nameEn: Always Mergin’ into Mistakes at the Resort! Blame it on Summer!
+  revival: false
+  start: 9/4/2026
+  end: 10/16/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: ナイトボーイと激アツ火遊び
+      weight: 0.01
+    - name: 両手に花のウハウハタイム
+      weight: 0.01
+    - name: リゾートナイトはやっぱり水着で
+      weight: 0.01
+    - name: 出会ってしまった凄腕按摩師
+      weight: 0.01
+  poolId: 14

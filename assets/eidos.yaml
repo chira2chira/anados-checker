@@ -1024,3 +1024,39 @@
   limited: false
   release: 7/17/2026
   image: WeaponIcon_6034.png
+- id: 115
+  eidosId: 5039
+  unitId: 2023
+  nameJa: 出会ってしまった凄腕按摩師
+  nameEn: Stumbling Upon a Master Masseur
+  rarity: 5
+  limited: false
+  release: 9/4/2026
+  image: WeaponIcon_5039.png
+- id: 116
+  eidosId: 5040
+  unitId: 3009
+  nameJa: リゾートナイトはやっぱり水着で
+  nameEn: Swimwear is Definitely a MUST at the Resort!
+  rarity: 5
+  limited: false
+  release: 9/4/2026
+  image: WeaponIcon_5040.png
+- id: 117
+  eidosId: 6035
+  unitId: 4008
+  nameJa: 両手に花のウハウハタイム
+  nameEn: Blissful Night with Both Hands on Charming Men
+  rarity: 6
+  limited: false
+  release: 9/4/2026
+  image: WeaponIcon_6035.png
+- id: 118
+  eidosId: 6036
+  unitId: 5091
+  nameJa: ナイトボーイと激アツ火遊び
+  nameEn: Hella Playin' w/ Fire w/ the Boys at Night
+  rarity: 6
+  limited: false
+  release: 9/4/2026
+  image: WeaponIcon_6036.png
