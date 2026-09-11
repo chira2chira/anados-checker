@@ -4179,3 +4179,24 @@
     - name: タフ
       weight: 0.01
   poolId: 24
+- id: 239
+  nameJa: パイス・ブランの常識があぶない！
+  nameEn: Pays Blanc Is Getting Crazy!
+  revival: true
+  start: 9/11/2026
+  end: 10/23/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 悪を穿つ緑の牙 バロン
+      weight: 0.01
+    - name: 今夜パパは帰らない コルカ
+      weight: 0.01
+  poolId: 25
