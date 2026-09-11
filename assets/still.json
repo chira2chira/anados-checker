@@ -5824,6 +5824,15 @@
       "animated": false
     },
     {
+      "charId": 6121,
+      "seq": 5,
+      "shared": [6121],
+      "group": [],
+      "label": "still06_equus",
+      "image": "StillThumbnail_bg_equus_still06_mosaic_001.webp",
+      "animated": true
+    },
+    {
       "charId": 6015,
       "seq": 20,
       "shared": [6015],
