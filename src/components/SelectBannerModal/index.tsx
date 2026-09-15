@@ -178,7 +178,7 @@ const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
               max-width: 100%;
               height: auto;
             `}
-            src={basePath + `${isJa ? "ja" : "en"}/header/${getBannerImageId(gachaInfo.id)}.png`}
+            src={basePath + `${isJa ? "ja" : "en"}/header/${getBannerImageId(gachaInfo.id)}.webp`}
             alt={isJa ? gachaInfo.nameJa : gachaInfo.nameEn}
             width={449}
             height={86}

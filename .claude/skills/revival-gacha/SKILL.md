@@ -5,7 +5,7 @@ description: 復刻ガチャを assets/gacha.yaml に一括追加し、バナー
 
 # 復刻ガチャ追加
 
-複数の復刻ガチャを `assets/gacha.yaml` に追記し、バナー画像を `public/static/image/banner/<locale>/{main,header}/<id>.png` に配置する定型作業。
+複数の復刻ガチャを `assets/gacha.yaml` に追記し、バナー画像を `public/static/image/banner/<locale>/{main,header}/<id>.webp` に配置する定型作業。バナー画像は Vercel のストレージ削減のため webp (quality 80) で統一している。PNG を置かないこと。
 
 ## 前提となる入力
 
@@ -21,7 +21,7 @@ description: 復刻ガチャを assets/gacha.yaml に一括追加し、バナー
 ### 1. 採番と現状確認
 
 ```bash
-ls public/static/image/banner/ja/main | sed 's/\.png//' | sort -n | tail -3
+ls public/static/image/banner/ja/main | sed 's/\.webp//' | sort -n | tail -3
 ls public/static/image/Housing_PickUP_*_single_JP.png
 ```
 
@@ -104,9 +104,9 @@ node .claude/skills/revival-gacha/scripts/gacha-revival.mjs pooldiff 23 24
 node .claude/skills/revival-gacha/scripts/gacha-revival.mjs images <plan.json>
 ```
 
-`Housing_PickUP_<newId>_single_JP/EN.png` を `banner/ja|en/main/<newId>.png` に移動し、`_headerFrom` があるものは ja/en 両方のヘッダーをコピーする。最後に未配置ファイルを一覧表示するので、それをユーザーへの報告にそのまま使う。
+`Housing_PickUP_<newId>_single_JP/EN.png` を webp (quality 80) に変換して `banner/ja|en/main/<newId>.webp` に置き（元の PNG は削除）、`_headerFrom` があるものは ja/en 両方のヘッダーをコピーする。最後に未配置ファイルを一覧表示するので、それをユーザーへの報告にそのまま使う。
 
-画像ファイル名の番号が新IDと違う場合はこのコマンドは使えない。手動で `mv` してから `images` を流す（移動済みなら「未配置」には出ない）。
+画像ファイル名の番号が新IDと違う場合は、先に `Housing_PickUP_<newId>_single_JP/EN.png` へリネームしてから `images` を流す（変換はスクリプトに任せる）。新規ヘッダーを手で追加する場合も webp に変換してから置く。
 
 ### 7. gacha.yaml への追記
 

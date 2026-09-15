@@ -8,8 +8,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import yaml from "js-yaml";
+import sharp from "sharp";
 
 const ROOT = process.cwd();
+const WEBP_QUALITY = 80;
 const GACHA = path.join(ROOT, "assets/gacha.yaml");
 const CHAR = path.join(ROOT, "assets/charactor.yaml");
 const POOL = path.join(ROOT, "assets/gacha_pool.yaml");
@@ -106,30 +108,31 @@ function append(planPath) {
   console.log(`appended ${out.length} entries`);
 }
 
-/** メイン画像を banner/<locale>/main へ移動し、流用可能なヘッダーをコピーする。 */
-function images(planPath) {
+/** メイン画像を webp に変換して banner/<locale>/main へ置き、流用可能なヘッダーをコピーする。 */
+async function images(planPath) {
   const plan = JSON.parse(fs.readFileSync(planPath, "utf8"));
   const SRC = path.join(ROOT, "public/static/image");
   const missing = [];
   for (const item of plan.items) {
     for (const [loc, suffix] of [["ja", "JP"], ["en", "EN"]]) {
       const from = path.join(SRC, `Housing_PickUP_${item.newId}_single_${suffix}.png`);
-      const to = path.join(BANNER, loc, "main", `${item.newId}.png`);
+      const to = path.join(BANNER, loc, "main", `${item.newId}.webp`);
       if (fs.existsSync(from)) {
-        fs.renameSync(from, to);
-        console.log(`main  ${loc}: ${path.basename(from)} -> ${item.newId}.png`);
+        await sharp(from).webp({ quality: WEBP_QUALITY }).toFile(to);
+        fs.unlinkSync(from);
+        console.log(`main  ${loc}: ${path.basename(from)} -> ${item.newId}.webp`);
       } else if (!fs.existsSync(to)) {
         missing.push(`main ${loc}/${item.newId}`);
       }
 
       const src = item._headerFrom;
-      const hTo = path.join(BANNER, loc, "header", `${item.newId}.png`);
+      const hTo = path.join(BANNER, loc, "header", `${item.newId}.webp`);
       if (src == null) {
         if (!fs.existsSync(hTo)) missing.push(`header ${loc}/${item.newId} (復刻実績なし・新規作成が必要)`);
         continue;
       }
-      fs.copyFileSync(path.join(BANNER, loc, "header", `${src}.png`), hTo);
-      console.log(`header ${loc}: ${src}.png -> ${item.newId}.png`);
+      fs.copyFileSync(path.join(BANNER, loc, "header", `${src}.webp`), hTo);
+      console.log(`header ${loc}: ${src}.webp -> ${item.newId}.webp`);
     }
   }
   console.log(missing.length ? `\n未配置:\n  ${missing.join("\n  ")}` : "\n画像は全て揃った");
@@ -172,7 +175,7 @@ function verify(count) {
     }
     for (const loc of ["ja", "en"]) {
       for (const kind of ["main", "header"]) {
-        const f = path.join(BANNER, loc, kind, `${g.id}.png`);
+        const f = path.join(BANNER, loc, kind, `${g.id}.webp`);
         if (!fs.existsSync(f)) fail(g.id, `画像が無い: ${loc}/${kind}`);
       }
     }
@@ -192,7 +195,7 @@ switch (cmd) {
     append(args[0]);
     break;
   case "images":
-    images(args[0]);
+    await images(args[0]);
     break;
   case "pooldiff":
     pooldiff(Number(args[0]), Number(args[1]));
