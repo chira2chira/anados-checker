@@ -3395,6 +3395,15 @@
     },
     {
       "charId": 5051,
+      "seq": 20,
+      "shared": [5051],
+      "group": [5051, 6095],
+      "label": "still02_habaki_eidos",
+      "image": "StillThumbnail_bg_habaki_still02_mosaic_004.webp",
+      "animated": true
+    },
+    {
+      "charId": 5051,
       "seq": 70,
       "shared": [5051],
       "group": [5051, 6095],
@@ -3860,6 +3869,15 @@
       "label": "still01_garold",
       "image": "StillThumbnail_bg_garoad_still01_mosaic_003.webp",
       "animated": false
+    },
+    {
+      "charId": 5069,
+      "seq": 20,
+      "shared": [5069],
+      "group": [5069],
+      "label": "still03_garoad_eidos",
+      "image": "StillThumbnail_bg_garoad_still03_mosaic_001.webp",
+      "animated": true
     },
     {
       "charId": 5069,
@@ -4435,6 +4453,15 @@
       "group": [5088, 6131],
       "label": "ord_024",
       "image": "StillThumbnail_bg_dunk_storystill04_mosaic_B001.webp",
+      "animated": true
+    },
+    {
+      "charId": 5089,
+      "seq": 1,
+      "shared": [5089],
+      "group": [],
+      "label": "still01_dickert",
+      "image": "StillThumbnail_bg_dickert_still01_mosaic_001.webp",
       "animated": true
     },
     {
@@ -5077,6 +5104,15 @@
       "animated": false
     },
     {
+      "charId": 6001,
+      "seq": 22,
+      "shared": [6001],
+      "group": [6001, 6034],
+      "label": "still06_jinnosuke_eidos",
+      "image": "StillThumbnail_bg_jinnosuke_still06_mosaic_001.webp",
+      "animated": true
+    },
+    {
       "charId": 6002,
       "seq": 1,
       "shared": [6002],
@@ -5708,6 +5744,15 @@
     },
     {
       "charId": 6013,
+      "seq": 20,
+      "shared": [6013],
+      "group": [5068, 6013],
+      "label": "still05_dakkar_eidos",
+      "image": "StillThumbnail_bg_dakkar_still05_mosaic_006.webp",
+      "animated": false
+    },
+    {
+      "charId": 6013,
       "seq": 70,
       "shared": [6013],
       "group": [5068, 6013],
@@ -6046,6 +6091,15 @@
       "group": [],
       "label": "still05_hellion",
       "image": "StillThumbnail_bg_hellion_still03_mosaic_002.webp",
+      "animated": false
+    },
+    {
+      "charId": 6123,
+      "seq": 6,
+      "shared": [6123],
+      "group": [],
+      "label": "still06_hellion",
+      "image": "StillThumbnail_bg_hellion_still06_mosaic_001.webp",
       "animated": false
     },
     {
