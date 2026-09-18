@@ -551,3 +551,28 @@
     - name: 出会ってしまった凄腕按摩師
       weight: 0.01
   poolId: 14
+- id: 17
+  nameJa: 不器用ですから！裸の付き合いでしかわかりあえない男たち
+  nameEn: Clumsy Guys Can Only Connect Via Naked Camaraderie!
+  revival: false
+  start: 9/18/2026
+  end: 10/30/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: 相撲じゃ！四股を踏め！
+      weight: 0.01
+    - name: 狂宴！夫婦仲の秘訣  
+      weight: 0.01
+    - name: 縄にかかったのはオ・マ・エ！
+      weight: 0.01
+    - name: パパとダーリン、選ぶなら？
+      weight: 0.01
+  poolId: 14

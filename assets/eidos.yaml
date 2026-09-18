@@ -1060,3 +1060,39 @@
   limited: false
   release: 9/4/2026
   image: WeaponIcon_6036.png
+- id: 119
+  eidosId: 5041
+  unitId: 6013
+  nameJa: パパとダーリン、選ぶなら？
+  nameEn: "Which Would You Like to Be Called: ＂Daddy＂ or ＂Darling＂?"
+  rarity: 5
+  limited: false
+  release: 9/18/2026
+  image: WeaponIcon_5041.png
+- id: 120
+  eidosId: 5042
+  unitId: 5069
+  nameJa: 縄にかかったのはオ・マ・エ！
+  nameEn: You're The One Who's Been Lassoed!
+  rarity: 5
+  limited: false
+  release: 9/18/2026
+  image: WeaponIcon_5042.png
+- id: 121
+  eidosId: 6037
+  unitId: 5051
+  nameJa: 狂宴！夫婦仲の秘訣
+  nameEn: It's a Wild Bash! The Secret to a Happy Marriage
+  rarity: 6
+  limited: false
+  release: 9/18/2026
+  image: WeaponIcon_6037.png
+- id: 122
+  eidosId: 6038
+  unitId: 6001
+  nameJa: 相撲じゃ！四股を踏め！
+  nameEn: It's Time for Sumo! Be Sure to Stomp Down Hard!
+  rarity: 6
+  limited: false
+  release: 9/18/2026
+  image: WeaponIcon_6038.png
