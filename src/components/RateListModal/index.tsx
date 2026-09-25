@@ -173,7 +173,7 @@ const StandardRate: React.FC<StandardRateProps> = (props) => {
           })
           .filter((x) => x !== null)
           .reduce<React.ReactNode[]>((prev, curr, i) => {
-            return [...prev, curr, <span key={i}>/</span>];
+            return [...prev, curr, <span key={`sep-${i}`}>/</span>];
           }, [])
           .slice(0, -1)}
       </div>
