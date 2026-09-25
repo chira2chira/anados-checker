@@ -4200,3 +4200,24 @@
     - name: 今夜パパは帰らない コルカ
       weight: 0.01
   poolId: 25
+- id: 240
+  nameJa: これぞ酒池肉林！？高潔なる精神と肉体の黄金郷
+  nameEn: Is This the Land of Unbridled Hedonism?! A Golden Land of Nobel Spirits & Bodies
+  revival: false
+  start: 9/25/2026
+  end: 11/6/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 躍る魅惑のフルボディ マハラージャン
+      weight: 0.01
+    - name: オリハル
+      weight: 0.01
+  poolId: 25

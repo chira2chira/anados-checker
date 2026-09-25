@@ -3484,3 +3484,23 @@
   limited: false
   release: 8/28/2026
   image: FS_6140_1.png
+- id: 357
+  unitId: 5120
+  nameJa: オリハル
+  nameEn: Oriharu
+  rarity: 5
+  class: guard
+  deployment: low
+  limited: false
+  release: 9/25/2026
+  image: FS_5120_1.png
+- id: 358
+  unitId: 6141
+  nameJa: 躍る魅惑のフルボディ マハラージャン
+  nameEn: Captivating Body Exuding Charm Maharajan
+  rarity: 6
+  class: support
+  deployment: high
+  limited: true
+  release: 9/25/2026
+  image: FS_6141_1.png
