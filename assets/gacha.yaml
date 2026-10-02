@@ -4221,3 +4221,457 @@
     - name: オリハル
       weight: 0.01
   poolId: 25
+- id: 241
+  nameJa: 魔を制し、連邦の異変に立ち向かえ！
+  nameEn: What's up with the Federation? Save the Day with Magic!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.33
+  pickUp:
+    - name: ヴェルンド
+      weight: 0.01
+    - name: スタロン
+      weight: 0.01
+    - name: モーガン
+      weight: 0.01
+    - name: アレク
+      weight: 0.01
+    - name: ユルト
+      weight: 0.01
+  poolId: 25
+- id: 242
+  nameJa: 帝王からの救援依頼
+  nameEn: Relief Request from the Emperor Himself
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: カフカ
+      weight: 0.01
+    - name: ロットハルト
+      weight: 0.01
+    - name: ダイン
+      weight: 0.01
+  poolId: 25
+- id: 243
+  nameJa: 魔城の迷宮より恋人を救助せよ！
+  nameEn: Save Thy Lover from the Castle of Pandemonium!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ヘリオン
+      weight: 0.01
+    - name: ベルゼブブ
+      weight: 0.01
+    - name: ギムノス
+      weight: 0.01
+  poolId: 25
+- id: 244
+  nameJa: 終わらない発情期を調査せよ！
+  nameEn: Investigate the Endless Mating Season!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.32
+  pickUp:
+    - name: アニマ
+      weight: 0.01
+    - name: シドレー
+      weight: 0.01
+    - name: ピオス
+      weight: 0.01
+    - name: リュート
+      weight: 0.01
+    - name: プージ
+      weight: 0.01
+    - name: ウォルサー
+      weight: 0.01
+  poolId: 25
+- id: 245
+  nameJa: 会って5秒でXXX！
+  nameEn: XXX 5 Seconds After Having Met!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: アズモンド
+      weight: 0.01
+    - name: フォルテ
+      weight: 0.01
+    - name: ハルク
+      weight: 0.01
+    - name: レッカー
+      weight: 0.01
+  poolId: 25
+- id: 246
+  nameJa: 略奪愛でもオールOK！
+  nameEn: Stolen Love is A-OK!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: アトムス
+      weight: 0.01
+    - name: ユーノ
+      weight: 0.01
+    - name: アルカナ
+      weight: 0.01
+  poolId: 25
+- id: 247
+  nameJa: 元カレ、ぶっ殺す！
+  nameEn: Beating Down an Old Flame!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: サタン
+      weight: 0.01
+    - name: フォーカー
+      weight: 0.01
+    - name: オルニス
+      weight: 0.01
+    - name: バラン
+      weight: 0.01
+  poolId: 25
+- id: 248
+  nameJa: 今夜も君を守らナイト
+  nameEn: Tonight I Shall be Thy Knight!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 守護騎士への願い カフカ
+      weight: 0.01
+    - name: 渇望の騎士 ヘリオン
+      weight: 0.01
+  poolId: 25
+- id: 249
+  nameJa: ニンゲンみーんな！食べちゃうぞ！
+  nameEn: All-You-Can-Beat!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ゼベク
+      weight: 0.01
+    - name: ポロンとオルタ
+      weight: 0.01
+  poolId: 25
+- id: 250
+  nameJa: 激突！悪魔VS悪魔！
+  nameEn: Clash of Demonic Egos! Devil vs Demon!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 支配者の審判 ジャラム
+      weight: 0.01
+    - name: 道拓くアークデーモン スタロン
+      weight: 0.01
+  poolId: 25
+- id: 251
+  nameJa: お父さん！娘さんをお嫁にください！
+  nameEn: Give Her Hand in Marriage!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 悟りのスフィンクス ザハロフ
+      weight: 0.01
+    - name: ヒュブリス
+      weight: 0.01
+  poolId: 25
+- id: 252
+  nameJa: 枕営業部、出動！ズブズブの関係になろうぜ！
+  nameEn: Red Light Merchants, Move Out! Get Busy with Business Partners!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: マグリット
+      weight: 0.01
+    - name: 名誉社長 トーマス
+      weight: 0.01
+  poolId: 25
+- id: 253
+  nameJa: 満員満席メトロ、発進！超自由席で常識が壊れる！
+  nameEn: Full Steam Ahead in the Crowded Metro! Norms Break Down in the SUPER “Open” Train Cars!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: アラート
+      weight: 0.01
+    - name: フルハウス
+      weight: 0.01
+  poolId: 25
+- id: 254
+  nameJa: オイルまみれ汗まみれの工場でキミだけの親方を作ろう！
+  nameEn: Create Your Boss at the Sweatiest, Oiliest Factory Ever!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ドメイ
+      weight: 0.01
+    - name: バイオソルジャー ブルート
+      weight: 0.01
+  poolId: 25
+- id: 255
+  nameJa: 超・合金！超・爆根！最強おもちゃ怪獣あらわる！
+  nameEn: SUPER ALLOY SUPER BOMB ROD The Strongest Monster of a Toy is Born!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: マモン
+      weight: 0.01
+    - name: エターニオン
+      weight: 0.01
+  poolId: 25
+- id: 256
+  nameJa: 凍てつく遺伝子、永久凍土に埋もれた超古代
+  nameEn: Genes Frozen in Time, An Ancient World Buried in Permafrost
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: むかしむかし…… フォーカー
+      weight: 0.01
+    - name: カルフーン
+      weight: 0.01
+  poolId: 25
+- id: 257
+  nameJa: そうさ極度フリーズドライ！凍てつくハートが燃えるとき
+  nameEn: Freeze Drying to the Extreme! When Frozen Hearts Are Set Ablaze!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 青き炎の運び手 トルケル
+      weight: 0.01
+    - name: フェゴール
+      weight: 0.01
+  poolId: 25
+- id: 258
+  nameJa: これってエロゲー！？聖獣覚醒
+  nameEn: Is This Some Erotic Game?! The Awakening of the Sacred Beast
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: オーロラの聖獣 パティ
+      weight: 0.01
+    - name: ドラゴンキラー テオドール
+      weight: 0.01
+  poolId: 25
+- id: 259
+  nameJa: エロレスなんてぜってーやんねー！！
+  nameEn: No Way I’m Taking Part in Erotic Wrestling!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ルガロゥ
+      weight: 0.01
+    - name: ゴルドフ
+      weight: 0.01
+    - name: ハルク
+      weight: 0.01
+  poolId: 25
+- id: 260
+  nameJa: ドスケベモンスター決定戦！
+  nameEn: Pervert Monster Championship!!
+  revival: true
+  start: 10/2/2026
+  end: 11/13/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: バシュカー
+      weight: 0.01
+    - name: ドワード
+      weight: 0.01
+    - name: バントゥ
+      weight: 0.01
+    - name: ダイン
+      weight: 0.01
+  poolId: 25
