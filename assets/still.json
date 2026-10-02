@@ -2446,7 +2446,7 @@
       "group": [],
       "label": "still03_barlitz",
       "image": "StillThumbnail_bg_barlitz_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5014,
@@ -5479,7 +5479,7 @@
       "group": [],
       "label": "still03_bart",
       "image": "StillThumbnail_bg_bart_still03_mosaic_A001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6008,
@@ -5524,7 +5524,7 @@
       "group": [],
       "label": "still03_billford",
       "image": "StillThumbnail_bg_billford_summer_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6009,
@@ -6262,7 +6262,7 @@
       "group": [],
       "label": "still03_azmond",
       "image": "StillThumbnail_bg_azmond_still03_mosaic_003.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6022,
@@ -6703,7 +6703,7 @@
       "group": [],
       "label": "still03_chabo",
       "image": "StillThumbnail_bg_chabo_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6068,
