@@ -3504,3 +3504,23 @@
   limited: true
   release: 9/25/2026
   image: FS_6141_1.png
+- id: 359
+  unitId: 5121
+  nameJa: トーマ
+  nameEn: Thoma
+  rarity: 5
+  class: healer
+  deployment: high
+  limited: false
+  release: 10/9/2026
+  image: FS_5121_1.png
+- id: 360
+  unitId: 6142
+  nameJa: 栄光のシャインナイト ダイン
+  nameEn: Glorious Shining Knight Dyne
+  rarity: 6
+  class: guard
+  deployment: low
+  limited: true
+  release: 10/9/2026
+  image: FS_6142_1.png

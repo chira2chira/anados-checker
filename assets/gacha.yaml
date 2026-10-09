@@ -4675,3 +4675,24 @@
     - name: ダイン
       weight: 0.01
   poolId: 25
+- id: 261
+  nameJa: ゴールド・セクシュアル・ナイト降臨！キミの魂は輝いているか
+  nameEn: Golden Hole-y Knights Have Ascended! Is Your Soul Shining Just as Brightly?!
+  revival: false
+  start: 10/9/2026
+  end: 11/20/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 栄光のシャインナイト ダイン
+      weight: 0.01
+    - name: トーマ
+      weight: 0.01
+  poolId: 25
