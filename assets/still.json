@@ -110,6 +110,15 @@
     },
     {
       "charId": 1,
+      "seq": 60,
+      "shared": [1, 2],
+      "group": [1, 2, 6137],
+      "label": "main_008_017",
+      "image": "StillThumbnail_bg_noah_storystill01_mosaic_009.webp",
+      "animated": false
+    },
+    {
+      "charId": 1,
       "seq": 70,
       "shared": [1, 2],
       "group": [1, 2, 6137],
@@ -214,6 +223,15 @@
       "group": [1009, 5115],
       "label": "still01_ballista",
       "image": "StillThumbnail_bg_ballista_still01_mosaicoff_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5115,
+      "seq": 3,
+      "shared": [5115],
+      "group": [],
+      "label": "still02_bolt",
+      "image": "StillThumbnail_bg_bolt_still02_mosaic_001.webp",
       "animated": false
     },
     {
