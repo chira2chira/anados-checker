@@ -52,7 +52,7 @@ export const RateListModal: React.FC<RateListModal> = (props) => {
                       display: flex;
                       align-items: flex-start;
                       flex-wrap: wrap;
-                      gap: 5px;
+                      gap: 0 5px;
                     `}
                   >
                     <span>★{char.rarity}</span>
