@@ -1,6 +1,6 @@
 {
   "title": "AnotherEidos Gacha Simulator",
-  "description": "These are the gacha simulators for AnotherEidos.",
+  "description": "A gacha simulator for AnotherEidos R.",
   "ui": {
     "text": {
       "pullCount": "Pulls",
@@ -8,21 +8,21 @@
       "jpy": " JPY",
       "pickupRate": "Pickup Rates",
       "standardRate": "Standard Rates",
-      "expectation": "Expected Value",
+      "expectation": "vs. Expected",
       "limited": "Limited",
-      "new": "Debut",
+      "new": "New",
       "revival": "Rerun",
       "ended": "Show Expired",
       "notFound": "No matching gacha found."
     },
     "button": {
       "changeBanner": "Change Banner",
-      "pull1": "1 Pull",
-      "pull10": "10 Pulls",
+      "pull1": "Pull x1",
+      "pull10": "Pull x10",
       "clear": "Clear Results",
-      "rate": "Appearance Rate",
+      "rate": "Availability Rates",
       "highlightPu": "Highlight Pickup Characters",
-      "showCharPer": "Show Probabilities for Each Character"
+      "showCharPer": "Show Per-Character Rates"
     }
   }
 }
