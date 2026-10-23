@@ -3524,3 +3524,13 @@
   limited: true
   release: 10/9/2026
   image: FS_6142_1.png
+- id: 361
+  unitId: 2030
+  nameJa: エインヘリヤル
+  nameEn: Einherjar
+  rarity: 2
+  class: vanguard
+  deployment: low
+  limited: false
+  release: 10/23/2026
+  image: FS_2030_1.png
