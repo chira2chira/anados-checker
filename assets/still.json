@@ -847,6 +847,24 @@
       "animated": false
     },
     {
+      "charId": 2030,
+      "seq": 50,
+      "shared": [2030],
+      "group": [2030],
+      "label": "main_008_012",
+      "image": "StillThumbnail_bg_einherjar_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 2030,
+      "seq": 51,
+      "shared": [2030],
+      "group": [2030],
+      "label": "main_008_015",
+      "image": "StillThumbnail_bg_jade_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 3001,
       "seq": 1,
       "shared": [3001],
@@ -1006,6 +1024,15 @@
       "group": [3004, 6033, 6142],
       "label": "main_008_010",
       "image": "StillThumbnail_bg_dyne_storystill03_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 3004,
+      "seq": 52,
+      "shared": [3004],
+      "group": [3004, 6033, 6142],
+      "label": "main_008_018",
+      "image": "StillThumbnail_bg_dyne_storystill04_mosaic_001.webp",
       "animated": false
     },
     {
@@ -4462,7 +4489,7 @@
       "group": [],
       "label": "still02_dunk",
       "image": "StillThumbnail_bg_dunk_still02_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5088,
@@ -5002,6 +5029,15 @@
       "group": [5108],
       "label": "hyp_031",
       "image": "StillThumbnail_bg_laguias_storystill01_mosaic_002.webp",
+      "animated": false
+    },
+    {
+      "charId": 5109,
+      "seq": 1,
+      "shared": [5109],
+      "group": [],
+      "label": "still01_enma",
+      "image": "StillThumbnail_bg_enma_still01_mosaic_001.webp",
       "animated": false
     },
     {
