@@ -1,9 +1,26 @@
+- id: 10010
+  nameJa: エイドス装備スカウト 願いの力が冒険者を強くする！
+  nameEn: Eidos Scout The Power of Desire Makes Adventurers Stronger!
+  revival: false
+  start: 10/30/2026
+  end: 12/31/9999
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.38
+  pickUp: []
+  poolId: 15
 - id: 10009
   nameJa: エイドス装備スカウト 願いの力が冒険者を強くする！
   nameEn: Eidos Scout The Power of Desire Makes Adventurers Stronger!
   revival: false
   start: 9/4/2026
-  end: 12/31/9999
+  end: 10/30/2026 13:00
   weight:
     - rarity: 6
       weight: 0.02
