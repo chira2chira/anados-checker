@@ -8,8 +8,13 @@ const nextConfig = {
   // Turbopackのファイルトレースがpublic配下の画像(約700MB)をServerless Functionに丸ごと同梱してしまう。
   // publicの読み取りはSSG(still/manager, still/nine-stills)のビルド時のみでランタイムには不要、
   // かつVercelではpublic配下は静的アセットとして別途配信されるため、トレース対象から除外する。
+  // ただしpublic/localesはgetServerSidePropsのページ(share/char/[id])で
+  // serverSideTranslationsが実行時にfsで読むため、除外対象から外し明示的に同梱する。
   outputFileTracingExcludes: {
-    "**": ["./public/**"],
+    "**": ["./public/static/**"],
+  },
+  outputFileTracingIncludes: {
+    "/share/char/[id]": ["./public/locales/**"],
   },
   images: {
     remotePatterns: [
