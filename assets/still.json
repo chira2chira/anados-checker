@@ -425,6 +425,15 @@
     },
     {
       "charId": 1024,
+      "seq": 20,
+      "shared": [1024],
+      "group": [1024],
+      "label": "still01_snowbunnywarrior_eidos",
+      "image": "StillThumbnail_bg_snowbunnywarrior_still01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 1024,
       "seq": 70,
       "shared": [1024],
       "group": [1024],
@@ -1042,6 +1051,15 @@
       "group": [3004, 6033, 6142],
       "label": "main_008_019",
       "image": "StillThumbnail_bg_dyne_storystill05_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 3004,
+      "seq": 54,
+      "shared": [3004],
+      "group": [3004, 6033, 6142],
+      "label": "main_008_022",
+      "image": "StillThumbnail_bg_dyne_storystill06_mosaic_002.webp",
       "animated": false
     },
     {
@@ -1883,6 +1901,15 @@
     },
     {
       "charId": 4010,
+      "seq": 21,
+      "shared": [4010],
+      "group": [4010, 5041, 6024],
+      "label": "still06_leonhart_eidos",
+      "image": "StillThumbnail_bg_leonhart_still06_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 4010,
       "seq": 70,
       "shared": [4010],
       "group": [4010, 5041, 6024],
@@ -2456,6 +2483,15 @@
       "label": "still05_hanzo_eidos",
       "image": "StillThumbnail_bg_hanzo_still05_mosaic_001.webp",
       "animated": false
+    },
+    {
+      "charId": 5011,
+      "seq": 21,
+      "shared": [5011],
+      "group": [5011, 6025],
+      "label": "still06_hanzo_eidos",
+      "image": "StillThumbnail_bg_hanzo_still06_mosaic_001.webp",
+      "animated": true
     },
     {
       "charId": 5012,
@@ -3481,7 +3517,7 @@
       "group": [],
       "label": "still03_habaki",
       "image": "StillThumbnail_bg_habaki_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 5051,
@@ -3868,6 +3904,15 @@
       "group": [],
       "label": "still01_goh",
       "image": "StillThumbnail_bg_goh_still01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 5061,
+      "seq": 20,
+      "shared": [5061],
+      "group": [5061],
+      "label": "still03_goh_eidos",
+      "image": "StillThumbnail_bg_goh_still03_mosaic_001.webp",
       "animated": false
     },
     {
@@ -5866,7 +5911,7 @@
       "group": [],
       "label": "still03_dakkar",
       "image": "StillThumbnail_bg_dakkar_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6013,
@@ -6496,7 +6541,7 @@
       "group": [],
       "label": "still03_dion",
       "image": "StillThumbnail_bg_dion_still03_mosaic_001.webp",
-      "animated": false
+      "animated": true
     },
     {
       "charId": 6039,
@@ -7369,6 +7414,15 @@
       "group": [6143],
       "label": "main_008_017",
       "image": "StillThumbnail_bg_noah_storystill01_mosaic_009.webp",
+      "animated": false
+    },
+    {
+      "charId": 6143,
+      "seq": 51,
+      "shared": [6143],
+      "group": [6143],
+      "label": "main_008_022",
+      "image": "StillThumbnail_bg_dyne_storystill06_mosaic_002.webp",
       "animated": false
     },
     {
