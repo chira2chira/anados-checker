@@ -1096,3 +1096,39 @@
   limited: false
   release: 9/18/2026
   image: WeaponIcon_6038.png
+- id: 123
+  eidosId: 5043
+  unitId: 4010
+  nameJa: 今夜船長は人肌恋しいウルフマン
+  nameEn: Tonight, The Lonely Werewolf Captain Longs for Human Warmth
+  rarity: 5
+  limited: false
+  release: 11/6/2026
+  image: WeaponIcon_5043.png
+- id: 124
+  eidosId: 5044
+  unitId: 1024
+  nameJa: お菓子じゃガマンできない！
+  nameEn: Sweets Just Won't Cut it!
+  rarity: 5
+  limited: false
+  release: 11/6/2026
+  image: WeaponIcon_5044.png
+- id: 125
+  eidosId: 6039
+  unitId: 5011
+  nameJa: 忍法対決！ひとり上手の巻
+  nameEn: A Ninjutsu Showdown! Tale of The Soloist
+  rarity: 6
+  limited: false
+  release: 11/6/2026
+  image: WeaponIcon_6039.png
+- id: 126
+  eidosId: 6040
+  unitId: 5061
+  nameJa: 男らしさエネルギー、リミットブレイク！
+  nameEn: Take Your ＂Manly Energy＂ Past its Limit!
+  rarity: 6
+  limited: false
+  release: 11/6/2026
+  image: WeaponIcon_6040.png

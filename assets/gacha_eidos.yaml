@@ -593,3 +593,28 @@
     - name: パパとダーリン、選ぶなら？
       weight: 0.01
   poolId: 14
+- id: 18
+  nameJa: 君は TOP OR BOTTOM？ 焦らしてコマして、ハロウィンパーティ！
+  nameEn: Trick N’ Tease ‘Em This Halloween! You a “Top” or a “Bottom”?!
+  revival: false
+  start: 11/6/2026
+  end: 12/18/2026 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.34
+  pickUp:
+    - name: 男らしさエネルギー、リミットブレイク！
+      weight: 0.01
+    - name: 忍法対決！ひとり上手の巻  
+      weight: 0.01
+    - name: お菓子じゃガマンできない！
+      weight: 0.01
+    - name: 今夜船長は人肌恋しいウルフマン
+      weight: 0.01
+  poolId: 15
