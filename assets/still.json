@@ -119,6 +119,15 @@
     },
     {
       "charId": 1,
+      "seq": 61,
+      "shared": [1, 2],
+      "group": [1, 2, 6137],
+      "label": "main_008_024",
+      "image": "StillThumbnail_bg_dyne_storystill07_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 1,
       "seq": 70,
       "shared": [1, 2],
       "group": [1, 2, 6137],
@@ -658,6 +667,15 @@
       "animated": false
     },
     {
+      "charId": 6138,
+      "seq": 3,
+      "shared": [6138],
+      "group": [],
+      "label": "still01_mayhem",
+      "image": "StillThumbnail_bg_mayhem_still01_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 2019,
       "seq": 50,
       "shared": [2019],
@@ -1060,6 +1078,15 @@
       "group": [3004, 6033, 6142],
       "label": "main_008_022",
       "image": "StillThumbnail_bg_dyne_storystill06_mosaic_002.webp",
+      "animated": false
+    },
+    {
+      "charId": 3004,
+      "seq": 55,
+      "shared": [3004],
+      "group": [3004, 6033, 6142],
+      "label": "main_008_024",
+      "image": "StillThumbnail_bg_dyne_storystill07_mosaic_001.webp",
       "animated": false
     },
     {
