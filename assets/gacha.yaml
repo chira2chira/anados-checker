@@ -4784,6 +4784,457 @@
     - name: ダンジョンボス ゼベク
       weight: 0.01
   poolId: 25
+- id: 266
+  nameJa: スーパーPU！自由と冒険　パイス・ブラン１
+  nameEn: "SUPER Pick-Up! Freedom & Adventure: Pays Blanc I"
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.18
+  pickUp:
+    - name: ビルフォード
+      weight: 0.02
+    - name: エクウス
+      weight: 0.02
+    - name: ジェイド
+      weight: 0.02
+    - name: ノア
+      weight: 0.02
+    - name: ソル
+      weight: 0.02
+    - name: モーガン
+      weight: 0.02
+    - name: バーリッツ
+      weight: 0.02
+    - name: コルカ
+      weight: 0.02
+    - name: オリハル
+      weight: 0.02
+    - name: トーマ
+      weight: 0.02
+  poolId: 26
+- id: 267
+  nameJa: スーパーPU！自由と冒険　パイス・ブラン２
+  nameEn: "SUPER Pick-Up! Freedom & Adventure: Pays Blanc II"
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.18
+  pickUp:
+    - name: エドガー
+      weight: 0.02
+    - name: ヴェルンド
+      weight: 0.02
+    - name: チャボ
+      weight: 0.02
+    - name: プロテオ
+      weight: 0.02
+    - name: ルーク
+      weight: 0.02
+    - name: ロマネス
+      weight: 0.02
+    - name: リオン
+      weight: 0.02
+    - name: ダンク
+      weight: 0.02
+    - name: デッカート
+      weight: 0.02
+    - name: アルキオン
+      weight: 0.02
+  poolId: 26
+- id: 268
+  nameJa: スーパーPU！卓越と職能　セパイア商会１
+  nameEn: "SUPER Pick-Up! Excellence and Function: Sepian Trade Association I"
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.19
+  pickUp:
+    - name: トーマス
+      weight: 0.02
+    - name: マグリット
+      weight: 0.01
+    - name: アラート
+      weight: 0.01
+    - name: ドメイ
+      weight: 0.02
+    - name: マモン
+      weight: 0.02
+    - name: ブルート
+      weight: 0.02
+    - name: バカラ
+      weight: 0.02
+    - name: フルハウス
+      weight: 0.02
+    - name: エターニオン
+      weight: 0.02
+    - name: バイオゴーレム・γ
+      weight: 0.01
+    - name: バイオゴーレム・θ
+      weight: 0.01
+    - name: キング
+      weight: 0.01
+  poolId: 26
+- id: 269
+  nameJa: スーパーPU！卓越と職能　セパイア商会２
+  nameEn: "SUPER Pick-Up! Excellence and Function: Sepian Trade Association II"
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.18
+  pickUp:
+    - name: ディオン
+      weight: 0.02
+    - name: イッテツ
+      weight: 0.02
+    - name: ゼット
+      weight: 0.02
+    - name: ハガネ
+      weight: 0.01
+    - name: ディーゼル
+      weight: 0.01
+    - name: ファガー
+      weight: 0.01
+    - name: ゴウ
+      weight: 0.02
+    - name: バルクスキー
+      weight: 0.02
+    - name: ラビロウ
+      weight: 0.01
+    - name: ワイルダー
+      weight: 0.02
+    - name: ガリウム
+      weight: 0.02
+    - name: エイドロン
+      weight: 0.01
+    - name: ドーナドーナ
+      weight: 0.01
+  poolId: 26
+- id: 270
+  nameJa: スーパーPU！繁茂と野生　ヴェルダンシア大陸
+  nameEn: "SUPER Pick-Up! The Wild & Its Overgrowth: The Tribal Lands of Verdancia"
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.18
+  pickUp:
+    - name: シドレー
+      weight: 0.02
+    - name: アニマ
+      weight: 0.02
+    - name: アズモンド
+      weight: 0.02
+    - name: フォルテ
+      weight: 0.02
+    - name: ハルク
+      weight: 0.02
+    - name: レッカー
+      weight: 0.02
+    - name: ピオス
+      weight: 0.02
+    - name: ドミノ
+      weight: 0.02
+    - name: フォラス
+      weight: 0.02
+    - name: スプートニク
+      weight: 0.02
+  poolId: 26
+- id: 271
+  nameJa: スーパーPU！魔と超越　アンバードン神和国
+  nameEn: "SUPER Pick-Up! Magic & Transcendence: The Holy Republic of Amberdon"
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.14
+  pickUp:
+    - name: ザハロフ
+      weight: 0.02
+    - name: ジャラム
+      weight: 0.02
+    - name: ゼベク
+      weight: 0.02
+    - name: シンバット
+      weight: 0.02
+    - name: ハマム
+      weight: 0.02
+    - name: ヤブサハ
+      weight: 0.02
+    - name: ポロンとオルタ
+      weight: 0.02
+    - name: ヒュブリス
+      weight: 0.02
+    - name: ヤークート
+      weight: 0.02
+    - name: ソルベ
+      weight: 0.02
+    - name: ラジーン
+      weight: 0.02
+    - name: ファルク
+      weight: 0.02
+  poolId: 26
+- id: 272
+  nameJa: スーパーPU！試練と練磨　アズアテラ城砦
+  nameEn: "SUPER Pick-Up! Trials & Drilling: The Fortress City-State of Azureterra"
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.14
+  pickUp:
+    - name: テオドール
+      weight: 0.02
+    - name: バルト
+      weight: 0.02
+    - name: ピノ
+      weight: 0.02
+    - name: オズワルド
+      weight: 0.02
+    - name: ラグナル
+      weight: 0.01
+    - name: シグヴァルディ
+      weight: 0.02
+    - name: ハロルド
+      weight: 0.01
+    - name: アナグラ
+      weight: 0.01
+    - name: スヴェン
+      weight: 0.01
+    - name: トドルフ
+      weight: 0.01
+    - name: リオンパパ
+      weight: 0.01
+    - name: イーヴァル
+      weight: 0.01
+    - name: カルフーン
+      weight: 0.02
+    - name: フェゴール
+      weight: 0.02
+    - name: サンダース
+      weight: 0.01
+    - name: フィン
+      weight: 0.01
+    - name: フレイヤ
+      weight: 0.01
+  poolId: 26
+- id: 273
+  nameJa: スーパーPU！仁と義　倭国ヤマト
+  nameEn: "SUPER Pick-Up! Humanity & Justice: The Nation of Wa—Yamato"
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.16
+  pickUp:
+    - name: ジンノスケ
+      weight: 0.02
+    - name: ラショウ
+      weight: 0.02
+    - name: テンゴ
+      weight: 0.02
+    - name: サルトビ
+      weight: 0.01
+    - name: ハンゾウ
+      weight: 0.01
+    - name: カンクロウ
+      weight: 0.02
+    - name: シャオロン
+      weight: 0.02
+    - name: ハバキ
+      weight: 0.01
+    - name: ジゴロウ
+      weight: 0.01
+    - name: ギンジ
+      weight: 0.01
+    - name: モミジ
+      weight: 0.01
+    - name: リクフネ
+      weight: 0.01
+    - name: ヒフミ
+      weight: 0.01
+    - name: エンマ
+      weight: 0.01
+    - name: アクロ
+      weight: 0.01
+    - name: カシ
+      weight: 0.01
+    - name: ツキマル
+      weight: 0.01
+  poolId: 26
+- id: 274
+  nameJa: スーパーPU！始原と終末　竜王の島
+  nameEn: "SUPER Pick-Up! Beginning & The End: Dragon King Isle"
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.18
+  pickUp:
+    - name: ダカール
+      weight: 0.02
+    - name: スカバンド
+      weight: 0.02
+    - name: コージー
+      weight: 0.02
+    - name: ファフニル
+      weight: 0.02
+    - name: ハリマオ
+      weight: 0.02
+    - name: スタロン
+      weight: 0.02
+    - name: ガオウ
+      weight: 0.02
+    - name: ガロード
+      weight: 0.02
+    - name: ティリクム
+      weight: 0.02
+    - name: ライディーン
+      weight: 0.02
+  poolId: 26
+- id: 275
+  nameJa: スーパーPU！退廃と栄華　オブシドニア帝国
+  nameEn: "SUPER Pick-Up! Decadence & Glory: The Empire of Obsidonia"
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.16
+  pickUp:
+    - name: バシュカー
+      weight: 0.02
+    - name: カフカ
+      weight: 0.02
+    - name: ヘリオン
+      weight: 0.02
+    - name: ルガロゥ
+      weight: 0.02
+    - name: ロットハルト
+      weight: 0.02
+    - name: ベルゼブブ
+      weight: 0.02
+    - name: ゴルドフ
+      weight: 0.02
+    - name: ドワード
+      weight: 0.02
+    - name: バクウ
+      weight: 0.02
+    - name: オリオン
+      weight: 0.02
+    - name: スピカ
+      weight: 0.02
+  poolId: 26
+- id: 276
+  nameJa: スーパーPU！心と力　火山島スルツェイ
+  nameEn: "SUPER Pick-Up! Heart & Power: The Land of Surtsey"
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.18
+  pickUp:
+    - name: アトムス
+      weight: 0.02
+    - name: サタン
+      weight: 0.02
+    - name: ガムラ
+      weight: 0.02
+    - name: ユーノ
+      weight: 0.02
+    - name: フォーカー
+      weight: 0.02
+    - name: マシュトラ
+      weight: 0.02
+    - name: ハリケンとタフ
+      weight: 0.02
+    - name: セイジ
+      weight: 0.02
+    - name: ジェフ
+      weight: 0.02
+    - name: ラ・ギアス
+      weight: 0.02
+  poolId: 26
 - id: 277
   nameJa: 今日からガバ倉庫のロジ部長！？　助けてセンパイ！！
   nameEn: Logistics Manager Starting Today at a Loose-as-Hell Warehouse! Help Me Out, Senpai!
@@ -4803,5 +5254,202 @@
     - name: サンタ・ロジの新米物流部長 フェデリクス
       weight: 0.01
     - name: トレトレ倉庫のガバガバセキュリティ ディオン
+      weight: 0.01
+  poolId: 26
+- id: 278
+  nameJa: メリークリスマス！性夜の添い寝相手募集中！
+  nameEn: Merry Christmas! Recruiting Mates to Sleep with on this Hole-y Night!
+  revival: true
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: ラブトイハンター ルーク
+      weight: 0.01
+    - name: シグヴァルディ
+      weight: 0.01
+  poolId: 26
+- id: 279
+  nameJa: 白の性騎士＆黒の性騎士
+  nameEn: Hole-y White Knight & Black Knight
+  revival: true
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 栄光の騎士 ギムノス
+      weight: 0.01
+    - name: 復讐者 ダイン
+      weight: 0.01
+  poolId: 26
+- id: 280
+  nameJa: 今夜はゴージャスナイト！大人だけの社交場へようこそ！
+  nameEn: Mingle with the Big Boys Tonight in the Glitzy Pleasure Dome!
+  revival: true
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ブラックバニー ウォルサー
+      weight: 0.01
+    - name: 闇夜を駆けるはぐれ刑事 バーリッツ
+      weight: 0.01
+    - name: ドミノ
+      weight: 0.01
+  poolId: 26
+- id: 281
+  nameJa: ありがとう2.0周年！極上ナイトサービスでベッド・イン！
+  nameEn: Thank You for 2 Years! Spend the Night Living Your Dreams!
+  revival: true
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: マフィアブラザーズ ビルフォード
+      weight: 0.01
+    - name: イカサマ勝負師 バカラ
+      weight: 0.01
+    - name: ゴージャスドリーム エドガー
+      weight: 0.01
+  poolId: 26
+- id: 282
+  nameJa: やったね３周年！爆アゲウインターデートへ出発！
+  nameEn: We’ve Hit 3 Years! Time to Head Off on Explosive Wintry Dates!
+  revival: true
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: 雪の日の約束 リオン
+      weight: 0.01
+    - name: アナグラ
+      weight: 0.01
+    - name: スヴェン
+      weight: 0.01
+  poolId: 26
+- id: 283
+  nameJa: イヴの夜クラッシャー登場！サンタだって恋したい
+  nameEn: Home Wrecker Swoopin’ in on Christmas Eve! Even Santa Needs Some Lovin’!
+  revival: true
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.35
+  pickUp:
+    - name: ゴーストサンタ ハロルド
+      weight: 0.01
+    - name: ウィンターデート チャボ
+      weight: 0.01
+    - name: トドルフ
+      weight: 0.01
+  poolId: 26
+- id: 284
+  nameJa: サンタアーミー出動！ハニトラ部隊のねっちょり外交術
+  nameEn: Santa’s Army Deployed! The Honeytrap Brigade & Their Sticky Diplomacy!
+  revival: true
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 特命！ハニトラ隊長 スヴェン
+      weight: 0.01
+    - name: サンダース
+      weight: 0.01
+  poolId: 26
+- id: 285
+  nameJa: 敵かな！？味方かな！？敏腕サンタのビンビン！フリーエージェント宣言
+  nameEn: Is He Friend or Foe?! A Go-Getter, Pumped Santa Declares Himself a “Free Agent”! 
+  revival: true
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: 聖夜の最強フリーター マッパマン
+      weight: 0.01
+    - name: フィン
+      weight: 0.01
+  poolId: 26
+- id: 286
+  nameJa: 性夜に征服者襲来！魔物VS魔物のガチンコバトル
+  nameEn: A Conqueror on the Hole-iest of Nights! Magical Beasts Against Magical Beasts!
+  revival: true
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: サンタアーミー軍事教官 トドルフ
+      weight: 0.01
+    - name: フレイヤ
       weight: 0.01
   poolId: 26
