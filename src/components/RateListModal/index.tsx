@@ -11,11 +11,16 @@ type RateListModal = {
   onClose: () => void;
 };
 
+// 確率(0〜1)をパーセント表記に変換する。浮動小数点誤差を除くため小数第2位で丸める
+function toPercent(rate: number) {
+  return Math.round(rate * 10000) / 100;
+}
+
 export function calcPickUpRate(charInfo: UnknownInfo, gacha: GachaInfo) {
   let prevWeight = 0;
   for (const char of gacha.pool) {
     if (char.id === charInfo.id) {
-      return Math.round((char.weight - prevWeight) * 10000) / 100;
+      return toPercent(char.weight - prevWeight);
     }
     prevWeight = char.weight;
   }
@@ -140,8 +145,8 @@ const StandardRate: React.FC<StandardRateProps> = (props) => {
         `}
       >
         <span>★{props.rarity}: </span>
-        <RateSpan>{weight * 100}%</RateSpan>
-        <span> {puWeight > 0 && `(PU +${puWeight * 100}%)`}</span>
+        <RateSpan>{toPercent(weight)}%</RateSpan>
+        <span> {puWeight > 0 && `(PU +${toPercent(puWeight)}%)`}</span>
       </div>
       <div
         css={css`
