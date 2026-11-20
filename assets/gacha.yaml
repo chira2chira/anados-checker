@@ -3389,7 +3389,7 @@
     - rarity: 3
       weight: 0.36
   pickUp:
-    - name: 獄闇の悪食王 オズワルド
+    - name: オズワルド
       weight: 0.01
     - name: スプートニク
       weight: 0.01

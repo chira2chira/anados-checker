@@ -3306,12 +3306,12 @@
   image: FS_5114_1.png
 - id: 339
   unitId: 6132
-  nameJa: 獄闇の悪食王 オズワルド
-  nameEn: Gluttonous King of Infernal Darkness Oswald
+  nameJa: オズワルド
+  nameEn: Oswald
   rarity: 6
   class: stranger
   deployment: low
-  limited: true
+  limited: false
   release: 5/29/2026
   image: FS_6132_1.png
 - id: 340
