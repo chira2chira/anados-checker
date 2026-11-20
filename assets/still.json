@@ -757,6 +757,15 @@
       "animated": false
     },
     {
+      "charId": 2023,
+      "seq": 70,
+      "shared": [2023],
+      "group": [2023],
+      "label": "log_012",
+      "image": "StillThumbnail_bg_worker_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 2024,
       "seq": 20,
       "shared": [2024],
@@ -850,9 +859,18 @@
       "charId": 2028,
       "seq": 20,
       "shared": [2028],
-      "group": [2028],
+      "group": [2028, 6145],
       "label": "still01_salaryman_eidos",
       "image": "StillThumbnail_bg_salaryman_still01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 2028,
+      "seq": 70,
+      "shared": [2028],
+      "group": [2028, 6145],
+      "label": "log_012",
+      "image": "StillThumbnail_bg_worker_storystill01_mosaic_007.webp",
       "animated": false
     },
     {
@@ -4663,6 +4681,15 @@
       "animated": false
     },
     {
+      "charId": 5089,
+      "seq": 73,
+      "shared": [5089],
+      "group": [5089],
+      "label": "log_012",
+      "image": "StillThumbnail_bg_worker_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
       "charId": 5090,
       "seq": 1,
       "shared": [5090],
@@ -6574,7 +6601,7 @@
       "charId": 6039,
       "seq": 4,
       "shared": [6039],
-      "group": [5064, 6039],
+      "group": [5064, 6039, 6146],
       "label": "still04_dion_secret_126039",
       "image": "StillThumbnail_bg_dion_still04_mosaic_B001.webp",
       "animated": false
@@ -6583,7 +6610,7 @@
       "charId": 6039,
       "seq": 20,
       "shared": [6039],
-      "group": [5064, 6039],
+      "group": [5064, 6039, 6146],
       "label": "still02_dion_eidos",
       "image": "StillThumbnail_bg_dion_still02_mosaic_001.webp",
       "animated": false
@@ -7396,6 +7423,15 @@
       "group": [6132],
       "label": "ord_020",
       "image": "StillThumbnail_bg_oswald_storystill01_mosaic_001.webp",
+      "animated": false
+    },
+    {
+      "charId": 6133,
+      "seq": 1,
+      "shared": [6133],
+      "group": [],
+      "label": "still01_faegar",
+      "image": "StillThumbnail_bg_faegar_still01_mosaic_001.webp",
       "animated": false
     },
     {
