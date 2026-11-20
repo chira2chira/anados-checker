@@ -3554,3 +3554,23 @@
   limited: true
   release: 10/30/2026
   image: FS_6144_1.png
+- id: 364
+  unitId: 6145
+  nameJa: サンタ・ロジの新米物流部長 フェデリクス
+  nameEn: Santa's Logistics Rookie Manager Federicus
+  rarity: 6
+  class: support
+  deployment: low
+  limited: true
+  release: 11/20/2026
+  image: FS_6145_1.png
+- id: 365
+  unitId: 6146
+  nameJa: トレトレ倉庫のガバガバセキュリティ ディオン
+  nameEn: Toretore Warehouse Lax Security Man Dion
+  rarity: 6
+  class: vanguard
+  deployment: both
+  limited: true
+  release: 11/20/2026
+  image: FS_6146_1.png
