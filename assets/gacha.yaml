@@ -4784,3 +4784,24 @@
     - name: ダンジョンボス ゼベク
       weight: 0.01
   poolId: 25
+- id: 277
+  nameJa: 今日からガバ倉庫のロジ部長！？　助けてセンパイ！！
+  nameEn: Logistics Manager Starting Today at a Loose-as-Hell Warehouse! Help Me Out, Senpai!
+  revival: false
+  start: 11/20/2026
+  end: 1/1/2027 13:00
+  weight:
+    - rarity: 6
+      weight: 0.02
+    - rarity: 5
+      weight: 0.1
+    - rarity: 4
+      weight: 0.5
+    - rarity: 3
+      weight: 0.36
+  pickUp:
+    - name: サンタ・ロジの新米物流部長 フェデリクス
+      weight: 0.01
+    - name: トレトレ倉庫のガバガバセキュリティ ディオン
+      weight: 0.01
+  poolId: 26
