@@ -4,15 +4,15 @@ import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next/pages";
 import { Checkbox, Dialog, DialogBody, Tag } from "@blueprintjs/core";
 import { css } from "@emotion/react";
-import { GachaInfo } from "@/types/gacha";
+import { GachaBanner } from "@/types/gacha";
 import { getBannerImageId } from "@/utils/gacha";
 import dayjs from "dayjs";
 import { getImageUrl } from "@/utils/image";
 
 type SelectBannerModal = {
   isOpen: boolean;
-  gachaInfo: GachaInfo[];
-  onSelect: (gacha: GachaInfo) => void;
+  gachaInfo: GachaBanner[];
+  onSelect: (gacha: GachaBanner) => void;
   onClose: () => void;
 };
 
@@ -124,8 +124,8 @@ export const SelectBannerModal: React.FC<SelectBannerModal> = (props) => {
 };
 
 type BannerLinkProps = {
-  gachaInfo: GachaInfo;
-  onClick: (gachaInfo: GachaInfo) => void;
+  gachaInfo: GachaBanner;
+  onClick: (gachaInfo: GachaBanner) => void;
 };
 const BannerLink = forwardRef<HTMLAnchorElement, BannerLinkProps>(
   (props, ref) => {

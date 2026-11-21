@@ -8,7 +8,8 @@ import {
   UnknownInfo,
   CharInfoWithStill,
 } from "@/types/unit";
-import { GachaInfo, GachaPool } from "@/types/gacha";
+import { GachaBanner, GachaPool, GachaPoolIds } from "@/types/gacha";
+import { toGachaInfo } from "@/utils/gacha";
 import still from "@/../assets/still.json";
 
 const CLASS_SORT_LIST: CharClass[] = [
@@ -101,18 +102,9 @@ export function loadEidosMaster() {
   return eidosInfo;
 }
 
-function mergeRarity(rarity: number) {
-  return function (name: string) {
-    return {
-      name,
-      rarity,
-    };
-  };
-}
-
 export function loadGachaMaster() {
   const charInfo = loadCharactors();
-  const gachaInfo = generateGachaInfo(
+  const { gachaInfo, gachaPool } = generateGachaInfo(
     charInfo,
     "assets/gacha.yaml",
     "assets/gacha_pool.yaml"
@@ -121,12 +113,13 @@ export function loadGachaMaster() {
   return {
     charInfo,
     gachaInfo,
+    gachaPool,
   };
 }
 
 export function loadEidosGachaMaster() {
   const eidosInfo = loadEidosMaster();
-  const gachaInfo = generateGachaInfo(
+  const { gachaInfo, gachaPool } = generateGachaInfo(
     eidosInfo,
     "assets/gacha_eidos.yaml",
     "assets/gacha_eidos_pool.yaml"
@@ -135,74 +128,60 @@ export function loadEidosGachaMaster() {
   return {
     eidosInfo,
     gachaInfo,
+    gachaPool,
   };
 }
 
+/**
+ * バナー定義とプールマスター（キャラ名→IDに変換済み）を返す。
+ * 展開済みの排出プールはバナー数×キャラ数でSSGのデータが肥大化するため返さず、
+ * クライアントで toGachaInfo により必要なバナー分だけ生成する。
+ * ここでは全バナーのプールを生成してデータの整合性のみ検証する。
+ */
 function generateGachaInfo(
   info: UnknownInfo[],
   yamlPath: string,
   poolYamlPath: string
-) {
-  const gachaPool: GachaPool[] = loadYaml<GachaPool[]>(poolYamlPath);
-  const gachaInfo: GachaInfo[] = loadYaml<GachaInfo[]>(yamlPath).map((x) => {
-    const poolMaster = gachaPool.find((y) => y.id === x.poolId);
-    if (poolMaster === undefined)
-      throw new Error(`不明なガチャプールID: ${x.poolId}`);
-    const pools = [
-      ...poolMaster.rarity6.map(mergeRarity(6)),
-      ...poolMaster.rarity5.map(mergeRarity(5)),
-      ...poolMaster.rarity4.map(mergeRarity(4)),
-      ...poolMaster.rarity3.map(mergeRarity(3)),
-    ];
-    // PUキャラ追加
-    for (const p of x.pickUp) {
-      if (pools.map((y) => y.name).includes(p.name)) continue;
-      const pickUpChar = info.find((z) => z.nameJa === p.name);
-      if (pickUpChar === undefined)
-        throw new Error(`ピックアップキャラが不正（${p.name}）`);
-      pools.push({ name: pickUpChar.nameJa, rarity: pickUpChar.rarity });
-    }
-    let accum = 0;
-    return {
-      ...x,
-      pool: pools.map((y) => {
-        const id = info.find((z) => z.nameJa === y.name)?.id;
-        if (id === undefined)
-          throw new Error(
-            `ガチャプールに不正なキャラがいる (${y.name}, ${info.map(
-              (z) => z.nameJa
-            )})`
-          );
-        const rarityWeight = x.weight.find(
-          (z) => z.rarity === y.rarity
-        )?.weight;
-        if (rarityWeight === undefined) throw new Error("レアリティが不正");
-        // キャラ毎の確率にPU率を足す
-        accum +=
-          rarityWeight / pools.filter((z) => z.rarity === y.rarity).length;
-        const pickUp = x.pickUp.find((z) => z.name === y.name);
-        if (pickUp) {
-          accum += pickUp.weight;
-        }
-        return {
-          id,
-          weight: Math.round(accum * 1_000_000) / 1_000_000, // 小数点第6位で四捨五入
-        };
-      }),
-    };
-  });
+): { gachaInfo: GachaBanner[]; gachaPool: GachaPoolIds[] } {
+  const toId = (name: string) => {
+    const id = info.find((z) => z.nameJa === name)?.id;
+    if (id === undefined)
+      throw new Error(
+        `ガチャプールに不正なキャラがいる (${name}, ${info.map(
+          (z) => z.nameJa
+        )})`
+      );
+    return id;
+  };
+  const gachaPool: GachaPoolIds[] = loadYaml<GachaPool[]>(poolYamlPath).map(
+    (x) => ({
+      id: x.id,
+      rarity6: x.rarity6.map(toId),
+      rarity5: x.rarity5.map(toId),
+      rarity4: x.rarity4.map(toId),
+      rarity3: x.rarity3.map(toId),
+    })
+  );
+  const gachaInfo = loadYaml<GachaBanner[]>(yamlPath);
 
-  for (const gacha of gachaInfo) {
-    const max = Math.max(...gacha.pool.map((x) => x.weight));
+  for (const banner of gachaInfo) {
+    const { pool } = toGachaInfo(banner, gachaPool, info);
+    const max = Math.max(...pool.map((x) => x.weight));
     if (max !== 1) {
-      throw new Error(`ガチャ確率が100%にならない (${max})`);
+      throw new Error(`ガチャ確率が100%にならない (${banner.id}: ${max})`);
     }
   }
 
+  // 実際に使われているプールだけ渡す
+  const usedPoolIds = new Set(gachaInfo.map((x) => x.poolId));
+
   // 開始日で降順。同日で並びを調整する場合は時間を入れる
-  return gachaInfo.sort(
-    (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime()
-  );
+  return {
+    gachaInfo: gachaInfo.sort(
+      (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime()
+    ),
+    gachaPool: gachaPool.filter((x) => usedPoolIds.has(x.id)),
+  };
 }
 
 type StillLabel = {

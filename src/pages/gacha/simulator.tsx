@@ -4,13 +4,13 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next/pages";
 import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import { UrlObject } from "url";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Button, ButtonGroup, Checkbox, Tooltip } from "@blueprintjs/core";
 import { css, keyframes } from "@emotion/react";
 import { CharInfo, EidosInfo, UnknownInfo } from "@/types/unit";
-import { GachaInfo } from "@/types/gacha";
+import { GachaBanner, GachaPoolIds } from "@/types/gacha";
 import { loadEidosGachaMaster, loadGachaMaster } from "@/utils/yamlUtil";
-import { gacha, getBannerImageId } from "@/utils/gacha";
+import { gacha, getBannerImageId, toGachaInfo } from "@/utils/gacha";
 import { displayCharClass } from "@/utils/stringUtil";
 import { Container } from "@/components/Container";
 import { SelectBannerModal } from "@/components/SelectBannerModal";
@@ -24,8 +24,10 @@ import { getImageUrl } from "@/utils/image";
 type GachaSimulatorProps = {
   charInfo: CharInfo[];
   eidosInfo: EidosInfo[];
-  gachaInfo: GachaInfo[];
-  eidosGachaInfo: GachaInfo[];
+  gachaInfo: GachaBanner[];
+  gachaPool: GachaPoolIds[];
+  eidosGachaInfo: GachaBanner[];
+  eidosGachaPool: GachaPoolIds[];
 };
 
 type CharInfoPu = UnknownInfo & {
@@ -56,7 +58,7 @@ const loseStyle = css`
   font-weight: 600;
 `;
 
-function getBanner(gachaInfo: GachaInfo[], id: any) {
+function getBanner(gachaInfo: GachaBanner[], id: any) {
   if (typeof id === "string") {
     const b = gachaInfo.find((x) => x.id.toString() === id);
     if (b !== undefined) return b;
@@ -91,7 +93,14 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
     category === "char" ? props.charInfo : props.eidosInfo;
   const currentGachaInfo =
     category === "char" ? props.gachaInfo : props.eidosGachaInfo;
-  const banner = getBanner(currentGachaInfo, id);
+  const currentGachaPool =
+    category === "char" ? props.gachaPool : props.eidosGachaPool;
+  const bannerMaster = getBanner(currentGachaInfo, id);
+  // 排出プールはSSGデータ削減のため、表示中のバナー分だけクライアントで生成する
+  const banner = useMemo(
+    () => toGachaInfo(bannerMaster, currentGachaPool, currentInfo),
+    [bannerMaster, currentGachaPool, currentInfo]
+  );
   const basePath =
     category === "char"
       ? "/static/image/banner/"
@@ -178,7 +187,7 @@ const GachaSimulator: NextPage<GachaSimulatorProps> = (props) => {
     setOpenSelectBanner(false);
   };
 
-  const handleChangeBanner = (gacha: GachaInfo) => {
+  const handleChangeBanner = (gacha: GachaBanner) => {
     const url: UrlObject = {
       pathname: router.pathname,
       query: { cat: category, id: gacha.id },
@@ -667,8 +676,12 @@ const PickUpIcon: React.FC = () => {
 export const getStaticProps: GetStaticProps<GachaSimulatorProps> = async (
   context
 ) => {
-  const { charInfo, gachaInfo } = loadGachaMaster();
-  const { eidosInfo, gachaInfo: eidosGachaInfo } = loadEidosGachaMaster();
+  const { charInfo, gachaInfo, gachaPool } = loadGachaMaster();
+  const {
+    eidosInfo,
+    gachaInfo: eidosGachaInfo,
+    gachaPool: eidosGachaPool,
+  } = loadEidosGachaMaster();
 
   return {
     props: {
@@ -676,7 +689,9 @@ export const getStaticProps: GetStaticProps<GachaSimulatorProps> = async (
       charInfo,
       eidosInfo,
       gachaInfo,
+      gachaPool,
       eidosGachaInfo,
+      eidosGachaPool,
     },
   };
 };
