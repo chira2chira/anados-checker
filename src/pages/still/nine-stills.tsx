@@ -396,14 +396,14 @@ const NineStills: NextPage<NineStillsProps> = (props) => {
 
         {generatedImageUrl && (
           <div css={previewContainerStyle}>
+            <Button intent="success" icon="download" onClick={handleDownload}>
+              {t2("button.download")}
+            </Button>
             <img
               src={generatedImageUrl}
               alt="Generated"
               css={previewImageStyle}
             />
-            <Button intent="success" icon="download" onClick={handleDownload}>
-              {t2("button.download")}
-            </Button>
           </div>
         )}
       </div>
