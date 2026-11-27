@@ -1085,7 +1085,7 @@
       "seq": 53,
       "shared": [3004],
       "group": [3004, 6033, 6142],
-      "label": "main_008_019",
+      "label": "main_008_021",
       "image": "StillThumbnail_bg_dyne_storystill05_mosaic_001.webp",
       "animated": false
     },
@@ -4744,6 +4744,15 @@
       "animated": true
     },
     {
+      "charId": 5091,
+      "seq": 70,
+      "shared": [5091],
+      "group": [5091],
+      "label": "log_014",
+      "image": "StillThumbnail_bg_calhoun_storystill02_mosaic_001.webp",
+      "animated": true
+    },
+    {
       "charId": 5093,
       "seq": 20,
       "shared": [5093],
@@ -6251,7 +6260,7 @@
       "seq": 52,
       "shared": [6016],
       "group": [6016, 6144],
-      "label": "main_008_019",
+      "label": "main_008_021",
       "image": "StillThumbnail_bg_dyne_storystill05_mosaic_001.webp",
       "animated": false
     },
@@ -6614,6 +6623,15 @@
       "label": "still02_dion_eidos",
       "image": "StillThumbnail_bg_dion_still02_mosaic_001.webp",
       "animated": false
+    },
+    {
+      "charId": 6039,
+      "seq": 70,
+      "shared": [6039],
+      "group": [5064, 6039, 6146],
+      "label": "log_014",
+      "image": "StillThumbnail_bg_calhoun_storystill02_mosaic_001.webp",
+      "animated": true
     },
     {
       "charId": 6040,
